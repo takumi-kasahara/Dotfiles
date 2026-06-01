@@ -1,0 +1,154 @@
+{
+  // #region Template
+  "Template.Script": {
+    "prefix": "template-script",
+    "body": [
+      "[CmdletBinding()]",
+      "param ()\n",
+      "Set-StrictMode -Version Latest",
+      "Set-Location -LiteralPath \\$PSScriptRoot",
+      "$0",
+    ],
+  },
+  "Template.Script.WithArguments": {
+    "prefix": "template-script-with-arguments",
+    "body": [
+      "[CmdletBinding()]",
+      "param (",
+      "\t[Parameter(ValueFromRemainingArguments)]",
+      "\t[ValidateScript({ Test-Path -LiteralPath \\$_ })]",
+      "\t[string[]]",
+      "\t\\$Path",
+      ")\n",
+      "Set-StrictMode -Version Latest",
+      "Set-Location -LiteralPath \\$PSScriptRoot",
+      "$0",
+    ],
+  },
+  // #endregion
+  // #region Using
+  "Using.Namespace": {
+    "prefix": "using-namespace",
+    "body": [
+      "using namespace ${1:Namespace}"
+    ],
+  },
+  "Using.Module": {
+    "prefix": "using-module",
+    "body": [
+      "using module '${1:ModulePath}'"
+    ],
+  },
+  // #endregion
+  // #region Function
+  "Function.Public": {
+    "prefix": "func.public",
+    "body": [
+      "function ${1:func_name} {",
+      "\t[CmdletBinding()]",
+      "\tparam ()\n",
+      "\t${0:# statement}",
+      "}",
+      "Export-ModuleMember -Function $1"
+    ],
+  },
+  "Function.Private": {
+    "prefix": "func.private",
+    "body": [
+      "function ${1:func_name} {",
+      "\tparam ()\n",
+      "\t${0:# statement}",
+      "}",
+    ],
+  },
+  // #endregion
+  // #region Common
+  "Common.If.Exists": {
+    "prefix": "if-exists",
+    "body": [
+      "if (!(Test-Path -LiteralPath \\$${1:path})) {",
+      "\t${0:# statement}",
+      "}",
+    ],
+  },
+  "Common.Foreach.Dictionary": {
+    "prefix": "foreach-dictionary",
+    "body": [
+      "foreach (${2:entry} in ${1:dictionary}.GetEnumerator() | Sort-Object -Property Name) {",
+      "\t${0:# statement}",
+      "}",
+    ],
+    "description": [
+      "https://blog.shibata.tech/entry/2017/01/19/031705",
+    ]
+  },
+  "Common.ScriptBlock": {
+    "prefix": [
+      "script-block",
+      "lambda",
+      "expr",
+    ],
+    "body": "{ param (\\$${1:param_name}) ${2:expression} }",
+  },
+  "Common.Switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:${2|-Regex ,-Wildcard ,-Exact |}}${3:-CaseSensitive }(${4:expr}) {",
+      "${5:case} { ${6:expr} }",
+      "default {}",
+      "}",
+    ],
+  },
+  // #endregion
+  // #region Util
+  "Util.ExpandEnvironmentVariables": {
+    "prefix": "parse-env",
+    "body": [
+      "[Environment]::ExpandEnvironmentVariables(%${2:input}%)",
+    ],
+  },
+  "Util.DeclareConstants": {
+    "prefix": "const",
+    "body": [
+      "New-Variable -Name ${1:name} -Value ${2:value} -Option ReadOnly -Force\n",
+    ],
+  },
+  "Util.DeclareVariable": {
+    "prefix": "var",
+    "body": [
+      "\\$${1:name} = ${2:value}\n",
+    ],
+  },
+  "Util.Dictionary.AsOrdered": {
+    "prefix": "ordered",
+    "body": [
+      "[ordered]@{",
+      "\t${1:name} = ${2:value}",
+      "}\n",
+    ],
+  },
+  // #endregion
+  // #region Idiom
+  "Idiom.Force.CommandNotFoundException": {
+    "prefix": "force-CommandNotFoundException",
+    "body": [
+      "# Force CommandNotFoundException",
+      "${1:command} >\\$null 2>&1\n",
+    ],
+  },
+  "Idiom.Force.ItemNotFoundException": {
+    "prefix": "force-ItemNotFoundException",
+    "body": [
+      "# Force ItemNotFoundException",
+      "Get-Item -LiteralPath ${1:path} >\\$null\n",
+    ],
+  },
+  "Idiom.Force.NativeCommandError": {
+    "prefix": "force-NativeCommandError",
+    "body": [
+      "# Force NativeCommandError",
+      "where.exe ${1:command} >\\$null 2>&1\n",
+    ],
+  },
+  // #endregion
+}

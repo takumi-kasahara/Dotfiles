@@ -1,0 +1,212 @@
+[alias]
+  export = !git-export.sh
+  reinit = !git-reinit.sh
+  sync = !git-sync.sh
+  # https://git-scm.com/docs/git-add
+  a = add --verbose
+  aa = a .
+  aaa = a --all
+  ai = a --interactive
+  ap = a --patch
+  au = a --update
+  # https://git-scm.com/docs/git-branch
+  b = branch --verbose --verbose
+  bb = b --all
+  brm = b --delete
+  bmv = b --move
+  # https://git-scm.com/docs/git-checkout
+  co = checkout
+  # https://git-scm.com/docs/git-cherry-pick
+  cp = cherry-pick --ff
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
+  cpn = cherry-pick --no-commit
+  cpq = cherry-pick --quit
+  cps = cherry-pick --skip
+  # https://git-scm.com/docs/git-commit
+  ci = commit --verbose
+  cia = ci --all
+  amend = !git-amend.sh
+  reword = ci --amend
+  rw = reword
+  fixup = ci --fixup
+  fx = fixup
+  squash = !git-squash.sh
+  sq = squash
+  # https://git-scm.com/docs/git-config
+  cf = config
+  cfg = cf --edit --global
+  cfl = cf --edit --local
+  cfs = cf --edit --system
+  alias = "!_() { git config --get alias.$1; }; _"
+  me = "!git cf --get user.name; git cf --get user.email"
+  # https://git-scm.com/docs/git-fetch
+  ft = fetch --verbose
+  fta = ft --all
+  # https://git-scm.com/docs/git-merge
+  mg = merge --verbose --no-ff
+  mgn = merge --no-commit
+  mga = merge --abort
+  mgc = merge --continue
+  mgs = merge --skip
+  # https://git-scm.com/docs/git-pull
+  pl = pull --verbose
+  pla = pl --all
+  # https://git-scm.com/docs/git-push
+  ps = push --verbose
+  psd = ps --delete
+  psf = ps --force-with-lease --force-if-includes
+  # https://git-scm.com/docs/git-rebase
+  rb = rebase --verbose --reapply-cherry-picks
+  rbi = rb --interactive
+  rbu = rbi @{u} --committer-date-is-author-date
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbq = rebase --quit
+  rbs = rebase --skip
+  # https://git-scm.com/docs/git-rm
+  rmc = rm --cached
+  rmf = rm --force
+  # https://git-scm.com/docs/git-show
+  v = show --pretty=fuller
+  vp = v @~
+  vu = v @{u}
+  # https://git-scm.com/docs/git-stash
+  sl = stash list
+  sp = stash pop
+  ss = stash push
+  # https://git-scm.com/docs/git-status
+  st = status --verbose
+  # https://git-scm.com/docs/git-switch
+  sw = switch
+  swc = sw --create
+  swd = sw --detach
+  # https://git-scm.com/docs/git-tag
+  t = tag
+  trm = t --delete
+  tmv = "!_() { git t ${1} ${2} && git trm ${2}; }; _"
+  # https://git-scm.com/docs/git-log
+  l = log --graph
+  ll = l --name-status
+  la = log --graph --all
+  lla = la --name-status
+  lu = l --left-right @{u}...@
+  llu = lu --name-status
+  # https://stackoverflow.com/questions/89332/how-do-i-recover-a-dropped-stash-in-git
+  trash = !git l --all $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
+  # https://git-scm.com/docs/git-difftool
+  windiff = difftool --dir-diff --tool winmerge
+  d = windiff
+  dc = d --cached
+  dp = "!_() { git d ${1:-@}~..${1:-@}; }; _"
+  du = d @{u}..@
+  # https://git-scm.com/docs/git-mergetool
+  winmerge = mergetool --tool winmerge
+  m = winmerge
+  # https://git-scm.com/docs/git-revert
+  rv = revert
+  rva = rv --abort
+  rvc = rv --continue
+  rvn = rv --no-commit
+  rvq = rv --quit
+  rvs = rv --skip
+  # https://git-scm.com/docs/git-reset
+  rs = reset
+  rsh = rs --hard
+  rss = rs --soft
+  unstage = rs --mixed @
+  us = unstage
+  undo = rss @{1}
+  u = undo
+  # https://git-scm.com/docs/git-restore
+  r = restore
+  # https://git-scm.com/docs/git-update-index
+  skip = update-index --verbose --skip-worktree
+  noskip = update-index --verbose --no-skip-worktree
+  # https://git-scm.com/docs/git-ls-files
+  ls = ls-files -t
+  # https://git-scm.com/docs/git-gc
+  gca = gc --aggressive
+  # https://git-scm.com/docs/git-svn
+  svn-ci = svn dcommit --verbose --rmdir --interactive
+  svn-up = svn rebase --verbose
+  svn-l = svn log
+  svn-ll = svn-l --verbose
+  # https://git-scm.com/docs/git-for-each-ref
+  refs = for-each-ref --format "%(refname)%09%(authordate:iso-local)%09%(authorname)%09%(contents:subject)" --sort -authordate
+[commit]
+  gpgSign = true
+  template = ~/.gitmessage.txt
+  verbose = true
+[core]
+  autocrlf = input      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
+  editor = C:/Program Files/WinGet/Links/edit.exe
+  fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
+  ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
+  pager = LESSCHARSET=utf-8 less -IJKNMRs
+  preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
+  quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
+  safecrlf = false      # https://github.com/Microsoft/vscode/issues/58874
+  sshCommand = C:/Program Files/OpenSSH/ssh.exe
+# https://git-scm.com/docs/diff-config
+[diff]
+  algorithm = histogram   # https://git-scm.com/docs/diff-config#Documentation/diff-config.txt-diffalgorithm
+  indentHeuristic = true  # https://git-scm.com/docs/diff-config#Documentation/diff-config.txt-diffindentHeuristic
+# https://git-scm.com/docs/git-difftool
+[difftool]
+  prompt = false
+[difftool "winmerge"]
+  cmd = winmerge-diff.sh \"$LOCAL\" \"$REMOTE\"
+  trustExitCode = false
+[fetch]
+  prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
+[format]
+  pretty = format:%C(auto)%h%x09%ad%x09%an%x09%s%d  # # https://git-scm.com/docs/pretty-formats
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[gpg]
+	program = C:/Program Files/GnuPG/bin/gpg.exe
+[gpg "ssh"]
+	program = C:/Program Files/OpenSSH/ssh-keygen.exe
+[gui]
+  fontui = -family \"Cascadia Next JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"Cascadia Next JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[log]
+  date = iso-local  # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logdate
+  follow = true     # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logfollow
+[include]
+  path = ~/user.gitconfig
+[merge]
+  autostash = true  # https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-mergeautoStash
+  ff = false        # https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-mergeff
+# https://git-scm.com/docs/git-mergetool
+[mergetool]
+  prompt = false
+[mergetool "winmerge"]
+  cmd = winmerge-merge.sh \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+  trustExitCode = false
+[pull]
+  ff = only       # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullff
+  rebase = merges # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase
+[push]
+  autoSetupRemote = true    # https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushautoSetupRemote
+  default = simple          # https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushdefault
+  recurseSubmodules = check # https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushrecurseSubmodules
+# https://git-scm.com/docs/git-rebase
+[rebase]
+  abbreviateCommands = true   # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebaseabbreviateCommands
+  autosquash = true           # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebaseautoSquash
+  autostash = true            # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebaseautoStash
+  missingCommitsCheck = warn  # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebasemissingCommitsCheck
+  rebaseMerges = true         # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebaserebaseMerges
+  updateRefs = true           # https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt-rebaseupdateRefs
+[status]
+  branch = true     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-statusbranch
+  short = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-statusshort
+  showStash = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-statusshowStash
+[submodule]
+  propagateBranches = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulepropagateBranches
+  recurse = true            # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulerecurse

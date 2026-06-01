@@ -1,0 +1,36 @@
+{
+  "inputs": [
+    {
+      "id": "Authorization",
+      "type": "promptString",
+      "description": "Authentication token (PAT or App token)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "com.microsoft/nuget": {
+      "type": "stdio",
+      "command": "dnx",
+      "args": [
+        "NuGet.Mcp.Server@1.2.3",
+        "--yes",
+        "--source",
+        "https://api.nuget.org/v3/index.json"
+      ],
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.2.3"
+    },
+    "io.github.github/github-mcp-server": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.0.0"
+    },
+    "microsoftdocs/mcp": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.0.0"
+    }
+  }
+}

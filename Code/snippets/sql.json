@@ -1,0 +1,144 @@
+{
+  // #region SqlServer, prefix: ms
+  // #region MSSQL.Template
+  "MSSQL.Template": {
+    "prefix": "@tsql",
+    "body": [
+      "use ${1:schema};",
+      "go",
+    ],
+  },
+  // #endregion
+  // #region MSSQL.Declare
+  "MSSQL.Declare.Variable": {
+    "prefix": "mssql.variable.declare",
+    "body": [
+      "declare",
+      "\t@${1:var} as ${2:type};",
+    ],
+  },
+  "MSSQL.Declare.Type.Table": {
+    "prefix": "mssql.table.decrare",
+    "body": [
+      "create type ${1:type_name} as table (",
+      "$0",
+      ");",
+    ],
+  },
+  // #endregion
+  // #region MSSQL.Cursor
+  "MSSQL.Cursor.Declare": {
+    "prefix": "mssql.cursor.declare",
+    "body": [
+      "declare cursor ${1:cursor} for",
+      "select\n",
+    ],
+  },
+  "MSSQL.Cursor.Open": {
+    "prefix": "mssql.open.cursor",
+    "body": [
+      "open ${1:cursor};",
+      "fetch next from ${1:cursor} into ${2:variables};",
+      "close ${1:cursor};",
+      "deallocate ${1:cursor};",
+    ],
+  },
+  "MSSQL.Cursor.Loop": {
+    "prefix": "mssql.loop.cursor",
+    "body": [
+      "open ${1:cursor};",
+      "fetch next from ${1:cursor} into ${2:variables};\n",
+      "while ${3:condition}",
+      "\tfetch next from ${1:cursor} into ${2:variables};\n",
+      "\t$0",
+    ],
+  },
+  // #endregion
+  // #region MSSQL.Structure
+  "MSSQL.Structure.If": {
+    "prefix": "mssql.if",
+    "body": [
+      "if ${1:condition}",
+      "begin",
+      "$2",
+      "end;",
+      "else",
+      "begin",
+      "$0",
+      "end;",
+    ],
+  },
+  "MSSQL.Structure.While": {
+    "prefix": "mssql.while",
+    "body": [
+      "while ${1:condition}",
+      "\t$0",
+    ],
+  },
+  "MSSQL.Structure.Try": {
+    "prefix": "mssql.try_catch",
+    "body": [
+      "begin try\n",
+      "end try",
+      "begin catch",
+      "end catch",
+    ],
+  },
+  // #endregion
+  // #region MSSQL.Stored
+  "MSSQL.Stored.Procedure": {
+    "prefix": "mssql.proc",
+    "body": [
+      "${1:create or alter } procedure ${2:name}",
+      "\t${3:-- @param type}",
+      "as",
+      "end",
+      "go",
+    ],
+  },
+  "MSSQL.Stored.Function": {
+    "prefix": "mssql.func",
+    "body": [
+      "${1:create or alter } function ${2:name} (",
+      "\t${3:@param as type}",
+      "returns ${3:return_type}",
+      "as",
+      "end",
+      "go",
+    ],
+  },
+  "MSSQL.Stored.Table.Function.Single": {
+    "prefix": "mssql.func.table.single",
+    "body": [
+      "${1:create or alter } function ${2:name} (",
+      "\t${3:@param as type}",
+      "returns table",
+      "as",
+      "return (",
+      "\tselect",
+      "\t$0",
+      ")",
+      "end",
+      "go",
+    ],
+  },
+  "MSSQL.Stored.Table.Function.Multi": {
+    "prefix": "mssql.func.table.multi",
+    "body": [
+      "${1:create or alter } function ${2:name} (",
+      "\t${3:@param as type}",
+      "returns @${3:table_var} table (",
+      "\t-- table definition",
+      ")",
+      "as",
+      "begin",
+      "\t-- insert, update, delete",
+      "$0",
+      "\treturn",
+      "end",
+      "go",
+    ],
+  },
+  // #endregion
+  // #endregion
+}

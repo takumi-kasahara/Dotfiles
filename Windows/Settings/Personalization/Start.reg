@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Personalization > Start
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SystemPaneSuggestionsEnabled"=dword:00000000 ; "Show recommendation for tips, shortcuts, new apps, and more": False
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_TrackDocs"=dword:00000000  ; "Show recently added apps": False
+"Start_TrackProgs"=dword:00000000 ; "Show most used apps": False
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"HideRecentlyAddedApps"=dword:00000001 ; "Show recently added apps": False

@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"CaretWidth"=dword:00000001 ; Accessibility > Text cursor thickness
+"CursorBlinkRate"="-1"      ; "Keyboard Properties > Keyboard Properties > Cursor blink rate": None
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"KeyboardSpeed"="31"  ; "Keyboard Properties > Character repeat > Repeat rate": Faster
+"KeyboardDelay"="0"   ; "Keyboard Properties > Character repeat > Repeat delay": Shorter
+"PrintScreenKeyForSnippingEnabled"=dword:00000001 ; "Accessibility > Keyboard > Use the Print screen key to open screen capture": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Accessibility]
+"Configuration"="cursorindicator" ; "Accessibility > Text cursor indicator": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Accessibility\CursorIndicator]
+"IndicatorColor"=dword:00ff00bf
+"IndicatorType"=dword:00000001

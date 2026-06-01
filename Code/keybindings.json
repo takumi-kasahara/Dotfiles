@@ -1,0 +1,346 @@
+// https://code.visualstudio.com/docs/getstarted/keybindings
+[
+  // #region Editor
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+shift+oem_2",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "shift+alt+s",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "editor.action.sortLinesDescending",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.terminal.runActiveFile",
+    "when": "editorTextFocus && (editorLangId == 'bat' || editorLangId == 'shellscript')",
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "copyFilePath",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+shift+f4",
+    "command": "workbench.action.closeAllEditors",
+  },
+  {
+    "key": "shift+backspace",
+    "command": "-deleteLeft",
+  },
+  {
+    "key": "shift+backspace",
+    "command": "deleteAllLeft",
+  },
+  {
+    "key": "shift+delete",
+    "command": "-editor.action.clipboardCutAction",
+  },
+  {
+    "key": "shift+delete",
+    "command": "deleteAllRight",
+  },
+  // #endregion
+  // #region Task
+  {
+    "key": "ctrl+alt+t",
+    "command": "workbench.action.tasks.runTask",
+    "when": "taskCommandsRegistered",
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "workbench.action.tasks.test",
+    "when": "taskCommandsRegistered",
+  },
+  {
+    "key": "ctrl+alt+q",
+    "command": "workbench.action.tasks.terminate",
+    "when": "taskCommandsRegistered",
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "workbench.action.tasks.restartTask",
+    "when": "taskCommandsRegistered",
+  },
+  // #endregion
+  // #region View
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.views.editSessions.data.focus"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "workbench.view.extension.todo-tree-container",
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "workbench.view.extension.bookmarks",
+  },
+  // #endregion
+  // #region Terminal
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+oem_5",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.splitActiveTab",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "ctrl+oem_5",
+    "command": "workbench.action.terminal.splitActiveTab",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  // #endregion
+  // #region Notepad++ https://github.com/Microsoft/vscode-notepadplusplus-keybindings
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+u",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+f3",
+    "command": "-editor.action.dirtydiff.next",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+f3",
+    "command": "-editor.action.dirtydiff.previous",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-cursorColumnSelectUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "cursorColumnSelectUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-cursorColumnSelectDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "cursorColumnSelectDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // #endregion
+  // #region Visual Studio https://github.com/rebornix/vscode-vs-keybindings
+  {
+    "key": "ctrl+oem_plus",
+    "command": "-workbench.action.zoomIn",
+  },
+  {
+    "key": "ctrl+shift+oem_plus",
+    "command": "-workbench.action.zoomIn",
+  },
+  {
+    "key": "ctrl+oem_minus",
+    "command": "-workbench.action.zoomOut",
+  },
+  {
+    "key": "ctrl+shift+oem_minus",
+    "command": "-workbench.action.zoomOut",
+  },
+  {
+    "key": "ctrl+oem_minus",
+    "command": "workbench.action.navigateBack",
+  },
+  {
+    "key": "ctrl+shift+oem_minus",
+    "command": "workbench.action.navigateForward",
+  },
+  {
+    "key": "ctrl+f10",
+    "command": "editor.debug.action.runToCursor",
+    "when": "debugState == 'stopped'",
+  },
+  // #endregion
+  // #region WinMarge https://manual.winmerge.org/en/Shortcut_keys.html
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible",
+  },
+  {
+    "key": "alt+down",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible",
+  },
+  {
+    "key": "shift+alt+f5",
+    "command": "-workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible",
+  },
+  {
+    "key": "alt+up",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible",
+  },
+  // #endregion
+  // #region Extensions
+  // #region ms-vscode.powershell-preview
+  {
+    //
+    "key": "ctrl+alt+j",
+    "command": "-editor.action.insertSnippet",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'",
+  },
+  // #endregion
+  // #region ms-vscode.hexeditor
+  {
+    "key": "ctrl+alt+h",
+    "command": "hexEditor.openFile",
+  },
+  // #endregion
+  // #region yzhang.markdown-all-in-one
+  {
+    "key": "ctrl+alt+c",
+    "command": "markdown.extension.editing.toggleCodeSpan",
+    "when": "editorTextFocus && editorLangId == 'markdown'",
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  // #endregion
+  // #region mechatroner.rainbow-csv
+  {
+    "key": "shift+alt+f",
+    "command": "rainbow-csv.Shrink",
+    "when": "editorTextFocus && editorLangId == 'csv' || editorTextFocus && editorLangId == 'tsv'",
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "rainbow-csv.Align",
+    "when": "editorTextFocus && editorLangId == 'csv' || editorTextFocus && editorLangId == 'tsv'",
+  },
+  // #endregion
+  // #region mark-wiemer.vscode-autohotkey-plus-plus
+  {
+    "key": "f9",
+    "command": "-ahk++.debug",
+    "when": "editorLangId == 'ahk'",
+  },
+  // #endregion
+  // #region Gruntfuggly.todo-tree
+  {
+    "key": "ctrl+alt+oem_period",
+    "command": "todo-tree.goToNext",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+alt+oem_comma",
+    "command": "todo-tree.goToPrevious",
+    "when": "editorTextFocus",
+  },
+  // #endregion
+  // #endregion
+]

@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\DetailsContainer]
+"DetailsContainer"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\ProperTreeModuleInner]
+"ProperTreeModuleInner"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"DetailsContainerSizer"=-
+"PageSpaceControlSizer"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\NamingTemplates]
+"CopyNameTemplate"="%s.bak"
+"ShortcutNameTemplate"="%s.lnk"
+"RenameNameTemplate"="%s"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"ClearRecentDocsOnExit"=dword:00000001
+"NoRecentDocsHistory"=dword:00000001

@@ -1,0 +1,22 @@
+{
+  // https://aka.ms/winget-settings
+  "$schema": "https://aka.ms/winget-settings.schema.json",
+  "source": {},
+  "installBehavior": {
+    "preferences": {
+      "locale": [
+        "en-US",
+      ],
+      "scope": "machine",
+    },
+  },
+  "uninstallBehavior": {
+    "purgePortablePackage": true,
+  },
+  "experimentalFeatures": {
+    "directMSI": true,
+    "fonts": true,
+    "resume": true,
+    "sourcePriority": true,
+  },
+}

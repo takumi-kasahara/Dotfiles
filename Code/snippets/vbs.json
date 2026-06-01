@@ -1,0 +1,188 @@
+{
+  // #region Condition
+  "Condition.If": {
+    "prefix": "if",
+    "body": [
+      "if ${1:cond} then",
+      "\t${0:' statements}",
+      "end if",
+    ],
+  },
+  "Condition.IfElse": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:cond} then",
+      "\t${0:' statements}",
+      "else",
+      "\t' else statements",
+      "end if",
+    ],
+  },
+  "Condition.IfElse.Full": {
+    "prefix": "ifelse_full",
+    "body": [
+      "if ${1:cond} then",
+      "\t${0:' statements}",
+      "elseif ${2:else_cond}",
+      "\t' elseif statements",
+      "else",
+      "\t' else statements",
+      "end if",
+    ],
+  },
+  // #endregion
+  // #region Loop
+  "Loop.For": {
+    "prefix": "for",
+    "body": [
+      "dim ${1:counter}",
+      "for ${1:counter} = ${2:first} to ${3:last}",
+      "\t${0:' statements}",
+      "next",
+    ],
+  },
+  "Loop.For.Array": {
+    "prefix": "for_array",
+    "body": [
+      "for ${1:counter} = 0 to UBound(${2:array})",
+      "\t${0:' statements}",
+      "next",
+    ],
+  },
+  "Loop.ForEach": {
+    "prefix": "foreach",
+    "body": [
+      "for each ${1:element} in ${2:collection}",
+      "\t${0:' statements}",
+      "next",
+    ],
+  },
+  "Loop.Do.Before": {
+    "prefix": "do_before",
+    "body": [
+      "do ${1|while,until|} ${2:cond}",
+      "loop",
+    ],
+  },
+  "Loop.Do.After": {
+    "prefix": "do_after",
+    "body": [
+      "do",
+      "\t${0:' statements}",
+      "loop ${1|while,until|} ${2:cond}",
+    ],
+  },
+  // #endregion
+  // #region Property
+  "Property.Get": {
+    "prefix": "property_get",
+    "body": [
+      "public property get ${1:Name}(${2:param})",
+      "\t${0:' statements}",
+      "end property",
+    ],
+  },
+  "Property.Let": {
+    "prefix": "property_let",
+    "body": [
+      "public property let ${1:Name}(${2:param})",
+      "\t${0:' statements}",
+      "end property",
+    ],
+  },
+  "Property.Set": {
+    "prefix": "property_set",
+    "body": [
+      "public property set ${1:Name}(${2:param})",
+      "\t${0:' statements}",
+      "end property",
+    ],
+  },
+  // #endregion
+  // #region Method
+  "Method.Sub": {
+    "prefix": "sub",
+    "body": [
+      "${1|public,private|} sub ${2:Name}(${3:params})",
+      "\ton error resume next",
+      "\t${0:' statements}",
+      "end sub",
+    ],
+  },
+  "Method.Function": {
+    "prefix": "function",
+    "body": [
+      "${1|public,private|} function ${2:Name}(${3:params})",
+      "\ton error resume next",
+      "\t${0:' statements}",
+      "end function",
+    ],
+  },
+  // #endregion
+  // #region Control
+  "Control.Exit": {
+    "prefix": "exit",
+    "body": [
+      "if ${1:cond} then exit ${2|for,do,sub,function|}"
+    ],
+  },
+  "Control.Try": {
+    "prefix": [
+      "catch",
+      "iferror",
+    ],
+    "body": [
+      "if Err.Number <> 0 then",
+      "\t' statements",
+      "end if",
+    ],
+  },
+  // #endregion
+  // #region Class
+  "Class.Declare": {
+    "prefix": "class",
+    "body": [
+      "class ${1:Name}",
+      "\t${0:' statements}",
+      "end class",
+    ],
+  },
+  "Class.Initialize": {
+    "prefix": "ctor",
+    "body": [
+      "private sub Class_Initialize()",
+      "\ton error resume next",
+      "\t${0:' statements}",
+      "end sub",
+    ],
+  },
+  "Class.Terminate": {
+    "prefix": "~",
+    "body": [
+      "private sub Class_Terminate()",
+      "\ton error resume next",
+      "\t${0:' statements}",
+      "end sub",
+    ],
+  },
+  // #endregion
+  // #region ErrorHandle
+  "ErrorHandle.Raise": {
+    "prefix": "raise",
+    "body": [
+      "Err.Raise number := vbObjectError + ${1:value}, _",
+      "\tsource := \"${2:src}\", _",
+      "\tdescription := \"${3:description}\"",
+    ],
+  },
+  // #endregion
+  // #region Utility
+  "Utility.Pause": {
+    "prefix": "pause",
+    "body": [
+      "WScript.Echo \"Press any key to continue.\"",
+      "WScript.StdIn.ReadLine",
+    ],
+  },
+  // #endregion
+}

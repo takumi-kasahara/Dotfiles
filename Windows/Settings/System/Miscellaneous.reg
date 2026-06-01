@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Clipboard]
+"EnableClipboardHistory"=dword:00000001 ; "System > Clipboard > Clipboard history": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
+"LegacyDefaultPrinterMode"=dword:00000001 ; "Bluetooth & devices > Printers & scanners > Let Windows manage my default printer": False
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Preference]
+"On"="1" ; "Accessibility > Keyboard > Underline access keys": True

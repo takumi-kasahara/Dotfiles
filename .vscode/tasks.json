@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "options": {},
+  "presentation": {
+    "reveal": "silent",
+    "revealProblems": "onProblem",
+  },
+  "tasks": [
+    {
+      "label": "install",
+      "type": "shell",
+      "command": "${workspaceFolder}\\Install.bat",
+      "problemMatcher": [],
+    },
+  ],
+}

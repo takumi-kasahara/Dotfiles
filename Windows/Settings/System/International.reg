@@ -1,0 +1,59 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\International]
+"Locale"="00000411"
+"LocaleName"="ja-JP"
+"s1159"="AM"
+"s2359"="PM"
+"sCurrency"="¥"
+"sDate"="/"
+"sDecimal"="."
+"sGrouping"="3;0"
+"sLanguage"="JPN"
+"sList"=","
+"sLongDate"="yyyy/MM/dd"
+"sMonDecimalSep"="."
+"sMonGrouping"="3;0"
+"sMonThousandSep"=","
+"sNativeDigits"="0123456789"
+"sNegativeSign"="-"
+"sPositiveSign"=""
+"sShortDate"="yyyy/M/d"
+"sThousand"=","
+"sTime"=":"
+"sTimeFormat"="H:mm:ss"
+"sShortTime"="H:mm"
+"sYearMonth"="yyyy/MM"
+"iCalendarType"="1"
+"iCountry"="81"
+"iCurrDigits"="0"
+"iCurrency"="0"
+"iDate"="2"
+"iDigits"="2"
+"NumShape"="0"
+"iFirstDayOfWeek"="0"
+"iFirstWeekOfYear"="0"
+"iLZero"="1"
+"iMeasure"="0"
+"iNegCurr"="1"
+"iNegNumber"="1"
+"iPaperSize"="9"
+"iTime"="1"
+"iTimePrefix"="0"
+"iTLZero"="0"
+
+[HKEY_CURRENT_USER\Control Panel\International\Geo]
+"Nation"="122"
+"Name"="JP"
+
+[HKEY_CURRENT_USER\Control Panel\International\User Profile]
+"ShowAutoCorrection"=dword:00000001
+"ShowTextPrediction"=dword:00000001
+"ShowCasing"=dword:00000001
+"ShowShiftLock"=dword:00000001
+"HttpAcceptLanguageOptOut"=dword:00000001
+"WindowsOverride"="en-US"
+"InputMethodOverride"="0411:{03B5835F-F03C-411B-9CE2-AA23E1171E36}{A76C93D9-5523-4E90-AAFA-4DB112F9AC76}"
+
+[HKEY_CURRENT_USER\Control Panel\International\🌎🌏🌍]
+"Calendar"="Gregorian"

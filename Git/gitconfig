@@ -1,0 +1,18 @@
+[http]
+  sslBackend = schannel
+[diff "astextplain"]
+  textconv = astextplain
+[diff "utf-16le-bom"]
+  textconv = iconv --from-code UTF-16LE --to-code UTF-8
+[add "interactive"]
+  useBuiltin = true
+[core]
+  symlinks = false # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks
+[credential]
+  helper = manager
+[credential "https://dev.azure.com"]
+  useHttpPath = true
+[init]
+  defaultBranch = main
+[safe]
+  directory = *

@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; SystemPropertiesPerformance.exe
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"DragFullWindows"="0"                             ; "Show thumbnails instead of icons": False
+"FontSmoothing"="2"                               ; "Smooth edges of screen fonts": True
+"UserPreferencesMask"=hex:90,12,02,80,10,00,00,00 ; "Visual Effects": "Custom"
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="0" ; "Animate windows when minimizing and maximizing": False
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ListviewAlphaSelect"=dword:00000000  ; "Show translucent selection rectangle": False
+"ListviewShadow"=dword:00000000       ; "Show shadows under windows": False
+"TaskbarAnimations"=dword:00000000    ; "Animate controls and elements inside windows": False
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+"VisualFXSetting"=dword:00000003 ; "Visual Effects": "Custom"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"AlwaysHibernateThumbnails"=dword:00000000  ; "Save taskbar thumbnail previews": False
+"EnableAeroPeek"=dword:00000000             ; "Enable Peek": False

@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+; File Explorer Options (control.exe folders)
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"AutoCheckSelect"=dword:00000001            ; "View > Use check boxes to select items": True
+"Hidden"=dword:00000001                     ; "View > Hidden files and folders": "Show hidden files, folders, and drives"
+"HideFileExt"=dword:00000000                ; "View > Hide extensions for known file types": False
+"IconsOnly"=dword:00000001                  ; "View > Always show icons, never thumbnails": True
+"LaunchTo"=dword:00000002                   ; "General > Open File Explorer to": "Home"
+"PersistBrowsers"=dword:00000001            ; "View > Restore previous folder windows at logon": True
+"SeparateProcess"=dword:00000001            ; "View > Launch folder windows in a separate process": True
+"ShowCompColor"=dword:00000001              ; "View >Show encrypted or compressed NTRS files in color": True
+"ShowEncryptCompressedColor"=dword:00000001 ; "View > Show encrypted or compressed NTFS files in color": True
+"ShowInfoTip"=dword:00000001                ; "View > Show pop-up description for folder and desktop icons": True
+"TypeAhead"=dword:00000001                  ; "View > When typing into list view": "Automatically type into the Search Box"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Search\Preferences]
+"ArchivedFiles"=dword:00000001    ; "Search > Include compressed files (ZIP, CAB...)": True
+"WholeFileSystem"=dword:00000001  ; "Search > Don't use the index when searching in file folders for system files (searches might take longer)": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Search\PrimaryProperties\UnindexedLocations]
+"SearchOnly"=dword:00000000 ; "Search > Always search file names and contents (this might take several minutes)": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Search\Preferences]
+"SystemFolders"=dword:00000001 ; "Search > Include system directories": True
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowCloudFilesInQuickAccess"=dword:00000000  ; "General > Include account-based insights, recent favorite, and recommended files": False
+"ShowFrequent"=dword:00000000                 ; "General > Show frequently used folders": False
+"ShowRecent"=dword:00000000                   ; "General > Show recently used files": False
+"ShowRecommendations"=dword:00000000          ; "General > Show recommended section": False

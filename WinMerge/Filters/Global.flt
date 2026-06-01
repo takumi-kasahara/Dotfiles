@@ -1,0 +1,12 @@
+name: Global
+desc: Global
+
+def: include
+
+d: \\\.git$
+d: \\\.svn$
+
+d: \\\.nuget$
+d: \\\.vs$
+d: \\apm_modules$
+d: \\node_modules$

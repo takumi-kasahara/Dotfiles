@@ -1,0 +1,189 @@
+﻿# For documentation, see https://www.sumatrapdfreader.org/settings/settings3-6.html
+
+CheckForUpdates = true
+CustomScreenDPI = 0
+DefaultDisplayMode = single page
+DefaultZoom = fit page
+EnableTeXEnhancements = true
+EscToExit = true
+FullPathInTitle = false
+InverseSearchCmdLine =
+LazyLoading = false
+MainWindowBackground = #80fff200
+NoHomeTab = true
+HomePageSortByFrequentlyRead = false
+ReloadModifiedDocuments = true
+RememberOpenedFiles = false
+RememberStatePerDocument = false
+RestoreSession = false
+ReuseInstance = true
+ShowMenubar = true
+ShowToolbar = true
+ShowFavorites = false
+ShowToc = false
+ShowLinks = false
+ShowStartPage = true
+SidebarDx = 161
+ScrollbarInSinglePage = false
+SmoothScroll = true
+FastScrollOverScrollbar = false
+PreventSleepInFullscreen = true
+TabWidth = 300
+Theme = Dark
+TocDy = 0
+ToolbarSize = 18
+TreeFontName = automatic
+TreeFontSize = 0
+UIFontSize = 0
+DisableAntiAlias = false
+UseSysColors = true
+UseTabs = true
+ZoomLevels = 8.33 12.5 18 25 33.33 50 66.67 75 100 125 150 200 300 400 600 800 1000 1200 1600 2000 2400 3200 4800 6400
+ZoomIncrement = 0
+
+FixedPageUI [
+	TextColor = #000000
+	BackgroundColor = #ffffff
+	SelectionColor = #f5fc0c
+	WindowMargin = 2 4 2 4
+	PageSpacing = 4 4
+	InvertColors = false
+	HideScrollbars = true
+]
+
+EBookUI [
+	FontSize = 0
+	LayoutDx = 0
+	LayoutDy = 0
+	IgnoreDocumentCSS = false
+]
+
+ComicBookUI [
+	WindowMargin = 0 0 0 0
+	PageSpacing = 4 4
+	CbxMangaMode = false
+]
+
+ChmUI [
+	UseFixedPageUI = true
+]
+
+Annotations [
+	HighlightColor = #ffff00
+	UnderlineColor = #00ff00
+	SquigglyColor = #ff00ff
+	StrikeOutColor = #ff0000
+	FreeTextColor =
+	FreeTextBackgroundColor =
+	FreeTextOpacity = 100
+	FreeTextSize = 12
+	FreeTextBorderWidth = 1
+	TextIconColor =
+	TextIconType =
+	DefaultAuthor =
+]
+
+ExternalViewers [
+]
+
+ForwardSearch [
+	HighlightOffset = 0
+	HighlightWidth = 15
+	HighlightColor = #6581ff
+	HighlightPermanent = false
+]
+
+PrinterDefaults [
+	PrintScale = fit
+]
+
+SelectionHandlers [
+]
+
+Shortcuts [
+	[
+		Cmd = CmdCopyLinkTarget
+		Key = Ctrl + Shift + c
+	]
+	[
+		Cmd = CmdCopyFilePath
+		Key = Alt + Shift + c
+	]
+	[
+		Cmd = CmdShowInFolder
+		Key = Alt + Shift + r
+	]
+	[
+		Cmd = CmdBookView
+		Key = b
+	]
+	[
+		Cmd = CmdFacingView
+		Key = f
+	]
+	[
+		Cmd = CmdSinglePageView
+		Key = s
+	]
+	[
+		Cmd = CmdToggleMangaMode
+		Key = m
+	]
+	[
+		Cmd = CmdNone
+		Key = u
+	]
+	[
+		Cmd = CmdNone
+		Key = U
+	]
+	[
+		Cmd = CmdNone
+		Key = Ctrl + 6
+	]
+	[
+		Cmd = CmdNone
+		Key = Ctrl + 7
+	]
+	[
+		Cmd = CmdNone
+		Key = Ctrl + 8
+	]
+	[
+		Cmd = CmdNone
+		Key = F6
+	]
+	[
+		Cmd = CmdNone
+		Key = F7
+	]
+	[
+		Cmd = CmdNone
+		Key = F8
+	]
+	[
+		Cmd = CmdProperties
+		Key = F12
+	]
+	[
+		Cmd = CmdNone
+		Key = Shift + F12
+	]
+]
+
+Themes [
+]
+
+# You're not expected to change those manually
+UiLanguage = en
+WindowState = 2
+WindowPos = 532 206 1280 960
+FileStates [
+]
+SessionData [
+]
+TimeOfLastUpdateCheck = 0 0
+OpenCountWeek = 795
+
+# Settings below are not recognized by the current version
+TreeFontWeightOffset = 0

@@ -1,0 +1,892 @@
+{
+  // #region UML
+  "Template.Start": {
+    "prefix": "@start",
+    "body": [
+      "@startuml ${TM_FILENAME_BASE}-$1",
+      "$0",
+      "@enduml",
+    ],
+  },
+  "Template.OrgMode.WBS": {
+    "prefix": "@wbs",
+    "body": [
+      "@startwbs ${TM_FILENAME_BASE}-$1",
+      "$0",
+      "@endwbs",
+    ],
+  },
+  "Template.OrgMode.Mindmap": {
+    "prefix": "@mindmap",
+    "body": [
+      "@startmindmap ${TM_FILENAME_BASE}-$1",
+      "$0",
+      "@endmindmap",
+    ],
+  },
+  "Template.Comment": {
+    "prefix": "@comment",
+    "body": [
+      "/'",
+      "\t$0",
+      "'/",
+    ],
+  },
+  "Template.OCL.Create": {
+    "prefix": "@ocl",
+    "body": [
+      "context ${1:target}",
+      "\t${2|init,inv,pre,post|}:",
+      "\t\t$0",
+    ],
+    "description": [
+      "Object Constraint Language (OCL) Template.",
+    ],
+  },
+  // #endregion
+  // #region Meta
+  "Meta.Class.Setup": {
+    "prefix": [
+      "*class.setup",
+      "*ERD.setup",
+    ],
+    "body": [
+      "hide empty members\n",
+    ],
+  },
+  "Meta.Sequence.Setup": {
+    "prefix": "*sequence.setup",
+    "body": [
+      "autonumber",
+      "hide footbox",
+      "$0",
+    ],
+  },
+  "Meta.Usecase.Setup": {
+    "prefix": "*usecase.setup",
+    "body": [
+      "left to right direction\n",
+      "$0",
+    ],
+  },
+  "Meta.Activity.Setup": {
+    "prefix": "*act.setup",
+    "body": [
+      "start",
+      "$0",
+      "stop",
+    ],
+  },
+  "Meta.StateMachine.Setup": {
+    "prefix": "*state.setup",
+    "body": [
+      "hide empty description\n",
+    ],
+  },
+  "Meta.Component.Setup": {
+    "prefix": "*component.setup",
+    "body": [
+      "skinparam componentStyle uml2\n",
+      "$0",
+    ],
+  },
+  // #endregion
+  // #region Structure
+  // #region Class
+  "Class.Definition": {
+    "prefix": "class.declare",
+    "body": [
+      "${1|class,abstract,interface,enum|} ${2:\"${3:longName}\" as }${4:alias} ${5:<<${6:keyword}>> }{",
+      "\t$0",
+      "}",
+    ],
+  },
+  "Class.Annotation": {
+    "prefix": "class.declare.annotation",
+    "body": [
+      "annotation ${2:\"${3:longName}\" as }${4:alias} ${5:<<${6:keyword}>>}",
+    ],
+  },
+  "Class.Interface": {
+    "prefix": "class.interface",
+    "body": "circle ${2:\"${3:longName}\" as }${4:alias} ${5:<<${6:keyword}>>}",
+  },
+  "Class.Diamond": {
+    "prefix": "class.diamond",
+    "body": "<> ${1:name}",
+  },
+  "Class.Grouping.Package": {
+    "prefix": [
+      "class.package",
+      "package.create",
+    ],
+    "body": [
+      "package ${1:\"${2:longName}\" as }${3:alias} {",
+      "\t$0",
+      "}"
+    ],
+  },
+  "Class.Grouping.Namespace": {
+    "prefix": "class.namespace",
+    "body": [
+      "namespace ${1:namespace} {",
+      "\t$0",
+      "}"
+    ],
+    "description": [
+      "Creates a namespace.",
+      "By default, separate with `.`.",
+      "Can be changed with set namespaceSeparator `<separator>`.",
+      "Nameless classes should be specified with `.<className>`.",
+    ],
+  },
+  "Class.AssosiationClass": {
+    "prefix": "class.assosiation.class",
+    "body": [
+      "(${1:Class_1}, ${2:Class_2}) .. ${3:AssosiationClass}",
+    ],
+  },
+  "Class.Link.Assosiation": {
+    "prefix": [
+      "class.link.assosiation",
+      "uses",
+    ],
+    "body": [
+      "${1:Source} -> ${2:Target}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+    "description": [
+      "<direction> := up | right | down | left",
+    ],
+  },
+  "Class.Link.Dependent": {
+    "prefix": [
+      "class.link.dependent",
+      "depends",
+    ],
+    "body": [
+      "${1:Source} .> ${2:Target}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+  },
+  "Class.Link.Aggregation": {
+    "prefix": [
+      "class.link.aggregation",
+      "contains",
+      "has-a",
+      "part-of",
+    ],
+    "body": [
+      "${1:Whole} o- ${2:Part}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+  },
+  "Class.Link.Composition": {
+    "prefix": "class.link.composition",
+    "body": [
+      "${1:Whole} *- ${2:Part}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+  },
+  "Class.Link.Generalization": {
+    "prefix": [
+      "class.link.generalization",
+      "extends",
+      "inherits",
+      "is-a",
+    ],
+    "body": [
+      "${1:Derived} -|> ${2:Base}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+  },
+  "Class.Link.Realization": {
+    "prefix": [
+      "class.link.realization",
+      "implements",
+    ],
+    "body": [
+      "${1:Derived} .|> ${2:Base}${3: : \"${4:label}\"}",
+      "$0",
+    ],
+  },
+  // #endregion
+  // #region ERD
+  "ERD.Create": {
+    "prefix": "ERD.create",
+    "body": [
+      "entity ${1:\"${2:longName}\" as }${3:alias} ${4:<<Assosiation>> }{",
+      "\t' Keys",
+      "\t$0",
+      "--",
+      "\t' Otherwise",
+      "}",
+    ],
+  },
+  "ERD.Relation": {
+    "prefix": "ERD.relation",
+    "body": [
+      "${1:entity_1} ${2|\"1\" \\|\\|,\"0..1\" \\|o,\"1..*\" }\\|,\"0..*\" }o|}--${3|\\|\\| \"1\",o\\| \"0..1\",\\|{ \"1..*\",o{ \"0..*\"|} ${4:entity_2}",
+      "$0",
+    ],
+  },
+  // #endregion
+  // #region Object
+  "Object.Create": {
+    "prefix": "obj.classifier",
+    "body": [
+      "object ${1:\"${2:longname}\" as }${3:alias} {",
+      "\t${0:fields}",
+      "}",
+    ],
+    "description": [
+      "<object>: <Class>",
+    ],
+  },
+  // #endregion
+  // #region Deployment
+  "Deployment.Element": {
+    "prefix": "deployment.classifier",
+    "body": [
+      "${1|actor,agent,artifact,boundar,card,cloud,component,control,database,entity,file,folder,frame,interface,node,package,queue,stack,rectangle,storage,usecase|} ${2:name} [",
+      "\t= ${2:name}",
+      "\t--",
+      "\t${0:artifacts}",
+      "]",
+    ],
+  },
+  "Deployment.Group": {
+    "prefix": "deployment.group",
+    "body": [
+      "${1|actor,agent,artifact,boundar,card,cloud,component,control,database,entity,file,folder,frame,interface,node,package,queue,stack,rectangle,storage,usecase|} ${2:name} {",
+      "\t$0",
+      "}",
+    ],
+  },
+  // #endregion
+  // #region Component
+  "Component.Declaretion": {
+    "prefix": "component.declaretion",
+    "body": [
+      "[${1:name}]${2: as ${3:alias}}",
+    ],
+  },
+  "Component.Declaretion.Multiline": {
+    "prefix": "component.declaretion.multiline",
+    "body": [
+      "component ${1:alias} [",
+      "\t$0",
+      "]",
+    ],
+  },
+  "Component.Interface": {
+    "prefix": "component.interface",
+    "body": [
+      "() ${1:name}${2: as ${3:alias}}",
+    ],
+    "description": [
+      "`()` can also be replaced with an `interface`.",
+    ],
+  },
+  "Component.Group": {
+    "prefix": "component.group",
+    "body": [
+      "${1|component,package,node,folder,frame,cloud,database|} ${2:name}${3: as ${4:alias}} {",
+      "\t$0",
+      "}",
+    ],
+  },
+  "Component.Association.Require": {
+    "prefix": "component.require",
+    "body": [
+      "${1:requester} -(0- ${2:provider}",
+    ],
+  },
+  // #endregion
+  // #endregion
+  // #region Behavior
+  // #region State
+  "State.Declaration": {
+    "prefix": "state.declaration",
+    "body": [
+      "state \"${1:longName}\" as ${2:alias}}",
+      "$0",
+    ],
+  },
+  "State.Declaration.Pseudo": {
+    "prefix": "state.declaration.pseudo",
+    "body": [
+      "state ${1|choice,fork,join,end|} <<$1>>",
+      "$0",
+    ],
+  },
+  "State.Transition": {
+    "prefix": "state.transition",
+    "body": [
+      "${1:from} --> ${2:to}${3: : ${4:label}}",
+    ],
+    "description": []
+  },
+  "State.Grouping.Create": {
+    "prefix": "state.group",
+    "body": [
+      "state \"${1:longName}\" as ${2:alias} {",
+      "\t$0",
+      "}",
+    ],
+  },
+  // #endregion
+  // #region Activity
+  "Activity.Create": {
+    "prefix": "act.create",
+    "body": [
+      ":${1:description};",
+      "$0",
+    ],
+    "description": [
+      "`-> ;` : Arrow",
+      "`: |`  : Subroutine",
+      "`: <`  : input (SDL)",
+      "`: >`  : output (SDL)",
+      "`: /`  : I/O (FlowChart)",
+      "`: }`  : calculation",
+    ],
+  },
+  "Activity.If": {
+    "prefix": "act.if",
+    "body": [
+      "if (${1:condition}) then (${2:if_true_label})",
+      "\t$3",
+      "elseif (${4:elseif_label})",
+      "\t$5",
+      "else (${6:else_label})",
+      "\t$0",
+      "endif",
+    ],
+  },
+  "Activity.While": {
+    "prefix": "act.while",
+    "body": [
+      "while (${1:condition})${2: is (${3:if_true_label})}",
+      "\t$0",
+      "endwhile (${4:if_false_label})",
+    ],
+  },
+  "Activity.Repeat": {
+    "prefix": "act.repeat",
+    "body": [
+      "repeat",
+      "\t$0",
+      "repeat while (${1:condition})${2: is (${3:if_true_label})}${4: not (${5:if_false_label})}",
+    ],
+  },
+  "Activity.Continue": {
+    "prefix": "act.continue",
+    "body": [
+      "if (${1:condition}) then (continue)",
+      "else",
+      "\t${2:activities}",
+      "endif",
+      "' NO ACTIVITY",
+    ],
+  },
+  "Activity.Fork": {
+    "prefix": "act.fork",
+    "body": [
+      "fork",
+      "\t$1",
+      "fork again",
+      "\t$0",
+      "end fork ${2:{ ${3:join_spec} }}",
+    ],
+  },
+  "Activity.Split": {
+    "prefix": "act.split",
+    "body": [
+      "split",
+      "\t$1",
+      "split again",
+      "\t$0",
+      "end split",
+    ],
+  },
+  "Activity.Grouping.Paritition": {
+    "prefix": "act.partition",
+    "body": [
+      "partition ${1:group_name} {",
+      "\t$0",
+      "}",
+    ],
+  },
+  "Activity.Grouping.Swimlane.Declare": {
+    "prefix": "act.swimlane.declare",
+    "body": [
+      "${1:|#${2:color}}|${3:alias}|${4:lane_name}|",
+      "$0",
+    ],
+  },
+  "Activity.Grouping.Swimlane": {
+    "prefix": "act.swimlane",
+    "body": [
+      "|${1:lane_name}|",
+      "$0",
+    ],
+  },
+  // #endregion
+  // #region Usecase
+  "Usecase.Declaretion": {
+    "prefix": "usecase.declaretion",
+    "body": [
+      "(${1:usecase}) as ${2:alias}",
+      "$0",
+    ],
+  },
+  "Usecase.Declaretion.Multiline": {
+    "prefix": "usecase.declaretion.multiline",
+    "body": [
+      "usecase ${2:alias} as \"",
+      "\t$0",
+      "\"",
+    ],
+  },
+  "Usecase.Actor": {
+    "prefix": "usecase.actor",
+    "body": [
+      ":${1:actor}: as ${2:alias}",
+      "$0",
+    ],
+  },
+  "Usecase.Includes": {
+    "prefix": "usecase.includes",
+    "body": [
+      "${1:usecase_part} ..> ${2:usecase_whole} : <<includes>>",
+    ],
+  },
+  // #endregion
+  // #endregion
+  // #region Interaction
+  // #region Sequence
+  "Sequence.Participant": {
+    "prefix": "sequence.participant",
+    "body": [
+      "${1|participant,actor,boundary,control,entity,database,collections|} ${2:\"${3:longname}\" as }${4:alias} ${5:<<${6:stereotype}>>}",
+    ],
+  },
+  "Sequence.Message.Send": {
+    "prefix": [
+      "sequence.send",
+      "request",
+    ],
+    "body": [
+      "${1:sender} -> ${2:receiver} : ${3:message}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Send.Self": {
+    "prefix": "sequence.self",
+    "body": [
+      "${1:self} -> ${1:self} : ${2:message}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Receive": {
+    "prefix": [
+      "sequence.receive",
+      "response",
+    ],
+    "body": [
+      "${1:sender} <-- ${2:receiver} : ${3:message}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Activate": {
+    "prefix": [
+      "sequence.activate",
+      "sequence.procedure",
+    ],
+    "body": [
+      "${1:sender} -> ${2:receiver} : ${3:message}",
+      "activate ${2:receiver}",
+      "\t$4",
+      "deactivate ${2:receiver}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Using": {
+    "prefix": "sequence.using",
+    "body": [
+      "create ${2:receiver}",
+      "${1:sender} -> ${2:receiver} : ${3:message}",
+      "activate ${2:receiver}",
+      "\t$4",
+      "destroy ${2:receiver}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Return": {
+    "prefix": [
+      "sequence.return",
+      "sequence.function",
+    ],
+    "body": [
+      "${1:sender} -> ${2:receiver} : ${3:message}",
+      "activate ${2:receiver}",
+      "\t$4",
+      "return${5: ${6:message}}",
+      "$0",
+    ],
+  },
+  "Sequence.Message.Found": {
+    "prefix": [
+      "sequence.found",
+      "sequence.in",
+    ],
+    "body": [
+      "[-> ${1:receiver} : ${2:message}",
+    ],
+  },
+  "Sequence.Message.Lost": {
+    "prefix": [
+      "sequence.lost",
+      "sequence.out",
+    ],
+    "body": [
+      "${1:sender} ->] : ${2:message}",
+    ],
+  },
+  "Sequence.Classify.Box": {
+    "prefix": "sequence.box",
+    "body": [
+      "box ${1:box_name}",
+      "\t$0",
+      "end box",
+    ],
+  },
+  "Sequence.Fragment.Group": {
+    "prefix": "sequence.group",
+    "body": [
+      "group ${1:group_name}",
+      "\t$0",
+      "end",
+    ],
+  },
+  "Sequence.Fragment.Alt": {
+    "prefix": [
+      "sequence.alt",
+      "sequence.par",
+    ],
+    "body": [
+      "${1|alt,par|} ${2:guard}",
+      "\t$3",
+      "else ${4:else}",
+      "\t$0",
+      "end",
+    ],
+  },
+  "Sequence.Fragment.Opt": {
+    "prefix": [
+      "sequence.opt",
+      "sequence.break",
+      "sequence.critical",
+    ],
+    "body": [
+      "${1|opt,break,critical|} ${2:guard}",
+      "\t$0",
+      "end",
+    ],
+  },
+  "Sequence.Fragment.Loop": {
+    "prefix": "sequence.loop",
+    "body": [
+      "loop ${1:guard}",
+      "\t$0",
+      "end",
+    ],
+  },
+  "Sequence.Fragment.Break": {
+    "prefix": "sequence.break",
+    "body": [
+      "break ${1:guard}",
+      "\t$0",
+      "end",
+    ],
+  },
+  "Sequence.Reference": {
+    "prefix": "sequence.ref",
+    "body": [
+      "ref over ${1:from}${2:, ${3:to}}",
+      "\t$0",
+      "end ref",
+    ],
+    "description": []
+  },
+  "Sequence.Devider": {
+    "prefix": "sequence.divider",
+    "body": [
+      "== ${1:description} =="
+    ],
+  },
+  "Sequence.Delay": {
+    "prefix": "sequence.delay",
+    "body": [
+      "... ${1:description} ..."
+    ],
+  },
+  // #endregion
+  // #endregion
+  // #region Note
+  "Note.Block": {
+    "prefix": "note.block",
+    "body": [
+      "note ${1|right,left,top,bottom|}${2: of ${3:alias}}",
+      "\t$0",
+      "end note",
+    ],
+  },
+  "Note.Inline": {
+    "prefix": "note.inline",
+    "body": [
+      "note ${1|right,left,top,bottom|} ${2:of ${3:alias} }: \"${4:text}\"",
+      "$0",
+    ],
+  },
+  "Note.Float": {
+    "prefix": "note.float",
+    "body": [
+      "note as ${1:note_name}",
+      "\t$0",
+      "end note",
+    ],
+    "description": [
+      "note \"<content>\" as <alias> も使用できます。",
+      "複数の要素と紐づける目的でない限り `legend` を利用してください。",
+    ],
+  },
+  "Note.Over.Sequence": {
+    "prefix": "sequence.note.over",
+    "body": [
+      "note over ${1:from}${2:, ${3:to}}",
+      "\t$0",
+      "end note",
+    ],
+  },
+  "Note.Across.Sequence": {
+    "prefix": "sequence.note.across",
+    "body": [
+      "note across",
+      "\t$0",
+      "end note",
+    ],
+    "description": []
+  },
+  "Note.Floating.Activity": {
+    "prefix": "act.note.floating",
+    "body": [
+      "floating note ${1|left,right|}",
+      "\t$0",
+      "end note",
+    ],
+  },
+  // #endregion
+  // #region Style
+  "Style.Zoom": {
+    "prefix": "#zoom",
+    "body": [
+      "scale ${1:max }${2|rate,width (px),height (px),width (px) * height (px)|}",
+    ],
+  },
+  "Style.Title": {
+    "prefix": "#title",
+    "body": [
+      "title",
+      "\t${1:${TM_FILENAME_BASE}}",
+      "end title",
+      "$0",
+    ],
+  },
+  "Style.Caption": {
+    "prefix": "#caption",
+    "body": [
+      "caption: ${0}\n",
+    ],
+  },
+  "Style.Header": {
+    "prefix": "#header",
+    "body": [
+      "${1|right,center,left|} header",
+      "\t$0",
+      "end header",
+    ],
+  },
+  "Style.Footer": {
+    "prefix": "#footer",
+    "body": [
+      "${1|right,center,left|} footer",
+      "\t$0",
+      "end footer",
+    ],
+  },
+  "Style.Legend": {
+    "prefix": "#legend",
+    "body": [
+      "legend ${1|top,bottom|} ${2|center,right,left|}",
+      "\t$0",
+      "end legend",
+    ],
+    "description": [
+      "default value is `bottom center`.",
+    ]
+  },
+  // #endregion
+  // #region Macro
+  "Macro.Define.Function": {
+    "prefix": "!func",
+    "body": [
+      "!${1:unquoted }function \\$${2:func_name}(\\$${3:params})",
+      "!$0",
+      "!endfunction",
+    ],
+    "description": []
+  },
+  "Macro.Define.Procedure": {
+    "prefix": "!proc",
+    "body": [
+      "!${1:unquoted }procedure \\$${2:func_name}(\\$${3:params})",
+      "!$0",
+      "!endprocedure",
+    ],
+  },
+  "Macro.If": {
+    "prefix": "!if",
+    "body": [
+      "!if ${1:cond}",
+      "!$0",
+      "!else",
+      "!",
+      "!endif",
+    ],
+  },
+  // #region Builtin
+  "Macro.Builtin.StrLen": {
+    "prefix": "%strlen",
+    "body": [
+      "%strlen(${1:str})",
+    ],
+  },
+  "Macro.Builtin.SubStr": {
+    "prefix": "%substr",
+    "body": [
+      "%substr(${1:str}, ${2:start}, ${3:count})",
+    ],
+  },
+  "Macro.Builtin.StrPos": {
+    "prefix": "%strpos",
+    "body": [
+      "%strpos(${1:str}, ${2:search})",
+    ],
+  },
+  "Macro.Builtin.IntVal": {
+    "prefix": "%intval",
+    "body": [
+      "%intval(${1:strNumber})",
+    ],
+  },
+  "Macro.Builtin.FileExists": {
+    "prefix": "%file_exists",
+    "body": [
+      "%file_exists(${1:path})",
+    ],
+  },
+  "Macro.Builtin.FunctionExists": {
+    "prefix": "%function_exists",
+    "body": [
+      "%function_exists(\"\\$${1:name}\")",
+    ],
+  },
+  "Macro.Builtin.VariableExists": {
+    "prefix": "%variable_exists",
+    "body": [
+      "%variable_exists(\"\\$${1:name}\")",
+    ],
+  },
+  "Macro.Builtin.SetVariableValue": {
+    "prefix": "%set_variable_value",
+    "body": [
+      "%set_variable_value(\"\\$${1:name}\", ${2:value})",
+    ],
+  },
+  "Macro.Builtin.GetVariableValue": {
+    "prefix": "%get_variable_value",
+    "body": [
+      "%get_variable_value(\"\\$${1:name}\")",
+    ],
+  },
+  "Macro.Builtin.GetEnv": {
+    "prefix": "%getenv",
+    "body": [
+      "%getenv(${1:env})",
+    ],
+  },
+  "Macro.Builtin.DirPath": {
+    "prefix": "%dirpath",
+    "body": [
+      "%dirpath()",
+    ],
+  },
+  "Macro.Builtin.FileName": {
+    "prefix": "%filename",
+    "body": [
+      "%filename()",
+    ],
+  },
+  "Macro.Builtin.Date": {
+    "prefix": "%date",
+    "body": [
+      "%date(${1:format})",
+    ],
+  },
+  "Macro.Builtin.True": {
+    "prefix": "%true",
+    "body": [
+      "%true()",
+    ],
+  },
+  "Macro.Builtin.False": {
+    "prefix": "%false",
+    "body": [
+      "%false()",
+    ],
+  },
+  "Macro.Builtin.Not": {
+    "prefix": "%not",
+    "body": [
+      "%not(${1:cond})",
+    ],
+  },
+  "Macro.Builtin.InvokeProcedure": {
+    "prefix": "%invoke_procedure",
+    "body": [
+      "%invoke_procedure(\"\\$${proc_name}\", ${0:args})",
+    ],
+  },
+  "Macro.Builtin.CallUserFunc": {
+    "prefix": "%call_user_func",
+    "body": [
+      "%call_user_func(\"\\$${func_name}\", ${0:args})",
+    ],
+  },
+  "Macro.Builtin.RetrieveVoidFunc": {
+    "prefix": "%retrieve_void_func",
+    "body": [
+      "%retrieve_void_func(\"\\$${func_name}\", ${0:args})",
+    ],
+  },
+  "Macro.Builtin.Version": {
+    "prefix": "%version()",
+    "body": [
+      "%version()",
+    ],
+  }
+  // #endregion
+  // #endregion
+}
