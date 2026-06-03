@@ -572,7 +572,7 @@
   "task.quickOpen.history": 0,
   // #endregion
   // #region terminal
-  "terminal.external.windowsExec": "wt.exe",
+  "terminal.external.windowsExec": "wtai.exe",
   "terminal.integrated.accessibleViewFocusOnCommandExecution": false,
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.altClickMovesCursor": true,

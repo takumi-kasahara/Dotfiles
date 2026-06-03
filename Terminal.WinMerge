@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <paths>
-    <left>Terminal\settings.json</left>
-    <right>Terminal\settings.preview.json</right>
+    <left>wt\settings.json</left>
+    <middle>wt\settings.preview.json</middle>
+    <right>wtai\settings.json</right>
     <filter>*.*</filter>
     <subfolders>1</subfolders>
     <left-readonly>0</left-readonly>
+    <middle-readonly>0</middle-readonly>
     <right-readonly>0</right-readonly>
     <unpacker>&lt;Automatic&gt;</unpacker>
     <prediffer>&lt;Automatic&gt;</prediffer>

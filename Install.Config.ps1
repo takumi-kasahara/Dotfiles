@@ -355,12 +355,16 @@ Install()
 
 # Windows Terminal
 [Installer]::new().
-Source('Terminal\settings.json').
+Source('wt\settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState')).
 Install()
 [Installer]::new().
-Source('Terminal\settings.preview.json', 'settings.json').
+Source('wt\settings.preview.json', 'settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState')).
+Install()
+[Installer]::new().
+Source('wtai\settings.json').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.IntelligentTerminal_8wekyb3d8bbwe\LocalState')).
 Install()
 
 # Command Prompt

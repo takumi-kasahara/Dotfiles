@@ -1,0 +1,128 @@
+{
+  "$help": "https://aka.ms/intelligent-terminal-docs",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "acpAgent": "copilot",
+  "acpModel": "auto",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.644BA8F2"
+    },
+    {
+      "command": "paste",
+      "id": "User.paste"
+    },
+    {
+      "command": "find",
+      "id": "User.find"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "id": "User.splitPane.A6751878"
+    }
+  ],
+  "agentPanePosition": "bottom",
+  "alwaysOnTop": false,
+  "alwaysShowNotificationIcon": false,
+  "autoErrorDetectionEnabled": true,
+  "autoFixEnabled": true,
+  "autoHideWindow": false,
+  "centerOnLaunch": true,
+  "compatibility.allowHeadless": true,
+  "copyFormatting": "none",
+  "copyOnSelect": true,
+  "debugFeatures": true,
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+  "delegateAgent": "copilot",
+  "disableAnimations": true,
+  "experimental.enableColorSelection": true,
+  "focusFollowMouse": true,
+  "keybindings": [
+    {
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": "User.find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "id": "User.paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    }
+  ],
+  "launchMode": "default",
+  "minimizeToNotificationArea": false,
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "compatibility.allowDECRQCRA": true,
+      "cursorShape": "filledBox",
+      "experimental.rainbowSuggestions": true,
+      "font": {
+        "face": "Cascadia Next JP"
+      }
+    },
+    "list": [
+      {
+        "commandline": "%ComSpec% /k %USERPROFILE%\\autoexec.bat",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "PowerShell"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell Core",
+        "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "guid": "{2595cd9c-8f05-55ff-a1d4-93f3041ca67f}",
+        "hidden": false,
+        "name": "PowerShell Core",
+        "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\wsl.exe",
+        "guid": "{00000000-0000-0000-0000-000000000000}",
+        "hidden": false,
+        "icon": "%SystemRoot%\\System32\\wsl.exe",
+        "name": "Linux",
+        "pathTranslationStyle": "wsl",
+        "startingDirectory": "~"
+      }
+    ]
+  },
+  "rendering.disablePartialInvalidation": true,
+  "rendering.software": true,
+  "schemes": [],
+  "searchWebDefaultQueryUrl": "https://duckduckgo.com/?q=%s",
+  "showTabsFullscreen": true,
+  "showTabsInTitlebar": true,
+  "showTerminalTitleInTitlebar": true,
+  "tabWidthMode": "titleLength",
+  "theme": "system",
+  "themes": [],
+  "useAcrylicInTabRow": true,
+  "windowingBehavior": "useAnyExisting"
+}
