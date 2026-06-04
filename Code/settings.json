@@ -287,6 +287,7 @@
   "github.copilot.chat.executionSubagent.useAgenticProxy": true,
   "github.copilot.chat.exploreAgent.enabled": true,
   "github.copilot.chat.feedback.onChange": true,
+  "github.copilot.chat.gemini3LowReasoningEffort.enabled": true,
   "github.copilot.chat.getChangedFilesTool.enabled": true,
   "github.copilot.chat.githubMcpServer.channel": "insiders",
   "github.copilot.chat.githubMcpServer.enabled": true,
