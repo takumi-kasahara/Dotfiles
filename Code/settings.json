@@ -376,6 +376,11 @@
   "editor.autoIndent": "advanced",
   "editor.autoIndentOnPaste": true,
   "editor.codeActions.triggerOnFocusChange": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always",
+    "source.organizeImports": "always",
+  },
   "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "solid",
