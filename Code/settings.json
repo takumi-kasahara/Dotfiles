@@ -12,12 +12,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
-  "[properties]": {
-    "editor.insertSpaces": false,
-  },
-  "[tsv]": {
-    "editor.insertSpaces": false,
-  },
   // #endregion
   // #region C++
   "C_Cpp.autocompleteAddParentheses": true,
@@ -228,7 +222,6 @@
   "chat.agent.sandbox.enabledWindows": "allowNetwork",
   "chat.agentHost.customTerminalTool.enabled": true,
   "chat.agentHost.enabled": true,
-  "chat.agentHost.rubberDuck.enabled": true,
   "chat.agentSessionProjection.enabled": true,
   "chat.artifacts.enabled": true,
   "chat.autoReply": true,
@@ -262,7 +255,6 @@
   "github.copilot.chat.agent.backgroundTodoAgent.enabled": true,
   "github.copilot.chat.agent.largeToolResultsToDisk.enabled": true,
   "github.copilot.chat.agent.longToolCallCachePreservation.enabled": true,
-  "github.copilot.chat.agentDebugLog.fileLogging.enabled": true,
   "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
   "github.copilot.chat.alternateGptPrompt.enabled": true,
   "github.copilot.chat.anthropic.promptCaching.extendedTtl": true,
