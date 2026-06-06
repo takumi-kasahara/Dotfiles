@@ -17,9 +17,5 @@ if ((Get-Command -Name gh.exe -ErrorAction SilentlyContinue)) {
   Invoke-Expression -Command $(gh.exe completion --shell powershell | Out-String)
 }
 function prompt {
-  $branch = (git.exe rev-parse --abbrev-ref HEAD 2>$null) -replace 'HEAD', '(detached)'
-  if ($branch) {
-    $branch = " `e[1;36m($branch)`e[00m"
-  }
-  return "`e[1;32m$env:USERNAME@$env:COMPUTERNAME`e[00m `e[1;35m$env:OS`e[00m `e[1;33m$($PWD -replace [regex]::Escape($env:USERPROFILE), '~')`e[00m$branch`n$('>' * ($nestedPromptLevel + 1)) "
+  return "`e[1;32m$env:USERNAME@$env:COMPUTERNAME`e[00m `e[1;35m$env:OS`e[00m `e[1;33m$($PWD -replace [regex]::Escape($env:USERPROFILE), '~')`e[00m`n$('>' * ($nestedPromptLevel + 1)) "
 }
