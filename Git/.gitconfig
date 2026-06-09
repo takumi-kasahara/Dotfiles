@@ -146,7 +146,7 @@
   pager = LESSCHARSET=utf-8 less -IJKNMRs
   preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
   quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
-  safecrlf = false      # https://github.com/Microsoft/vscode/issues/58874
+  safepcrlf = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
   sshCommand = C:/Program Files/OpenSSH/ssh.exe
 # https://git-scm.com/docs/diff-config
 [diff]
