@@ -127,11 +127,6 @@
   ls = ls-files -t
   # https://git-scm.com/docs/git-gc
   gca = gc --aggressive
-  # https://git-scm.com/docs/git-svn
-  svn-ci = svn dcommit --verbose --rmdir --interactive
-  svn-up = svn rebase --verbose
-  svn-l = svn log
-  svn-ll = svn-l --verbose
   # https://git-scm.com/docs/git-for-each-ref
   refs = for-each-ref --format "%(refname)%09%(authordate:iso-local)%09%(authorname)%09%(contents:subject)" --sort -authordate
 [commit]
@@ -140,14 +135,14 @@
   verbose = true
 [core]
   autocrlf = input      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
-  editor = C:/Program Files/WinGet/Links/edit.exe
+	editor = C:/Program Files/WinGet/Links/edit.exe
   fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
   ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
   pager = LESSCHARSET=utf-8 less -IJKNMRs
   preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
   quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
   safepcrlf = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
-  sshCommand = C:/Program Files/OpenSSH/ssh.exe
+	sshCommand = C:/Program Files/OpenSSH/ssh.exe
 # https://git-scm.com/docs/diff-config
 [diff]
   algorithm = histogram   # https://git-scm.com/docs/diff-config#Documentation/diff-config.txt-diffalgorithm
