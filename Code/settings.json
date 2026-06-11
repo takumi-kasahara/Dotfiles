@@ -637,6 +637,7 @@
   // #region workbench
   "workbench.browser.agentHostChatToolsEnabled": true,
   "workbench.browser.enableChatTools": true,
+  "workbench.browser.enableRemoteProxy": true,
   "workbench.browser.experimentalUserTools.enabled": true,
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.history": 0,
