@@ -313,6 +313,8 @@ $devDrive = Get-Volume |
 Where-Object -Property FileSystem -EQ 'ReFS' |
 Select-Object -ExpandProperty DriveLetter -First 1
 if ($devDrive) {
+  $cache = "$($devDrive):\.cache"
+  setx.exe XDG_CACHE_HOME "$cache"
   if ((Get-Command -Name npm.cmd -ErrorAction SilentlyContinue)) {
     $npm = "$($devDrive):\npm-cache"
     npm.cmd config set --global cache="$npm"
@@ -322,7 +324,6 @@ if ($devDrive) {
     $nuget = "$($devDrive):\.nuget\packages"
     nuget.exe config -set globalPackagesFolder="$nuget"
     setx.exe NUGET_PACKAGES "$nuget"
-
   }
   if ((Get-Command -Name pip.exe -ErrorAction SilentlyContinue)) {
     $pip = "$($devDrive):\pip\cache"
