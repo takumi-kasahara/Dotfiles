@@ -646,6 +646,7 @@
   "workbench.editor.wrapTabs": true,
   "workbench.experimental.cloudChanges.autoStore": "onShutdown",
   "workbench.experimental.cloudChanges.partialMatches.enabled": true,
+  "workbench.experimental.modernUI": true,
   "workbench.experimental.share.enabled": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.horizontalScrolling": true,
