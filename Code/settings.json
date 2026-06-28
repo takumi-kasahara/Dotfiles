@@ -155,7 +155,10 @@
   "isort.check": true,
   "pylint.lintOnChange": true,
   "python-envs.terminal.showActivateButton": true,
+  "python.analysis.addExtraPathsForPythonProjects": true,
+  "python.analysis.addFoldersForPythonProjects": true,
   "python.analysis.aiCodeActions": {
+    "convertLambdaToNamedFunction": true,
     "convertFormatString": true,
     "generateDocstring": true,
     "generateSymbol": true,
