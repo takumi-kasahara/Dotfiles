@@ -341,7 +341,12 @@ if ($devDrive) {
     if (-not (Test-Path -LiteralPath $models)) {
       New-Item -Path $models -ItemType Directory -Force | Out-Null
     }
+    # https://docs.ollama.com/faq#how-do-i-set-them-to-a-different-location
     setx.exe OLLAMA_MODELS "$models"
+    # https://docs.ollama.com/faq#how-do-i-configure-ollama-server
+    setx.exe OLLAMA_FLASH_ATTENTION 1
+    setx.exe OLLAMA_IGPU_ENABLE 1
+    setx.exe OLLAMA_KV_CACHE_TYPE q4_0
   }
 }
 
