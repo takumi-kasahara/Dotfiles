@@ -218,8 +218,9 @@
   "appmod.experimental.enableExperimentalTasks": true,
   "appmod.experimental.task.websphere.lite": true,
   "appmod.javaUpgrade.enableQuickPick": true,
+  "chat.agent.sandbox.allowNetwork": true,
   "chat.agent.sandbox.enabled": "on",
-  "chat.agent.sandbox.enabledWindows": "allowNetwork",
+  "chat.agent.sandbox.enabledWindows": "on",
   "chat.agentHost.codexAgent.enabled": true,
   "chat.agentHost.customTerminalTool.enabled": true,
   "chat.agentHost.enabled": true,
@@ -482,12 +483,12 @@
   "github.copilot.chat.switchAgent.enabled": true,
   "github.copilot.chat.tools.defaultToolsGrouped": true,
   "github.copilot.chat.workspace.codeSearchExternalIngest.enabled": true,
+  "github.copilot.completions.chat.enabled": true,
   "github.copilot.enable": {
     "plaintext": true,
     "markdown": true,
     "scminput": true,
   },
-  "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.nextEditSuggestions.extendedRange": true,
   // #region instructions
   "github.copilot.chat.commitMessageGeneration.instructions": [
