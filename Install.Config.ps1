@@ -231,6 +231,7 @@ Install()
 $edit = Get-Command -Name edit.exe -ErrorAction SilentlyContinue
 if ($edit) {
   git.exe config --global core.editor $edit.Source.Replace([Path]::DirectorySeparatorChar, [Path]::AltDirectorySeparatorChar)
+  setx.exe EDITOR "`"$($edit.Source)`""
 }
 else {
   git.exe config --global --unset core.editor
