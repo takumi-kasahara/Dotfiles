@@ -166,10 +166,10 @@ Source('Code\mcp.json', '.mcp.json').
 Destination($env:USERPROFILE).
 Install()
 
-# Edit
+# Eclipsecod
 [Installer]::new().
-Source('Edit\settings.json').
-Destination(($env:APPDATA | Join-Path -ChildPath 'Microsoft\Edit')).
+Source('Eclipse\*.json').
+Destination(($env:USERPROFILE | Join-Path -ChildPath '.theia-ide')).
 Install()
 
 # ILSpy
@@ -437,5 +437,4 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
 else {
   Write-Warning -Message 'WSL not available.'
 }
-#endregion
 #endregion

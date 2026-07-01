@@ -1,0 +1,298 @@
+[
+  {
+    "command": "-ahk++.debug",
+    "keybinding": "f9",
+    "when": "editorLangId == 'ahk'"
+  },
+  {
+    "command": "-close.window",
+    "keybinding": "ctrl+w"
+  },
+  {
+    "command": "-cursorColumnSelectDown",
+    "keybinding": "ctrl+shift+alt+down",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "-cursorColumnSelectUp",
+    "keybinding": "ctrl+shift+alt+up",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "-deleteLeft",
+    "keybinding": "shift+backspace"
+  },
+  {
+    "command": "-editor.action.blockComment",
+    "keybinding": "shift+alt+a",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.clipboardCutAction",
+    "keybinding": "shift+delete"
+  },
+  {
+    "command": "-editor.action.copyLinesDownAction",
+    "keybinding": "shift+alt+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.copyLinesUpAction",
+    "keybinding": "shift+alt+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.dirtydiff.next",
+    "keybinding": "alt+f3",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "command": "-editor.action.dirtydiff.previous",
+    "keybinding": "shift+alt+f3",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "command": "-editor.action.insertSnippet",
+    "keybinding": "ctrl+alt+j",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'"
+  },
+  {
+    "command": "-editor.action.moveLinesDownAction",
+    "keybinding": "alt+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-editor.action.moveLinesUpAction",
+    "keybinding": "alt+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "-markdown.showPreview",
+    "keybinding": "ctrl+shift+v",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.showPreviewToSide",
+    "keybinding": "ctrl+k v",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-typehierarchy:toggle",
+    "keybinding": "ctrlcmd+shift+h"
+  },
+  {
+    "command": "-workbench.action.compareEditor.nextChange",
+    "keybinding": "alt+f5",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "command": "-workbench.action.compareEditor.previousChange",
+    "keybinding": "shift+alt+f5",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "command": "-workbench.action.terminal.split",
+    "keybinding": "ctrl+shift+5",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "command": "-workbench.action.terminal.splitActiveTab",
+    "keybinding": "ctrl+shift+5",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "command": "-workbench.action.togglePanel",
+    "keybinding": "ctrl+j"
+  },
+  {
+    "command": "close.window",
+    "keybinding": "shift+ctrl+w"
+  },
+  {
+    "command": "copyFilePath",
+    "keybinding": "shift+alt+c",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "cursorColumnSelectDown",
+    "keybinding": "shift+alt+down",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "cursorColumnSelectUp",
+    "keybinding": "shift+alt+up",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "deleteAllLeft",
+    "keybinding": "shift+backspace"
+  },
+  {
+    "command": "deleteAllRight",
+    "keybinding": "shift+delete"
+  },
+  {
+    "command": "editor.action.copyLinesDownAction",
+    "keybinding": "ctrl+alt+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "editor.action.copyLinesUpAction",
+    "keybinding": "ctrl+alt+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "editor.action.dirtydiff.next",
+    "keybinding": "alt+down",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "command": "editor.action.dirtydiff.previous",
+    "keybinding": "alt+up",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "command": "editor.action.joinLines",
+    "keybinding": "ctrl+j"
+  },
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "keybinding": "ctrl+shift+down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "keybinding": "ctrl+shift+up",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "editor.action.sortLinesAscending",
+    "keybinding": "shift+alt+s",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.action.sortLinesDescending",
+    "keybinding": "ctrl+shift+alt+s",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.action.transformToLowercase",
+    "keybinding": "ctrl+u",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.action.transformToUppercase",
+    "keybinding": "ctrl+shift+u",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.debug.action.runToCursor",
+    "keybinding": "ctrl+f10",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "command": "hexEditor.openFile",
+    "keybinding": "ctrl+alt+h"
+  },
+  {
+    "command": "markdown.extension.editing.toggleCodeSpan",
+    "keybinding": "ctrl+alt+c",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "markdown.showPreviewToSide",
+    "keybinding": "ctrl+shift+v",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "command": "rainbow-csv.Align",
+    "keybinding": "shift+alt+a",
+    "when": "editorTextFocus && editorLangId == 'csv' || editorTextFocus && editorLangId == 'tsv'"
+  },
+  {
+    "command": "rainbow-csv.Shrink",
+    "keybinding": "shift+alt+f",
+    "when": "editorTextFocus && editorLangId == 'csv' || editorTextFocus && editorLangId == 'tsv'"
+  },
+  {
+    "command": "search-in-workspace.replace",
+    "keybinding": "shift+ctrl+h"
+  },
+  {
+    "command": "task:run:build",
+    "keybinding": "shift+ctrl+b"
+  },
+  {
+    "command": "textEditor.commands.go.back",
+    "keybinding": "ctrl+-"
+  },
+  {
+    "command": "textEditor.commands.go.forward",
+    "keybinding": "shift+ctrl+-"
+  },
+  {
+    "command": "workbench.action.closeActiveEditor",
+    "keybinding": "ctrl+w"
+  },
+  {
+    "command": "workbench.action.closeAllEditors",
+    "keybinding": "ctrl+shift+f4"
+  },
+  {
+    "command": "workbench.action.compareEditor.nextChange",
+    "keybinding": "alt+down",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "command": "workbench.action.compareEditor.previousChange",
+    "keybinding": "alt+up",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "command": "workbench.action.tasks.restartTask",
+    "keybinding": "ctrl+alt+r",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "command": "workbench.action.tasks.runTask",
+    "keybinding": "ctrl+alt+t",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "command": "workbench.action.tasks.terminate",
+    "keybinding": "ctrl+alt+q",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "command": "workbench.action.tasks.test",
+    "keybinding": "ctrl+alt+e",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "command": "workbench.action.terminal.kill",
+    "keybinding": "ctrl+w",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.runActiveFile",
+    "keybinding": "f5",
+    "when": "editorTextFocus && (editorLangId == 'bat' || editorLangId == 'shellscript')"
+  },
+  {
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "keybinding": "shift+alt+r",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "workbench.view.extension.bookmarks",
+    "keybinding": "ctrl+alt+m"
+  },
+  {
+    "command": "workbench.view.extension.todo-tree-container",
+    "keybinding": "ctrl+alt+d"
+  },
+  {
+    "command": "workbench.views.editSessions.data.focus",
+    "keybinding": "ctrl+alt+s"
+  }
+]

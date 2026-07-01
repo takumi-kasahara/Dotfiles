@@ -1,0 +1,398 @@
+{
+  // #region File Extension
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+  },
+  // #region ai-features
+  "ai-features.agentMode.enabled": true,
+  "ai-features.AiEnable.enableAI": true,
+  "ai-features.anthropic.AnthropicModels": [],
+  "ai-features.chat.bypassModelRequirement": true,
+  "ai-features.chat.defaultChatAgent": "Coder",
+  "ai-features.chat.defaultToolConfirmation": "always_allow",
+  "ai-features.chat.tokenUsageIndicator.enabled": true,
+  "ai-features.chat.tokenUsageWarning.enabled": true,
+  "ai-features.google.models": [],
+  "ai-features.huggingFace.models": [],
+  "ai-features.languageModelAliases": {
+    "default/code": {
+      "selectedModel": "Kimi-K2.6",
+    },
+    "default/universal": {
+      "selectedModel": "Kimi-K2.6",
+    },
+    "default/code-completion": {
+      "selectedModel": "ollama/granite4.1:3b",
+    },
+    "default/summarize": {
+      "selectedModel": "Qwen3.6-35B-A3B",
+    },
+    "default/fast": {
+      "selectedModel": "Qwen3.6-35B-A3B",
+    }
+  },
+  // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
+  "ai-features.openAiCustom.customOpenAiModels": [
+    {
+      "model": "preview/Kimi-K2.6",
+      "url": "https://api.ai.sakura.ad.jp/v1",
+      "id": "Kimi-K2.6",
+      "apiKey": true,
+    },
+    {
+      "model": "preview/Qwen3.6-35B-A3B",
+      "url": "https://api.ai.sakura.ad.jp/v1",
+      "id": "Qwen3.6-35B-A3B",
+      "apiKey": true,
+    }
+  ],
+  "ai-features.openAiOfficial.officialOpenAiModels": [],
+  "ai-features.openAiOfficial.useResponseApi": true,
+  "ai-features.ollama.ollamaModels": [
+    "granite4.1:3b",
+    "ornith:latest",
+  ],
+  "ai-features.notifications.default": "os-notification",
+  "ai-features.workspaceFunctions.userExcludes": [
+    ".nuget",
+    ".venv",
+    "apm_modules",
+    "node_modules",
+  ],
+  // #endregion
+  // #region powershell
+  "powershell.buttons.showPanelMovementButtons": true,
+  "powershell.codeFormatting.autoCorrectAliases": true,
+  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+  "powershell.codeFormatting.ignoreOneLineBlock": false,
+  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "powershell.debugging.createTemporaryIntegratedConsole": true,
+  "powershell.integratedConsole.startInBackground": true,
+  // #endregion
+  // #region HTML
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.templating": true,
+  // #endregion
+  // #region CSS/SCSS
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  // #endregion
+  // #region JavaScript/TypeScript
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.module": "ESNext",
+  "js/ts.implicitProjectConfig.target": "ESNext",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.showOnAllClassMethods": true,
+  "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  // #endregion
+  // #region Python
+  "debugpy.showPythonInlineValues": true,
+  "isort.check": true,
+  "pylint.lintOnChange": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": true,
+  "python.useEnvironmentsExtension": true,
+  // #endregion
+  // #region accessibility
+  "editor.accessibilitySupport": "off",
+  // #endregion
+  // #region breadcrumbs
+  "breadcrumbs.enabled": true,
+  // #endregion
+  // #region debug
+  "debug.inlineValues": true,
+  "debug.javascript.autoAttachFilter": "smart",
+  "debug.javascript.breakOnConditionalError": true,
+  "debug.trace": true,
+  // #endregion
+  // #region diffEditor
+  "diffEditor.codeLens": true,
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showEmptyDecorations": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.experimental.useTrueInlineView": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": false,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  // #endregion
+  // #region editor
+  "editor.autoIndent": "advanced",
+  "editor.codeActions.triggerOnFocusChange": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+  },
+  "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.cursorStyle": "block",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.experimental.asyncTokenization": true,
+  "editor.experimental.preferTreeSitter.css": true,
+  "editor.experimental.preferTreeSitter.ini": true,
+  "editor.experimental.preferTreeSitter.regex": true,
+  "editor.experimental.preferTreeSitter.typescript": true,
+  "editor.experimentalEditContextEnabled": true,
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.foldingImportsByDefault": true,
+  "editor.fontFamily": "'Cascadia Next JP', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontVariations": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.edits.experimental.useInterleavedLinesDiff": "always",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+  ],
+  "editor.smoothScrolling": true,
+  "editor.stablePeek": true,
+  "editor.stickyTabStops": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedLocales": {
+    "ja": true,
+  },
+  // #endregion
+  // #region emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.useInlineCompletions": true,
+  // #endregion
+  // #region files
+  "files.associations": {
+    "*.sct": "xml",
+    "*.vssettings": "xml",
+    "*.wsc": "xml",
+    "*.wsf": "xml",
+  },
+  "files.autoGuessEncoding": true,
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveWhenNoErrors": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.nuget/**": true,
+    "**/.venv/**": true,
+    "**/apm_modules/**": true,
+    "**/node_modules/**": true,
+  },
+  // #endregion
+  // #region git
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.alwaysSignOff": true,
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.autoStash": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.editorDecoration.template": "${authorDate}, ${authorName}, ${subject}",
+  "git.blame.ignoreWhitespace": true,
+  "git.blame.statusBarItem.template": "${authorDate}, ${authorName}",
+  "git.closeDiffOnOperation": true,
+  "git.confirmSync": true,
+  "git.detectWorktrees": true,
+  "git.diagnosticsCommitHook.enabled": true,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,
+  "git.mergeEditor": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.pruneOnFetch": true,
+  "git.pullBeforeCheckout": true,
+  "git.rebaseWhenSync": true,
+  "git.replaceTagsWhenPull": true,
+  "git.showPushSuccessNotification": true,
+  "git.supportCancellation": true,
+  "git.terminalGitEditor": true,
+  "git.timeline.showUncommitted": true,
+  "git.untrackedChanges": "separate",
+  "git.verboseCommit": true,
+  // #endregion
+  // #region markdown
+  "markdown.occurrencesHighlight.enabled": true,
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontFamily": "'BIZ UDP Gothic', sans-serif",
+  "markdown.preview.typographer": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.validate.enabled": true,
+  // #endregion
+  // #region notebook
+  // #endregion
+  // #region scm
+  "scm.defaultViewMode": "tree",
+  // #endregion
+  // #region search
+  "search.collapseResults": "auto",
+  "search.lineNumbers": true,
+  "search.smartCase": true,
+  // #endregion
+  // #region terminal
+  "terminal.external.windowsExec": "wtai.exe",
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  // #endregion
+  // #region updates
+  "updates.channel": "preview",
+  // #endregion
+  // #region window
+  "window.title": "${folderName}${separator}${activeEditorShort}",
+  // #endregion
+  // #region workbench
+  "workbench.commandPalette.history": 0,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.tree.renderIndentGuides": "always",
+  // #endregion
+  // #region security
+  "security.workspace.trust.trustedFolders": [
+    "file:///d%3A/source",
+    "file:///e%3A/source",
+  ],
+  // #endregion
+  // #region Extensions
+  // #region bookmarks
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  // #endregion
+  // #region code-spell-checker
+  "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.autoFormatConfigFile": true,
+  "cSpell.caseSensitive": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.experimental.enableRegexpView": true,
+  "cSpell.experimental.symbols": true,
+  "cSpell.useGitignore": true,
+  "cSpell.usePnP": true,
+  "cSpell.validateDirectives": true,
+  // #endregion
+  // #region svn-scm
+  "svn.conflicts.autoResolve": true,
+  "svn.experimental.detect_encoding": true,
+  "svn.multipleFolders.enabled": true,
+  "svn.refresh.remoteChanges": true,
+  "svn.sourceControl.combineExternalIfSameServer": true,
+  // #endregion
+  // #region todo-tree
+  "todo-tree.filtering.excludeGlobs": [
+    ".nuget",
+    ".venv",
+    "apm_modules",
+    "node_modules",
+  ],
+  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+  "todo-tree.general.statusBar": "tags",
+  "todo-tree.general.tags": [
+    "FIXME",
+    "HACK",
+    "NOTE",
+    "TODO",
+    "WIP",
+  ],
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "todo-tree.highlights.customHighlight": {
+    // https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
+    "FIXME": {
+      "icon": "bug",
+      "iconColour": "#FF0000", // red
+    },
+    "HACK": {
+      "icon": "alert",
+      "iconColour": "#FF00FF", // magenta
+    },
+    "NOTE": {
+      "icon": "note",
+      "iconColour": "#00FFFF", // cyan
+    },
+    "TODO": {
+      "icon": "checklist",
+      "iconColour": "#00FF00", // lime
+    },
+    "WIP": {
+      "icon": "beaker",
+      "iconColour": "#FFFF00", // yellow
+    },
+  },
+  "todo-tree.highlights.useColourScheme": true,
+  // //   js line
+  // /*   js block
+  // #    PowerShell
+  // <!-- html
+  // --   SQL
+  // /'   plantUML block
+  // '    Visual Basic
+  // ::   batch
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|--|/'|'|::|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.ripgrep.ripgrep": "C:/Program Files/WinGet/Links/rg.exe",
+  "todo-tree.tree.buttons.export": true,
+  "todo-tree.tree.buttons.groupBySubTag": true,
+  "todo-tree.tree.buttons.groupByTag": true,
+  "todo-tree.tree.expanded": true,
+  "todo-tree.tree.filterCaseSensitive": true,
+  "todo-tree.tree.flat": true,
+  "todo-tree.tree.groupedBySubTag": true,
+  "todo-tree.tree.groupedByTag": true,
+  "todo-tree.tree.hideIconsWhenGroupedByTag": true,
+  "todo-tree.tree.hideTreeWhenEmpty": true,
+  "todo-tree.tree.labelFormat": "${line} ${afterOrBefore}",
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.tree.tooltipFormat": "${filename}:${line}",
+  // #endregion
+  // #region vscode-xml
+  "xml.codeLens.enabled": true,
+  "xml.validation.resolveExternalEntities": true,
+  "xml.validation.xInclude.enabled": true,
+  // #endregion
+  // #region vscode-yaml
+  "yaml.disableAdditionalProperties": true,
+  "yaml.disableDefaultProperties": true,
+  "yaml.format.singleQuote": true,
+  // #endregion
+  // #endregion
+}
