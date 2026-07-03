@@ -6,3 +6,7 @@ fi
 if [ -d "$LOCALAPPDATA/Programs" ]; then
   PATH="$(cygpath -a "$LOCALAPPDATA/Programs"):$PATH"
 fi
+
+if [ -d "$USERPROFILE/.local/bin" ]; then
+  PATH="$(cygpath -a "$USERPROFILE/.local/bin"):$PATH"
+fi

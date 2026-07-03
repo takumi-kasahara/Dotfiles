@@ -3,6 +3,9 @@
 @if exist "%LOCALAPPDATA%\Programs" (
   @set "PATH=%LOCALAPPDATA%\Programs;%PATH%"
 )
+@if exist "%USERPROFILE%\.local\bin" (
+  @set "PATH=%USERPROFILE%\.local\bin;%PATH%"
+)
 
 :: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/doskey
 @doskey #=rem $*

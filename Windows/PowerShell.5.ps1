@@ -7,6 +7,9 @@ Register-EngineEvent -SourceIdentifier PowerShell.Exiting -SupportEvent -Action 
 if (Test-Path -LiteralPath "$env:LOCALAPPDATA\Programs") {
   $env:Path = "$env:LOCALAPPDATA\Programs;$env:Path"
 }
+if (Test-Path -LiteralPath "$env:USERPROFILE\.local\bin") {
+  $env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
+}
 if ($null -ne $env:ChocolateyInstall) {
   $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
   if (Test-Path -LiteralPath $ChocolateyProfile) {
