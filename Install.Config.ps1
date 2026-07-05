@@ -285,6 +285,7 @@ Install()
 
 # Copilot
 [Installer]::new().
+Source('.copilot\*.json').
 Source('.copilot\agents').
 Source('.copilot\instructions').
 Source('.copilot\skills').

@@ -1,0 +1,15 @@
+{
+  "enabledPlugins": {
+    "wt-agent-hooks@wt-local": true
+  },
+  "extraKnownMarketplaces": {
+    "wt-local": {
+      "source": {
+        "source": "directory",
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.IntelligentTerminal_0.1.1681.0_x64__8wekyb3d8bbwe\\wt-agent-hooks\\copilot"
+      }
+    }
+  },
+  "experimental": true,
+  "model": "auto"
+}
