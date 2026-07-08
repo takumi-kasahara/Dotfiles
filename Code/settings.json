@@ -340,6 +340,7 @@
   "python.analysis.findRefsInBackgroundThread": true,
   "python.analysis.generateWithTypeAnnotation": true,
   "python.analysis.includeAliasesFromUserFiles": true,
+  "python.analysis.includeExtraPathSymbolsInSymbolSearch": true,
   "python.analysis.inlayHints.callArgumentNames": "partial",
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
