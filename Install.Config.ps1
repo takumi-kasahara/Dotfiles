@@ -155,12 +155,15 @@ Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\MozillaThunderbi
 Install()
 
 # Visual Studio Code
+# https://code.visualstudio.com/docs/agent-customization/prompt-files#_prompt-file-locations
 [Installer]::new().
 Source('Code\*.json').
+Source('Code\prompts').
 Source('Code\snippets').
 Destination(($env:APPDATA | Join-Path -ChildPath 'Code\User')).
 Destination(($env:APPDATA | Join-Path -ChildPath 'Code - Insiders\User')).
 Install()
+# https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=visualstudio
 [Installer]::new().
 Source('Code\mcp.json', '.mcp.json').
 Destination($env:USERPROFILE).
@@ -284,6 +287,13 @@ Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs')).
 Install()
 
 # Copilot
+# https://code.visualstudio.com/docs/agent-customization/agent-skills#_create-a-skill
+# https://code.visualstudio.com/docs/agent-customization/custom-agents#_custom-agent-file-locations
+# https://code.visualstudio.com/docs/agent-customization/custom-instructions#_instructions-file-locations
+[Installer]::new().
+Source('.agents').
+Destination($env:USERPROFILE).
+Install()
 [Installer]::new().
 Source('.copilot\*.json').
 Source('.copilot\agents').

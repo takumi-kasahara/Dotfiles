@@ -1,7 +1,4 @@
 @{
-  'instructions/agent-safety.instructions.md' = @{
-    Url = 'https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/instructions/agent-safety.instructions.md'
-  }
   'instructions/agent-skills.instructions.md' = @{
     Url = 'https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/instructions/agent-skills.instructions.md'
   }

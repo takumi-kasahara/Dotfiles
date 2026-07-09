@@ -19,8 +19,8 @@ try {
     cmd.exe /c `"$($_.FullName)`"
     "Ran:`t$relative" | Out-Host
   }
-  taskkill.exe /IM explorer.exe /F >$null && Start-Process -FilePath explorer.exe
   Copy-UserInternationalSettingsToSystem -WelcomeScreen:$true -NewUser:$true
+  taskkill.exe /IM explorer.exe /F >$null && Start-Process -FilePath explorer.exe
 }
 finally {
   Write-Progress -Completed
