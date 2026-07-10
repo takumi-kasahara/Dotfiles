@@ -1,5 +1,8 @@
 {
   // #region File Extension
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
@@ -720,9 +723,6 @@
   // #endregion
   // #region plantuml
   "plantuml.exportMapFile": true,
-  // #endregion
-  // #region sql-developer
-  "sqldeveloper.datagrid.fontFamily": "'Cascadia Next JP', monospace",
   // #endregion
   // #region svn-scm
   "svn.conflicts.autoResolve": true,
