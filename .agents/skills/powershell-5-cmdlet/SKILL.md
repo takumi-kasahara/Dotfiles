@@ -1,6 +1,6 @@
 ---
-name: powershell-cmdlet
-description: 'This skill creates or updates PowerShell cmdlets for this repository. Use when: create commandlet, update commandlet, add parameter, comment-based help.'
+name: powershell-5-cmdlet
+description: 'This skill creates or updates PowerShell cmdlets. Use when: create commandlet, update commandlet, add parameter, comment-based help.'
 argument-hint: 'Enter the target cmdlet and the behavior you want to add or change.'
 user-invocable: true
 ---

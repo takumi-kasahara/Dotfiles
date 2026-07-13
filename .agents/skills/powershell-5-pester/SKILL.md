@@ -1,5 +1,5 @@
 ---
-name: powershell-pester
+name: powershell-5-pester
 description: 'This skill creates or updates Pester tests. Use to create *.Tests.ps1. Follow the context checklist in order.'
 argument-hint: 'Enter the target module or test file and the test cases you want to validate.'
 user-invocable: true

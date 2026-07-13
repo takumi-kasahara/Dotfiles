@@ -1,6 +1,6 @@
 ---
-name: powershell-help
-description: 'This skill creates or updates PowerShell comment-based help for this repository. Use when documenting a function, updating help, or aligning help with implementation.'
+name: powershell-7-help
+description: 'This skill creates or updates PowerShell comment-based help. Use when documenting a function, updating help, or aligning help with implementation.'
 argument-hint: 'Provide: (1) target function or cmdlet name, and (2) help content to add or update. If either is missing, ask for the missing item before editing.'
 user-invocable: true
 ---

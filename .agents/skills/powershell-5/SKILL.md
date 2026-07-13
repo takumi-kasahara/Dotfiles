@@ -1,6 +1,6 @@
 ---
 name: powershell-5
-description: 'PowerShell 5.1 coding guidelines for this repository. Use when: writing or editing *.ps1/*.psm1, adding functions, error handling, null checks, string formatting, path joining, .NET constructors, wildcard escaping. Enforces [CmdletBinding()], Set-StrictMode, ThrowTerminatingError, and safe path handling.'
+description: 'PowerShell 5.1 coding guidelines. Use when: writing or editing *.ps1/*.psm1, adding functions, error handling, null checks, string formatting, path joining, .NET constructors, wildcard escaping. Enforces [CmdletBinding()], Set-StrictMode, ThrowTerminatingError, and safe path handling.'
 argument-hint: 'Describe the PowerShell 5.1 script or function you are writing or editing.'
 user-invocable: true
 ---

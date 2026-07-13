@@ -1,6 +1,6 @@
 ---
-name: csharp-for-powershell
-description: 'This skill creates C# files that can be loaded by PowerShell 7.6 Add-Type for this repository.'
+name: csharp-for-powershell-7
+description: 'This skill creates C# files that can be loaded by PowerShell 7.6 Add-Type.'
 argument-hint: 'Enter the desired functionality and type overview for the C# file.'
 user-invocable: true
 ---

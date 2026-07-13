@@ -1,6 +1,6 @@
 ---
 name: autohotkey
-description: 'AutoHotkey v2 coding guidelines for this repository (Windows 11). Use when: writing or editing *.ahk, variable/function naming, Format() usage, regex with ~=, DllCall/COM integration, Try-Catch-Finally error handling, WINAPI type mapping.'
+description: 'AutoHotkey v2 coding guidelines (Windows 11). Use when: writing or editing *.ahk, variable/function naming, Format() usage, regex with ~=, DllCall/COM integration, Try-Catch-Finally error handling, WINAPI type mapping.'
 argument-hint: 'Describe the AutoHotkey v2 script or function you are writing or editing.'
 user-invocable: true
 ---
