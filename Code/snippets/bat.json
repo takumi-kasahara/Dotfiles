@@ -142,13 +142,13 @@
   "Set.From": {
     "prefix": "$()",
     "body": [
-      "for /f \"usebackq\" %%I in (`${1:command}`) do set ${2:variable}=%%I",
+      "for /f \"usebackq\" %%I in (`${1:command}`) do set \"${2:variable}=%%I\"",
     ],
   },
   "Set.TimeStamp": {
     "prefix": "Set.TimeStamp",
     "body": [
-      "for /f \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -Command \"Get-Date -Format 'yyyyMMddHHmmss'\"`) do set TIMESTAMP=%%I",
+      "for /f \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\"",
     ],
   },
   // #endregion
