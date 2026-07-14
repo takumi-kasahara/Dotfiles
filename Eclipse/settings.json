@@ -47,6 +47,13 @@
     }
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
+  "ai-features.mcp.mcpServers": {
+    "MDN": {
+      "serverUrl": "https://mcp.mdn.mozilla.net/",
+      "autostart": true,
+      "deferLoading": true,
+    }
+  },
   "ai-features.openAiCustom.customOpenAiModels": [
     {
       "model": "preview/Kimi-K2.6",

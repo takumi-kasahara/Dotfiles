@@ -8,29 +8,49 @@
     }
   ],
   "servers": {
-    "com.microsoft/nuget": {
-      "type": "stdio",
-      "command": "dnx",
-      "args": [
-        "NuGet.Mcp.Server@1.2.3",
-        "--yes",
-        "--source",
-        "https://api.nuget.org/v3/index.json"
-      ],
-      "gallery": "https://api.mcp.github.com",
-      "version": "1.2.3"
-    },
     "io.github.github/github-mcp-server": {
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp/",
       "gallery": "https://api.mcp.github.com",
       "version": "1.0.0"
     },
+    "microsoft/markitdown": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "markitdown-mcp@0.0.1a4"
+      ],
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.0.0"
+    },
+    "microsoft/playwright-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "gallery": "https://api.mcp.github.com",
+      "version": "0.0.1-seed"
+    },
     "microsoftdocs/mcp": {
       "type": "http",
       "url": "https://learn.microsoft.com/api/mcp",
       "gallery": "https://api.mcp.github.com",
       "version": "1.0.0"
+    },
+    "NuGet": {
+      "type": "stdio",
+      "command": "dnx",
+      "args": [
+        "NuGet.Mcp.Server",
+        "--source",
+        "https://api.nuget.org/v3/index.json",
+        "--yes"
+      ]
+    },
+    "MDN": {
+      "type": "http",
+      "url": "https://mcp.mdn.mozilla.net/"
     }
   }
 }
