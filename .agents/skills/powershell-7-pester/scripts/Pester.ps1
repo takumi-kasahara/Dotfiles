@@ -16,5 +16,6 @@ if ($LineNumber -gt 0) {
   $config.Filter.Line = "$(Resolve-Path -LiteralPath $Path):$LineNumber"
 }
 $config.Run.Exit = $true
+$config.Run.Parallel = $true
 $config.Run.Path = (Resolve-Path -LiteralPath $Path).Path
 Invoke-Pester -Configuration $config
