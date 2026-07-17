@@ -237,6 +237,9 @@
   "powershell.integratedConsole.startInBackground": true,
   "powershell.rename.acceptDisclaimer": true,
   // #endregion
+  // #region Java
+  "vscode-java-dependency.enableLspTools": true,
+  // #endregion
   // #region AutoHotkey
   "AHK++.experimental": {
     "funcDefSearch": true,
