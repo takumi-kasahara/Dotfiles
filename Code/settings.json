@@ -385,6 +385,7 @@
   // #endregion
   // #region breadcrumbs
   "breadcrumbs.enabled": true,
+  "breadcrumbs.showEditorType": true,
   "breadcrumbs.symbolSortOrder": "type",
   // #endregion
   // #region debug
@@ -614,7 +615,6 @@
   "terminal.integrated.enableWin32InputMode": true,
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.initialHintCopilotCli": true,
   "terminal.integrated.localEchoEnabled": "auto",
   "terminal.integrated.shellIntegration.history": 0,
   "terminal.integrated.smoothScrolling": true,
@@ -653,7 +653,6 @@
   "window.title": "${activeRepositoryName}${separator}${activeRepositoryBranchName}",
   // #endregion
   // #region workbench
-  "workbench.browser.agentHostChatToolsEnabled": true,
   "workbench.browser.enableChatTools": true,
   "workbench.browser.enableRemoteProxy": true,
   "workbench.browser.experimentalUserTools.enabled": true,
@@ -662,6 +661,7 @@
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.markdownDefaultEditorInAgentsWindow": true,
   "workbench.editor.preferHistoryBasedLanguageDetection": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.tabSizing": "shrink",
