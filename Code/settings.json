@@ -6,6 +6,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint",
   },
@@ -304,6 +307,7 @@
   "js/ts.inlayHints.parameterTypes.enabled": true,
   "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
   "js/ts.inlayHints.variableTypes.enabled": true,
+  "js/ts.preferences.autoImportEntrypointDirectorySearch": true,
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
   "js/ts.referencesCodeLens.enabled": true,
