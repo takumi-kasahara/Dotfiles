@@ -11,11 +11,16 @@ user-invocable: true
 
 - Organize Pester tests with Describe, Context, and It blocks, creating one Describe block per function.
 - Put helper functions in the Describe block's BeforeAll.
-- Divide Context into these four categories:
+- Divide Context into these five categories:
   - ParameterSetName
     - Cover all ParameterSetNames.
     - If there is no ParameterSetName, cover mandatory parameters.
     - For parameters with `SupportsWildcards()`, test values containing wildcards.
+  - Output
+    - Verify the shape of the objects returned by the function (the normal-case result).
+    - Cover count (`Should -HaveCount`), property names, property values, and property types.
+    - Example: verify a parsed entry exposes `Path`, `CreationTime`, `LastWriteTime` with correct values.
+    - Distinguish from `Edge case`: `Output` checks the result shape in normal cases; `Edge case` checks behavior under boundary or invalid input.
   - SupportsShouldProcess
     - Apply this section only when `CmdletBinding(SupportsShouldProcess)` is present.
     - Required cases (run in order):
@@ -28,10 +33,10 @@ user-invocable: true
     - Optional cases:
       - Verify `-Force` takes precedence over `-Confirm`.
       - Verify existing files are not overwritten with `-NoClobber`.
-  - Other parameter
+  - Other parameters
     - Parameters not covered by `ParameterSetName` or `SupportsShouldProcess`.
     - Add tests for defaults, aliases, and accepted input shapes.
-  - Edge case
+  - Edge cases
     - Add boundary and error-case tests.
     - Example: minimum/maximum numeric values, read-only target file behavior.
     - Do not test constraints defined by `Parameter` or `Validate*` attributes.
