@@ -75,6 +75,7 @@
     "ornith:latest",
   ],
   "ai-features.notifications.default": "os-notification",
+  "ai-features.SCANOSS.mode": "automatic",
   "ai-features.workspaceFunctions.userExcludes": [
     ".nuget",
     ".venv",
