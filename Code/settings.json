@@ -50,6 +50,7 @@
   "chat.customizations.structuredPreview.enabled": true,
   "chat.defaultToCopilotHarness": true,
   "chat.editing.explainChanges.enabled": true,
+  "chat.editor.codex.preferAgentHost": true,
   "chat.editor.preferCopilotHarness": true,
   "chat.exitAfterDelegation": true,
   "chat.experimental.collectInstructionsInExtension": true,
