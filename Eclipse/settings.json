@@ -31,19 +31,19 @@
   "ai-features.huggingFace.models": [],
   "ai-features.languageModelAliases": {
     "default/code": {
-      "selectedModel": "Kimi-K2.7-Code",
+      "selectedModel": "openrouter/free",
     },
     "default/universal": {
-      "selectedModel": "Kimi-K2.7-Code",
+      "selectedModel": "openrouter/free",
     },
     "default/code-completion": {
-      "selectedModel": "ollama/granite4.1:3b",
+      "selectedModel": "openrouter/free",
     },
     "default/summarize": {
-      "selectedModel": "ollama/granite4.1:3b",
+      "selectedModel": "openrouter/free",
     },
     "default/fast": {
-      "selectedModel": "ollama/granite4.1:3b",
+      "selectedModel": "openrouter/free",
     }
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
@@ -56,17 +56,11 @@
   },
   "ai-features.openAiCustom.customOpenAiModels": [
     {
-      "model": "preview/Kimi-K2.7-Code",
-      "url": "https://api.ai.sakura.ad.jp/v1",
-      "id": "Kimi-K2.7-Code",
+      "model": "openrouter/free",
+      "url": "https://openrouter.ai/api/v1",
+      "id": "openrouter/free",
       "apiKey": true,
     },
-    {
-      "model": "preview/Qwen3.6-35B-A3B",
-      "url": "https://api.ai.sakura.ad.jp/v1",
-      "id": "Qwen3.6-35B-A3B",
-      "apiKey": true,
-    }
   ],
   "ai-features.openAiOfficial.officialOpenAiModels": [],
   "ai-features.openAiOfficial.useResponseApi": true,
