@@ -173,17 +173,17 @@
   // #region instructions
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Use conventional commit message format."
+      "text": "Use conventional commit message format.",
     },
   ],
   "github.copilot.chat.reviewSelection.instructions": [
     {
-      "text": "Use underscore for field names."
+      "text": "Use underscore for field names.",
     },
   ],
   "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
     {
-      "text": "Always include a list of key changes."
+      "text": "Always include a list of key changes.",
     },
   ],
   // #endregion
