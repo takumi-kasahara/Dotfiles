@@ -324,7 +324,6 @@
   "js/ts.inlayHints.parameterTypes.enabled": true,
   "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
   "js/ts.inlayHints.variableTypes.enabled": true,
-  "js/ts.preferences.autoImportEntrypointDirectorySearch": true,
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
   "js/ts.referencesCodeLens.enabled": true,
