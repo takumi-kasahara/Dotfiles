@@ -393,6 +393,15 @@
   "cSpell.usePnP": true,
   "cSpell.validateDirectives": true,
   // #endregion
+  // #region markdown-all-in-one
+  "markdown.extension.completion.enabled": true,
+  "markdown.extension.orderedList.autoRenumber": true,
+  "markdown.extension.orderedList.marker": "one",
+  "markdown.extension.theming.decoration.renderHardLineBreak": true,
+  "markdown.extension.theming.decoration.renderLink": true,
+  "markdown.extension.theming.decoration.renderParagraph": true,
+  "markdown.extension.theming.decoration.renderTrailingSpace": true,
+  // #endregion
   // #region svn-scm
   "svn.conflicts.autoResolve": true,
   "svn.experimental.detect_encoding": true,
