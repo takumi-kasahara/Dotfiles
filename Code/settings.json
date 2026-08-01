@@ -250,6 +250,25 @@
   "powershell.rename.acceptDisclaimer": true,
   // #endregion
   // #region Java
+  "java.codeGeneration.generateComments": true,
+  "java.codeGeneration.generateCommentsInMarkdown": true,
+  "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+  "java.codeGeneration.toString.skipNullValues": true,
+  "java.codeGeneration.useBlocks": true,
+  "java.completion.chain.enabled": true,
+  "java.dependency.showMembers": true,
+  "java.edit.smartSemicolonDetection.enabled": true,
+  "java.inlayHints.formatParameters.enabled": true,
+  "java.inlayHints.parameterTypes.enabled": true,
+  "java.inlayHints.variableTypes.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.referencesCodeLens.includeFields": true,
+  "java.signatureHelp.description.enabled": true,
+  "java.symbols.includeGeneratedCode": true,
+  "java.symbols.includeSourceMethodDeclarations": true,
+  "java.typeHierarchy.lazyLoad": true,
+  "maven.pomfile.autoUpdateEffectivePOM": true,
+  "maven.pomfile.prefetchEffectivePom": true,
   "vscode-java-dependency.enableLspTools": true,
   // #endregion
   // #region AutoHotkey
@@ -432,8 +451,12 @@
   "editor.codeActions.triggerOnFocusChange": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
+    "source.fixAll.markdownlint": "always",
+    "source.fixAll.ruff": "always",
     "source.fixAll.stylelint": "always",
+    "source.organizeImports.ruff": "always",
     "source.organizeImports": "always",
+    "source.organizeLinkDefinitions": "always",
   },
   "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
   "editor.copyWithSyntaxHighlighting": false,
