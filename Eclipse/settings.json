@@ -210,6 +210,8 @@
   "breadcrumbs.enabled": true,
   // #endregion
   // #region debug
+  "debug.autoExpandLazyVariables": "on",
+  "debug.confirmOnExit": "always",
   "debug.inlineValues": true,
   "debug.javascript.autoAttachFilter": "smart",
   "debug.javascript.breakOnConditionalError": true,

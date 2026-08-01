@@ -424,6 +424,7 @@
   // #endregion
   // #region debug
   "debug.breakpointsView.presentation": "tree",
+  "debug.confirmOnExit": "always",
   "debug.console.closeOnEnd": true,
   "debug.javascript.autoAttachFilter": "smart",
   "debug.javascript.breakOnConditionalError": true,
