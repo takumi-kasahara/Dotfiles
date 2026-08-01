@@ -79,6 +79,7 @@
     "apm_modules",
     "node_modules",
   ],
+  "mermaid-chat.enabled": true,
   // #endregion
   // #region powershell
   "powershell.buttons.showPanelMovementButtons": true,
