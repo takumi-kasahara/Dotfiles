@@ -21,6 +21,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+  },
   // #endregion
   // #region chat
   "agents.voice.enabled": true,
@@ -385,6 +388,9 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": true,
   "python.useEnvironmentsExtension": true,
+  "ruff.format.preview": true,
+  "ruff.lint.preview": true,
+  "ty.completions.completeFunctionParentheses": true,
   // #endregion
   // #region accessibility
   "application.experimental.rendererProfiling": true,

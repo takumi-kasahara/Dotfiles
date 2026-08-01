@@ -38,5 +38,24 @@
       "problemMatcher": [],
       "hide": true,
     },
+    {
+      "label": "uv",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "sync",
+      ],
+      "problemMatcher": [],
+    },
+    {
+      "label": "uv-upgrade",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "sync",
+        "--upgrade"
+      ],
+      "problemMatcher": [],
+    }
   ],
 }
