@@ -170,23 +170,6 @@
     "scminput": true,
   },
   "github.copilot.nextEditSuggestions.extendedRange": true,
-  // #region instructions
-  "github.copilot.chat.commitMessageGeneration.instructions": [
-    {
-      "text": "Use conventional commit message format.",
-    },
-  ],
-  "github.copilot.chat.reviewSelection.instructions": [
-    {
-      "text": "Use underscore for field names.",
-    },
-  ],
-  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
-    {
-      "text": "Always include a list of key changes.",
-    },
-  ],
-  // #endregion
   "githubIssues.alwaysPromptForNewIssueRepo": true,
   "githubPullRequests.deleteBranchAfterMerge": true,
   "githubPullRequests.devMode": true,
