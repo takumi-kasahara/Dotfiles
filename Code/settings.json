@@ -1,8 +1,5 @@
 {
   // #region File Extension
-  "[html]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
@@ -42,11 +39,11 @@
   "chat.agent.sandbox.allowNetwork": true,
   "chat.agent.sandbox.enabled": "on",
   "chat.agent.sandbox.enabledWindows": "on",
+  "chat.agentHost.allowSignedOutWhenUsable": true,
   "chat.agentHost.byokModels.enabled": true,
   "chat.agentHost.codexAgent.enabled": true,
   "chat.agentHost.copilot.toolSearch.enabled": true,
   "chat.agentHost.customTerminalTool.enabled": true,
-  "chat.agentHost.enabled": true,
   "chat.agentHost.opus48Prompt.enabled": true,
   "chat.agentHost.sdkSandbox.enabled": "on",
   "chat.agentSessionProjection.enabled": true,
