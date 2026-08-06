@@ -9,14 +9,20 @@
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[less]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
