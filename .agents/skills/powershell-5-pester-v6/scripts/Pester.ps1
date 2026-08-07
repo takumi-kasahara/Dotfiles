@@ -36,7 +36,7 @@ if (-not (Test-Path -LiteralPath $testPath)) {
 
 $config = New-PesterConfiguration
 if ($LineNumber -gt 0) {
-  $config.Filter.Line = "$testPath:$LineNumber"
+  $config.Filter.Line = "$($testPath):$($LineNumber)"
 }
 $config.Run.Exit = $true
 $config.Run.Parallel = $true
