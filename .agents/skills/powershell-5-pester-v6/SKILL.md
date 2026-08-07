@@ -1,7 +1,7 @@
 ---
-name: powershell-7-pester
-description: 'This skill creates or updates Pester tests. Use to create *.Tests.ps1. Follow the context checklist in order.'
-argument-hint: 'Enter the target module or test file and the test cases you want to validate.'
+name: powershell-5-pester-v6
+description: "This skill creates or updates Pester v6 tests. Use to create *.Tests.ps1. Follow the context checklist in order."
+argument-hint: "Enter the target module or test file and the test cases you want to validate."
 user-invocable: true
 ---
 
@@ -18,7 +18,7 @@ user-invocable: true
     - For parameters with `SupportsWildcards()`, test values containing wildcards.
   - Output
     - Verify the shape of the objects returned by the function (the normal-case result).
-    - Cover count (`Should -HaveCount`), property names, property values, and property types.
+    - Cover count (`Should-BeCollection -Count`), property names, property values, and property types.
     - Example: verify a parsed entry exposes `Path`, `CreationTime`, `LastWriteTime` with correct values.
     - Distinguish from `Edge case`: `Output` checks the result shape in normal cases; `Edge case` checks behavior under boundary or invalid input.
   - SupportsShouldProcess
