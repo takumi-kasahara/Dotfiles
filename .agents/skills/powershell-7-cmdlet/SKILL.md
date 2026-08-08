@@ -1,7 +1,7 @@
 ---
 name: powershell-7-cmdlet
-description: 'This skill creates or updates PowerShell cmdlets. Use when: create commandlet, update commandlet, add parameter, comment-based help.'
-argument-hint: 'Enter the target cmdlet and the behavior you want to add or change.'
+description: "This skill creates or updates PowerShell cmdlets. Use when: create commandlet, update commandlet, add parameter, comment-based help."
+argument-hint: "Enter the target cmdlet and the behavior you want to add or change."
 user-invocable: true
 ---
 
@@ -89,3 +89,8 @@ Use this checklist by section:
   - `[Alias('FilePath', 'FullName')]`
   - `[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]`
   - `[ValidateScript({ Test-Path -LiteralPath $_ })]`
+
+## Scripts
+
+- Use [ParseFile.ps1](./scripts/ParseFile.ps1) to parse PowerShell files.
+- Use [ScriptAnalyzer.ps1](./scripts/ScriptAnalyzer.ps1) for PSScriptAnalyzer.

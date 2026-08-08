@@ -1,7 +1,7 @@
 ---
 name: csharp-for-powershell-7
-description: 'This skill creates C# files that can be loaded by PowerShell 7.6 Add-Type.'
-argument-hint: 'Enter the desired functionality and type overview for the C# file.'
+description: "This skill creates C# files that can be loaded by PowerShell 7.6 Add-Type."
+argument-hint: "Enter the desired functionality and type overview for the C# file."
 user-invocable: true
 ---
 
@@ -13,11 +13,11 @@ user-invocable: true
 ## Guidelines
 
 1. Constraint priority:
-	- First: .NET 10 API compatibility.
-	- Second: PowerShell 7.6 `Add-Type` compilation compatibility.
-	- Third: minimal namespace usage.
+   - First: .NET 10 API compatibility.
+   - Second: PowerShell 7.6 `Add-Type` compilation compatibility.
+   - Third: minimal namespace usage.
 2. If the request depends on unsupported APIs or features, explain the limitation and suggest a compatible alternative.
 3. Generate C# source containing `public class` or `public static class`.
 4. Include only namespaces that are actually used by the generated code.
-	- Start with `using System;` when needed.
-	- Common examples: `System`, `System.IO`, `System.Collections.Generic`.
+   - Start with `using System;` when needed.
+   - Common examples: `System`, `System.IO`, `System.Collections.Generic`.

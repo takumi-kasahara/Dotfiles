@@ -1,7 +1,7 @@
 ---
 name: vba-annotation
-description: 'Use Rubberduck and VB_Attribute Annotations to implement and maintain VBA modules with consistent documentation and inspection quality.'
-argument-hint: 'Provide: (1) target VBA component path, and (2) what to add or change (module/procedures/annotations).'
+description: "Use Rubberduck and VB_Attribute Annotations to implement and maintain VBA modules with consistent documentation and inspection quality."
+argument-hint: "Provide: (1) target VBA component path, and (2) what to add or change (module/procedures/annotations)."
 user-invocable: true
 ---
 
@@ -67,7 +67,7 @@ Use `@VariableDescription("...")` on the line immediately above a module field d
 
 Example:
 
-``` vb
+```vb
 '@VariableDescription("It's a thing")
 Private thing As Something
 ```

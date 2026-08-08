@@ -1,7 +1,7 @@
 ---
 name: autohotkey
-description: 'AutoHotkey v2 coding guidelines (Windows 11). Use when: writing or editing *.ahk, variable/function naming, Format() usage, regex with ~=, DllCall/COM integration, Try-Catch-Finally error handling, WINAPI type mapping.'
-argument-hint: 'Describe the AutoHotkey v2 script or function you are writing or editing.'
+description: "AutoHotkey v2 coding guidelines (Windows 11). Use when: writing or editing *.ahk, variable/function naming, Format() usage, regex with ~=, DllCall/COM integration, Try-Catch-Finally error handling, WINAPI type mapping."
+argument-hint: "Describe the AutoHotkey v2 script or function you are writing or editing."
 user-invocable: true
 ---
 
@@ -26,6 +26,7 @@ Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
 ## Coding Style
 
 **Priority**: Rules marked as mandatory must always be followed. All other rules are strong recommendations.
+
 - **Mandatory**: Variable Naming, Function Naming
 - **Recommendation**: Formatting, String Formatting, Regular Expressions, System Integration
 

@@ -1,7 +1,7 @@
 ---
 name: plantuml
-description: 'Generate PlantUML images from text files using a local or remote PlantUML server. Use when converting *.puml/*.plantuml files to png/svg/txt via Python, especially with wildcard input patterns and Docker-hosted PlantUML at http://localhost:8080.'
-argument-hint: 'Describe the input pattern(s), output directory, format, and PlantUML server URL.'
+description: "Generate PlantUML images from text files using a local or remote PlantUML server. Use when converting *.puml/*.plantuml files to png/svg/txt via Python, especially with wildcard input patterns and Docker-hosted PlantUML at http://localhost:8080."
+argument-hint: "Describe the input pattern(s), output directory, format, and PlantUML server URL."
 user-invocable: true
 ---
 

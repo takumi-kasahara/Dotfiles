@@ -1,7 +1,7 @@
 ---
 name: powershell-5-help
-description: 'This skill creates or updates PowerShell comment-based help. Use when documenting a function, updating help, or aligning help with implementation.'
-argument-hint: 'Provide: (1) target function or cmdlet name, and (2) help content to add or update. If either is missing, ask for the missing item before editing.'
+description: "This skill creates or updates PowerShell comment-based help. Use when documenting a function, updating help, or aligning help with implementation."
+argument-hint: "Provide: (1) target function or cmdlet name, and (2) help content to add or update. If either is missing, ask for the missing item before editing."
 user-invocable: true
 ---
 
@@ -29,3 +29,7 @@ Use these steps in order:
     - `[OutputType([System.IO.FileInfo])]`: `.OUTPUTS System.IO.FileInfo`
 - `.NOTES` should include supplementary information or caveats.
 - After editing, always verify output with `Get-Help [-Path <Path>] -Name <Name> -Full`.
+
+## Tips
+
+- Use the bundled [Help.ps1](./scripts/Help.ps1) script to automate the verification step.

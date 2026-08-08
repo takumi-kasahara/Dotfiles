@@ -1,7 +1,7 @@
 ---
 name: powershell-5
-description: 'PowerShell 5.1 coding guidelines. Use when: writing or editing *.ps1/*.psm1, adding functions, error handling, null checks, string formatting, path joining, .NET constructors, wildcard escaping. Enforces [CmdletBinding()], Set-StrictMode, ThrowTerminatingError, and safe path handling.'
-argument-hint: 'Describe the PowerShell 5.1 script or function you are writing or editing.'
+description: "PowerShell 5.1 coding guidelines. Use when: writing or editing *.ps1/*.psm1, adding functions, error handling, null checks, string formatting, path joining, .NET constructors, wildcard escaping. Enforces [CmdletBinding()], Set-StrictMode, ThrowTerminatingError, and safe path handling."
+argument-hint: "Describe the PowerShell 5.1 script or function you are writing or editing."
 user-invocable: true
 ---
 
@@ -72,16 +72,16 @@ Do not use `+` for string concatenation.
 
 #### Examples
 
-  - OK: `if (Test-Path -LiteralPath $existingPath) { Convert-Path -Path $existingPath }`
-  - OK: `$item = Get-Item -LiteralPath $existingPath; Resolve-Path -LiteralPath $item.FullName`
-  - OK: `[Path]::GetFullPath($mayNotExistPath)`
-  - NG: `Convert-Path -Path $mayNotExistPath`
-  - NG: `Resolve-Path -Path $mayNotExistPath`
+- OK: `if (Test-Path -LiteralPath $existingPath) { Convert-Path -Path $existingPath }`
+- OK: `$item = Get-Item -LiteralPath $existingPath; Resolve-Path -LiteralPath $item.FullName`
+- OK: `[Path]::GetFullPath($mayNotExistPath)`
+- NG: `Convert-Path -Path $mayNotExistPath`
+- NG: `Resolve-Path -Path $mayNotExistPath`
 
 #### References
 
-  - [Convert-Path](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/convert-path?view=powershell-5.1)
-  - [Resolve-Path](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/resolve-path?view=powershell-5.1)
+- [Convert-Path](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/convert-path?view=powershell-5.1)
+- [Resolve-Path](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/resolve-path?view=powershell-5.1)
 
 ### Path Joining
 

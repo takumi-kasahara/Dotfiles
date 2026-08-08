@@ -1,7 +1,7 @@
 ---
 name: vba-unittest
-description: 'Create or update Rubberduck VBA unit tests, including test module setup, lifecycle hooks, and VBA Moq-based doubles.'
-argument-hint: 'Provide: (1) target VBA component path, (2) behavior to test, and (3) whether to add new tests or update existing tests.'
+description: "Create or update Rubberduck VBA unit tests, including test module setup, lifecycle hooks, and VBA Moq-based doubles."
+argument-hint: "Provide: (1) target VBA component path, (2) behavior to test, and (3) whether to add new tests or update existing tests."
 user-invocable: true
 ---
 
