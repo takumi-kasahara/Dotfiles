@@ -1,31 +1,34 @@
 {
   // #region File Extension
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   // #endregion
   // #region chat
@@ -173,7 +176,7 @@
   "github.copilot.enable": {
     "plaintext": true,
     "markdown": true,
-    "scminput": true,
+    "scminput": true
   },
   "github.copilot.nextEditSuggestions.extendedRange": true,
   "githubIssues.alwaysPromptForNewIssueRepo": true,
@@ -262,14 +265,14 @@
   // #endregion
   // #region AutoHotkey
   "AHK++.experimental": {
-    "funcDefSearch": true,
+    "funcDefSearch": true
   },
   "AHK++.v1.formatter": {
     "allowedNumberOfEmptyLines": 1,
     "indentCodeAfterIfDirective": true,
     "indentCodeAfterLabel": true,
     "preserveIndent": true,
-    "trimExtraSpaces": true,
+    "trimExtraSpaces": true
   },
   "AHK++.v2.formatter": {
     "arrayStyle": "collapse",
@@ -289,18 +292,18 @@
     "spaceInParen": false,
     "switchCaseAlignment": false,
     "symbolWithSameCase": false,
-    "wrapLineLength": 0,
+    "wrapLineLength": 0
   },
   "AHK++.v2.general": {
     "actionWhenV1Detected": "Warn",
     "completeFunctionCalls": true,
     "librarySuggestions": "All",
-    "symbolFoldingFromOpenBrace": true,
+    "symbolFoldingFromOpenBrace": true
   },
   "AHK++.v2.warn": {
     "callWithoutParentheses": "On",
     "localSameAsGlobal": true,
-    "varUnset": true,
+    "varUnset": true
   },
   // #endregion
   // #region HTML
@@ -352,7 +355,7 @@
     "convertFormatString": true,
     "generateDocstring": true,
     "generateSymbol": true,
-    "implementAbstractClasses": true,
+    "implementAbstractClasses": true
   },
   "python.analysis.aiHoverSummaries": true,
   "python.analysis.autoFormatStrings": true,
@@ -445,7 +448,7 @@
     "source.fixAll.stylelint": "always",
     "source.organizeImports.ruff": "always",
     "source.organizeImports": "always",
-    "source.organizeLinkDefinitions": "always",
+    "source.organizeLinkDefinitions": "always"
   },
   "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
   "editor.copyWithSyntaxHighlighting": false,
@@ -476,9 +479,7 @@
   "editor.minimap.showSlider": "always",
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80,
-  ],
+  "editor.rulers": [80],
   "editor.selectionHighlightMultiline": true,
   "editor.smoothScrolling": true,
   "editor.stablePeek": true,
@@ -491,7 +492,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.allowedLocales": {
-    "ja": true,
+    "ja": true
   },
   // #endregion
   // #region explorer
@@ -510,7 +511,7 @@
     "*.sct": "xml",
     "*.vssettings": "xml",
     "*.wsc": "xml",
-    "*.wsf": "xml",
+    "*.wsf": "xml"
   },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
@@ -525,7 +526,7 @@
     "**/.nuget/**": true,
     "**/.venv/**": true,
     "**/apm_modules/**": true,
-    "**/node_modules/**": true,
+    "**/node_modules/**": true
   },
   // #endregion
   // #region git
@@ -595,7 +596,7 @@
   "scm.defaultViewSortKey": "path",
   "scm.diffDecorationsGutterPattern": {
     "added": true,
-    "modified": true,
+    "modified": true
   },
   "scm.diffDecorationsIgnoreTrimWhitespace": "true",
   "scm.providerCountBadge": "auto",
@@ -648,7 +649,7 @@
   "terminal.integrated.stickyScroll.enabled": true,
   "terminal.integrated.suggest.insertTrailingSpace": true,
   "terminal.integrated.suggest.providers": {
-    "lsp": true,
+    "lsp": true
   },
   "terminal.integrated.suggest.quickSuggestions": {
     "commands": "on",
@@ -774,41 +775,35 @@
     ".nuget",
     ".venv",
     "apm_modules",
-    "node_modules",
+    "node_modules"
   ],
   "todo-tree.general.showActivityBarBadge": true,
   "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
   "todo-tree.general.statusBar": "tags",
-  "todo-tree.general.tags": [
-    "FIXME",
-    "HACK",
-    "NOTE",
-    "TODO",
-    "WIP",
-  ],
+  "todo-tree.general.tags": ["FIXME", "HACK", "NOTE", "TODO", "WIP"],
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.highlights.customHighlight": {
     // https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
     "FIXME": {
       "icon": "bug",
-      "iconColour": "#FF0000", // red
+      "iconColour": "#FF0000" // red
     },
     "HACK": {
       "icon": "alert",
-      "iconColour": "#FF00FF", // magenta
+      "iconColour": "#FF00FF" // magenta
     },
     "NOTE": {
       "icon": "note",
-      "iconColour": "#00FFFF", // cyan
+      "iconColour": "#00FFFF" // cyan
     },
     "TODO": {
       "icon": "checklist",
-      "iconColour": "#00FF00", // lime
+      "iconColour": "#00FF00" // lime
     },
     "WIP": {
       "icon": "beaker",
-      "iconColour": "#FFFF00", // yellow
-    },
+      "iconColour": "#FFFF00" // yellow
+    }
   },
   "todo-tree.highlights.useColourScheme": true,
   // //   js line
@@ -846,7 +841,7 @@
   // #region vscode-yaml
   "yaml.disableAdditionalProperties": true,
   "yaml.disableDefaultProperties": true,
-  "yaml.format.singleQuote": true,
+  "yaml.format.singleQuote": true
   // #endregion
   // #endregion
 }
