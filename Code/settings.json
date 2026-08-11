@@ -24,6 +24,12 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
@@ -74,6 +80,7 @@
   "chat.math.enabled": true,
   "chat.mcp.apps.enabled": true,
   "chat.mcp.assisted.nuget.enabled": true,
+  "chat.omni.enabled": true,
   "chat.permissions.default": "autopilot",
   "chat.restoreLastPanelSession": true,
   "chat.sessionSync.enabled": true,
