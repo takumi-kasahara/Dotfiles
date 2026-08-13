@@ -72,9 +72,10 @@
   vp = v @~
   vu = v @{u}
   # https://git-scm.com/docs/git-stash
-  sl = stash list
-  sp = stash pop
-  ss = stash push
+  ls-stash = stash list
+  apply = stash apply
+  load = stash pop
+  save = stash push
   # https://git-scm.com/docs/git-status
   st = status --verbose
   # https://git-scm.com/docs/git-switch
@@ -138,7 +139,7 @@
 	editor = C:/Program Files/WinGet/Links/edit.exe
   fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
   ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
-  pager = LESSCHARSET=utf-8 less -IJKNMRs
+  pager = LESSCHARSET=utf-8 less -IFJKNMRX
   preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
   quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
   safepcrlf = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
