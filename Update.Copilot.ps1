@@ -20,16 +20,14 @@ ForEach-Object {
         "Skiped:`t$($_.Key)" | Out-Host
         return
       }
-    }
-    else {
+    } else {
       $parent = [WildcardPattern]::Escape($destination) | Split-Path -Parent
       if (-not (Test-Path -LiteralPath $parent)) {
         New-Item -ItemType Directory -Path $parent -Force | Out-Null
       }
     }
     Move-Item -LiteralPath $temp -Destination $destination -Force -PassThru
-  }
-  finally {
+  } finally {
     if (Test-Path -LiteralPath $temp) {
       Remove-Item -LiteralPath $temp
     }

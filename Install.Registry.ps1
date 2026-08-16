@@ -21,7 +21,6 @@ try {
   }
   Copy-UserInternationalSettingsToSystem -WelcomeScreen:$true -NewUser:$true
   taskkill.exe /IM explorer.exe /F >$null && Start-Process -FilePath explorer.exe
-}
-finally {
+} finally {
   Write-Progress -Completed
 }

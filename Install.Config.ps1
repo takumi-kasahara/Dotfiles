@@ -68,13 +68,11 @@ class Installer {
               if (Test-Path -LiteralPath $target) {
                 "Replace:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                 Remove-Item -LiteralPath $target -Recurse -Force:$Force
-              }
-              else {
+              } else {
                 "Create:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
               }
               New-Item @arguments -ItemType SymbolicLink -Force:$Force
-            }
-            else {
+            } else {
               if (Test-Path -LiteralPath $target) {
                 $srcItem = Get-Item -LiteralPath $target -Force
                 $destItem = Get-Item -LiteralPath $resolved -Force
@@ -114,11 +112,9 @@ class Installer {
               }
               Copy-Item -LiteralPath $resolved -Destination $target -Recurse -Force:$Force
             }
-          }
-          catch [UnauthorizedAccessException] {
+          } catch [UnauthorizedAccessException] {
             Write-Error -ErrorRecord $_
-          }
-          catch {
+          } catch {
             Write-Warning -Message $_.Exception.Message
           }
         }
@@ -235,8 +231,7 @@ $edit = Get-Command -Name edit.exe -ErrorAction SilentlyContinue
 if ($edit) {
   git.exe config --global core.editor $edit.Source.Replace([Path]::DirectorySeparatorChar, [Path]::AltDirectorySeparatorChar)
   setx.exe EDITOR "`"$($edit.Source)`""
-}
-else {
+} else {
   git.exe config --global --unset core.editor
 }
 $gpg = Get-Command -Name gpg.exe -ErrorAction SilentlyContinue
@@ -246,22 +241,19 @@ if ($gpg) {
   Destination(($env:APPDATA | Join-Path -ChildPath 'gnupg')).
   Install()
   git.exe config set --global gpg.program $gpg.Source.Replace([Path]::DirectorySeparatorChar, [Path]::AltDirectorySeparatorChar)
-}
-else {
+} else {
   git.exe config unset --global gpg.program
 }
 $ssh = Get-Command -Name ssh.exe -ErrorAction SilentlyContinue
 if ($ssh) {
   git.exe config set --global core.sshCommand $ssh.Source.Replace([Path]::DirectorySeparatorChar, [Path]::AltDirectorySeparatorChar)
-}
-else {
+} else {
   git.exe config unset --global core.sshCommand
 }
 $ssh_keygen = Get-Command -Name ssh-keygen.exe -ErrorAction SilentlyContinue
 if ($ssh_keygen) {
   git.exe config set --global gpg.ssh.program $ssh_keygen.Source.Replace([Path]::DirectorySeparatorChar, [Path]::AltDirectorySeparatorChar)
-}
-else {
+} else {
   git.exe config unset --global gpg.ssh.program
 }
 Copy-Item -LiteralPath ($PSScriptRoot | Join-Path -ChildPath 'Git\ignore') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.config\git') -Force
@@ -411,8 +403,7 @@ Install()
 if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
   try {
     wsl.exe --status >$null 2>&1
-  }
-  catch {
+  } catch {
     wsl.exe --install
   }
   [Installer]::new().
@@ -444,8 +435,7 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
     }
   }
   wsl.exe --shutdown
-}
-else {
+} else {
   Write-Warning -Message 'WSL not available.'
 }
 #endregion
