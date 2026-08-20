@@ -2,7 +2,7 @@
   "$help": "https://aka.ms/intelligent-terminal-docs",
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "acpAgent": "copilot",
-  "acpModel": "auto",
+  "acpModel": null,
   "actions": [
     {
       "command": {
@@ -38,6 +38,24 @@
   "compatibility.allowHeadless": true,
   "copyFormatting": "none",
   "copyOnSelect": true,
+  "customModelProviders": [
+    {
+      "apiContract": "openai-compatible",
+      "apiKeyCredential": null,
+      "apiKeyRequired": false,
+      "baseUrl": "http://localhost:11434/v1",
+      "id": "ollama",
+      "location": "local",
+      "models": [
+        {
+          "id": "ornith-1.5:9b",
+          "name": "ornith-1.5:9b"
+        }
+      ],
+      "name": "localhost"
+    }
+  ],
+  "customModelSelection": "custom:ollama:ornith-1.5:9b",
   "debugFeatures": true,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
   "delegateAgent": "copilot",
