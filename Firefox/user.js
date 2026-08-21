@@ -36,7 +36,7 @@ user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("general.smoothScroll", true);
-user_pref("geo.enabled", true);
+user_pref("geo.enabled", false);
 user_pref("gfx.webrender.all", true);
 user_pref("javascript.enabled", true);
 user_pref("media.eme.enabled", true);
@@ -46,12 +46,14 @@ user_pref("media.hardwaremediakeys.enabled", true);
 user_pref("media.peerconnection.enabled", true);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.dns.disableIPv6", false);
 user_pref("network.dns.disablePrefetch", true);
+user_pref("network.http.idempotencyKey.enabled", true);   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#idempotency-key} */
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.http.windows-sso.enabled", true);
-user_pref("network.IDN_show_punycode", true); /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
+user_pref("network.IDN_show_punycode", true);             /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
 user_pref("network.preconnect", false);
 user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
@@ -80,7 +82,7 @@ user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.webrtc.globalMuteToggles", true);
 user_pref("security.integrity_policy.enabled", true);
-user_pref("security.integrity_policy.stylesheet.enabled", true);
+user_pref("security.integrity_policy.stylesheet.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#integrity_policy_for_stylesheet_resources} */
 user_pref("signon.autofillForms", true);
 user_pref("signon.autologin.proxy", true);
 user_pref("signon.generation.enabled", true);
@@ -231,6 +233,8 @@ user_pref("devtools.webconsole.timestampMessages", true);
 // #endregion
 // #region layout.css.*
 user_pref("layout.css.always_underline_links", true);
+user_pref("layout.forms.input-type-search.enabled", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout_for_input_typesearch} */
+user_pref("layout.forms.reveal-password-button.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#toggle_password_display} */
 // #endregion
 // #region print.*
 user_pref("print.more-settings.open", false);

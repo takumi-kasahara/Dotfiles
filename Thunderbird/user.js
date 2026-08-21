@@ -22,6 +22,7 @@ user_pref("browser.safebrowsing.phishing.enabled", true);
 user_pref("browser.send_pings", false);
 user_pref("cookiebanners.service.mode", 1); // 1: Reject All
 user_pref("dom.battery.enabled", false);
+user_pref("dom.disable_open_during_load", true);
 user_pref("dom.event.clipboardevents.enabled", false);
 user_pref("dom.event.contextmenu.enabled", false);
 user_pref("dom.events.dataTransfer.protected.enabled", true);
@@ -43,14 +44,16 @@ user_pref("media.hardwaremediakeys.enabled", false);
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.cookie.cookieBehavior", 2);
 user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", false);
 user_pref("network.dns.disablePrefetch", true);
+user_pref("network.http.idempotencyKey.enabled", true);   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#idempotency-key} */
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.http.windows-sso.enabled", true);
-user_pref("network.IDN_show_punycode", true); // https://kb.mozillazine.org/Network.IDN_show_punycode
+user_pref("network.IDN_show_punycode", true);             /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
 user_pref("network.preconnect", false);
 user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
@@ -71,6 +74,8 @@ user_pref("privacy.trackingprotection.emailtracking.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.webrtc.globalMuteToggles", true);
+user_pref("security.integrity_policy.enabled", true);
+user_pref("security.integrity_policy.stylesheet.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#integrity_policy_for_stylesheet_resources} */
 user_pref("signon.autofillForms", true);
 user_pref("signon.autologin.proxy", true);
 user_pref("signon.generation.enabled", true);
@@ -104,6 +109,7 @@ user_pref("browser.sessionstore.interval", 60000); // 1 Minute
 // #region font.*
 user_pref("browser.display.use_document_fonts", 1);
 user_pref("font.language.group", "ja");
+user_pref("font.cjk_pref_fallback_order", "ja,zh-cn,zh-hk,zh-tw,ko");
 user_pref("font.default.ja", "serif");
 user_pref("font.name.serif.ja", "BIZ UDPMincho");
 user_pref("font.name.sans-serif.ja", "BIZ UDPGothic");
@@ -113,6 +119,7 @@ user_pref("font.name.monospace.ja", "BIZ UDGothic");
 /** @see {@link https://firefox-source-docs.mozilla.org/intl/locale.html} */
 user_pref("browser.search.region", "JP");
 user_pref("intl.accept_languages", "ja");
+user_pref("intl.locale.requested", "");
 user_pref("intl.regional_prefs.use_os_locales", true);
 user_pref("privacy.spoof_english", 2);
 // #endregion
@@ -211,6 +218,8 @@ user_pref("devtools.webconsole.timestampMessages", true);
 // #endregion
 // #region layout.css.*
 user_pref("layout.css.always_underline_links", true);
+user_pref("layout.forms.input-type-search.enabled", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout_for_input_typesearch} */
+user_pref("layout.forms.reveal-password-button.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#toggle_password_display} */
 // #endregion
 // #region print.*
 user_pref("print.more-settings.open", false);
