@@ -578,6 +578,7 @@
   "http.systemCertificatesNode": true,
   // #endregion
   // #region markdown
+  "markdown.experimental.richLinks.enabled": true,
   "markdown.extension.print.imgToBase64": true,
   "markdown.extension.showActionButtons": true,
   "markdown.extension.syntax.plainTheme": true,
