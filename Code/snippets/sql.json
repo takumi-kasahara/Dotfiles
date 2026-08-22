@@ -3,36 +3,23 @@
   // #region MSSQL.Template
   "MSSQL.Template": {
     "prefix": "@tsql",
-    "body": [
-      "use ${1:schema};",
-      "go",
-    ],
+    "body": ["use ${1:schema};", "go"]
   },
   // #endregion
   // #region MSSQL.Declare
   "MSSQL.Declare.Variable": {
     "prefix": "mssql.variable.declare",
-    "body": [
-      "declare",
-      "\t@${1:var} as ${2:type};",
-    ],
+    "body": ["declare", "\t@${1:var} as ${2:type};"]
   },
   "MSSQL.Declare.Type.Table": {
     "prefix": "mssql.table.decrare",
-    "body": [
-      "create type ${1:type_name} as table (",
-      "$0",
-      ");",
-    ],
+    "body": ["create type ${1:type_name} as table (", "$0", ");"]
   },
   // #endregion
   // #region MSSQL.Cursor
   "MSSQL.Cursor.Declare": {
     "prefix": "mssql.cursor.declare",
-    "body": [
-      "declare cursor ${1:cursor} for",
-      "select\n",
-    ],
+    "body": ["declare cursor ${1:cursor} for", "select\n"]
   },
   "MSSQL.Cursor.Open": {
     "prefix": "mssql.open.cursor",
@@ -40,8 +27,8 @@
       "open ${1:cursor};",
       "fetch next from ${1:cursor} into ${2:variables};",
       "close ${1:cursor};",
-      "deallocate ${1:cursor};",
-    ],
+      "deallocate ${1:cursor};"
+    ]
   },
   "MSSQL.Cursor.Loop": {
     "prefix": "mssql.loop.cursor",
@@ -50,8 +37,8 @@
       "fetch next from ${1:cursor} into ${2:variables};\n",
       "while ${3:condition}",
       "\tfetch next from ${1:cursor} into ${2:variables};\n",
-      "\t$0",
-    ],
+      "\t$0"
+    ]
   },
   // #endregion
   // #region MSSQL.Structure
@@ -65,24 +52,16 @@
       "else",
       "begin",
       "$0",
-      "end;",
-    ],
+      "end;"
+    ]
   },
   "MSSQL.Structure.While": {
     "prefix": "mssql.while",
-    "body": [
-      "while ${1:condition}",
-      "\t$0",
-    ],
+    "body": ["while ${1:condition}", "\t$0"]
   },
   "MSSQL.Structure.Try": {
     "prefix": "mssql.try_catch",
-    "body": [
-      "begin try\n",
-      "end try",
-      "begin catch",
-      "end catch",
-    ],
+    "body": ["begin try\n", "end try", "begin catch", "end catch"]
   },
   // #endregion
   // #region MSSQL.Stored
@@ -93,8 +72,8 @@
       "\t${3:-- @param type}",
       "as",
       "end",
-      "go",
-    ],
+      "go"
+    ]
   },
   "MSSQL.Stored.Function": {
     "prefix": "mssql.func",
@@ -104,8 +83,8 @@
       "returns ${3:return_type}",
       "as",
       "end",
-      "go",
-    ],
+      "go"
+    ]
   },
   "MSSQL.Stored.Table.Function.Single": {
     "prefix": "mssql.func.table.single",
@@ -119,8 +98,8 @@
       "\t$0",
       ")",
       "end",
-      "go",
-    ],
+      "go"
+    ]
   },
   "MSSQL.Stored.Table.Function.Multi": {
     "prefix": "mssql.func.table.multi",
@@ -136,9 +115,9 @@
       "$0",
       "\treturn",
       "end",
-      "go",
-    ],
-  },
+      "go"
+    ]
+  }
   // #endregion
   // #endregion
 }

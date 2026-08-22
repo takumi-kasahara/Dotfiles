@@ -1,9 +1,6 @@
 {
   "Folder Only": {
     "prefix": "*folder",
-    "body": [
-      "*",
-      "!.gitignore",
-    ],
-  },
+    "body": ["*", "!.gitignore"]
+  }
 }

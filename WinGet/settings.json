@@ -4,19 +4,17 @@
   "source": {},
   "installBehavior": {
     "preferences": {
-      "locale": [
-        "en-US",
-      ],
-      "scope": "machine",
-    },
+      "locale": ["en-US"],
+      "scope": "machine"
+    }
   },
   "uninstallBehavior": {
-    "purgePortablePackage": true,
+    "purgePortablePackage": true
   },
   "experimentalFeatures": {
     "directMSI": true,
     "fonts": true,
     "resume": true,
-    "sourcePriority": true,
-  },
+    "sourcePriority": true
+  }
 }

@@ -1,7 +1,7 @@
 ---
 name: communication-instructions
 description: This file describes the communication style for the project.
-applyTo: '**'
+applyTo: "**"
 ---
 
 # Communication Instructions

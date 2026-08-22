@@ -1,11 +1,6 @@
 {
   "panes": {
-    "quadrants": [
-      "Source",
-      "Console",
-      "TabSet1",
-      "TabSet2"
-    ],
+    "quadrants": ["Source", "Console", "TabSet1", "TabSet2"],
     "tabSet1": [
       "Environment",
       "History",

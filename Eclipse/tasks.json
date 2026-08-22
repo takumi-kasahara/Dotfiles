@@ -3,59 +3,45 @@
   "options": {},
   "presentation": {
     "reveal": "silent",
-    "revealProblems": "onProblem",
+    "revealProblems": "onProblem"
   },
   "tasks": [
     {
       "label": "npm-install",
       "type": "shell",
       "command": "npm",
-      "args": [
-        "install",
-      ],
-      "problemMatcher": [],
+      "args": ["install"],
+      "problemMatcher": []
     },
     {
       "label": "npm-update",
       "type": "shell",
       "command": "npm",
-      "args": [
-        "update",
-      ],
+      "args": ["update"],
       "problemMatcher": [],
-      "dependsOn": [
-        "npm-check-updates",
-      ],
+      "dependsOn": ["npm-check-updates"]
     },
     {
       "label": "npm-check-updates",
       "type": "shell",
       "command": "npx",
-      "args": [
-        "npm-check-updates",
-        "--upgrade",
-      ],
+      "args": ["npm-check-updates", "--upgrade"],
       "problemMatcher": [],
-      "hide": true,
+      "hide": true
     },
     {
       "label": "uv",
       "type": "shell",
       "command": "uv",
-      "args": [
-        "sync",
-      ],
-      "problemMatcher": [],
+      "args": ["sync"],
+      "problemMatcher": []
     },
     {
       "label": "uv-upgrade",
       "type": "shell",
       "command": "uv",
-      "args": [
-        "sync",
-        "--upgrade"
-      ],
-      "problemMatcher": [],
+      "args": ["sync", "--upgrade"],
+      "problemMatcher": []
     }
-  ],
+  ]
 }

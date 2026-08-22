@@ -12,8 +12,8 @@
       "${0::: statement}\n",
       ":end",
       "pause",
-      "exit /b %errorlevel%",
-    ],
+      "exit /b %errorlevel%"
+    ]
   },
   "Template.Basic.RunAs": {
     "prefix": "template-script-runas",
@@ -37,8 +37,8 @@
       "${0::: statement}\n",
       ":end",
       "pause",
-      "exit /b %errorlevel%",
-    ],
+      "exit /b %errorlevel%"
+    ]
   },
   // #endregion
   // #region Syntax.For
@@ -47,45 +47,38 @@
     "body": [
       "for /l %%I in (${1:start},${2:inc::ent},${3:end}) do (",
       "\t${0::: statements}",
-      ")",
-    ],
+      ")"
+    ]
   },
   "Syntax.For.Pattern": {
-    "prefix": [
-      "find",
-      "for-pattern",
-    ],
+    "prefix": ["find", "for-pattern"],
     "body": [
       "for${1: /d}${2: /r \"${3:path}\"} %%I in (${4:pattern}) do (",
       "\t${0::: statements}",
-      ")",
-    ],
+      ")"
+    ]
   },
   "Syntax.For.F": {
     "prefix": "while-read",
     "body": [
       "for /f \"${1:usebackq}${2: skip=${3:0}}${4: eol=${5:;}}${6: delims=${7}}${8: tokens=${9:1}}\" %%I in (${10:pattern}) do (",
       "\t${0::: statements}",
-      ")",
-    ],
+      ")"
+    ]
   },
   "Syntax.For.ReadEachCommand": {
     "prefix": "for-each-command",
     "body": [
       "for /f \"usebackq\" %%I in (`${1:command}`) do (",
       "\t${0::: statements}",
-      ")",
-    ],
+      ")"
+    ]
   },
   // #endregion
   // #region Syntax.If
   "Syntax.If": {
     "prefix": "If",
-    "body": [
-      "if ${1:cond} (",
-      "\t${0::: if_true}",
-      ")",
-    ],
+    "body": ["if ${1:cond} (", "\t${0::: if_true}", ")"]
   },
   "Syntax.If.Else": {
     "prefix": "If.Else",
@@ -94,32 +87,20 @@
       "\t${0::: if_true}",
       ") else (",
       "\t:: if_false",
-      ")",
-    ],
+      ")"
+    ]
   },
   "Syntax.If.Defined": {
     "prefix": "If.Defined",
-    "body": [
-      "if not defined ${1:variable} (",
-      "\t${0::: statements}",
-      ")",
-    ],
+    "body": ["if not defined ${1:variable} (", "\t${0::: statements}", ")"]
   },
   "Syntax.If.Exist": {
     "prefix": "If.Exist",
-    "body": [
-      "if exist \"${1:path}\" (",
-      "\t${0::: statements}",
-      ")",
-    ],
+    "body": ["if exist \"${1:path}\" (", "\t${0::: statements}", ")"]
   },
   "Syntax.If.NotExist": {
     "prefix": "If.NotExist",
-    "body": [
-      "if not exist \"${1:path}\" (",
-      "\t${0::: statements}",
-      ")",
-    ],
+    "body": ["if not exist \"${1:path}\" (", "\t${0::: statements}", ")"]
   },
   // #endregion
   // #region Using
@@ -128,57 +109,48 @@
     "body": [
       "setlocal${1: enabledelayedexpansion}",
       "${0::: statements}",
-      "endlocal",
-    ],
+      "endlocal"
+    ]
   },
   // #endregion
   // #region Set
   "Set": {
     "prefix": "Set",
-    "body": [
-      "set \"${1:variable}=${2:value}\"",
-    ],
+    "body": ["set \"${1:variable}=${2:value}\""]
   },
   "Set.From": {
     "prefix": "$()",
     "body": [
-      "for /f \"usebackq\" %%I in (`${1:command}`) do set \"${2:variable}=%%I\"",
-    ],
+      "for /f \"usebackq\" %%I in (`${1:command}`) do set \"${2:variable}=%%I\""
+    ]
   },
   "Set.TimeStamp": {
     "prefix": "Set.TimeStamp",
     "body": [
-      "for /f \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\"",
-    ],
+      "for /f \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\""
+    ]
   },
   // #endregion
   // #region Variable
   "Variable.SubString": {
     "prefix": "%SubString",
-    "body": [
-      "%${1:variable}:~${2:start}${3:,${4:length}}%",
-    ],
+    "body": ["%${1:variable}:~${2:start}${3:,${4:length}}%"]
   },
   "Variable.Replace": {
     "prefix": "%Replace",
-    "body": [
-      "%${1:variable}:${2:find}=${3:replace}%",
-    ],
+    "body": ["%${1:variable}:${2:find}=${3:replace}%"]
   },
   "Variable.Expand": {
     "prefix": "%Expand",
     "body": [
       // "${3|~,~dp,~nx,~f,~d,~p,~n,~x,~s,~a,~t,~z|}"
-      "${1|%,%%|}${3|~,~dp,~nx,~f,~d,~p,~n,~x,~s,~a,~t,~z|}${4:\\$${5:env}:}${2:variable}",
-    ],
+      "${1|%,%%|}${3|~,~dp,~nx,~f,~d,~p,~n,~x,~s,~a,~t,~z|}${4:\\$${5:env}:}${2:variable}"
+    ]
   },
   // #endregion
   // #region Idiom
   "Idiom.Confirm": {
-    "prefix": [
-      "Case",
-      "Confirm",
-    ],
+    "prefix": ["Case", "Confirm"],
     "body": [
       "choice ${1:/c ${2:choices}}${3: /n}${4: /m \"${5:message}\"}${6: /t ${7:timeout} /d ${8:default}}",
       "goto :case_%errorlevel%",
@@ -191,8 +163,8 @@
       ":case_2",
       ":: case_2",
       "goto :end_case",
-      ":end_case",
-    ],
+      ":end_case"
+    ]
   },
   "Idiom.JoinArgs": {
     "prefix": "Join",
@@ -203,27 +175,22 @@
       "\t)",
       "\tset args=%args% \"%~1\"",
       "\tshift /1",
-      "goto :loop",
-    ],
+      "goto :loop"
+    ]
   },
   "Idiom.Print": {
     "prefix": "Print",
-    "body": [
-      "set /p =\"${1:value}\"<nul",
-    ],
+    "body": ["set /p =\"${1:value}\"<nul"]
   },
   "Idiom.Function": {
-    "prefix": [
-      "Fn",
-      "Func",
-    ],
+    "prefix": ["Fn", "Func"],
     "body": [
       ":: ${1:discription}",
       ":${2:label}",
       "\t$0",
       "exit /b",
-      ":: end {2:label}",
-    ],
+      ":: end {2:label}"
+    ]
   },
   // #endregion
   // #region MaybeError
@@ -234,8 +201,8 @@
       "if errorlevel 1 (",
       "\t$0",
       "\tgoto :end",
-      ")",
-    ],
+      ")"
+    ]
   },
   "MaybeError.Args": {
     "prefix": "Args",
@@ -243,8 +210,8 @@
       "if \"%~1\"==\"\" (",
       "\techo USAGE: %~nx0 ${0:args}",
       "\tgoto :end",
-      ")",
-    ],
-  },
+      ")"
+    ]
+  }
   // #endregion
 }

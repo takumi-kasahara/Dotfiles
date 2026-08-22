@@ -2,20 +2,13 @@
   // #region Template
   "Template.Default": {
     "prefix": "@start",
-    "body": [
-      "# $TM_FILENAME_BASE\n",
-      "$0"
-    ],
+    "body": ["# $TM_FILENAME_BASE\n", "$0"]
   },
   // #endregion
   // #region CodeBlock
   "CodeBlock": {
     "prefix": "@code",
-    "body": [
-      "``` ${1:extension}",
-      "$0",
-      "```"
-    ],
+    "body": ["``` ${1:extension}", "$0", "```"]
   },
   "CodeBlock.PlantUML": {
     "prefix": "@uml",
@@ -25,69 +18,46 @@
       "$0",
       "@enduml",
       "```"
-    ],
+    ]
   },
   // #endregion
   // #region Markdown
   "Markdown.Image": {
     "prefix": "@img.markdown",
-    "body": [
-      "![${2:alt}](${1:src})",
-    ],
-    "description": [
-      "https://pandoc.org/MANUAL.html#images",
-    ]
+    "body": ["![${2:alt}](${1:src})"],
+    "description": ["https://pandoc.org/MANUAL.html#images"]
   },
   "Markdown.CheckList": {
     "prefix": "[]",
-    "body": [
-      "- [ ]",
-    ],
+    "body": ["- [ ]"]
   },
   // #endregion
   // #region Table
   "Table.2": {
     "prefix": "@table-2",
-    "body": [
-      "| $1  | $2  |",
-      "| - | - |",
-      "| $0  |   |",
-    ],
+    "body": ["| $1  | $2  |", "| - | - |", "| $0  |   |"]
   },
   "Table.3": {
     "prefix": "@table-3",
-    "body": [
-      "| $1  | $2  | $3  |",
-      "| - | - | - |",
-      "| $0  |   |   |",
-    ],
+    "body": ["| $1  | $2  | $3  |", "| - | - | - |", "| $0  |   |   |"]
   },
   "Table.4": {
     "prefix": "@table-4",
     "body": [
       "| $1  | $2  | $3  | $4  |",
       "| - | - | - | - |",
-      "| $0  |   |   |   |",
-    ],
+      "| $0  |   |   |   |"
+    ]
   },
   // #endregion
   // #region HTML
   "HTML.Comment": {
     "prefix": "--",
-    "body": [
-      "<!--",
-      "\t${0:comment}",
-      "-->"
-    ],
+    "body": ["<!--", "\t${0:comment}", "-->"]
   },
   "HTML.Details": {
     "prefix": "@details",
-    "body": [
-      "<details>",
-      "\t<summary>${1}</summary>",
-      "\t${0}",
-      "</details>",
-    ],
+    "body": ["<details>", "\t<summary>${1}</summary>", "\t${0}", "</details>"]
   },
   "HTML.Image": {
     "prefix": "@img.html",
@@ -95,14 +65,12 @@
       "<figure style=\"text-align: center; align: center;\">",
       "\t<img src=\"${1}\" alt=\"${2}\" width=\"100%\">",
       "\t<figcaption>${3}</figcaption>",
-      "</figure>",
-    ],
+      "</figure>"
+    ]
   },
   "HTML.PageBreak": {
     "prefix": "@page-break",
-    "body": [
-      "<div style=\"break-before:always\"></div>",
-    ],
-  },
+    "body": ["<div style=\"break-before:always\"></div>"]
+  }
   // #endregion
 }

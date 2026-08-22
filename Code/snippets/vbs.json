@@ -2,11 +2,7 @@
   // #region Condition
   "Condition.If": {
     "prefix": "if",
-    "body": [
-      "if ${1:cond} then",
-      "\t${0:' statements}",
-      "end if",
-    ],
+    "body": ["if ${1:cond} then", "\t${0:' statements}", "end if"]
   },
   "Condition.IfElse": {
     "prefix": "ifelse",
@@ -15,8 +11,8 @@
       "\t${0:' statements}",
       "else",
       "\t' else statements",
-      "end if",
-    ],
+      "end if"
+    ]
   },
   "Condition.IfElse.Full": {
     "prefix": "ifelse_full",
@@ -27,8 +23,8 @@
       "\t' elseif statements",
       "else",
       "\t' else statements",
-      "end if",
-    ],
+      "end if"
+    ]
   },
   // #endregion
   // #region Loop
@@ -38,39 +34,32 @@
       "dim ${1:counter}",
       "for ${1:counter} = ${2:first} to ${3:last}",
       "\t${0:' statements}",
-      "next",
-    ],
+      "next"
+    ]
   },
   "Loop.For.Array": {
     "prefix": "for_array",
     "body": [
       "for ${1:counter} = 0 to UBound(${2:array})",
       "\t${0:' statements}",
-      "next",
-    ],
+      "next"
+    ]
   },
   "Loop.ForEach": {
     "prefix": "foreach",
     "body": [
       "for each ${1:element} in ${2:collection}",
       "\t${0:' statements}",
-      "next",
-    ],
+      "next"
+    ]
   },
   "Loop.Do.Before": {
     "prefix": "do_before",
-    "body": [
-      "do ${1|while,until|} ${2:cond}",
-      "loop",
-    ],
+    "body": ["do ${1|while,until|} ${2:cond}", "loop"]
   },
   "Loop.Do.After": {
     "prefix": "do_after",
-    "body": [
-      "do",
-      "\t${0:' statements}",
-      "loop ${1|while,until|} ${2:cond}",
-    ],
+    "body": ["do", "\t${0:' statements}", "loop ${1|while,until|} ${2:cond}"]
   },
   // #endregion
   // #region Property
@@ -79,24 +68,24 @@
     "body": [
       "public property get ${1:Name}(${2:param})",
       "\t${0:' statements}",
-      "end property",
-    ],
+      "end property"
+    ]
   },
   "Property.Let": {
     "prefix": "property_let",
     "body": [
       "public property let ${1:Name}(${2:param})",
       "\t${0:' statements}",
-      "end property",
-    ],
+      "end property"
+    ]
   },
   "Property.Set": {
     "prefix": "property_set",
     "body": [
       "public property set ${1:Name}(${2:param})",
       "\t${0:' statements}",
-      "end property",
-    ],
+      "end property"
+    ]
   },
   // #endregion
   // #region Method
@@ -106,8 +95,8 @@
       "${1|public,private|} sub ${2:Name}(${3:params})",
       "\ton error resume next",
       "\t${0:' statements}",
-      "end sub",
-    ],
+      "end sub"
+    ]
   },
   "Method.Function": {
     "prefix": "function",
@@ -115,37 +104,24 @@
       "${1|public,private|} function ${2:Name}(${3:params})",
       "\ton error resume next",
       "\t${0:' statements}",
-      "end function",
-    ],
+      "end function"
+    ]
   },
   // #endregion
   // #region Control
   "Control.Exit": {
     "prefix": "exit",
-    "body": [
-      "if ${1:cond} then exit ${2|for,do,sub,function|}"
-    ],
+    "body": ["if ${1:cond} then exit ${2|for,do,sub,function|}"]
   },
   "Control.Try": {
-    "prefix": [
-      "catch",
-      "iferror",
-    ],
-    "body": [
-      "if Err.Number <> 0 then",
-      "\t' statements",
-      "end if",
-    ],
+    "prefix": ["catch", "iferror"],
+    "body": ["if Err.Number <> 0 then", "\t' statements", "end if"]
   },
   // #endregion
   // #region Class
   "Class.Declare": {
     "prefix": "class",
-    "body": [
-      "class ${1:Name}",
-      "\t${0:' statements}",
-      "end class",
-    ],
+    "body": ["class ${1:Name}", "\t${0:' statements}", "end class"]
   },
   "Class.Initialize": {
     "prefix": "ctor",
@@ -153,8 +129,8 @@
       "private sub Class_Initialize()",
       "\ton error resume next",
       "\t${0:' statements}",
-      "end sub",
-    ],
+      "end sub"
+    ]
   },
   "Class.Terminate": {
     "prefix": "~",
@@ -162,8 +138,8 @@
       "private sub Class_Terminate()",
       "\ton error resume next",
       "\t${0:' statements}",
-      "end sub",
-    ],
+      "end sub"
+    ]
   },
   // #endregion
   // #region ErrorHandle
@@ -172,8 +148,8 @@
     "body": [
       "Err.Raise number := vbObjectError + ${1:value}, _",
       "\tsource := \"${2:src}\", _",
-      "\tdescription := \"${3:description}\"",
-    ],
+      "\tdescription := \"${3:description}\""
+    ]
   },
   // #endregion
   // #region Utility
@@ -181,8 +157,8 @@
     "prefix": "pause",
     "body": [
       "WScript.Echo \"Press any key to continue.\"",
-      "WScript.StdIn.ReadLine",
-    ],
-  },
+      "WScript.StdIn.ReadLine"
+    ]
+  }
   // #endregion
 }

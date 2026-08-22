@@ -3,14 +3,14 @@
   "options": {},
   "presentation": {
     "reveal": "silent",
-    "revealProblems": "onProblem",
+    "revealProblems": "onProblem"
   },
   "tasks": [
     {
       "label": "install",
       "type": "shell",
       "command": "${workspaceFolder}\\Install.bat",
-      "problemMatcher": [],
-    },
-  ],
+      "problemMatcher": []
+    }
+  ]
 }

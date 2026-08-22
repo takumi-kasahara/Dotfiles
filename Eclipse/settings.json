@@ -4,25 +4,25 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[less]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   // #region ai-features
   "ai-features.agentMode.enabled": true,
@@ -37,19 +37,19 @@
   "ai-features.huggingFace.models": [],
   "ai-features.languageModelAliases": {
     "default/code": {
-      "selectedModel": "openrouter/free",
+      "selectedModel": "ollama/ornith-1.5:9b"
     },
     "default/universal": {
-      "selectedModel": "openrouter/free",
+      "selectedModel": "ollama/ornith-1.5:9b"
     },
     "default/code-completion": {
-      "selectedModel": "openrouter/free",
+      "selectedModel": "ollama/granite4.1:3b"
     },
     "default/summarize": {
-      "selectedModel": "openrouter/free",
+      "selectedModel": "ollama/granite4.1:3b"
     },
     "default/fast": {
-      "selectedModel": "openrouter/free",
+      "selectedModel": "ollama/granite4.1:3b"
     }
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
@@ -57,30 +57,19 @@
     "MDN": {
       "serverUrl": "https://mcp.mdn.mozilla.net/",
       "autostart": true,
-      "deferLoading": true,
+      "deferLoading": true
     }
   },
-  "ai-features.openAiCustom.customOpenAiModels": [
-    {
-      "model": "openrouter/free",
-      "url": "https://openrouter.ai/api/v1",
-      "id": "openrouter/free",
-      "apiKey": true,
-    },
-  ],
   "ai-features.openAiOfficial.officialOpenAiModels": [],
   "ai-features.openAiOfficial.useResponseApi": true,
-  "ai-features.ollama.ollamaModels": [
-    "granite4.1:3b",
-    "ornith:latest",
-  ],
+  "ai-features.ollama.ollamaModels": ["granite4.1:3b", "ornith-1.5:9b"],
   "ai-features.notifications.default": "os-notification",
   "ai-features.SCANOSS.mode": "automatic",
   "ai-features.workspaceFunctions.userExcludes": [
     ".nuget",
     ".venv",
     "apm_modules",
-    "node_modules",
+    "node_modules"
   ],
   "mermaid-chat.enabled": true,
   // #endregion
@@ -116,14 +105,14 @@
   // #endregion
   // #region AutoHotkey
   "AHK++.experimental": {
-    "funcDefSearch": true,
+    "funcDefSearch": true
   },
   "AHK++.v1.formatter": {
     "allowedNumberOfEmptyLines": 1,
     "indentCodeAfterIfDirective": true,
     "indentCodeAfterLabel": true,
     "preserveIndent": true,
-    "trimExtraSpaces": true,
+    "trimExtraSpaces": true
   },
   "AHK++.v2.formatter": {
     "arrayStyle": "collapse",
@@ -143,18 +132,18 @@
     "spaceInParen": false,
     "switchCaseAlignment": false,
     "symbolWithSameCase": false,
-    "wrapLineLength": 0,
+    "wrapLineLength": 0
   },
   "AHK++.v2.general": {
     "actionWhenV1Detected": "Warn",
     "completeFunctionCalls": true,
     "librarySuggestions": "All",
-    "symbolFoldingFromOpenBrace": true,
+    "symbolFoldingFromOpenBrace": true
   },
   "AHK++.v2.warn": {
     "callWithoutParentheses": "On",
     "localSameAsGlobal": true,
-    "varUnset": true,
+    "varUnset": true
   },
   // #endregion
   // #region HTML
@@ -232,7 +221,7 @@
   "editor.autoIndent": "advanced",
   "editor.codeActions.triggerOnFocusChange": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll": true
   },
   "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
   "editor.copyWithSyntaxHighlighting": false,
@@ -262,9 +251,7 @@
   "editor.minimap.showSlider": "always",
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80,
-  ],
+  "editor.rulers": [80],
   "editor.smoothScrolling": true,
   "editor.stablePeek": true,
   "editor.stickyTabStops": true,
@@ -276,7 +263,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.allowedLocales": {
-    "ja": true,
+    "ja": true
   },
   // #endregion
   // #region emmet
@@ -288,7 +275,7 @@
     "*.sct": "xml",
     "*.vssettings": "xml",
     "*.wsc": "xml",
-    "*.wsf": "xml",
+    "*.wsf": "xml"
   },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
@@ -299,7 +286,7 @@
     "**/.nuget/**": true,
     "**/.venv/**": true,
     "**/apm_modules/**": true,
-    "**/node_modules/**": true,
+    "**/node_modules/**": true
   },
   // #endregion
   // #region git
@@ -372,7 +359,7 @@
   // #region security
   "security.workspace.trust.trustedFolders": [
     "file:///d%3A/source",
-    "file:///e%3A/source",
+    "file:///e%3A/source"
   ],
   // #endregion
   // #region Extensions
@@ -414,40 +401,34 @@
     ".nuget",
     ".venv",
     "apm_modules",
-    "node_modules",
+    "node_modules"
   ],
   "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
   "todo-tree.general.statusBar": "tags",
-  "todo-tree.general.tags": [
-    "FIXME",
-    "HACK",
-    "NOTE",
-    "TODO",
-    "WIP",
-  ],
+  "todo-tree.general.tags": ["FIXME", "HACK", "NOTE", "TODO", "WIP"],
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.highlights.customHighlight": {
     // https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
     "FIXME": {
       "icon": "bug",
-      "iconColour": "#FF0000", // red
+      "iconColour": "#FF0000" // red
     },
     "HACK": {
       "icon": "alert",
-      "iconColour": "#FF00FF", // magenta
+      "iconColour": "#FF00FF" // magenta
     },
     "NOTE": {
       "icon": "note",
-      "iconColour": "#00FFFF", // cyan
+      "iconColour": "#00FFFF" // cyan
     },
     "TODO": {
       "icon": "checklist",
-      "iconColour": "#00FF00", // lime
+      "iconColour": "#00FF00" // lime
     },
     "WIP": {
       "icon": "beaker",
-      "iconColour": "#FFFF00", // yellow
-    },
+      "iconColour": "#FFFF00" // yellow
+    }
   },
   "todo-tree.highlights.useColourScheme": true,
   // //   js line
@@ -482,7 +463,7 @@
   // #region vscode-yaml
   "yaml.disableAdditionalProperties": true,
   "yaml.disableDefaultProperties": true,
-  "yaml.format.singleQuote": true,
+  "yaml.format.singleQuote": true
   // #endregion
   // #endregion
 }

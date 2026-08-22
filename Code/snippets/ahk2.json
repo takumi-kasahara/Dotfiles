@@ -1,9 +1,6 @@
 {
   "Document": {
-    "prefix": "@doc",
-      "@doc",
-      "/**",
-    ],
+    "prefix": ["@doc", "/**"],
     "body": [
       "/**",
       "\t* $1",
@@ -12,134 +9,92 @@
       "\t* @send     $4",
       "\t* @override $5",
       "\t* @alter    $6",
-      "*/",
-    ],
+      "*/"
+    ]
   },
   "Region": {
     "prefix": "region",
-    "body": [
-      "; #region $1",
-      "$0",
-      "; #endregion",
-    ],
+    "body": ["; #region $1", "$0", "; #endregion"]
   },
   //#region Keys
   "CopilotKey": {
     "prefix": "CopilotKey",
-    "body": [
-      "+#f23",
-    ],
+    "body": ["+#f23"]
   },
   // #region scan code
   "半角/全角": {
     "prefix": "sc半角/全角",
-    "body": [
-      "sc029",
-    ],
+    "body": ["sc029"]
   },
   "無変換": {
     "prefix": "sc無変換",
-    "body": [
-      "sc07B",
-    ],
+    "body": ["sc07B"]
   },
   "カタカナ/ひらがな/ローマ字": {
     "prefix": "scカタカナ/ひらがな/ローマ字",
-    "body": [
-      "sc070",
-    ],
+    "body": ["sc070"]
   },
   "変換": {
     "prefix": "sc変換",
-    "body": [
-      "sc079",
-    ],
+    "body": ["sc079"]
   },
   "CapsLockOnly": {
     "prefix": "scCapsLockOnly",
-    "body": [
-      "sc03A",
-    ],
+    "body": ["sc03A"]
   },
   "CapsLock": {
     "prefix": "scCapsLock",
-    "body": [
-      "sc02A",
-    ],
+    "body": ["sc02A"]
   },
   // #endregion
   // #region virtual key
   "vkBA": {
     "prefix": "vk : or *",
-    "body": [
-      "vkBA",
-    ],
+    "body": ["vkBA"]
   },
   "vkBB": {
     "prefix": "vk ; or +",
-    "body": [
-      "vkBB",
-    ],
+    "body": ["vkBB"]
   },
   "vkBC": {
     "prefix": "vk , or <",
-    "body": [
-      "vkBC",
-    ],
+    "body": ["vkBC"]
   },
   "vkBD": {
     "prefix": "vk - or =",
-    "body": [
-      "vkBD",
-    ],
+    "body": ["vkBD"]
   },
   "vkBE": {
     "prefix": "vk . or >",
-    "body": [
-      "vkBE",
-    ],
+    "body": ["vkBE"]
   },
   "vkBF": {
     "prefix": "vk / or ?",
-    "body": [
-      "vkBF",
-    ],
+    "body": ["vkBF"]
   },
   "vkC0": {
     "prefix": "vk @ or `",
-    "body": [
-      "vkC0",
-    ],
+    "body": ["vkC0"]
   },
   "vkDB": {
     "prefix": "vk [ or {",
-    "body": [
-      "vkDB",
-    ],
+    "body": ["vkDB"]
   },
   "vkDC": {
     "prefix": "vk \\ or |",
-    "body": [
-      "vkDC",
-    ],
+    "body": ["vkDC"]
   },
   "vkDD": {
     "prefix": "vk ] or }",
-    "body": [
-      "vkDD",
-    ],
+    "body": ["vkDD"]
   },
   "vkDE": {
     "prefix": "vk ^ or ~",
-    "body": [
-      "vkDE",
-    ],
+    "body": ["vkDE"]
   },
   "vkE2": {
     "prefix": "vk \\ or _",
-    "body": [
-      "vkE2",
-    ],
-  },
+    "body": ["vkE2"]
+  }
   // #endregion
 }

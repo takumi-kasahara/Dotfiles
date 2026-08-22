@@ -3,1338 +3,1338 @@
     "prefix": "&account-login",
     "body": "<&account-login>",
     "description": "account-login",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.account-logout": {
     "prefix": "&account-logout",
     "body": "<&account-logout>",
     "description": "account-logout",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.action-redo": {
     "prefix": "&action-redo",
     "body": "<&action-redo>",
     "description": "action-redo",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.action-undo": {
     "prefix": "&action-undo",
     "body": "<&action-undo>",
     "description": "action-undo",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.align-center": {
     "prefix": "&align-center",
     "body": "<&align-center>",
     "description": "align-center",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.align-left": {
     "prefix": "&align-left",
     "body": "<&align-left>",
     "description": "align-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.align-right": {
     "prefix": "&align-right",
     "body": "<&align-right>",
     "description": "align-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.aperture": {
     "prefix": "&aperture",
     "body": "<&aperture>",
     "description": "aperture",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-bottom": {
     "prefix": "&arrow-bottom",
     "body": "<&arrow-bottom>",
     "description": "arrow-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-circle-bottom": {
     "prefix": "&arrow-circle-bottom",
     "body": "<&arrow-circle-bottom>",
     "description": "arrow-circle-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-circle-left": {
     "prefix": "&arrow-circle-left",
     "body": "<&arrow-circle-left>",
     "description": "arrow-circle-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-circle-right": {
     "prefix": "&arrow-circle-right",
     "body": "<&arrow-circle-right>",
     "description": "arrow-circle-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-circle-top": {
     "prefix": "&arrow-circle-top",
     "body": "<&arrow-circle-top>",
     "description": "arrow-circle-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-left": {
     "prefix": "&arrow-left",
     "body": "<&arrow-left>",
     "description": "arrow-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-right": {
     "prefix": "&arrow-right",
     "body": "<&arrow-right>",
     "description": "arrow-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-thick-bottom": {
     "prefix": "&arrow-thick-bottom",
     "body": "<&arrow-thick-bottom>",
     "description": "arrow-thick-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-thick-left": {
     "prefix": "&arrow-thick-left",
     "body": "<&arrow-thick-left>",
     "description": "arrow-thick-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-thick-right": {
     "prefix": "&arrow-thick-right",
     "body": "<&arrow-thick-right>",
     "description": "arrow-thick-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-thick-top": {
     "prefix": "&arrow-thick-top",
     "body": "<&arrow-thick-top>",
     "description": "arrow-thick-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.arrow-top": {
     "prefix": "&arrow-top",
     "body": "<&arrow-top>",
     "description": "arrow-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.audio": {
     "prefix": "&audio",
     "body": "<&audio>",
     "description": "audio",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.audio-spectrum": {
     "prefix": "&audio-spectrum",
     "body": "<&audio-spectrum>",
     "description": "audio-spectrum",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.badge": {
     "prefix": "&badge",
     "body": "<&badge>",
     "description": "badge",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.ban": {
     "prefix": "&ban",
     "body": "<&ban>",
     "description": "ban",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bar-chart": {
     "prefix": "&bar-chart",
     "body": "<&bar-chart>",
     "description": "bar-chart",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.basket": {
     "prefix": "&basket",
     "body": "<&basket>",
     "description": "basket",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.battery-empty": {
     "prefix": "&battery-empty",
     "body": "<&battery-empty>",
     "description": "battery-empty",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.battery-full": {
     "prefix": "&battery-full",
     "body": "<&battery-full>",
     "description": "battery-full",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.beaker": {
     "prefix": "&beaker",
     "body": "<&beaker>",
     "description": "beaker",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bell": {
     "prefix": "&bell",
     "body": "<&bell>",
     "description": "bell",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bluetooth": {
     "prefix": "&bluetooth",
     "body": "<&bluetooth>",
     "description": "bluetooth",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bold": {
     "prefix": "&bold",
     "body": "<&bold>",
     "description": "bold",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bolt": {
     "prefix": "&bolt",
     "body": "<&bolt>",
     "description": "bolt",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.book": {
     "prefix": "&book",
     "body": "<&book>",
     "description": "book",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bookmark": {
     "prefix": "&bookmark",
     "body": "<&bookmark>",
     "description": "bookmark",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.box": {
     "prefix": "&box",
     "body": "<&box>",
     "description": "box",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.briefcase": {
     "prefix": "&briefcase",
     "body": "<&briefcase>",
     "description": "briefcase",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.british-pound": {
     "prefix": "&british-pound",
     "body": "<&british-pound>",
     "description": "british-pound",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.browser": {
     "prefix": "&browser",
     "body": "<&browser>",
     "description": "browser",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.brush": {
     "prefix": "&brush",
     "body": "<&brush>",
     "description": "brush",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bug": {
     "prefix": "&bug",
     "body": "<&bug>",
     "description": "bug",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.bullhorn": {
     "prefix": "&bullhorn",
     "body": "<&bullhorn>",
     "description": "bullhorn",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.calculator": {
     "prefix": "&calculator",
     "body": "<&calculator>",
     "description": "calculator",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.calendar": {
     "prefix": "&calendar",
     "body": "<&calendar>",
     "description": "calendar",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.camera-slr": {
     "prefix": "&camera-slr",
     "body": "<&camera-slr>",
     "description": "camera-slr",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.caret-bottom": {
     "prefix": "&caret-bottom",
     "body": "<&caret-bottom>",
     "description": "caret-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.caret-left": {
     "prefix": "&caret-left",
     "body": "<&caret-left>",
     "description": "caret-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.caret-right": {
     "prefix": "&caret-right",
     "body": "<&caret-right>",
     "description": "caret-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.caret-top": {
     "prefix": "&caret-top",
     "body": "<&caret-top>",
     "description": "caret-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cart": {
     "prefix": "&cart",
     "body": "<&cart>",
     "description": "cart",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.chat": {
     "prefix": "&chat",
     "body": "<&chat>",
     "description": "chat",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.check": {
     "prefix": "&check",
     "body": "<&check>",
     "description": "check",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.chevron-bottom": {
     "prefix": "&chevron-bottom",
     "body": "<&chevron-bottom>",
     "description": "chevron-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.chevron-left": {
     "prefix": "&chevron-left",
     "body": "<&chevron-left>",
     "description": "chevron-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.chevron-right": {
     "prefix": "&chevron-right",
     "body": "<&chevron-right>",
     "description": "chevron-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.chevron-top": {
     "prefix": "&chevron-top",
     "body": "<&chevron-top>",
     "description": "chevron-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.circle-check": {
     "prefix": "&circle-check",
     "body": "<&circle-check>",
     "description": "circle-check",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.circle-x": {
     "prefix": "&circle-x",
     "body": "<&circle-x>",
     "description": "circle-x",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.clipboard": {
     "prefix": "&clipboard",
     "body": "<&clipboard>",
     "description": "clipboard",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.clock": {
     "prefix": "&clock",
     "body": "<&clock>",
     "description": "clock",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cloud": {
     "prefix": "&cloud",
     "body": "<&cloud>",
     "description": "cloud",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cloud-download": {
     "prefix": "&cloud-download",
     "body": "<&cloud-download>",
     "description": "cloud-download",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cloud-upload": {
     "prefix": "&cloud-upload",
     "body": "<&cloud-upload>",
     "description": "cloud-upload",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cloudy": {
     "prefix": "&cloudy",
     "body": "<&cloudy>",
     "description": "cloudy",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.code": {
     "prefix": "&code",
     "body": "<&code>",
     "description": "code",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.cog": {
     "prefix": "&cog",
     "body": "<&cog>",
     "description": "cog",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.collapse-down": {
     "prefix": "&collapse-down",
     "body": "<&collapse-down>",
     "description": "collapse-down",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.collapse-left": {
     "prefix": "&collapse-left",
     "body": "<&collapse-left>",
     "description": "collapse-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.collapse-right": {
     "prefix": "&collapse-right",
     "body": "<&collapse-right>",
     "description": "collapse-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.collapse-up": {
     "prefix": "&collapse-up",
     "body": "<&collapse-up>",
     "description": "collapse-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.command": {
     "prefix": "&command",
     "body": "<&command>",
     "description": "command",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.comment-square": {
     "prefix": "&comment-square",
     "body": "<&comment-square>",
     "description": "comment-square",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.compass": {
     "prefix": "&compass",
     "body": "<&compass>",
     "description": "compass",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.contrast": {
     "prefix": "&contrast",
     "body": "<&contrast>",
     "description": "contrast",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.copywriting": {
     "prefix": "&copywriting",
     "body": "<&copywriting>",
     "description": "copywriting",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.credit-card": {
     "prefix": "&credit-card",
     "body": "<&credit-card>",
     "description": "credit-card",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.crop": {
     "prefix": "&crop",
     "body": "<&crop>",
     "description": "crop",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.dashboard": {
     "prefix": "&dashboard",
     "body": "<&dashboard>",
     "description": "dashboard",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.data-transfer-download": {
     "prefix": "&data-transfer-download",
     "body": "<&data-transfer-download>",
     "description": "data-transfer-download",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.data-transfer-upload": {
     "prefix": "&data-transfer-upload",
     "body": "<&data-transfer-upload>",
     "description": "data-transfer-upload",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.delete": {
     "prefix": "&delete",
     "body": "<&delete>",
     "description": "delete",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.dial": {
     "prefix": "&dial",
     "body": "<&dial>",
     "description": "dial",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.document": {
     "prefix": "&document",
     "body": "<&document>",
     "description": "document",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.dollar": {
     "prefix": "&dollar",
     "body": "<&dollar>",
     "description": "dollar",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.double-quote-sans-left": {
     "prefix": "&double-quote-sans-left",
     "body": "<&double-quote-sans-left>",
     "description": "double-quote-sans-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.double-quote-sans-right": {
     "prefix": "&double-quote-sans-right",
     "body": "<&double-quote-sans-right>",
     "description": "double-quote-sans-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.double-quote-serif-left": {
     "prefix": "&double-quote-serif-left",
     "body": "<&double-quote-serif-left>",
     "description": "double-quote-serif-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.double-quote-serif-right": {
     "prefix": "&double-quote-serif-right",
     "body": "<&double-quote-serif-right>",
     "description": "double-quote-serif-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.droplet": {
     "prefix": "&droplet",
     "body": "<&droplet>",
     "description": "droplet",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.eject": {
     "prefix": "&eject",
     "body": "<&eject>",
     "description": "eject",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.elevator": {
     "prefix": "&elevator",
     "body": "<&elevator>",
     "description": "elevator",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.ellipses": {
     "prefix": "&ellipses",
     "body": "<&ellipses>",
     "description": "ellipses",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.envelope-closed": {
     "prefix": "&envelope-closed",
     "body": "<&envelope-closed>",
     "description": "envelope-closed",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.envelope-open": {
     "prefix": "&envelope-open",
     "body": "<&envelope-open>",
     "description": "envelope-open",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.euro": {
     "prefix": "&euro",
     "body": "<&euro>",
     "description": "euro",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.excerpt": {
     "prefix": "&excerpt",
     "body": "<&excerpt>",
     "description": "excerpt",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.expand-down": {
     "prefix": "&expand-down",
     "body": "<&expand-down>",
     "description": "expand-down",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.expand-left": {
     "prefix": "&expand-left",
     "body": "<&expand-left>",
     "description": "expand-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.expand-right": {
     "prefix": "&expand-right",
     "body": "<&expand-right>",
     "description": "expand-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.expand-up": {
     "prefix": "&expand-up",
     "body": "<&expand-up>",
     "description": "expand-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.external-link": {
     "prefix": "&external-link",
     "body": "<&external-link>",
     "description": "external-link",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.eye": {
     "prefix": "&eye",
     "body": "<&eye>",
     "description": "eye",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.eyedropper": {
     "prefix": "&eyedropper",
     "body": "<&eyedropper>",
     "description": "eyedropper",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.file": {
     "prefix": "&file",
     "body": "<&file>",
     "description": "file",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.fire": {
     "prefix": "&fire",
     "body": "<&fire>",
     "description": "fire",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.flag": {
     "prefix": "&flag",
     "body": "<&flag>",
     "description": "flag",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.flash": {
     "prefix": "&flash",
     "body": "<&flash>",
     "description": "flash",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.folder": {
     "prefix": "&folder",
     "body": "<&folder>",
     "description": "folder",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.fork": {
     "prefix": "&fork",
     "body": "<&fork>",
     "description": "fork",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.fullscreen-enter": {
     "prefix": "&fullscreen-enter",
     "body": "<&fullscreen-enter>",
     "description": "fullscreen-enter",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.fullscreen-exit": {
     "prefix": "&fullscreen-exit",
     "body": "<&fullscreen-exit>",
     "description": "fullscreen-exit",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.globe": {
     "prefix": "&globe",
     "body": "<&globe>",
     "description": "globe",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.graph": {
     "prefix": "&graph",
     "body": "<&graph>",
     "description": "graph",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.grid-four-up": {
     "prefix": "&grid-four-up",
     "body": "<&grid-four-up>",
     "description": "grid-four-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.grid-three-up": {
     "prefix": "&grid-three-up",
     "body": "<&grid-three-up>",
     "description": "grid-three-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.grid-two-up": {
     "prefix": "&grid-two-up",
     "body": "<&grid-two-up>",
     "description": "grid-two-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.hard-drive": {
     "prefix": "&hard-drive",
     "body": "<&hard-drive>",
     "description": "hard-drive",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.header": {
     "prefix": "&header",
     "body": "<&header>",
     "description": "header",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.headphones": {
     "prefix": "&headphones",
     "body": "<&headphones>",
     "description": "headphones",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.heart": {
     "prefix": "&heart",
     "body": "<&heart>",
     "description": "heart",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.home": {
     "prefix": "&home",
     "body": "<&home>",
     "description": "home",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.image": {
     "prefix": "&image",
     "body": "<&image>",
     "description": "image",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.inbox": {
     "prefix": "&inbox",
     "body": "<&inbox>",
     "description": "inbox",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.infinity": {
     "prefix": "&infinity",
     "body": "<&infinity>",
     "description": "infinity",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.info": {
     "prefix": "&info",
     "body": "<&info>",
     "description": "info",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.italic": {
     "prefix": "&italic",
     "body": "<&italic>",
     "description": "italic",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.justify-center": {
     "prefix": "&justify-center",
     "body": "<&justify-center>",
     "description": "justify-center",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.justify-left": {
     "prefix": "&justify-left",
     "body": "<&justify-left>",
     "description": "justify-left",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.justify-right": {
     "prefix": "&justify-right",
     "body": "<&justify-right>",
     "description": "justify-right",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.key": {
     "prefix": "&key",
     "body": "<&key>",
     "description": "key",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.laptop": {
     "prefix": "&laptop",
     "body": "<&laptop>",
     "description": "laptop",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.layers": {
     "prefix": "&layers",
     "body": "<&layers>",
     "description": "layers",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.lightbulb": {
     "prefix": "&lightbulb",
     "body": "<&lightbulb>",
     "description": "lightbulb",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.link-broken": {
     "prefix": "&link-broken",
     "body": "<&link-broken>",
     "description": "link-broken",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.link-intact": {
     "prefix": "&link-intact",
     "body": "<&link-intact>",
     "description": "link-intact",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.list": {
     "prefix": "&list",
     "body": "<&list>",
     "description": "list",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.list-rich": {
     "prefix": "&list-rich",
     "body": "<&list-rich>",
     "description": "list-rich",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.location": {
     "prefix": "&location",
     "body": "<&location>",
     "description": "location",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.lock-locked": {
     "prefix": "&lock-locked",
     "body": "<&lock-locked>",
     "description": "lock-locked",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.lock-unlocked": {
     "prefix": "&lock-unlocked",
     "body": "<&lock-unlocked>",
     "description": "lock-unlocked",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.loop": {
     "prefix": "&loop",
     "body": "<&loop>",
     "description": "loop",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.loop-circular": {
     "prefix": "&loop-circular",
     "body": "<&loop-circular>",
     "description": "loop-circular",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.loop-square": {
     "prefix": "&loop-square",
     "body": "<&loop-square>",
     "description": "loop-square",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.magnifying-glass": {
     "prefix": "&magnifying-glass",
     "body": "<&magnifying-glass>",
     "description": "magnifying-glass",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.map": {
     "prefix": "&map",
     "body": "<&map>",
     "description": "map",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.map-marker": {
     "prefix": "&map-marker",
     "body": "<&map-marker>",
     "description": "map-marker",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-pause": {
     "prefix": "&media-pause",
     "body": "<&media-pause>",
     "description": "media-pause",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-play": {
     "prefix": "&media-play",
     "body": "<&media-play>",
     "description": "media-play",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-record": {
     "prefix": "&media-record",
     "body": "<&media-record>",
     "description": "media-record",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-skip-backward": {
     "prefix": "&media-skip-backward",
     "body": "<&media-skip-backward>",
     "description": "media-skip-backward",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-skip-forward": {
     "prefix": "&media-skip-forward",
     "body": "<&media-skip-forward>",
     "description": "media-skip-forward",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-step-backward": {
     "prefix": "&media-step-backward",
     "body": "<&media-step-backward>",
     "description": "media-step-backward",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-step-forward": {
     "prefix": "&media-step-forward",
     "body": "<&media-step-forward>",
     "description": "media-step-forward",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.media-stop": {
     "prefix": "&media-stop",
     "body": "<&media-stop>",
     "description": "media-stop",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.medical-cross": {
     "prefix": "&medical-cross",
     "body": "<&medical-cross>",
     "description": "medical-cross",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.menu": {
     "prefix": "&menu",
     "body": "<&menu>",
     "description": "menu",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.microphone": {
     "prefix": "&microphone",
     "body": "<&microphone>",
     "description": "microphone",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.minus": {
     "prefix": "&minus",
     "body": "<&minus>",
     "description": "minus",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.monitor": {
     "prefix": "&monitor",
     "body": "<&monitor>",
     "description": "monitor",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.moon": {
     "prefix": "&moon",
     "body": "<&moon>",
     "description": "moon",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.move": {
     "prefix": "&move",
     "body": "<&move>",
     "description": "move",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.musical-note": {
     "prefix": "&musical-note",
     "body": "<&musical-note>",
     "description": "musical-note",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.paperclip": {
     "prefix": "&paperclip",
     "body": "<&paperclip>",
     "description": "paperclip",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.pencil": {
     "prefix": "&pencil",
     "body": "<&pencil>",
     "description": "pencil",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.people": {
     "prefix": "&people",
     "body": "<&people>",
     "description": "people",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.person": {
     "prefix": "&person",
     "body": "<&person>",
     "description": "person",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.phone": {
     "prefix": "&phone",
     "body": "<&phone>",
     "description": "phone",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.pie-chart": {
     "prefix": "&pie-chart",
     "body": "<&pie-chart>",
     "description": "pie-chart",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.pin": {
     "prefix": "&pin",
     "body": "<&pin>",
     "description": "pin",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.play-circle": {
     "prefix": "&play-circle",
     "body": "<&play-circle>",
     "description": "play-circle",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.plus": {
     "prefix": "&plus",
     "body": "<&plus>",
     "description": "plus",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.power-standby": {
     "prefix": "&power-standby",
     "body": "<&power-standby>",
     "description": "power-standby",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.print": {
     "prefix": "&print",
     "body": "<&print>",
     "description": "print",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.project": {
     "prefix": "&project",
     "body": "<&project>",
     "description": "project",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.pulse": {
     "prefix": "&pulse",
     "body": "<&pulse>",
     "description": "pulse",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.puzzle-piece": {
     "prefix": "&puzzle-piece",
     "body": "<&puzzle-piece>",
     "description": "puzzle-piece",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.question-mark": {
     "prefix": "&question-mark",
     "body": "<&question-mark>",
     "description": "question-mark",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.rain": {
     "prefix": "&rain",
     "body": "<&rain>",
     "description": "rain",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.random": {
     "prefix": "&random",
     "body": "<&random>",
     "description": "random",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.reload": {
     "prefix": "&reload",
     "body": "<&reload>",
     "description": "reload",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.resize-both": {
     "prefix": "&resize-both",
     "body": "<&resize-both>",
     "description": "resize-both",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.resize-height": {
     "prefix": "&resize-height",
     "body": "<&resize-height>",
     "description": "resize-height",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.resize-width": {
     "prefix": "&resize-width",
     "body": "<&resize-width>",
     "description": "resize-width",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.rss": {
     "prefix": "&rss",
     "body": "<&rss>",
     "description": "rss",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.rss-alt": {
     "prefix": "&rss-alt",
     "body": "<&rss-alt>",
     "description": "rss-alt",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.script": {
     "prefix": "&script",
     "body": "<&script>",
     "description": "script",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.share": {
     "prefix": "&share",
     "body": "<&share>",
     "description": "share",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.share-boxed": {
     "prefix": "&share-boxed",
     "body": "<&share-boxed>",
     "description": "share-boxed",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.shield": {
     "prefix": "&shield",
     "body": "<&shield>",
     "description": "shield",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.signal": {
     "prefix": "&signal",
     "body": "<&signal>",
     "description": "signal",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.signpost": {
     "prefix": "&signpost",
     "body": "<&signpost>",
     "description": "signpost",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.sort-ascending": {
     "prefix": "&sort-ascending",
     "body": "<&sort-ascending>",
     "description": "sort-ascending",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.sort-descending": {
     "prefix": "&sort-descending",
     "body": "<&sort-descending>",
     "description": "sort-descending",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.spreadsheet": {
     "prefix": "&spreadsheet",
     "body": "<&spreadsheet>",
     "description": "spreadsheet",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.star": {
     "prefix": "&star",
     "body": "<&star>",
     "description": "star",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.sun": {
     "prefix": "&sun",
     "body": "<&sun>",
     "description": "sun",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.tablet": {
     "prefix": "&tablet",
     "body": "<&tablet>",
     "description": "tablet",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.tag": {
     "prefix": "&tag",
     "body": "<&tag>",
     "description": "tag",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.tags": {
     "prefix": "&tags",
     "body": "<&tags>",
     "description": "tags",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.target": {
     "prefix": "&target",
     "body": "<&target>",
     "description": "target",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.task": {
     "prefix": "&task",
     "body": "<&task>",
     "description": "task",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.terminal": {
     "prefix": "&terminal",
     "body": "<&terminal>",
     "description": "terminal",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.text": {
     "prefix": "&text",
     "body": "<&text>",
     "description": "text",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.thumb-down": {
     "prefix": "&thumb-down",
     "body": "<&thumb-down>",
     "description": "thumb-down",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.thumb-up": {
     "prefix": "&thumb-up",
     "body": "<&thumb-up>",
     "description": "thumb-up",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.timer": {
     "prefix": "&timer",
     "body": "<&timer>",
     "description": "timer",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.transfer": {
     "prefix": "&transfer",
     "body": "<&transfer>",
     "description": "transfer",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.trash": {
     "prefix": "&trash",
     "body": "<&trash>",
     "description": "trash",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.underline": {
     "prefix": "&underline",
     "body": "<&underline>",
     "description": "underline",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.vertical-align-bottom": {
     "prefix": "&vertical-align-bottom",
     "body": "<&vertical-align-bottom>",
     "description": "vertical-align-bottom",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.vertical-align-center": {
     "prefix": "&vertical-align-center",
     "body": "<&vertical-align-center>",
     "description": "vertical-align-center",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.vertical-align-top": {
     "prefix": "&vertical-align-top",
     "body": "<&vertical-align-top>",
     "description": "vertical-align-top",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.video": {
     "prefix": "&video",
     "body": "<&video>",
     "description": "video",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.volume-high": {
     "prefix": "&volume-high",
     "body": "<&volume-high>",
     "description": "volume-high",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.volume-low": {
     "prefix": "&volume-low",
     "body": "<&volume-low>",
     "description": "volume-low",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.volume-off": {
     "prefix": "&volume-off",
     "body": "<&volume-off>",
     "description": "volume-off",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.warning": {
     "prefix": "&warning",
     "body": "<&warning>",
     "description": "warning",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.wifi": {
     "prefix": "&wifi",
     "body": "<&wifi>",
     "description": "wifi",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.wrench": {
     "prefix": "&wrench",
     "body": "<&wrench>",
     "description": "wrench",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.x": {
     "prefix": "&x",
     "body": "<&x>",
     "description": "x",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.yen": {
     "prefix": "&yen",
     "body": "<&yen>",
     "description": "yen",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.zoom-in": {
     "prefix": "&zoom-in",
     "body": "<&zoom-in>",
     "description": "zoom-in",
-    "scope": "diagram"
+    "scope": "diagram",
   },
   "OpenIconic.zoom-out": {
     "prefix": "&zoom-out",
     "body": "<&zoom-out>",
     "description": "zoom-out",
-    "scope": "diagram"
-  }
+    "scope": "diagram",
+  },
 }

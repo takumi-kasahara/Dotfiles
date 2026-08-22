@@ -9,18 +9,14 @@
       "exception",
       "\twhen others then",
       "\t\tnull;",
-      "end;",
-    ],
+      "end;"
+    ]
   },
   // #endregion
   // #region PLSQL.Structure
   "PLSQL.Structure.If": {
     "prefix": "pl.if",
-    "body": [
-      "if ${1:condition} then",
-      "\t${2:null};",
-      "end if;",
-    ],
+    "body": ["if ${1:condition} then", "\t${2:null};", "end if;"]
   },
   "PLSQL.Structure.If-Else": {
     "prefix": "pl.if-else",
@@ -29,8 +25,8 @@
       "\t${2:null};",
       "else",
       "\t${0:null};",
-      "end if;",
-    ],
+      "end if;"
+    ]
   },
   "PLSQL.Structure.If-Elsif-Else": {
     "prefix": "pl.if-elsif-else",
@@ -41,8 +37,8 @@
       "\t${4:null};",
       "else",
       "\t${0:null};",
-      "end if;",
-    ],
+      "end if;"
+    ]
   },
   "PLSQL.Structure.Case.Simple": {
     "prefix": "pl.case.simple",
@@ -52,8 +48,8 @@
       "\t\t${0:-- statements}",
       "\telse",
       "\t\t-- default_statements",
-      "end case;",
-    ],
+      "end case;"
+    ]
   },
   "PLSQL.Structure.Case.Searched": {
     "prefix": "pl.case.simple",
@@ -63,24 +59,24 @@
       "\t\t${0:-- statements}",
       "\telse",
       "\t\t-- default_statements",
-      "end case;",
-    ],
+      "end case;"
+    ]
   },
   "PLSQL.Structure.For": {
     "prefix": "pl.for",
     "body": [
       "for ${1:index} in ${2:start} .. ${3:end} loop",
       "\t${0:-- statements}",
-      "end loop;",
-    ],
+      "end loop;"
+    ]
   },
   "PLSQL.Structure.Loop": {
     "prefix": "pl.loop",
     "body": [
       "${1:while ${2:condition}} loop",
       "\t${0:-- statements}",
-      "end loop;",
-    ],
+      "end loop;"
+    ]
   },
   // #endregion
   // #region PLSQL.Select
@@ -94,8 +90,8 @@
       "from",
       "\t${3:table}",
       "$0",
-      ";",
-    ],
+      ";"
+    ]
   },
   "PLSQL.Select.BulkCollect": {
     "prefix": "pl.select.bulk_collect",
@@ -107,54 +103,42 @@
       "from",
       "\t${3:table}",
       "$0",
-      ";",
-    ],
+      ";"
+    ]
   },
   // #endregion
   // #region PLSQL.Declare
   "PLSQL.Declare.Variable": {
     "prefix": "pl.variable.declare",
     "body": [
-      "${1:var} ${2:type}${3: not null}${4: default ${5:default_value}};",
-    ],
+      "${1:var} ${2:type}${3: not null}${4: default ${5:default_value}};"
+    ]
   },
   "PLSQL.Declare.Variable.Constant": {
     "prefix": "pl.const.declare",
-    "body": [
-      "${1:var} ${2:type} := ${3:value};",
-    ],
+    "body": ["${1:var} ${2:type} := ${3:value};"]
   },
   "PLSQL.Declare.Type.Collection.AssociativeArray": {
     "prefix": "pl.associative_array.declare",
     "body": [
-      "type ${1:t_name} is table of ${2:t_element} index by ${3:t_index}${4: not null};",
+      "type ${1:t_name} is table of ${2:t_element} index by ${3:t_index}${4: not null};"
     ]
   },
   "PLSQL.Declare.Type.Collection.NestedTable": {
     "prefix": "pl.nested_table.declare",
-    "body": [
-      "type ${1:t_name} is table of ${2:t_element} ${3: not null};",
-    ],
+    "body": ["type ${1:t_name} is table of ${2:t_element} ${3: not null};"]
   },
   "PLSQL.Declare.Type.Collection.Varray": {
     "prefix": "pl.varray.declare",
-    "body": [
-      "type ${1:t_name} is varray(${2:max_index}) of ${3:t_element}",
-    ],
+    "body": ["type ${1:t_name} is varray(${2:max_index}) of ${3:t_element}"]
   },
   "PLSQL.Declare.Type.Record": {
     "prefix": "pl.record_type.declare",
-    "body": [
-      "type ${1:t_record} is record (",
-      "\t-- <field> <type>$0",
-      ");",
-    ],
+    "body": ["type ${1:t_record} is record (", "\t-- <field> <type>$0", ");"]
   },
   "PLSQL.Declare.Type.Table": {
     "prefix": "pl.table_type.declare",
-    "body": [
-      "type ${1:t_name} is table of %{2:table or cursor}%rowtype",
-    ],
+    "body": ["type ${1:t_name} is table of %{2:table or cursor}%rowtype"]
   },
   // #endregion
   // #region PLSQL.Cursor
@@ -163,30 +147,28 @@
     "body": [
       "cursor ${1:cursor_name[params]} is",
       "\t${0:-- select statement}",
-      ";",
-    ],
+      ";"
+    ]
   },
   "PLSQL.Cursor.Fetch": {
     "prefix": "pl.cursor.fetch",
     "body": [
       "open ${1:cursor};",
       "fetch ${1:cursor} into ${2:record};$0",
-      "close ${1:cursor};",
-    ],
+      "close ${1:cursor};"
+    ]
   },
   "PLSQL.Cursor.Property": {
     "prefix": "pl.cursor.property",
-    "body": [
-      "${1:cursor}%${2|found,notfound,isopen,rowcount|}",
-    ],
+    "body": ["${1:cursor}%${2|found,notfound,isopen,rowcount|}"]
   },
   "PLSQL.Cursor.For": {
     "prefix": "pl.for.cursor",
     "body": [
       "for ${1:var} in ${2:cursor} loop",
       "\t${3:-- statements}",
-      "end loop;",
-    ],
+      "end loop;"
+    ]
   },
   "PLSQL.Cursor.Loop": {
     "prefix": "pl.loop.cursor",
@@ -197,30 +179,30 @@
       "\texit when ${1:cursor}%notfound or ${1:cursor}%notfound is null;",
       "\t${3:-- statements}",
       "end loop;",
-      "close ${1:cursor};",
-    ],
+      "close ${1:cursor};"
+    ]
   },
   "PLSQL.Cursor.BulkFetch": {
     "prefix": "pl.cursor.bulk_fetch",
     "body": [
       "open ${1:cursor};",
       "fetch ${1:cursor} bulk collect into ${2:t_record}${3: limit ${4:max_size}};$0",
-      "close ${1:cursor};",
-    ],
+      "close ${1:cursor};"
+    ]
   },
   "PLSQL.Cursor.ForAll": {
     "prefix": "pl.forall",
     "body": [
       "forall ${1:record} in ${2:cursor}${3: save exceptions}",
-      "\t${4:-- statements}",
-    ],
+      "\t${4:-- statements}"
+    ]
   },
   "PLSQL.Cursor.Forall.ValuesOf": {
     "prefix": "pl.forall.association_array",
     "body": [
       "forall ${1|${k} in indice of,v in values of|} ${2:association_array}${3: save exceptions}",
-      "\t${4:-- statements}",
-    ],
+      "\t${4:-- statements}"
+    ]
   },
   // #endregion
   // #region PLSQL.Stored
@@ -233,8 +215,8 @@
       "\t${0:-- declare block}",
       "begin",
       "\tnull;",
-      "end ${2:name};",
-    ],
+      "end ${2:name};"
+    ]
   },
   "PLSQL.Stored.Function": {
     "prefix": "prefix",
@@ -245,8 +227,8 @@
       "\t${0:-- declare block}",
       "begin",
       "\tnull;",
-      "end ${2:name};",
-    ],
-  },
+      "end ${2:name};"
+    ]
+  }
   // #endregion
 }

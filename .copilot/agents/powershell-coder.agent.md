@@ -4,7 +4,7 @@ description: |
   End-to-end PowerShell commandlet development agent following strict TDD.
   Orchestrates the full cycle: design specs, write failing tests, implement code, refactor, and review.
   Use when: creating new commandlets, extending existing ones, or refactoring PowerShell modules.
-argument-hint: 'Describe the commandlet to design, implement, or review.'
+argument-hint: "Describe the commandlet to design, implement, or review."
 user-invocable: true
 ---
 
