@@ -1,4 +1,5 @@
 /**
+ * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}
@@ -59,7 +60,8 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
-user_pref("network.trr.mode", 3); // 3: TRR-only
+user_pref("network.trr_ui.fallback_was_checked", true);
+user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
 user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
 user_pref("places.history.enabled", true);
 user_pref("privacy.clearHistory.formdata", true);
@@ -88,7 +90,7 @@ user_pref("signon.autologin.proxy", true);
 user_pref("signon.generation.enabled", true);
 user_pref("signon.management.page.breach-alerts.enabled", true);
 user_pref("signon.rememberSignons", false);
-user_pref("webgl.disabled", true);
+user_pref("webgl.disabled", false);
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
 // #region mousewheel.*

@@ -1,4 +1,5 @@
 /**
+ * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}

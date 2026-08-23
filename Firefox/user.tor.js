@@ -1,4 +1,5 @@
 /**
+ * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}
@@ -18,7 +19,7 @@ user_pref("browser.safebrowsing.downloads.enabled", true);
 user_pref("browser.safebrowsing.malware.enabled", true);
 user_pref("browser.safebrowsing.phishing.enabled", true);
 user_pref("browser.send_pings", false);
-user_pref("browser.shell.checkDefaultBrowser", false)
+user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.tabs.crashReporting.includeURL", true);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("cookiebanners.service.mode", 1); // 1: Reject All
