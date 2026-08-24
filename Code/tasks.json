@@ -22,10 +22,26 @@
       "dependsOn": ["npm-check-updates"]
     },
     {
+      "label": "npm-update (semver)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["update"],
+      "problemMatcher": [],
+      "dependsOn": ["npm-check-updates (semver)"]
+    },
+    {
       "label": "npm-check-updates",
       "type": "shell",
       "command": "npx",
       "args": ["npm-check-updates", "--upgrade"],
+      "problemMatcher": [],
+      "hide": true
+    },
+    {
+      "label": "npm-check-updates (semver)",
+      "type": "shell",
+      "command": "npx",
+      "args": ["npm-check-updates", "--target", "semver", "--upgrade"],
       "problemMatcher": [],
       "hide": true
     },
