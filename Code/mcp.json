@@ -1,12 +1,4 @@
 {
-  "inputs": [
-    {
-      "id": "Authorization",
-      "type": "promptString",
-      "description": "Authentication token (PAT or App token)",
-      "password": true
-    }
-  ],
   "servers": {
     "io.github.github/github-mcp-server": {
       "type": "http",
@@ -14,12 +6,17 @@
       "gallery": "https://api.mcp.github.com",
       "version": "1.0.0"
     },
-    "microsoft/markitdown": {
+    "com.microsoft/nuget": {
       "type": "stdio",
-      "command": "uvx",
-      "args": ["markitdown-mcp@0.0.1a4"],
+      "command": "dnx",
+      "args": [
+        "NuGet.Mcp.Server@1.4.16",
+        "--yes",
+        "--source",
+        "https://api.nuget.org/v3/index.json"
+      ],
       "gallery": "https://api.mcp.github.com",
-      "version": "1.0.0"
+      "version": "1.4.16"
     },
     "microsoft/playwright-mcp": {
       "type": "stdio",
@@ -34,19 +31,14 @@
       "gallery": "https://api.mcp.github.com",
       "version": "1.0.0"
     },
-    "NuGet": {
-      "type": "stdio",
-      "command": "dnx",
-      "args": [
-        "NuGet.Mcp.Server",
-        "--source",
-        "https://api.nuget.org/v3/index.json",
-        "--yes"
-      ]
-    },
-    "MDN": {
+    "mdn": {
       "type": "http",
       "url": "https://mcp.mdn.mozilla.net/"
+    },
+    "firefox-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@mozilla/firefox-devtools-mcp@latest", "--headless"]
     }
   }
 }
