@@ -54,7 +54,13 @@
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
   "ai-features.mcp.mcpServers": {
-    "MDN": {
+    "firefox-devtools": {
+      "command": "npx",
+      "autostart": true,
+      "deferLoading": true,
+      "args": ["-y", "@mozilla/firefox-devtools-mcp@latest", "--headless"]
+    },
+    "mdn": {
       "serverUrl": "https://mcp.mdn.mozilla.net/",
       "autostart": true,
       "deferLoading": true
