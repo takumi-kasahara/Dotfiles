@@ -43,13 +43,13 @@
       "selectedModel": "ollama/ornith-1.5:9b"
     },
     "default/code-completion": {
-      "selectedModel": "ollama/granite4.1:3b"
+      "selectedModel": "ollama/granite4.2:3b"
     },
     "default/summarize": {
-      "selectedModel": "ollama/granite4.1:3b"
+      "selectedModel": "ollama/granite4.2:3b"
     },
     "default/fast": {
-      "selectedModel": "ollama/granite4.1:3b"
+      "selectedModel": "ollama/granite4.2:3b"
     }
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
@@ -68,7 +68,7 @@
   },
   "ai-features.openAiOfficial.officialOpenAiModels": [],
   "ai-features.openAiOfficial.useResponseApi": true,
-  "ai-features.ollama.ollamaModels": ["granite4.1:3b", "ornith-1.5:9b"],
+  "ai-features.ollama.ollamaModels": ["granite4.2:3b", "ornith-1.5:9b"],
   "ai-features.notifications.default": "os-notification",
   "ai-features.SCANOSS.mode": "automatic",
   "ai-features.workspaceFunctions.userExcludes": [

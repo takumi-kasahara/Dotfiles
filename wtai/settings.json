@@ -48,8 +48,8 @@
       "location": "local",
       "models": [
         {
-          "id": "granite4.1:3b",
-          "name": "granite4.1:3b"
+          "id": "granite4.2:3b",
+          "name": "granite4.2:3b"
         },
         {
           "id": "ornith-1.5:9b",
@@ -59,7 +59,7 @@
       "name": "localhost"
     }
   ],
-  "customModelSelection": "custom:ollama:granite4.1:3b",
+  "customModelSelection": "custom:ollama:granite4.2:3b",
   "debugFeatures": true,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
   "delegateAgent": "copilot",
