@@ -54,6 +54,14 @@
     {
       "id": "User.splitPane.A6751878",
       "keys": "alt+shift+d"
+    },
+    {
+      "id": null,
+      "keys": "win+sc(41)"
+    },
+    {
+      "id": "Terminal.QuakeMode",
+      "keys": "win+@"
     }
   ],
   "launchMode": "default",
