@@ -31,11 +31,6 @@
       "gallery": "https://api.mcp.github.com",
       "version": "1.0.0"
     },
-    "firefox-devtools": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@mozilla/firefox-devtools-mcp@latest", "--headless"]
-    },
     "mdn": {
       "type": "http",
       "url": "https://mcp.mdn.mozilla.net/"
