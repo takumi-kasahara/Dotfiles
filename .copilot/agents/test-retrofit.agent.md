@@ -3,7 +3,6 @@ name: test-retrofit
 description: |
   Retrofits tests onto existing code that already has functionality but no test coverage.
   Analyzes implementation, identifies behavior to lock in, and writes tests without changing external behavior.
-  Use when: existing code lacks tests, refactoring legacy code safely, or capturing current behavior before changing it.
 argument-hint: "Describe the existing code that needs test coverage."
 user-invocable: true
 ---

@@ -2,7 +2,6 @@
 name: test-first
 description: |
   End-to-end TDD practitioner that orchestrates the full cycle: design specs, write failing tests, implement code, refactor, and review.
-  Use when: creating new functions or modules, extending existing ones, or refactoring code in any language.
 argument-hint: "Describe the feature or function to design, implement, or review."
 user-invocable: true
 ---
