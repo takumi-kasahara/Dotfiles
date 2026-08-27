@@ -398,6 +398,7 @@
   "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
   "python.analysis.supportAllPythonDocuments": true,
   "python.analysis.supportDocstringTemplate": true,
+  "python.analysis.supportHtmlEmbeddedPython": true,
   "python.analysis.typeCheckingMode": "strict",
   "python.analysis.typeEvaluation.deprecateTypingAliases": true,
   "python.analysis.typeEvaluation.disableBytesTypePromotions": true,
