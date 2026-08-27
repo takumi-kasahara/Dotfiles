@@ -34,6 +34,10 @@
     "mdn": {
       "type": "http",
       "url": "https://mcp.mdn.mozilla.net/"
+    },
+    "mrc": {
+      "type": "http",
+      "url": "https://www.microsoft.com/releasecommunications/mcp"
     }
   }
 }

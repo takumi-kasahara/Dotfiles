@@ -72,8 +72,13 @@
       "autostart": true,
       "deferLoading": true
     },
-    "microsoftdocs": {
+    "microsoft-learn": {
       "serverUrl": "https://learn.microsoft.com/api/mcp",
+      "autostart": true,
+      "deferLoading": true
+    },
+    "mrc": {
+      "serverUrl": "https://www.microsoft.com/releasecommunications/mcp",
       "autostart": true,
       "deferLoading": true
     }
