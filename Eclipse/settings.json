@@ -1,25 +1,37 @@
 {
   // #region File Extension
-  "[html]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -33,6 +45,7 @@
   "ai-features.chat.defaultToolConfirmation": "always_allow",
   "ai-features.chat.tokenUsageIndicator.enabled": true,
   "ai-features.chat.tokenUsageWarning.enabled": true,
+  "ai-features.codeCompletion.automaticCodeCompletion": true,
   "ai-features.google.models": [],
   "ai-features.huggingFace.models": [],
   "ai-features.languageModelAliases": {
@@ -54,14 +67,13 @@
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
   "ai-features.mcp.mcpServers": {
-    "firefox-devtools": {
-      "command": "npx",
-      "autostart": true,
-      "deferLoading": true,
-      "args": ["-y", "@mozilla/firefox-devtools-mcp@latest", "--headless"]
-    },
     "mdn": {
       "serverUrl": "https://mcp.mdn.mozilla.net/",
+      "autostart": true,
+      "deferLoading": true
+    },
+    "microsoftdocs": {
+      "serverUrl": "https://learn.microsoft.com/api/mcp",
       "autostart": true,
       "deferLoading": true
     }
