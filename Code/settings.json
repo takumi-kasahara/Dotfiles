@@ -638,7 +638,7 @@
   "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "search.searchView.keywordSuggestions": true,
-  "search.searchView.semanticSearchBehavior": "auto",
+  "search.searchView.semanticSearchBehavior": "runOnEmpty",
   "search.seedOnFocus": true,
   "search.seedWithNearestWord": true,
   "search.showLineNumbers": true,
