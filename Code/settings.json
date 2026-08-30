@@ -62,7 +62,7 @@
   "chat.agentHost.opus48Prompt.enabled": true,
   "chat.agentHost.sdkSandbox.enabled": "on",
   "chat.agentHost.sdkSandbox.enabledWindows": "on",
-  "chat.agentMerge.mergePullRequest": true,
+  "chat.agentMerge.mergePullRequest": "always",
   "chat.agentSessionProjection.enabled": true,
   "chat.agentSessions.migrateLegacyCopilotCli": true,
   "chat.agentsHandoffTip.mode": "default",
