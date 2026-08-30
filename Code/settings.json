@@ -704,9 +704,11 @@
   "window.title": "${activeRepositoryName}${separator}${activeRepositoryBranchName}",
   // #endregion
   // #region workbench
+  "workbench.browser.dataStorage": "ephemeral",
   "workbench.browser.enableChatTools": true,
   "workbench.browser.enableRemoteProxy": true,
   "workbench.browser.experimentalUserTools.enabled": true,
+  "workbench.browser.searchEngine": "duckduckgo",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.history": 0,
   "workbench.editor.closeOnFileDelete": true,
