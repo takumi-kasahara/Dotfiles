@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "microsoft-learn": {
-      "tools": ["*"],
       "type": "http",
-      "url": "https://learn.microsoft.com/api/mcp"
+      "url": "https://learn.microsoft.com/api/mcp",
+      "tools": ["*"],
+      "id": ""
     },
     "playwright": {
       "tools": ["*"],
