@@ -136,7 +136,7 @@
   verbose = true
 [core]
   autocrlf = input      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
-	editor = C:/Program Files/WinGet/Links/edit.exe
+	editor = C:/WINDOWS/system32/edit.exe
   fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
   ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
   pager = LESSCHARSET=utf-8 less -IFJKNMRX
