@@ -712,6 +712,7 @@
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.history": 0,
   "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.markdownDefaultEditorInAgentsWindow": true,
