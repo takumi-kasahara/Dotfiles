@@ -14,6 +14,7 @@
   bb = b --all
   brm = b --delete
   bmv = b --move
+  bprune = "!_() { current=$(git rev-parse --abbrev-ref ${1:-@}); git branch --format=\"%(refname:short)\" --merged $current | grep -v \"^${current}$\" | xargs -r -n 1 git branch -d; }; _"
   # https://git-scm.com/docs/git-checkout
   co = checkout
   # https://git-scm.com/docs/git-cherry-pick
