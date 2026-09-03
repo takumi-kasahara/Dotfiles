@@ -206,12 +206,6 @@ Source('WinMerge\Filters').
 Destination(($shell.NameSpace('shell:Personal').Self.Path | Join-Path -ChildPath 'WinMerge')).
 Install()
 
-# AstroGrep
-[Installer]::new().
-Source('AstroGrep\*.config').
-Destination(($env:APPDATA | Join-Path -ChildPath 'AstroGrep')).
-Install()
-
 # RStudio
 [Installer]::new().
 Source('RStudio\rstudio-prefs.json').
