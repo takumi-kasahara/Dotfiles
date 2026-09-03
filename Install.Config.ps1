@@ -339,6 +339,7 @@ if ($devDrive) {
     if (-not (Test-Path -LiteralPath $models)) {
       New-Item -Path $models -ItemType Directory -Force | Out-Null
     }
+    setx.exe OLLAMA_NOHISTORY 1
     # https://docs.ollama.com/faq#how-do-i-set-them-to-a-different-location
     setx.exe OLLAMA_MODELS "$models"
     # https://docs.ollama.com/faq#how-do-i-configure-ollama-server
