@@ -24,6 +24,13 @@
         "splitMode": "duplicate"
       },
       "id": "User.splitPane.A6751878"
+    },
+    {
+      "command": {
+        "action": "sendInput",
+        "input": "\u001b\r"
+      },
+      "keys": "shift+enter"
     }
   ],
   "alwaysOnTop": false,
