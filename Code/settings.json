@@ -204,9 +204,11 @@
   },
   "github.copilot.nextEditSuggestions.extendedRange": true,
   "githubIssues.alwaysPromptForNewIssueRepo": true,
+  "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
   "githubPullRequests.deleteBranchAfterMerge": true,
   "githubPullRequests.devMode": true,
   "githubPullRequests.experimental.useQuickChat": true,
+  "githubPullRequests.pullRequestDescription": "Copilot",
   "githubPullRequests.quickDiff": true,
   "githubPullRequests.showPullRequestNumberInTree": true,
   // #endregion
