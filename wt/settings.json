@@ -30,7 +30,7 @@
         "action": "sendInput",
         "input": "\u001b\r"
       },
-      "keys": "shift+enter"
+      "id": "User.sendInput.8F63D3A9"
     }
   ],
   "alwaysOnTop": false,
@@ -47,6 +47,14 @@
   "focusFollowMouse": true,
   "keybindings": [
     {
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    },
+    {
+      "id": "User.sendInput.8F63D3A9",
+      "keys": "shift+enter"
+    },
+    {
       "id": "User.copy.644BA8F2",
       "keys": "ctrl+c"
     },
@@ -57,10 +65,6 @@
     {
       "id": "User.paste",
       "keys": "ctrl+v"
-    },
-    {
-      "id": "User.splitPane.A6751878",
-      "keys": "alt+shift+d"
     },
     {
       "id": null,
