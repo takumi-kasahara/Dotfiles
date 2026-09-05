@@ -65,8 +65,8 @@
   rbc = rebase --continue
   rbq = rebase --quit
   rbs = rebase --skip
-  fix-date = "!_() { git rebase --committer-date-is-author-date ${1:-@}; }; _"
-  reset-date = "!_() { git rebase --reset-author-date ${1:-@}; }; _"
+  fix-date = "!_() { git rebase --committer-date-is-author-date ${1:-@}~; }; _"
+  reset-date = "!_() { git rebase --reset-author-date ${1:-@}~; }; _"
   # https://git-scm.com/docs/git-rm
   rmc = rm --cached
   rmf = rm --force
