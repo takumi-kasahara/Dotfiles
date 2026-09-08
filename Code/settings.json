@@ -452,6 +452,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.fixAll.markdownlint": "always",
+    "source.fixAll.prettier": "always",
     "source.fixAll.ruff": "always",
     "source.fixAll.stylelint": "always",
     "source.organizeImports.ruff": "always",
