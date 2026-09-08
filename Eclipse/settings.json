@@ -415,6 +415,9 @@
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.theming.decoration.renderTrailingSpace": true,
   // #endregion
+  // #region prettier-vscode
+  "prettier.experimentalTernaries": true,
+  // #endregion
   // #region svn-scm
   "svn.conflicts.autoResolve": true,
   "svn.experimental.detect_encoding": true,

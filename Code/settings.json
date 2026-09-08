@@ -767,6 +767,9 @@
   // #region ms-ossdata.vscode-pgsql
   "pgsql.enableExperimentalFeatures": true,
   // #endregion
+  // #region prettier-vscode
+  "prettier.experimentalTernaries": true,
+  // #endregion
   // #region npm
   "npm.enableRunFromFolder": true,
   // #endregion
