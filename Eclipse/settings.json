@@ -40,9 +40,9 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   // #region ai-features
-  "ai-features.agentMode.enabled": true,
   "ai-features.AiEnable.enableAI": true,
   "ai-features.anthropic.AnthropicModels": [],
+  "ai-features.anthropic.serverSideCompaction": "enabled",
   "ai-features.chat.bypassModelRequirement": true,
   "ai-features.chat.defaultChatAgent": "Coder",
   "ai-features.chat.defaultToolConfirmation": "always_allow",
@@ -87,6 +87,7 @@
     }
   },
   "ai-features.openAiOfficial.officialOpenAiModels": [],
+  "ai-features.openAiOfficial.serverSideCompaction": "enabled",
   "ai-features.openAiOfficial.useResponseApi": true,
   "ai-features.ollama.ollamaModels": ["granite4.2:3b", "ornith-1.5:9b"],
   "ai-features.notifications.default": "os-notification",
@@ -191,10 +192,12 @@
   "javascript.inlayHints.variableTypes.enabled": true,
   "javascript.referencesCodeLens.enabled": true,
   "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "javascript.suggest.completeFunctionCalls": true,
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   "js/ts.implicitProjectConfig.module": "ESNext",
   "js/ts.implicitProjectConfig.target": "ESNext",
+  "typescript.experimental.useTsgo": true,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.implementationsCodeLens.showOnAllClassMethods": true,
   "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
@@ -205,6 +208,7 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
   "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "typescript.suggest.completeFunctionCalls": true,
   // #endregion
   // #region Python
   "debugpy.showPythonInlineValues": true,
@@ -271,6 +275,7 @@
   "editor.formatOnType": true,
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.edits.experimental.useInterleavedLinesDiff": "always",
+  "editor.inlineSuggest.edits.experimental.useMixedLinesDiff": "whenPossible",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
   "editor.linkedEditing": true,
   "editor.minimap.renderCharacters": false,
