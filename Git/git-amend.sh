@@ -16,7 +16,7 @@ shopt -s shift_verbose
 if [[ -z "$(git diff --name-status --cached)" ]]; then
   exit 0
 elif [[ -z "${1:-}" ]]; then
-  git commit --verbose --amend --no-edit
+  GIT_COMMITTER_DATE="$(git log -1 --format=%aI)" git commit --verbose --amend --no-edit
 else
   if [[ "$(git rev-parse "$1")" == "$(git rev-list @ --max-parents=0)" ]]; then
     hash=--root
