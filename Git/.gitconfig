@@ -161,7 +161,7 @@
 [fetch]
   prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
 [format]
-  pretty = format:%C(auto)%h%x09%ad%x09%an%x09%s%d  # # https://git-scm.com/docs/pretty-formats
+  pretty = format:%C(auto)%h%x09%ad%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
