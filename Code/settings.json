@@ -385,6 +385,7 @@
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.installPythonDependencyRemediation": true,
+  "python.analysis.languageServerBackend": "rust",
   "python.analysis.referencesCodeLens": true,
   "python.analysis.regenerateStdLibIndices": true,
   "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
