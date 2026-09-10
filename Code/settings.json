@@ -726,6 +726,7 @@
   "extensions.autoRestart": true,
   "extensions.closeExtensionDetailsOnViewChange": true,
   "extensions.experimental.deferredStartupFinishedActivation": true,
+  "extensions.experimental.enableAgentsWindowCapability": true,
   // #region bookmarks
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,
