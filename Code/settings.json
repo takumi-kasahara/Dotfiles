@@ -693,7 +693,6 @@
   "window.commandCenter": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.openFilesInNewWindow": "default",
-  "window.openFoldersInNewWindow": "default",
   "window.restoreWindows": "none",
   "window.title": "${activeRepositoryName}${separator}${activeRepositoryBranchName}",
   // #endregion
