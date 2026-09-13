@@ -50,7 +50,6 @@
   "chat.agent.sandbox.allowNetwork": true,
   "chat.agent.sandbox.enabledWindows": "on",
   "chat.agentHost.copilot.mapLegacySettingsToManagedSettings": true,
-  "chat.agentHost.copilot.multiTurnContextRouting.enabled": true,
   "chat.agentHost.copilot.reasoningSummary.enabled": true,
   "chat.agentHost.customTerminalTool.enabled": true,
   "chat.agentHost.experimental.autoAttachPullRequests": true,
