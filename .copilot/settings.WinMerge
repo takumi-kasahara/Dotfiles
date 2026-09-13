@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<paths>
-		<left>C:\Users\Owner\.copilot\settings.json</left>
-		<right>D:\source\Dotfiles\.copilot\settings.json</right>
+		<left>%USERPROFILE%\.copilot\settings.json</left>
+		<right>settings.json</right>
 		<filter>*.*</filter>
 		<subfolders>1</subfolders>
 		<left-readonly>0</left-readonly>

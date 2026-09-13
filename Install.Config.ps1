@@ -277,14 +277,13 @@ Install()
 # https://code.visualstudio.com/docs/agent-customization/custom-agents#_custom-agent-file-locations
 # https://code.visualstudio.com/docs/agent-customization/custom-instructions#_instructions-file-locations
 [Installer]::new().
-Source('.agents').
 Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
 Source('.copilot\*.json').
-Source('.copilot\agents').
-Source('.copilot\instructions').
-Source('.copilot\skills').
+Source('.github\agents').
+Source('.github\instructions').
+Source('.github\skills').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 
