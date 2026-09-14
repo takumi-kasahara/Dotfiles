@@ -32,6 +32,7 @@
   rw = reword
   fixup = ci --fixup
   fx = fixup
+  set-date = "!_() { GIT_COMMITTER_DATE=\"$(date --iso-8601=seconds --date=\"${1:-now}\")\" git commit --amend --no-edit --date=\"${1:-now}\"; }; _"
   squash = !git-squash.sh
   sq = squash
   # https://git-scm.com/docs/git-config
