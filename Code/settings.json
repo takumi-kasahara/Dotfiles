@@ -98,7 +98,6 @@
   "chat.microsoftAuthentication.enabled": true,
   "chat.permissions.default": "autopilot",
   "chat.restoreLastPanelSession": true,
-  "chat.sessionSync.enabled": true,
   "chat.subagents.defaultToAuto": true,
   "chat.subagents.showCreditUsage": true,
   "chat.terminal.agentHost.enabled": true,
