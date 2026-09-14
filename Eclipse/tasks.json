@@ -7,6 +7,20 @@
   },
   "tasks": [
     {
+      "label": "apm-install",
+      "type": "shell",
+      "command": "apm",
+      "args": ["install"],
+      "problemMatcher": []
+    },
+    {
+      "label": "apm-update",
+      "type": "shell",
+      "command": "apm",
+      "args": ["update", "--yes"],
+      "problemMatcher": []
+    },
+    {
       "label": "npm-install",
       "type": "shell",
       "command": "npm",
