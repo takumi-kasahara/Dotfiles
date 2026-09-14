@@ -287,6 +287,13 @@ Source('.github\skills').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 
+# apm
+# https://microsoft.github.io/apm/reference/cli/experimental/
+apm experimental list --json |
+ConvertFrom-Json |
+Where-Object { -not $_.enabled } |
+ForEach-Object { apm experimental enable $_.name }
+
 # Subversion
 [Installer]::new().
 Source('Subversion\config').
