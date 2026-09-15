@@ -43,7 +43,7 @@
   "autoHideWindow": false,
   "centerOnLaunch": true,
   "compatibility.allowHeadless": true,
-  "copyFormatting": "none",
+  "copyFormatting": "all",
   "copyOnSelect": true,
   "customModelProviders": [
     {
