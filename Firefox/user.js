@@ -15,6 +15,7 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", true);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", true);
 user_pref("browser.download.deletePrivate", true);
 user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", true);
 user_pref("browser.privatebrowsing.autostart", false);
 user_pref("browser.safebrowsing.downloads.enabled", true);
 user_pref("browser.safebrowsing.malware.enabled", true);
@@ -45,6 +46,7 @@ user_pref("media.gmp-gmpopenh264.enabled", true);
 user_pref("media.gmp-widevinecdm.enabled", true);
 user_pref("media.hardwaremediakeys.enabled", true);
 user_pref("media.peerconnection.enabled", true);
+user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
