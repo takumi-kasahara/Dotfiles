@@ -86,11 +86,12 @@
       "deferLoading": true
     }
   },
+  "ai-features.notifications.default": "os-notification",
+  "ai-features.ollama.ollamaModels": ["granite4.2:3b", "ornith-1.5:9b"],
   "ai-features.openAiOfficial.officialOpenAiModels": [],
   "ai-features.openAiOfficial.serverSideCompaction": "enabled",
   "ai-features.openAiOfficial.useResponseApi": true,
-  "ai-features.ollama.ollamaModels": ["granite4.2:3b", "ornith-1.5:9b"],
-  "ai-features.notifications.default": "os-notification",
+  "ai-features.registry.autoUpdate": "on",
   "ai-features.SCANOSS.mode": "automatic",
   "ai-features.workspaceFunctions.userExcludes": [
     ".nuget",
