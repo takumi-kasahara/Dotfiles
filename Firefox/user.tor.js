@@ -134,7 +134,7 @@ user_pref("font.name.monospace.ja", "BIZ UDGothic");
 // #region intl.*
 /** @see {@link https://firefox-source-docs.mozilla.org/intl/locale.html} */
 user_pref("browser.search.region", "JP");
-user_pref("intl.accept_languages", "ja");
+user_pref("intl.accept_languages", "");
 user_pref("intl.locale.requested", "");
 user_pref("intl.regional_prefs.use_os_locales", true);
 user_pref("privacy.spoof_english", 2);
