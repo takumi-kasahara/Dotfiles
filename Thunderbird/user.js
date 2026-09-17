@@ -16,6 +16,7 @@ user_pref("browser.download.downloadDir", "");
 user_pref("browser.download.folderList", 1);
 user_pref("browser.download.lastDir", "");
 user_pref("browser.download.useDownloadDir", false); // Always ask you where to save files.
+user_pref("browser.formfill.enable", false);
 user_pref("browser.privatebrowsing.autostart", false);
 user_pref("browser.safebrowsing.downloads.enabled", true);
 user_pref("browser.safebrowsing.malware.enabled", true);
