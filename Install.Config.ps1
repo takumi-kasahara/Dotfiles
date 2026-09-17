@@ -277,9 +277,9 @@ Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
 Source('.copilot\*.json').
+Source('.agents\skills').
 Source('.github\agents').
 Source('.github\instructions').
-Source('.github\skills').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 
