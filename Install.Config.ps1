@@ -29,10 +29,6 @@ class Installer {
     $this.Destinations += $path
     return $this
   }
-  [Installer] Destination2([string]$path) {
-    $this.Destinations += [WildcardPattern]::Escape($path) | Split-Path -Parent
-    return $this
-  }
   [void] Install() {
     foreach ($dest in $this.Destinations.GetEnumerator() | Sort-Object -Property Name) {
       if (-not (Test-Path -LiteralPath $dest)) {
@@ -388,12 +384,17 @@ Install()
 # PowerShell
 [Installer]::new().
 Source('Windows\PowerShell.5.ps1', 'profile.ps1').
-Destination2((powershell.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')).
+Destination(([WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent)).
 Install()
 [Installer]::new().
 Source('Windows\PowerShell.7.ps1', 'profile.ps1').
-Destination2((pwsh.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')).
+Destination(([WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent)).
 Install()
+if ($PSEdition -eq 'Core') {
+  Get-ExperimentalFeature |
+  Where-Object -Property Enabled -Not |
+  Enable-ExperimentalFeature
+}
 
 # Event Viewer
 [Installer]::new().
