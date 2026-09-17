@@ -255,7 +255,6 @@
     "source.fixAll": true
   },
   "editor.codeLensFontFamily": "'Cascadia Next JP', monospace",
-  "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": "off",
   "editor.cursorStyle": "block",
