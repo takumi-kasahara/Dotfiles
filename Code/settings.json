@@ -67,6 +67,7 @@
   "chat.autoReply": true,
   "chat.checkpoints.showFileChanges": true,
   "chat.copilot.claudeAdvisor.enabled": true,
+  "chat.copilot.hydraFusion.enabled": true,
   "chat.copilot.semanticSearch.enabled": true,
   "chat.copilot.subagentModelGuidance.enabled": true,
   "chat.customizations.locationsMigration.enabled": true,
@@ -860,7 +861,23 @@
   // #region vscode-yaml
   "yaml.disableAdditionalProperties": true,
   "yaml.disableDefaultProperties": true,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
   // #endregion
   // #endregion
 }
