@@ -1,49 +1,52 @@
 ﻿<#
 .SYNOPSIS
-    Runs one or more AutoHotkey v2 scripts via AutoHotkey.exe.
+  Runs one or more AutoHotkey v2 scripts via AutoHotkey.exe.
 
 .DESCRIPTION
-    Finds AutoHotkey.exe on the system and uses it to execute the specified `.ahk` files.
-    The script resolves AutoHotkey.exe from the PATH first, then falls back to a recursive search under $env:ProgramFiles.
-    Output from each script is streamed to the console.
+  Finds AutoHotkey.exe on the system and uses it to execute the specified `.ahk` files.
+  The script resolves AutoHotkey.exe from the PATH first, then falls back to a recursive search under $env:ProgramFiles.
+  Output from each script is streamed to the console.
 
 .PARAMETER Path
-    One or more paths to AutoHotkey script files. Wildcards are supported.
-    This parameter accepts pipeline input and property-name binding.
+  One or more paths to AutoHotkey script files. Wildcards are supported.
+  This parameter accepts pipeline input and property-name binding.
 
 .PARAMETER LiteralPath
-    One or more literal paths to AutoHotkey script files. Wildcards are not supported.
-    This parameter accepts pipeline input by property name and has the aliases PSPath and LP.
+  One or more literal paths to AutoHotkey script files. Wildcards are not supported.
+  This parameter accepts pipeline input by property name and has the aliases PSPath and LP.
 
 .PARAMETER Switches
-    Additional switches to pass to AutoHotkey.exe. These are inserted before the script path.
+  Additional switches to pass to AutoHotkey.exe. These are inserted before the script path.
 
 .PARAMETER ArgumentList
-    Additional arguments to pass to Script. These are forwarded after the script path.
+  Additional arguments to pass to Script. These are forwarded after the script path.
 
 .EXAMPLE
-    ```powershell
-    powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk
-    ```
+  ```powershell
+  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk
+  ```
 
-    Runs the test suite from a clean PowerShell session.
-
-.EXAMPLE
-    ```powershell
-    powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -Path .\Tests\*.ahk
-    ```
-
-    Runs all AutoHotkey scripts in the specified directory.
+  Runs the test suite from a clean PowerShell session.
 
 .EXAMPLE
-    ```powershell
-    powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk -Switches '/ErrorStdOut', '/NoEnv' -ArgumentList 'foo', 'bar', 'baz'
-    ```
+  ```powershell
+  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -Path .\Tests\*.ahk
+  ```
 
-    Runs the specified AutoHotkey script with additional switches passed to AutoHotkey.exe before the script path, and additional arguments passed to AutoHotkey.exe after the script path.
+  Runs all AutoHotkey scripts in the specified directory.
+
+.EXAMPLE
+  ```powershell
+    powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
+  ```
+
+  Runs the specified AutoHotkey script with additional switches passed to AutoHotkey.exe before the script path, and additional arguments passed to AutoHotkey.exe after the script path.
+
+.LINK
+  - [Command Line Parameters](https://www.autohotkey.com/docs/v2/Scripts.htm#cmd)
 
 .OUTPUTS
-    None.
+  None.
 #>
 [CmdletBinding(DefaultParameterSetName = 'PathSet', SupportsShouldProcess)]
 param (
@@ -58,7 +61,7 @@ param (
   [string[]]
   $LiteralPath,
   [string[]]
-  $Switches,
+  $Switches = @('/ErrorStdOut'),
   [string[]]
   [Parameter(ValueFromRemainingArguments)]
   $ArgumentList
@@ -85,10 +88,9 @@ process {
       }
     }
   )
-  $Switches += '/ErrorStdOut'
   $result = $items |
   ForEach-Object {
-    & $ahk @Switches $_.FullName @ArgumentList 2>&1 | Out-Default
+    & $ahk @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
     return $LASTEXITCODE
   }
 }

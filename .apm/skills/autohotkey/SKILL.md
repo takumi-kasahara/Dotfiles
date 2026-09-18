@@ -28,19 +28,19 @@ Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
 - Run a single script:
 
   ```powershell
-  powershell.exe -NoLogo -NoProfile -File .agents\skills\autohotkey\scripts\AutoHotkey.ps1 -LiteralPath .\Src\Run.ahk
+  powershell.exe -NoLogo -NoProfile -File .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1 -LiteralPath .\Script.ahk
   ```
 
 - Run multiple scripts with wildcards:
 
   ```powershell
-  powershell.exe -NoLogo -NoProfile -File .agents\skills\autohotkey\scripts\AutoHotkey.ps1 -Path .\Src\Tests\*.Tests.ahk
+  powershell.exe -NoLogo -NoProfile -File .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1 -Path .\*.Tests.ahk
   ```
 
 - Pipe files to the script:
 
   ```powershell
-  Get-ChildItem .\Src\Scripts\ContextMenu\*.ahk | .agents\skills\autohotkey\scripts\AutoHotkey.ps1
+  Get-ChildItem .\Scripts\*.ahk | .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1
   ```
 
 ## Output to Console
@@ -70,7 +70,7 @@ Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
 
 **Priority**: Rules marked as mandatory must always be followed. All other rules are strong recommendations.
 
-- **Mandatory**: Variable Naming, Function Naming
+- **Mandatory**: Variable Naming, Function Naming, Equality Operators
 - **Recommendation**: Formatting, String Formatting, Regular Expressions, System Integration
 
 ### Formatting
@@ -83,6 +83,33 @@ Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
 - Use `lowerCamelCase` for variable names.
   - Avoid reassignment unless it significantly improves performance or is required for compatibility with external libraries.
 - Use `UPPER_SNAKE_CASE` for constants.
+
+### Equality Operators
+
+- **Prohibited**: `=` and `!=` operators for equality/inequality checks.
+- **Required**: Use `==` for equality and `!==` for inequality.
+  - [Equality Operators](https://www.autohotkey.com/docs/v2/Variables.htm#equal)
+- `=` performs case-insensitive string comparison, which can lead to unexpected behavior.
+- `==` performs strict equality comparison (type and value).
+- `!==` performs strict inequality comparison (type and value).
+
+```autohotkey
+; NG: Case-insensitive comparison (prohibited)
+if value = "hello"
+  MsgBox("matched")
+
+; OK: Strict equality comparison
+if value == "hello"
+  MsgBox("matched")
+
+; NG: Case-insensitive inequality (prohibited)
+if value != "hello"
+  MsgBox("not matched")
+
+; OK: Strict inequality comparison
+if value !== "hello"
+  MsgBox("not matched")
+```
 
 ### Function Naming
 
