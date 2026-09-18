@@ -1,7 +1,9 @@
 .agents
-.github
 apm_modules
 node_modules
+
+.github/*
+!.github/mcp.json
 
 .vscode/*
 !.vscode/*.code-snippets
