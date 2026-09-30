@@ -1,0 +1,22 @@
+# https://www.gnu.org/software/bash/manual/html_node/Command-Line-Editing.html
+# Variables
+set bell-style none
+set blink-matching-paren on
+set colored-completion-prefix on
+set colored-stats on
+set completion-map-case on
+set convert-meta on
+set echo-control-characters off
+set expand-tilde on
+set history-preserve-point on
+set mark-modified-lines on
+set match-hidden-files off
+set menu-complete-display-prefix on
+set revert-all-at-newline on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set skip-completed-text on
+set visible-stats on
+
+# Key Bindings
+"\C-H": backward-kill-word

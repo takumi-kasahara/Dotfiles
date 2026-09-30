@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <plugin name="ComparePDF">
+    <event value="FILE_PACK_UNPACK" />
+    <file-filters value="\.pdf$" />
+    <is-automatic value="false" />
+    <extended-properties value="ProcessType=Content Extraction;MenuCaption=Compare PDF" />
+    <unpack-file>
+      <command>qpdf.exe --qdf &quot;${SRC_FILE}&quot; &quot;${DST_FILE}&quot;</command>
+    </unpack-file>
+  </plugin>
+</plugins>

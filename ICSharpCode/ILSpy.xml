@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ILSpy version="10.0.1.8346">
+  <AssemblyLists>
+    <List name=".NET 4 (WPF)">
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</Assembly>
+    </List>
+    <List name="ASP.NET (MVC3)">
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Entity.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Abstractions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Abstractions.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.DynamicData\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.DynamicData.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Web.Entity.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Routing\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Routing.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
+      <Assembly>
+        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
+    </List>
+    <List name="(Default)">
+      <Assembly>C:\Program
+        Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.CoreLib.dll</Assembly>
+      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.Uri.dll</Assembly>
+      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Linq.dll</Assembly>
+      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.Xml.dll</Assembly>
+      <Assembly>C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\System.Xaml.dll</Assembly>
+      <Assembly>C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\WindowsBase.dll</Assembly>
+      <Assembly>C:\Program
+        Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\PresentationCore.dll</Assembly>
+      <Assembly>C:\Program
+        Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\PresentationFramework.dll</Assembly>
+    </List>
+  </AssemblyLists>
+  <SessionSettings>
+    <FilterSettings>
+      <ShowAPILevel>0</ShowAPILevel>
+      <Language></Language>
+      <LanguageVersion></LanguageVersion>
+    </FilterSettings>
+    <ActiveAssemblyList>(Default)</ActiveAssemblyList>
+    <WindowState>Maximized</WindowState>
+    <WindowBounds>10,10,750,550</WindowBounds>
+    <SelectedSearchMode>TypeAndMember</SelectedSearchMode>
+    <Theme>Dark</Theme>
+    <DockLayout>
+      <LayoutRoot>
+        <RootPanel Orientation="Horizontal">
+          <LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="300">
+            <LayoutAnchorablePane>
+              <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100"
+                CanDockAsTabbedDocument="False" Title="Assemblies" IsSelected="True"
+                ContentId="assemblyListPane" LastActivationTimeStamp="05/15/2026 00:00:00" />
+            </LayoutAnchorablePane>
+          </LayoutAnchorablePaneGroup>
+          <LayoutPanel Orientation="Vertical">
+            <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="225">
+              <LayoutAnchorablePane Id="3ce12a2b-e6be-47cd-9787-fbf74bb9f157" DockHeight="225" />
+            </LayoutAnchorablePaneGroup>
+            <LayoutDocumentPane Id="d9f0bff0-b44f-452c-baf0-6905e2fbf933">
+              <LayoutDocument Title="About" IsSelected="True" IsLastFocusedDocument="True"
+                CanClose="False" LastActivationTimeStamp="05/15/2026 00:00:00" />
+            </LayoutDocumentPane>
+            <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="225">
+              <LayoutAnchorablePane Id="8858bc50-019a-480e-b402-30a890e7c68f" DockHeight="225" />
+            </LayoutAnchorablePaneGroup>
+          </LayoutPanel>
+        </RootPanel>
+        <TopSide />
+        <RightSide />
+        <LeftSide />
+        <BottomSide />
+        <FloatingWindows />
+        <Hidden>
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100"
+            CanDockAsTabbedDocument="False" Title="Search" IsSelected="True" ContentId="searchPane"
+            CanClose="True" LastActivationTimeStamp="05/15/2026 00:00:00"
+            PreviousContainerId="3ce12a2b-e6be-47cd-9787-fbf74bb9f157" PreviousContainerIndex="0" />
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100"
+            CanDockAsTabbedDocument="False" Title="Analyze" IsSelected="True"
+            ContentId="analyzerPane" CanClose="True" LastActivationTimeStamp="05/15/2026 00:00:00"
+            PreviousContainerId="8858bc50-019a-480e-b402-30a890e7c68f" PreviousContainerIndex="0" />
+        </Hidden>
+      </LayoutRoot>
+    </DockLayout>
+  </SessionSettings>
+  <UpdateSettings>
+    <AutomaticUpdateCheckEnabled>true</AutomaticUpdateCheckEnabled>
+    <LastSuccessfulUpdateCheck>2026-04-01T00:00:00.0000000Z</LastSuccessfulUpdateCheck>
+  </UpdateSettings>
+  <ReadyToRunOptions DisassemblyFormat="Intel" IsShowUnwindInfo="true" IsShowDebugInfo="true"
+    IsShowGCInfo="true" xmlns="http://www.ilspy.net/ready-to-run" />
+  <MiscSettings AllowMultipleInstances="true" LoadPreviousAssemblies="true" />
+  <DisplaySettings Font="Cascadia Next JP" FontSize="13.333333333333334" ShowLineNumbers="true"
+    ShowMetadataTokens="true" ShowMetadataTokensInBase10="true" ShowDebugInfo="true"
+    EnableWordWrap="true" SortResults="true" FoldBraces="true" ExpandMemberDefinitions="true"
+    ExpandUsingDeclarations="true" IndentationUseTabs="true" IndentationSize="4"
+    IndentationTabSize="4" HighlightMatchingBraces="true" HighlightCurrentLine="true"
+    HideEmptyMetadataTables="true" UseNestedNamespaceNodes="true"
+    ShowRawOffsetsAndBytesBeforeInstruction="true" StyleWindowTitleBar="true"
+    EnableSmoothScrolling="true" DecodeCustomAttributeBlobs="true" />
+  <DecompilerSettings NativeIntegers="true" NumericIntPtr="true" CovariantReturns="true"
+    InitAccessors="true" RecordClasses="true" RecordStructs="true"
+    StructDefaultConstructorsAndFieldInitializers="true" WithExpressions="true"
+    UsePrimaryConstructorSyntax="true" FunctionPointers="true" ScopedRef="true"
+    RequiredMembers="true" SwitchExpressions="true" FileScopedNamespaces="true"
+    AnonymousMethods="true" AnonymousTypes="true" UseLambdaSyntax="true" ExpressionTrees="true"
+    YieldReturn="true" Dynamic="true" AsyncAwait="true" AwaitInCatchFinally="true"
+    AsyncEnumerator="true" DecimalConstants="true" FixedBuffers="true" StringConcat="true"
+    LiftNullables="true" NullPropagation="true" AutomaticProperties="true"
+    GetterOnlyAutomaticProperties="true" AutomaticEvents="true" UsingStatement="true"
+    UseEnhancedUsing="true" AlwaysUseBraces="true" ForEachStatement="true"
+    ForEachWithGetEnumeratorExtension="true" ParamsCollections="true" LockStatement="true"
+    SwitchStatementOnString="true" SparseIntegerSwitch="true" UsingDeclarations="true"
+    ExtensionMethods="true" QueryExpressions="true" UseImplicitMethodGroupConversion="true"
+    UseObjectCreationOfGenericTypeParameter="true"
+    AlwaysCastTargetsOfExplicitInterfaceImplementationCalls="true"
+    AlwaysQualifyMemberReferences="true" AlwaysShowEnumMemberValues="true" UseDebugSymbols="true"
+    ArrayInitializers="true" ObjectOrCollectionInitializers="true" DictionaryInitializers="true"
+    ExtensionMethodsInCollectionInitializers="true" UseRefLocalsForAccurateOrderOfEvaluation="true"
+    RefExtensionMethods="true" StringInterpolation="true" Utf8StringLiterals="true"
+    SwitchOnReadOnlySpanChar="true" UnsignedRightShift="true" CheckedOperators="true"
+    ShowXmlDocumentation="true" UseExpressionBodyForCalculatedGetterOnlyProperties="true"
+    OutVariables="true" Discards="true" IntroduceRefModifiersOnStructs="true"
+    IntroduceReadonlyAndInModifiers="true" IntroducePrivateProtectedAccessibility="true"
+    ReadOnlyMethods="true" AsyncUsingAndForEachStatement="true" IntroduceUnmanagedConstraint="true"
+    StackAllocInitializers="true" PatternBasedFixedStatement="true" TupleTypes="true"
+    ThrowExpressions="true" TupleConversions="true" TupleComparisons="true" NamedArguments="true"
+    NonTrailingNamedArguments="true" OptionalArguments="true" ExpandParamsArguments="true"
+    LocalFunctions="true" Deconstruction="true" PatternMatching="true"
+    RecursivePatternMatching="true" PatternCombinators="true" RelationalPatterns="true"
+    StaticLocalFunctions="true" Ranges="true" NullableReferenceTypes="true" RemoveDeadCode="true"
+    RemoveDeadStores="true" ApplyWindowsRuntimeProjections="true" AutoLoadAssemblyReferences="true"
+    ForStatement="true" DoWhileStatement="true" RefReadOnlyParameters="true"
+    UsePrimaryConstructorSyntaxForNonRecordTypes="true" InlineArrays="true" ExtensionMembers="true"
+    FirstClassSpanTypes="true" SeparateLocalVariableDeclarations="true"
+    UseSdkStyleProjectFormat="true" UseNestedDirectoriesForNamespaces="true"
+    AggressiveInlining="true" AlwaysUseGlobal="true" AlwaysMoveInitializer="true"
+    SortCustomAttributes="true" CheckForOverflowUnderflow="true" />
+</ILSpy>

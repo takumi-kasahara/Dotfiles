@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; System > Multitasking
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisallowShaking"=dword:00000001 ; "Title bar window shake": False
+"SnapAssist"=dword:00000000 ; "Snap windows > When I snap a window, suggest what I can snap next to it": True

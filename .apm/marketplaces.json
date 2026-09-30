@@ -1,0 +1,32 @@
+{
+  "marketplaces": [
+    {
+      "name": "anthropic-agent-skills",
+      "url": "https://github.com/anthropics/skills",
+      "path": ".claude-plugin/marketplace.json",
+      "owner": "anthropics",
+      "repo": "skills"
+    },
+    {
+      "name": "awesome-copilot",
+      "url": "https://github.com/github/awesome-copilot",
+      "path": ".github/plugin/marketplace.json",
+      "owner": "github",
+      "repo": "awesome-copilot"
+    },
+    {
+      "name": "copilot-plugins",
+      "url": "https://github.com/github/copilot-plugins",
+      "path": ".github/plugin/marketplace.json",
+      "owner": "github",
+      "repo": "copilot-plugins"
+    },
+    {
+      "name": "docker",
+      "url": "https://github.com/docker/skills",
+      "path": ".github/plugin/marketplace.json",
+      "owner": "docker",
+      "repo": "skills"
+    }
+  ]
+}

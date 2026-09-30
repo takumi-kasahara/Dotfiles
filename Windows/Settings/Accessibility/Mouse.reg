@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WheelScrollChars"="5" ; Mouse Properties > Wheel > Horizontal Scrolling
+"WheelScrollLines"="5" ; Mouse Properties > Wheel > Vertical Scrolling
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"DoubleClickSpeed"="200"            ; "Mouse Properties > Buttons > Double-click speed": Faster
+"MouseSensitivity"="10"             ; "Bluetooth & devices > Mouse > Mouse pointer speed": Middle
+"MouseSpeed"="1"                    ; "Bluetooth & devices > Mouse > Enhance pointer precision": True
+"MouseThreshold1"="5"
+"MouseThreshold2"="10"
+"MouseTrails"="0"                   ; "Accessibility > Mouse > Mouse pointer trails": False
+"MouseWheelRouting"=dword:00000002  ; "Bluetooth & devices > Mouse > Roll the mouse wheel to scroll": True
+"SnapToDefaultButton"="1"           ; "Accessibility > Mouse > Snap to default button": True

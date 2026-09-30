@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowLayoutOptions xmlns="http://schemas.datacontract.org/2004/07/LINQPad">
+  <IsMaximized>true</IsMaximized>
+  <MainSplitPosition>400</MainSplitPosition>
+  <ResultsWindowHeight>0</ResultsWindowHeight>
+  <ResultsWindowWidth>0</ResultsWindowWidth>
+  <SchemaScriptsSplitRatio>0.5</SchemaScriptsSplitRatio>
+  <WindowHeight>789</WindowHeight>
+  <WindowLeft>298</WindowLeft>
+  <WindowTop>146</WindowTop>
+  <WindowWidth>1440</WindowWidth>
+</WindowLayoutOptions>

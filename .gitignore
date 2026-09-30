@@ -1,0 +1,13 @@
+.agents
+apm_modules
+node_modules
+
+.github/*
+!.github/mcp.json
+
+.vscode/*
+!.vscode/*.code-snippets
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json

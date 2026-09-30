@@ -1,0 +1,35 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\Backup]
+"EnableFile"=dword:00000000
+"EnableFolder"=dword:00000000
+"GlobalFolder"=""
+"Location"=dword:00000000
+"NameAddBak"=dword:00000000
+"NameAddTime"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\Font]
+"FaceName"="Cascadia Next JP"
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\FontDirCompare]
+"FaceName"="Cascadia Next JP"
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\Merge7z]
+"Enable"=dword:00000001
+"FilterIndex"=dword:00000001
+"ProbeSignature"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\PatchCreator]
+"CaseSensitive"=dword:00000001
+"EOLSensitive"=dword:00000001
+"IgnoreBlankLines"=dword:00000000
+"Whitespace"=dword:00000000
+"ContextLines"=dword:00000000
+"CopyToClipboard"=dword:00000000
+"IncludeCmdLine"=dword:00000000
+"OpenToEditor"=dword:00000000
+"PatchStyle"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\Settings]
+"ExternalEditor"="C:\\Program Files\\Notepad++\\notepad++.exe"
+"PluginsCustomSettingsList"="EDITOR_SCRIPT.PrettifyXML=filters:\\.xml$;\\.vssettings$;\\.wsf$|automatic:false	FILE_PACK_UNPACK.PrettifyXML=filters:\\.xml$;\\.vssettings$;\\.wsf$|automatic:false"

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LocalUserOptions xmlns="http://schemas.datacontract.org/2004/07/LINQPad">
+  <AutoSaveFiles>true</AutoSaveFiles>
+  <EditorFontSize>0</EditorFontSize>
+  <EditorFontWeight>Normal</EditorFontWeight>
+  <GlobalZoomPercent>100</GlobalZoomPercent>
+  <MacOSModifierKeyHandlingMode>0</MacOSModifierKeyHandlingMode>
+  <PresentationMode>true</PresentationMode>
+  <UseDarkTheme>true</UseDarkTheme>
+</LocalUserOptions>

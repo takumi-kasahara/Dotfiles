@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+  <ScintillaContextMenu>
+    <Item MenuEntryName="Edit" MenuItemName="Cut" />
+    <Item MenuEntryName="Edit" MenuItemName="Copy" />
+    <Item MenuEntryName="Edit" MenuItemName="Paste" />
+    <Item MenuEntryName="Edit" MenuItemName="Delete" />
+    <Item MenuEntryName="Edit" MenuItemName="Select all" />
+    <Item MenuEntryName="Edit" MenuItemName="Begin/End Select" />
+    <Item MenuEntryName="Edit" MenuItemName="Begin/End Select in Column Mode" />
+    <Item id="0" />
+    <Item FolderName="Style all occurrences of token"
+      TranslateID="contextMenu-styleAlloccurrencesOfToken" id="43022" />
+    <Item FolderName="Style all occurrences of token"
+      TranslateID="contextMenu-styleAlloccurrencesOfToken" id="43024" />
+    <Item FolderName="Style all occurrences of token"
+      TranslateID="contextMenu-styleAlloccurrencesOfToken" id="43026" />
+    <Item FolderName="Style all occurrences of token"
+      TranslateID="contextMenu-styleAlloccurrencesOfToken" id="43028" />
+    <Item FolderName="Style all occurrences of token"
+      TranslateID="contextMenu-styleAlloccurrencesOfToken" id="43030" />
+    <Item FolderName="Style one token" TranslateID="contextMenu-styleOneToken" id="43062" />
+    <Item FolderName="Style one token" TranslateID="contextMenu-styleOneToken" id="43063" />
+    <Item FolderName="Style one token" TranslateID="contextMenu-styleOneToken" id="43064" />
+    <Item FolderName="Style one token" TranslateID="contextMenu-styleOneToken" id="43065" />
+    <Item FolderName="Style one token" TranslateID="contextMenu-styleOneToken" id="43066" />
+
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43023" />
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43025" />
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43027" />
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43029" />
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43031" />
+    <Item FolderName="Clear style" TranslateID="contextMenu-clearStyle" id="43032" />
+    <Item id="0" />
+    <Item FolderName="Plugin commands" TranslateID="contextMenu-PluginCommands"
+      PluginEntryName="MIME Tools" PluginCommandItemName="Base64 Encode" />
+    <Item FolderName="Plugin commands" TranslateID="contextMenu-PluginCommands"
+      PluginEntryName="MIME Tools" PluginCommandItemName="Base64 Decode" />
+    <Item FolderName="Plugin commands" TranslateID="contextMenu-PluginCommands"
+      PluginEntryName="NppExport" PluginCommandItemName="Copy all formats to clipboard"
+      ItemNameAs="Copy Text with Syntax Highlighting" />
+    <Item id="0" />
+    <Item MenuEntryName="Edit" MenuItemName="UPPERCASE" />
+    <Item MenuEntryName="Edit" MenuItemName="lowercase" />
+    <Item id="0" />
+    <Item MenuEntryName="Edit" MenuItemName="Open File" />
+    <Item MenuEntryName="Edit" MenuItemName="Search on Internet" />
+    <Item id="0" />
+    <Item MenuEntryName="Edit" MenuItemName="Toggle Single Line Comment" />
+    <Item MenuEntryName="Edit" MenuItemName="Block Comment" />
+    <Item MenuEntryName="Edit" MenuItemName="Block Uncomment" />
+    <Item id="0" />
+    <Item MenuEntryName="View" MenuItemName="Hide lines" />
+  </ScintillaContextMenu>
+</NotepadPlus>

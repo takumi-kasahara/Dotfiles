@@ -1,0 +1,14 @@
+{
+  "default_client": "vscode",
+  "experimental": {
+    "verbose_version": true,
+    "copilot_cowork": true,
+    "copilot_app": true,
+    "grok_cloud": true,
+    "marketplace_authoring": true,
+    "registries": true,
+    "canvas": true,
+    "external_scanners": true,
+    "openclaw": true
+  }
+}

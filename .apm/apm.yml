@@ -1,0 +1,21 @@
+name: Owner
+version: 1.0.0
+description: APM project for Owner
+author: takumi-kasahara
+targets:
+  - copilot
+dependencies:
+  apm:
+    - github/awesome-copilot/instructions/agent-skills.instructions.md
+    - github/awesome-copilot/instructions/agents.instructions.md
+    - github/awesome-copilot/instructions/instructions.instructions.md
+    - github/awesome-copilot/instructions/markdown.instructions.md
+    - github/awesome-copilot/instructions/prompt.instructions.md
+    - github/copilot-advanced-security-plugin
+    - microsoftdocs/mcp
+  mcp:
+    - name: mdn
+      registry: false
+      transport: http
+      url: https://mcp.mdn.mozilla.net
+scripts: {}
