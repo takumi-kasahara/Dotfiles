@@ -1,13 +1,20 @@
 {
   "enabledPlugins": {
-    "wt-agent-hooks@wt-local": true
+    "wt-agent-hooks@wt-local": true,
+    "dotnet@dotnet-agent-skills": true
   },
   "experimental": true,
   "extraKnownMarketplaces": {
     "wt-local": {
       "source": {
-        "path": "C:\\Program Files\\WindowsApps\\Microsoft.IntelligentTerminal_0.2.2572.0_x64__8wekyb3d8bbwe\\wt-agent-hooks\\copilot",
-        "source": "directory"
+        "source": "directory",
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.IntelligentTerminal_0.2.2572.0_x64__8wekyb3d8bbwe\\wt-agent-hooks\\copilot"
+      }
+    },
+    "dotnet-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "dotnet/skills"
       }
     }
   },
