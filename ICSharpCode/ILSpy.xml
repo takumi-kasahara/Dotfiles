@@ -71,19 +71,7 @@
       <Assembly>
         C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
     </List>
-    <List name="(Default)">
-      <Assembly>C:\Program
-        Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.CoreLib.dll</Assembly>
-      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.Uri.dll</Assembly>
-      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Linq.dll</Assembly>
-      <Assembly>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.22\System.Private.Xml.dll</Assembly>
-      <Assembly>C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\System.Xaml.dll</Assembly>
-      <Assembly>C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\WindowsBase.dll</Assembly>
-      <Assembly>C:\Program
-        Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\PresentationCore.dll</Assembly>
-      <Assembly>C:\Program
-        Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\PresentationFramework.dll</Assembly>
-    </List>
+    <List name="(Default)" />
   </AssemblyLists>
   <SessionSettings>
     <FilterSettings>
@@ -103,7 +91,7 @@
             <LayoutAnchorablePane>
               <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100"
                 CanDockAsTabbedDocument="False" Title="Assemblies" IsSelected="True"
-                ContentId="assemblyListPane" LastActivationTimeStamp="05/15/2026 00:00:00" />
+                ContentId="assemblyListPane" LastActivationTimeStamp="10/01/2026 00:00:00" />
             </LayoutAnchorablePane>
           </LayoutAnchorablePaneGroup>
           <LayoutPanel Orientation="Vertical">
@@ -111,8 +99,8 @@
               <LayoutAnchorablePane Id="3ce12a2b-e6be-47cd-9787-fbf74bb9f157" DockHeight="225" />
             </LayoutAnchorablePaneGroup>
             <LayoutDocumentPane Id="d9f0bff0-b44f-452c-baf0-6905e2fbf933">
-              <LayoutDocument Title="About" IsSelected="True" IsLastFocusedDocument="True"
-                CanClose="False" LastActivationTimeStamp="05/15/2026 00:00:00" />
+              <LayoutDocument Title="New Tab" IsSelected="True" IsLastFocusedDocument="True"
+                CanClose="False" LastActivationTimeStamp="10/01/2026 00:00:00" />
             </LayoutDocumentPane>
             <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="225">
               <LayoutAnchorablePane Id="8858bc50-019a-480e-b402-30a890e7c68f" DockHeight="225" />
@@ -127,11 +115,11 @@
         <Hidden>
           <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100"
             CanDockAsTabbedDocument="False" Title="Search" IsSelected="True" ContentId="searchPane"
-            CanClose="True" LastActivationTimeStamp="05/15/2026 00:00:00"
+            CanClose="True" LastActivationTimeStamp="10/01/2026 00:00:00"
             PreviousContainerId="3ce12a2b-e6be-47cd-9787-fbf74bb9f157" PreviousContainerIndex="0" />
           <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100"
             CanDockAsTabbedDocument="False" Title="Analyze" IsSelected="True"
-            ContentId="analyzerPane" CanClose="True" LastActivationTimeStamp="05/15/2026 00:00:00"
+            ContentId="analyzerPane" CanClose="True" LastActivationTimeStamp="10/01/2026 00:00:00"
             PreviousContainerId="8858bc50-019a-480e-b402-30a890e7c68f" PreviousContainerIndex="0" />
         </Hidden>
       </LayoutRoot>
