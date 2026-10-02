@@ -1,7 +1,6 @@
 ---
 name: userscripts
 description: "TypeScript coding conventions for Greasemonkey user script source and build scripts. Use when writing or editing *.ts files in src/ or .tools/ for bookmarklets, user scripts, or user styles — covers ES module style, variable/function naming, JSDoc, and array iteration patterns."
-license: Complete terms in LICENSE.txt
 ---
 
 # TypeScript Browser Scripts
@@ -10,9 +9,8 @@ Coding conventions for authoring browser bookmarklets, Greasemonkey user scripts
 
 ## When to Use This Skill
 
-- Creating or modifying a `.ts` source file under `src/` (modules or scripts)
-- Writing or editing a build script under `.tools/`
-- Adding a new bookmarklet, user script, or user style
+- Creating or modifying a `.ts`
+- Adding a new user script for a site
 - Reviewing TypeScript for naming, JSDoc, or iteration-style consistency
 
 ## Compatibility Requirements
@@ -79,6 +77,5 @@ for (let i = 0; i < items.length; i++) {
 
 ## References
 
-- Project guidelines: `AGENTS.md`
-- ESLint rules: `eslint.config.mjs`
-- TypeScript config: `tsconfig.json`
+- [Greasespot Wiki](https://wiki.greasespot.net/Main_Page)
+- [Metadata Block](https://wiki.greasespot.net/Metadata_Block)

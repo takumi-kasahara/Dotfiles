@@ -1,7 +1,6 @@
 ---
 name: userstyles
 description: "CSS coding conventions for Stylus-compatible user-style files (*.user.css). Use when writing or editing user styles in src/ — covers modern CSS targeting, selector naming, property grouping order, color formats, comments, and the Stylus metadata header."
-license: Complete terms in LICENSE.txt
 ---
 
 # CSS User Styles
@@ -10,7 +9,7 @@ Coding conventions for authoring Stylus-compatible user styles (`.user.css`) in 
 
 ## When to Use This Skill
 
-- Creating or modifying a `.user.css` file under `src/`
+- Creating or modifying a `.user.css`
 - Adding a new user style for a site
 - Reviewing CSS for selector naming, property grouping, or metadata-header consistency
 
@@ -94,9 +93,8 @@ All user styles must include a Stylus metadata header.
 - **`@version` is semantic** — use `major.minor.patch` (e.g. `1.0.0`), not a single number.
 - **One `@match` per line** — list each URL pattern on its own `@match` line; multiple sites mean multiple lines.
 - **Keep specificity low** — high-specificity selectors make the style hard to override and conflict with site CSS.
-- **stylelint enforces these rules** — run the linter (`stylelint.config.mjs`) before committing.
 
 ## References
 
-- Project guidelines: `AGENTS.md`
-- Linting rules: `stylelint.config.mjs`
+- [Stylus Wiki](https://github.com/openstyles/stylus/wiki)
+- [Writing UserCSS](https://github.com/openstyles/stylus/wiki/Writing-UserCSS)
