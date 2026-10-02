@@ -1,6 +1,6 @@
 ---
 name: powershell-5
-description: "PowerShell 5.1 coding guidelines. Use when: writing or editing *.ps1/*.psm1, adding functions, error handling, null checks, string formatting, path joining, .NET constructors, wildcard escaping. Enforces [CmdletBinding()], Set-StrictMode, ThrowTerminatingError, and safe path handling."
+description: "PowerShell 5.1 coding, cmdlet, comment-based help, and Pester v6 guidance. Use when writing or editing *.ps1/*.psm1 files, creating or updating functions/cmdlets, documenting commands, or creating tests. Covers parameter design, ShouldProcess, terminating errors, null checks, safe paths, and testing."
 argument-hint: "Describe the PowerShell 5.1 script or function you are writing or editing."
 user-invocable: true
 ---
@@ -20,10 +20,9 @@ Guidelines for writing and editing PowerShell 5.1 scripts and modules in this re
 
 ## Critical Rules
 
-- For editing cmdlets, load the `powershell-5-cmdlet` skill.
-- For editing comment-based help, load the `powershell-5-help` skill.
 - Use `[CmdletBinding()]` for every function.
 - Use `Set-StrictMode -Version Latest` in every script.
+- For cmdlets, comment-based help, and Pester v6 tests, follow the corresponding sections below.
 
 ## Best Practices
 
@@ -118,3 +117,177 @@ Do not use `+` for string concatenation.
 - [Documentation](https://learn.microsoft.com/en-us/powershell/)
 - [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
 - [PowerShell Gallery](https://www.powershellgallery.com/)
+
+## Cmdlet Guidelines
+
+Use this checklist by section:
+
+### Cmdlet Pattern
+
+1. Pick the correct cmdlet pattern (`New-*`, `Get-*`, `Set-*`, `Remove-*`, `Export-*`, `Import-*`).
+
+### Parameters and Behavior
+
+2. Apply parameter and attribute rules from the parameter section.
+3. If `SupportsShouldProcess` is enabled, verify `-WhatIf` and `-Confirm` behavior.
+
+### Error Handling
+
+4. Add clear, user-friendly terminating errors for invalid or unsupported parameter values, including valid alternatives.
+
+- Follow parameter naming and attribute usage conventions from the official PowerShell docs: https://learn.microsoft.com/powershell/.
+- If using `[CmdletBinding(SupportsShouldProcess)]`, always implement `-WhatIf`/`-Confirm` behavior.
+- Refer to existing similar functions and tests.
+- If a parameter value is invalid or unsupported, throw a clear terminating error that states the issue and valid alternatives.
+
+### Parameter Guidelines
+
+- When adding `[CmdletBinding(SupportsShouldProcess)]`, follow official documentation
+  - Always call `$PSCmdlet.ShouldProcess()`
+  - Add `-WhatIf:$WhatIfPreference` to any command that supports `-WhatIf`
+
+#### `New-*`
+
+- `[CmdletBinding(SupportsShouldProcess)]`
+  - `[switch]$Force`
+    - Overwrite existing items when present
+    - If the target is a folder or another mismatched type when creating a file, throw an exception
+- `[string]$Path`
+  - `[Alias('FullName')]`
+  - `[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]`
+  - `[ValidateScript({ Test-Path -LiteralPath $_ -IsValid })]`
+
+#### `Get-*`
+
+- `[string[]]$Path`
+  - `[Parameter(Mandatory, Position = 0)]`
+  - `[SupportsWildcards()]`
+  - `[ValidateScript({ Test-Path -Path $_ })]`
+- `[string[]]$LiteralPath`
+  - `[Alias('PSPath', 'LP')]`
+  - `[Parameter(Mandatory, ParameterSetName = 'LiteralPathSet', ValueFromPipelineByPropertyName)]`
+  - `[ValidateScript({ Test-Path -LiteralPath $_ })]`
+
+#### `Set-*` / `Remove-*`
+
+- `[CmdletBinding(SupportsShouldProcess)]`
+  - `[switch]$Force`: ignore read-only attributes and overwrite
+- `[string[]]$Path`
+  - `[Parameter(Mandatory, ParameterSetName = 'PathSet', Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]`
+  - `[SupportsWildcards()]`
+  - `[ValidateScript({ Test-Path -Path $_ })]`
+- `[string[]]$LiteralPath`
+  - `[Alias('PSPath', 'LP')]`
+  - `[Parameter(Mandatory, ParameterSetName = 'LiteralPathSet', ValueFromPipelineByPropertyName)]`
+  - `[ValidateScript({ Test-Path -LiteralPath $_ })]`
+
+#### `Export-*`
+
+- `[CmdletBinding(SupportsShouldProcess)]`
+  - `[switch]$Force`: ignore read-only attributes and overwrite
+  - `[switch]$NoClobber`: error if the file already exists
+    - If not specified, overwrite
+- `[string]$Path`
+  - `[Alias('FilePath', 'FullName')]`
+  - `[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]`
+  - `[ValidateScript({ Test-Path -LiteralPath $_ -IsValid })]`
+
+#### `Import-*`
+
+- `[CmdletBinding(SupportsShouldProcess)]`
+  - `[switch]$Force`: ignore read-only attributes and overwrite
+- `[string]$Path`
+  - `[Alias('FilePath', 'FullName')]`
+  - `[Parameter(Mandatory, Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]`
+  - `[ValidateScript({ Test-Path -LiteralPath $_ })]`
+
+### Cmdlet Resources
+
+- See the [cmdlet reference](./references/powershell-cmdlet.md).
+- Use [ParseFile.ps1](./scripts/ParseFile.ps1) to parse PowerShell files.
+- Use [ScriptAnalyzer.ps1](./scripts/ScriptAnalyzer.ps1) for PSScriptAnalyzer.
+
+## Comment-Based Help
+
+Follow these steps in order:
+
+1. Core sections: update `.SYNOPSIS` and `.DESCRIPTION`.
+2. Parameters: update each `.PARAMETER <Name>` in function-signature order.
+3. Supporting sections: add or refresh `.EXAMPLE`, `.OUTPUTS`, and `.NOTES`.
+4. Validation: verify with `Get-Help [-Path <Path>] -Name <Name> -Full`.
+
+- Follow the official PowerShell comment-based help documentation: https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help.
+- `.SYNOPSIS` should describe the function purpose concisely.
+- `.DESCRIPTION` should describe behavior details, notes, and overall `ShouldProcess` behavior.
+- `.PARAMETER <Name>` should match the parameter definition in the function signature, including order, type, and required/optional behavior.
+- `.EXAMPLE` should include usage examples, scenarios, and results.
+- `.OUTPUTS` should include the output type FQCN (Fully Qualified Class Name) and meaning.
+  - Example:
+    - `[OutputType([void])]`: `.OUTPUTS None.`
+    - `[OutputType([string])]`: `.OUTPUTS System.String`
+    - `[OutputType([string[]])]`: `.OUTPUTS System.String[]`
+    - `[OutputType([System.IO.FileInfo])]`: `.OUTPUTS System.IO.FileInfo`
+- `.NOTES` should include supplementary information or caveats.
+- After editing, always verify output with `Get-Help [-Path <Path>] -Name <Name> -Full`.
+
+### Help Resource
+
+- Use [Help.ps1](./scripts/Help.ps1) to automate verification.
+- See the [comment-based help reference](./references/comment-based-help.md).
+
+## Pester v6 Tests
+
+### Organization and Coverage
+
+- Organize Pester tests with `Describe`, `Context`, and `It` blocks, creating one `Describe` block per function.
+- Put helper functions in the `Describe` block's `BeforeAll`.
+- Divide `Context` into these five categories:
+  - `ParameterSetName`
+    - Cover all `ParameterSetNames`.
+    - If there is no `ParameterSetName`, cover mandatory parameters.
+    - For parameters with `SupportsWildcards()`, test values containing wildcards.
+  - `Output`
+    - Verify the shape of the objects returned by the function (the normal-case result).
+    - Cover count (`Should-BeCollection -Count`), property names, property values, and property types.
+    - Example: verify a parsed entry exposes `Path`, `CreationTime`, `LastWriteTime` with correct values.
+    - Distinguish from `Edge case`: `Output` checks the result shape in normal cases; `Edge case` checks behavior under boundary or invalid input.
+  - `SupportsShouldProcess`
+    - Apply this section only when `CmdletBinding(SupportsShouldProcess)` is present.
+    - Required cases (run in order):
+      1. Verify no side effects occur with `-WhatIf`.
+      2. Verify the command runs when `-Confirm` is accepted.
+      3. Verify the command does not run when `-Confirm` is declined.
+    - Notes:
+      - Since mocking `$PSCmdlet.ShouldProcess()` is difficult, review this in code review.
+      - When `ConfirmImpact` is `High`, suppress the dialog by testing with `-Confirm:$false`.
+    - Optional cases:
+      - Verify `-Force` takes precedence over `-Confirm`.
+      - Verify existing files are not overwritten with `-NoClobber`.
+  - `Other parameters`
+    - Parameters not covered by `ParameterSetName` or `SupportsShouldProcess`.
+    - Add tests for defaults, aliases, and accepted input shapes.
+  - `Edge cases`
+    - Add boundary and error-case tests.
+    - Example: minimum/maximum numeric values, read-only target file behavior.
+    - Do not test constraints defined by `Parameter` or `Validate*` attributes.
+- When changing existing code, run only related tests and verify behavior.
+
+### Pester Mock Best Practices
+
+- Declare Mocks inside `BeforeAll` or `It` blocks.
+- A Mock declared in `BeforeAll` applies to all test cases in the same `Describe` block.
+- A Mock declared in an `It` block applies only to that test case.
+- Always mock functions called by `ValidationScript` or operations with significant side effects, such as file operations or external program execution.
+  - Example: always mock validation functions like `Test-Path`.
+- Use primitive types or objects created by `[PSCustomObject]` for Mock return values.
+  - Example:
+    - OK: `Mock -CommandName Test-Path -MockWith { $true }`
+    - OK: `Mock -CommandName Get-Item -MockWith { [PSCustomObject]@{ FullName = 'C:\file.txt' } }`
+    - NG: `Mock -CommandName Get-Item -MockWith { [System.IO.FileInfo]::new('C:\file.txt') }`
+- Use `-ParameterFilter` to simulate behavior for specific arguments. This avoids needing `param()` inside `-MockWith`.
+  - Example: `Mock -CommandName Get-Item -ParameterFilter { $Path -eq '*.txt' }`
+
+### Pester Resource
+
+- Use [Pester.ps1](./scripts/Pester.ps1) for tests.
+- See the [Pester reference](./references/powershell-pester.md).
