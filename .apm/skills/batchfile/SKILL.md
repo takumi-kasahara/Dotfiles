@@ -144,12 +144,12 @@ Validate required arguments before continuing. This produces a clean usage messa
 
 ## Completion Checklist
 
-- `@echo off` / `cd /d "%~dp0"` / `setlocal` are in the right places
-- `:begin` $\rightarrow$ `:process` $\rightarrow$ `:end` flow is clear
-- Argument validation and command-existence checks are present where needed
-- Variable assignments use `set "NAME=value"` form
-- Redirection follows the front-placement policy
-- Exit code is returned via `exit /b %errorlevel%`
+- [ ] `@echo off` / `cd /d "%~dp0"` / `setlocal` are in the right places
+- [ ] `:begin` $\rightarrow$ `:process` $\rightarrow$ `:end` flow is clear
+- [ ] Argument validation and command-existence checks are present where needed
+- [ ] Variable assignments use `set "NAME=value"` form
+- [ ] Redirection follows the front-placement policy
+- [ ] Exit code is returned via `exit /b %errorlevel%`
 
 ## Troubleshooting
 
