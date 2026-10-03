@@ -1,5 +1,27 @@
 {
   "mcpServers": {
+    "com.microsoft/nuget": {
+      "type": "local",
+      "command": "dnx",
+      "args": [
+        "NuGet.Mcp.Server",
+        "--yes",
+        "--source",
+        "https://api.nuget.org/v3/index.json"
+      ],
+      "tools": ["*"]
+    },
+    "io.github.github/github-mcp-server": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "tools": ["*"]
+    },
+    "microsoft/playwright-mcp": {
+      "type": "local",
+      "command": "npx",
+      "args": ["--yes", "@playwright/mcp@latest"],
+      "tools": ["*"]
+    },
     "github-ghas-tools": {
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp/",
@@ -10,28 +32,23 @@
         "X-MCP-Tools": "run_secret_scanning"
       }
     },
-    "microsoft-learn": {
-      "type": "http",
-      "url": "https://learn.microsoft.com/api/mcp",
-      "tools": ["*"],
-      "id": ""
-    },
-    "playwright": {
-      "tools": ["*"],
-      "type": "local",
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
-    },
     "mdn": {
       "type": "http",
       "url": "https://mcp.mdn.mozilla.net",
       "tools": ["*"],
       "id": ""
     },
+    "microsoft-learn": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "tools": ["*"],
+      "id": ""
+    },
     "mrc": {
       "type": "http",
       "url": "https://www.microsoft.com/releasecommunications/mcp",
-      "tools": ["*"]
+      "tools": ["*"],
+      "id": ""
     }
   }
 }
