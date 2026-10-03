@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
   Runs Pester tests for a specified script or module.
 

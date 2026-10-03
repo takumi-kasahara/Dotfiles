@@ -1,4 +1,4 @@
-﻿using namespace System.Management.Automation.Language
+using namespace System.Management.Automation.Language
 
 [CmdletBinding()]
 param (

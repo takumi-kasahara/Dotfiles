@@ -82,6 +82,4 @@ for (let i = 0; i < items.length; i++) {
 
 ## References
 
-- Project guidelines: `AGENTS.md`
-- ESLint rules: `eslint.config.mjs`
-- TypeScript config: `tsconfig.json`
+- [javascript: URI scheme](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/javascript)
