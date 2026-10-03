@@ -100,6 +100,9 @@
   "chat.includeReferencedInstructions": true,
   "chat.inlineChat.agentHost.enabled": true,
   "chat.mcp.assisted.nuget.enabled": true,
+  "chat.mcp.discovery.enabled": {
+    "copilot": true
+  },
   "chat.microsoftAuthentication.enabled": true,
   "chat.permissions.default": "autopilot",
   "chat.restoreLastPanelSession": true,
