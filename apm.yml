@@ -5,7 +5,24 @@ author: takumi-kasahara
 targets:
   - copilot
 dependencies:
-  apm: []
-  mcp: []
+  apm:
+    - github/awesome-copilot/instructions/agent-skills.instructions.md
+    - github/awesome-copilot/instructions/agents.instructions.md
+    - github/awesome-copilot/instructions/instructions.instructions.md
+    - github/awesome-copilot/instructions/markdown.instructions.md
+    - github/awesome-copilot/instructions/prompt.instructions.md
+    - github/awesome-copilot/skills/conventional-branch
+    - github/awesome-copilot/skills/conventional-commit
+    - github/copilot-advanced-security-plugin
+    - microsoftdocs/mcp
+  mcp:
+    - name: mdn
+      registry: false
+      transport: http
+      url: https://mcp.mdn.mozilla.net
+    - name: mrc
+      registry: false
+      transport: http
+      url: https://www.microsoft.com/releasecommunications/mcp
 includes: auto
 scripts: {}
