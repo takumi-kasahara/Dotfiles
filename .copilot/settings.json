@@ -1,6 +1,7 @@
 {
   "enabledPlugins": {
     "wt-agent-hooks@wt-local": true,
+    "computer-use": true,
     "dotnet@dotnet-agent-skills": true
   },
   "experimental": true,

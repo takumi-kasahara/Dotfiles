@@ -106,7 +106,7 @@ class Installer {
               if (-not (Test-Path -LiteralPath $target)) {
                 "Create:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
               }
-              Copy-Item -LiteralPath $resolved -Destination $target -Recurse -Force:$Force
+              Copy-Item -LiteralPath $resolved -Destination $target -Recurse -Force:$Force -PassThru
             }
           } catch [UnauthorizedAccessException] {
             Write-Error -ErrorRecord $_
@@ -246,7 +246,7 @@ if ($ssh_keygen) {
 } else {
   git.exe config unset --global gpg.ssh.program
 }
-Copy-Item -LiteralPath ($PSScriptRoot | Join-Path -ChildPath 'Git\ignore') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.config\git') -Force
+Copy-Item -LiteralPath ($PSScriptRoot | Join-Path -ChildPath 'Git\ignore') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.config\git') -Force:$Force -PassThru
 [Installer]::new().
 Source('Git\gitconfig').
 Destination(($env:ProgramFiles | Join-Path -ChildPath 'Git\etc')).
@@ -276,12 +276,12 @@ Install()
 Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
-Source('.copilot\*.json').
 Source('.agents\skills').
 Source('.github\agents').
 Source('.github\instructions').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
+Copy-Item -Path ([WildcardPattern]::Escape($PSScriptRoot) | Join-Path -ChildPath '.copilot\*.json') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.copilot') -Force:$Force -PassThru
 
 # apm
 # https://microsoft.github.io/apm/reference/cli/experimental/
