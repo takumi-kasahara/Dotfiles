@@ -1,4 +1,4 @@
-Attribute VB_Name = "TestModule1"
+Attribute VB_Name = "TestModule"
 '@TestModule
 '@Folder("Tests")
 
@@ -33,7 +33,7 @@ Private Sub TestCleanup()
 End Sub
 
 '@TestMethod("Uncategorized")
-Private Sub TestMethod1()
+Private Sub TestMethod()
   On Error GoTo TestFail
 
   ' Arrange:

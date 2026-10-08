@@ -13,7 +13,7 @@ Use this skill to implement or maintain VBA components with accurate Rubberduck 
 
 1. **Confirm scope and behavior.** Identify the target component, the requested behavior, and whether the task concerns production code, annotations, tests, or all three. Clarify expected inputs, outputs, state changes, errors, and external interactions before editing.
 2. **Inspect the project conventions.** Locate the component and its related tests. Follow the repository's actual component and test paths rather than assuming a particular folder layout. Identify whether the component is a standard module (`.bas`), class module (`.cls`), or document module (`.vba`).
-3. **Choose test coverage.** List the observable behaviors and edge cases to verify. Reuse a suitable test module or create one from [the test module template](./assets/TestModule1.bas). Keep each test module focused on one production component or coherent feature.
+3. **Choose test coverage.** List the observable behaviors and edge cases to verify. Reuse a suitable test module or create one from [the test module template](./assets/TestModule.bas). Keep each test module focused on one production component or coherent feature.
 4. **Make the smallest appropriate implementation change.** When testability is a problem, prefer a narrow dependency seam or smaller responsibility over complex test setup. Do not add annotations that describe behavior the implementation does not have.
 5. **Add or update annotations.** Use the placement guide below. Keep annotations adjacent to their targets and update them whenever a procedure or member is added, renamed, or changed.
 6. **Write or update tests.** Use Arrange, Act, Assert (AAA), with one behavioral expectation per test. Select direct tests or doubles using the decision guide below.
@@ -31,16 +31,16 @@ Use this skill to implement or maintain VBA components with accurate Rubberduck 
 
 ### Common annotations
 
-| Annotation                    | Target and purpose                                           | Scope / rule                                                                                                             |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `@ModuleDescription("...")`   | Module description (`VB_Description`)                        | Standard, class, and document modules                                                                                    |
-| `@PredeclaredId`              | Predeclared class instance (`VB_PredeclaredId = True`)       | Class modules only                                                                                                       |
-| `@Exposed`                    | Exposed class (`VB_Exposed = True`)                          | Class modules only                                                                                                       |
-| `@VariableDescription("...")` | Description for a module field (`VB_VarDescription`)         | Immediately above the field                                                                                              |
-| `@Description("...")`         | Procedure/property description (`MemberName.VB_Description`) | Immediately above the member                                                                                             |
-| `@ExcelHotkey("D")`           | Excel macro shortcut (`VB_ProcData.VB_Invoke_Func`)          | Standard/document macro procedures; exactly one character. Lowercase maps to Ctrl+key; uppercase maps to Ctrl+Shift+key. |
-| `@DefaultMember`              | Default class member (`VB_UserMemId = 0`)                    | Class modules; only one member                                                                                           |
-| `@Enumerator`                 | Enumerator member (`VB_UserMemId = -4`)                      | Class modules; typically `NewEnum` returning `IUnknown`                                                                  |
+| Annotation                    | Target and purpose                                           | Scope / rule                                                     |
+| ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `@ModuleDescription("...")`   | Module description (`VB_Description`)                        | Standard, class, and document modules                            |
+| `@PredeclaredId`              | Predeclared class instance (`VB_PredeclaredId = True`)       | Class modules only                                               |
+| `@Exposed`                    | Exposed class (`VB_Exposed = True`)                          | Class modules only                                               |
+| `@VariableDescription("...")` | Description for a module field (`VB_VarDescription`)         | Immediately above the field                                      |
+| `@Description("...")`         | Procedure/property description (`MemberName.VB_Description`) | Immediately above the member                                     |
+| `@ExcelHotkey("D")`           | Excel macro shortcut (`VB_ProcData.VB_Invoke_Func`)          | Lowercase maps to Ctrl+key.<br>Uppercase maps to Ctrl+Shift+key. |
+| `@DefaultMember`              | Default class member (`VB_UserMemId = 0`)                    | Class modules; only one member                                   |
+| `@Enumerator`                 | Enumerator member (`VB_UserMemId = -4`)                      | Class modules; typically `NewEnum` returning `IUnknown`          |
 
 Example:
 
@@ -48,9 +48,13 @@ Example:
 '@ModuleDescription("Provides customer lookup operations")
 Option Explicit
 
-'@Description("Returns the customer with the requested identifier")
-Public Function FindCustomer(ByVal customerId As Long) As Customer
-End Function
+'@Description("Does something")
+'@ExcelHotkey("D")
+Public Sub DoSomething()
+Attribute DoSomething.VB_Description = "Does something"
+Attribute DoSomething.VB_ProcData.VB_Invoke_Func = "D\n14"
+  ' Does something
+End Sub
 ```
 
 Review module-level metadata and member-level annotations for class modules. Annotation wording must match parameter names, return behavior, and actual runtime behavior.
@@ -61,7 +65,7 @@ Use named test procedures that make the expected behavior clear. Add optional li
 
 - `@ModuleInitialize` / `@ModuleCleanup` for module-wide setup and teardown.
 - `@TestInitialize` / `@TestCleanup` for per-test setup and teardown, especially to reset mutable state and prevent test leakage.
-- Mark test modules and test procedures with the appropriate Rubberduck annotations, such as `@TestModule`, `@Folder`, and `@TestMethod`.
+- Mark test modules and test procedures with the appropriate Rubberduck annotations, such as `@TestModule` and `@TestMethod`.
 
 ### Choose the test style
 
@@ -97,6 +101,6 @@ Prefer deterministic tests. Avoid dependence on machine-local paths, filesystem 
 
 ## References
 
-- [Rubberduck VB_Attribute Annotations](https://github.com/rubberduck-vba/Rubberduck/wiki/VB_Attribute-Annotations)
-- [Rubberduck Unit Testing](https://github.com/rubberduck-vba/Rubberduck/wiki/Unit-Testing)
-- [VBA Moq Mocking Framework](https://github.com/rubberduck-vba/Rubberduck/wiki/VBA-Moq-Mocking-Framework)
+- [VB_Attribute Annotations](https://github.com/rubberduck-vba/Rubberduck/wiki/VB_Attribute-Annotations)
+- [Unit Testing](https://github.com/rubberduck-vba/Rubberduck/wiki/Unit-Testing)
+  - [Mocking](https://github.com/rubberduck-vba/Rubberduck/wiki/VBA-Moq-Mocking-Framework)
