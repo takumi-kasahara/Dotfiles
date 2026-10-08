@@ -1,7 +1,5 @@
 [alias]
   export = !git-export.sh
-  reinit = !git-reinit.sh
-  sync = !git-sync.sh
   # https://git-scm.com/docs/git-add
   a = add --verbose
   aa = a .
@@ -32,9 +30,10 @@
   rw = reword
   fixup = ci --fixup
   fx = fixup
-  set-date = "!_() { GIT_COMMITTER_DATE=\"$(date --iso-8601=seconds --date=\"${1:-now}\")\" git commit --amend --no-edit --date=\"${1:-now}\"; }; _"
   squash = !git-squash.sh
   sq = squash
+  set-date = "!_() { if [[ -z \"$(git diff --name-status --cached)\" ]]; then GIT_COMMITTER_DATE=\"$(date --iso-8601=seconds --date=\"${1:-now}\")\" git commit --amend --no-edit --date=\"${1:-now}\"; fi }; _"
+  sync-date = !git-sync.sh
   # https://git-scm.com/docs/git-config
   cf = config
   cfg = cf --edit --global
