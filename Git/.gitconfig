@@ -134,6 +134,10 @@
   gca = gc --aggressive
   # https://git-scm.com/docs/git-for-each-ref
   refs = for-each-ref --format "%(refname)%09%(authordate:iso-local)%09%(authorname)%09%(contents:subject)" --sort -authordate
+# https://git-scm.com/docs/git-branch
+[branch]
+  autoSetupMerge = simple   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
+  autoSetupRebase = always  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupRebase
 [commit]
   gpgSign = true
   template = ~/.gitmessage.txt
