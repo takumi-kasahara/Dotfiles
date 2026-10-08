@@ -173,8 +173,15 @@
 [gpg "ssh"]
 	program = C:/Program Files/OpenSSH/ssh-keygen.exe
 [gui]
-  fontui = -family \"Cascadia Next JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"Cascadia Next JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	commitmsgwidth = 80
+	fastcopyblame = true
+	fontdiff = -family \"Noto Sans JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family \"Noto Sans JP\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	matchtrackingbranch = true
+	pruneduringfetch = true
+	tabsize = 2
+	trustmtime = true
+	warndetachedcommit = true
 [log]
   date = iso-local  # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logdate
   follow = true     # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logfollow
