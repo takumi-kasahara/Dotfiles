@@ -793,6 +793,9 @@
   // #region plantuml
   "plantuml.exportMapFile": true,
   // #endregion
+  // #region shellcheck
+  "shellcheck.markdownDiagnostics": true,
+  // #endregion
   // #region svn-scm
   "svn.conflicts.autoResolve": true,
   "svn.experimental.detect_encoding": true,
