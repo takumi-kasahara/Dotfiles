@@ -198,6 +198,7 @@
   // #endregion
   // #region C++
   "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.autoFoldInactiveRegions": true,
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.mergeConfigurations": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
