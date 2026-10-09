@@ -124,8 +124,6 @@
   "copilotUpgrade.allowPrerelease": true,
   "inlineChat.affordance": "editor",
   "inlineChat.notebookAgent": true,
-  // #endregion
-  // #region github
   "github.copilot.chat.agent.autoFix": true,
   "github.copilot.chat.agent.longToolCallCachePreservation.enabled": true,
   "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
@@ -197,14 +195,6 @@
     "markdown": true,
     "scminput": true
   },
-  "githubIssues.alwaysPromptForNewIssueRepo": true,
-  "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
-  "githubPullRequests.deleteBranchAfterMerge": true,
-  "githubPullRequests.devMode": true,
-  "githubPullRequests.experimental.useQuickChat": true,
-  "githubPullRequests.pullRequestDescription": "Copilot",
-  "githubPullRequests.quickDiff": true,
-  "githubPullRequests.showPullRequestNumberInTree": true,
   // #endregion
   // #region C++
   "C_Cpp.autocompleteAddParentheses": true,
@@ -580,6 +570,19 @@
   "git.timeline.showUncommitted": true,
   "git.untrackedChanges": "separate",
   "git.verboseCommit": true,
+  // #endregion
+  // #region github
+  "githubIssues.alwaysPromptForNewIssueRepo": true,
+  "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
+  "githubPullRequests.deleteBranchAfterMerge": true,
+  "githubPullRequests.devMode": true,
+  "githubPullRequests.experimental.useQuickChat": true,
+  "githubPullRequests.pullBranch": "always",
+  "githubPullRequests.pullRequestAvatarDisplay": "state",
+  "githubPullRequests.pullRequestDescription": "Copilot",
+  "githubPullRequests.pushBranch": "always",
+  "githubPullRequests.quickDiff": true,
+  "githubPullRequests.showPullRequestNumberInTree": true,
   // #endregion
   // #region http
   "http.experimental.systemCertificatesV2": true,
