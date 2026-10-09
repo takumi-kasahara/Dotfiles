@@ -13,12 +13,12 @@
     "github": {
       "tools": ["*"],
       "type": "local",
-      "command": "docker",
+      "command": "wslc",
       "args": [
         "run",
-        "-i",
+        "--interactive",
         "--rm",
-        "-e",
+        "--env",
         "GITHUB_PERSONAL_ACCESS_TOKEN",
         "ghcr.io/github/github-mcp-server"
       ],
