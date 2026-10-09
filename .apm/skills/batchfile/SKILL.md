@@ -49,7 +49,6 @@ For scripts that require elevation, perform a `net session` check and branch to 
 ### Error Handling
 
 - Verify external commands with `where /q` + `if errorlevel 1 (...)`.
-- Fail fast on missing required arguments: `if "%~1"=="" (...)`.
 - Return the script's exit code to the caller with `exit /b %errorlevel%`.
 
 ## Redirection Policy
@@ -126,18 +125,17 @@ These are defensive checks that keep the script from failing in confusing ways.
 
 ```bat
 where /q some-command
-if errorlevel 1 (
-  goto :end
-)
+if errorlevel 1 goto :end
 ```
 
 Check whether an external command exists before using it. If missing, exit early instead of failing later with a vague error.
 
 ```bat
-if "%~1"=="" (
-  echo USAGE: %~nx0 ARG1 ARG2
-  goto :end
-)
+if "%~1"=="" goto :usage
+
+:usage
+echo USAGE: %~nx0 ARG1 ARG2
+goto :end
 ```
 
 Validate required arguments before continuing. This produces a clean usage message and avoids partial execution.
@@ -151,6 +149,11 @@ Validate required arguments before continuing. This produces a clean usage messa
 - [ ] Redirection follows the front-placement policy
 - [ ] Exit code is returned via `exit /b %errorlevel%`
 
+## Gotchas
+
+- `%*` inside `if (...) else (...)` blocks breaks on parentheses in arguments
+  — When `%*` expands to something containing `)` (e.g., `temp().txt`), it closes the block prematurely. Use `goto` labels instead of blocks for branching. See [Argument Expansion Gotchas](./references/gotchas-argument-expansion.md).
+
 ## Troubleshooting
 
 | Symptom                                    | Remedy                                                                   |
@@ -159,6 +162,7 @@ Validate required arguments before continuing. This produces a clean usage messa
 | Stderr not captured                        | Explicitly use `2>`; if merging, standardize on `> "log.txt" 2>&1` order |
 | Loop variable not updating                 | Add `setlocal enabledelayedexpansion` and use `!VAR!`                    |
 | Control flow breaks after subroutine       | Standardize on `exit /b` returns; verify `goto` target labels            |
+| `.{ext} was unexpected at this time`       | Parentheses in `%*` broke an `if` block — use `goto` labels instead      |
 
 ## References
 

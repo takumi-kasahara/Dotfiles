@@ -24,15 +24,16 @@
       ":begin",
       "net session >nul 2>&1",
       "if errorlevel 1 (",
-      "\twhere /q sudo >nul 2>&1",
-      "\tif errorlevel 1 (",
-      "\t\techo ERROR: Access is denied.",
-      "\t\tgoto :end",
-      "\t) else (",
-      "\t\tsudo --inline \"%~0\" %*",
-      "\t\texit /b %errorlevel%",
-      "\t)",
+      "  where /q sudo >nul 2>&1",
+      "  if errorlevel 1 goto :no_sudo",
+      "  goto :elevate",
       ")\n",
+      ":no_sudo",
+      "echo ERROR: Access is denied.",
+      "goto :end\n",
+      ":elevate",
+      "sudo --inline \"%~0\" %*",
+      "exit /b %errorlevel%\n",
       ":process",
       "${0::: statement}\n",
       ":end",
@@ -83,11 +84,12 @@
   "Syntax.If.Else": {
     "prefix": "If.Else",
     "body": [
-      "if ${1:cond} (",
-      "\t${0::: if_true}",
-      ") else (",
-      "\t:: if_false",
-      ")"
+      "if ${1:cond} goto :if_true",
+      ":: if_false",
+      "goto :end_if\n",
+      ":if_true",
+      "${0::: if_true}\n",
+      ":end_if"
     ]
   },
   "Syntax.If.Defined": {
@@ -143,7 +145,6 @@
   "Variable.Expand": {
     "prefix": "%Expand",
     "body": [
-      // "${3|~,~dp,~nx,~f,~d,~p,~n,~x,~s,~a,~t,~z|}"
       "${1|%,%%|}${3|~,~dp,~nx,~f,~d,~p,~n,~x,~s,~a,~t,~z|}${4:\\$${5:env}:}${2:variable}"
     ]
   },
@@ -170,12 +171,11 @@
     "prefix": "Join",
     "body": [
       ":loop",
-      "\tif \"%~1\"==\"\" (",
-      "\t\tgoto :process",
-      "\t)",
-      "\tset args=%args% \"%~1\"",
-      "\tshift /1",
-      "goto :loop"
+      "if \"%~1\"==\"\" goto :process",
+      "set args=%args% \"%~1\"",
+      "shift /1",
+      "goto :loop\n",
+      ":process"
     ]
   },
   "Idiom.Print": {
@@ -198,19 +198,23 @@
     "prefix": "Try",
     "body": [
       "where /q ${1:command}",
-      "if errorlevel 1 (",
-      "\t$0",
-      "\tgoto :end",
-      ")"
+      "if errorlevel 1 goto :handle_error",
+      "goto :continue\n",
+      ":handle_error",
+      "$0",
+      "goto :end\n",
+      ":continue"
     ]
   },
   "MaybeError.Args": {
     "prefix": "Args",
     "body": [
-      "if \"%~1\"==\"\" (",
-      "\techo USAGE: %~nx0 ${0:args}",
-      "\tgoto :end",
-      ")"
+      "if \"%~1\"==\"\" goto :usage",
+      "goto :continue\n",
+      ":usage",
+      "echo USAGE: %~nx0 ${0:args}",
+      "goto :end\n",
+      ":continue"
     ]
   }
   // #endregion
