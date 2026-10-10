@@ -1,9 +1,7 @@
 ---
 name: test-first
-description: |
-  End-to-end TDD practitioner that orchestrates the full cycle: design specs, write failing tests, implement code, refactor, and review.
-argument-hint: "Describe the feature or function to design, implement, or review."
-user-invocable: true
+description: Guides test-driven development (TDD) for new features or functions.
+argument-hint: Describe the feature or function to design, implement, or review.
 ---
 
 # Test First Coder

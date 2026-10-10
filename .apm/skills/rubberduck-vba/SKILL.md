@@ -1,8 +1,7 @@
 ---
 name: rubberduck-vba
-description: "Create, update, or review VBA code with Rubberduck VB_Attribute annotations, unit tests, test lifecycle hooks, and VBA Moq doubles. Use when working on VBA modules, Rubberduck tests, or annotation and inspection quality."
-argument-hint: "Provide the VBA component path, the behavior or change, and whether annotations, tests, implementation, or a combination are in scope."
-user-invocable: true
+description: Guidelines for VBA code with Rubberduck.
+argument-hint: Describe the VBA component and its expected behavior.
 ---
 
 # Rubberduck VBA Development

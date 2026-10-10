@@ -1,8 +1,7 @@
 ---
 name: powershell-7
-description: "PowerShell 7.6 coding, cmdlet, comment-based help, and Pester v6 guidance. Use when writing or editing *.ps1/*.psm1 files, creating or updating functions/cmdlets, documenting commands, or creating tests. Covers parameter design, ShouldProcess, terminating errors, null checks, safe paths, and testing."
-argument-hint: "Describe the PowerShell 7 script or function you are writing or editing."
-user-invocable: true
+description: Guidelines for PowerShell 7.6 coding, cmdlet, comment-based help, and Pester v6 testing.
+argument-hint: Describe the PowerShell 7.6 script or function and its expected behavior
 ---
 
 # PowerShell 7.6 Coding Guidelines

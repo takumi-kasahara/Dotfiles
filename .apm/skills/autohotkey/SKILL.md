@@ -1,65 +1,12 @@
 ---
 name: autohotkey
-description: "AutoHotkey v2 coding guidelines (Windows 11). Use when: writing or editing *.ahk, variable/function naming, Format() usage, regex with ~=, DllCall/COM integration, Try-Catch-Finally error handling, WINAPI type mapping, running scripts via AutoHotkey.ps1, FileAppend stdout/stderr output."
-argument-hint: "Describe the AutoHotkey v2 script or function you are writing or editing."
-user-invocable: true
+description: Guidelines for AutoHotkey v2 coding or testing.
+argument-hint: Describe the AutoHotkey v2 script or function and its expected behavior
 ---
 
 # AutoHotkey v2 Coding Guidelines
 
 Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
-
-## When to Use This Skill
-
-- Writing or editing any `*.ahk` file
-- Naming variables, constants, or functions
-- Formatting strings with `Format()`
-- Writing regular expression checks
-- Calling WINAPI via `DllCall` or using COM objects
-- Adding error handling for file operations, inputs, or system calls
-- Running AutoHotkey scripts via `AutoHotkey.ps1`
-- Outputting to stdout or stderr using `FileAppend`
-
-## Running Scripts
-
-- Use `AutoHotkey.ps1` to run AutoHotkey v2 scripts from PowerShell.
-  - [AutoHotkey.ps1](./scripts/AutoHotkey.ps1)
-- Find the script at `.agents/skills/autohotkey/scripts/AutoHotkey.ps1`.
-- Run a single script:
-
-  ```powershell
-  powershell.exe -NoLogo -NoProfile -File .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1 -LiteralPath .\Script.ahk
-  ```
-
-- Run multiple scripts with wildcards:
-
-  ```powershell
-  powershell.exe -NoLogo -NoProfile -File .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1 -Path .\*.Tests.ahk
-  ```
-
-- Pipe files to the script:
-
-  ```powershell
-  Get-ChildItem .\Scripts\*.ahk | .\.agents\skills\autohotkey\scripts\AutoHotkey.ps1
-  ```
-
-## Output to Console
-
-- Use `FileAppend()` to write to stdout or stderr.
-  - [FileAppend](https://www.autohotkey.com/docs/v2/lib/FileAppend.htm)
-- Write to stdout:
-
-  ```autohotkey
-  FileAppend("Hello stdout", "*")
-  ```
-
-- Write to stderr:
-
-  ```autohotkey
-  FileAppend("Hello stderr", "**")
-  ```
-
-- This is useful for debugging and error reporting in scripts run via `AutoHotkey.ps1`.
 
 ## Compatibility
 
@@ -68,21 +15,15 @@ Guidelines for writing and editing AutoHotkey v2 scripts in this repository.
 
 ## Coding Style
 
-**Priority**: Rules marked as mandatory must always be followed. All other rules are strong recommendations.
-
-- **Mandatory**: Variable Naming, Function Naming, Equality Operators
-- **Recommendation**: Formatting, String Formatting, Regular Expressions, System Integration
-
-### Formatting
-
-- Omit curly braces `{}` for single-line `if` statements and loops.
-  - [Format](https://www.autohotkey.com/docs/v2/Format.htm)
-
 ### Variable Naming
 
 - Use `lowerCamelCase` for variable names.
   - Avoid reassignment unless it significantly improves performance or is required for compatibility with external libraries.
 - Use `UPPER_SNAKE_CASE` for constants.
+
+### Function Naming
+
+- Use the `FileName_FunctionName` format for function names.
 
 ### Equality Operators
 
@@ -111,17 +52,6 @@ if value !== "hello"
   MsgBox("not matched")
 ```
 
-### Function Naming
-
-- Use the `FileName_FunctionName` format for function names.
-
-### String Formatting
-
-- Use `Format()` only when specifying format specifiers.
-  - OK: `value " cm"`
-  - OK: `Format("{:0.2f} cm", value)`
-  - NG: `Format("{} cm", value)`
-
 ### Escape Sequences
 
 AutoHotkey v2 uses the backtick character (`` ` ``) as its escape character inside expressions. Outside expressions (in literal strings), use ` `` ` (double backtick) for a literal backtick.
@@ -137,13 +67,13 @@ Common [Escape Sequences](https://www.autohotkey.com/docs/v2/misc/EscapeChar.htm
 | `` `# `` | Literal hash                              |
 | `` `: `` | Literal colon                             |
 | `` `" `` | Literal double-quote                      |
-| `` `n `` | Newline (` Chr(10)`)                      |
-| `` `r `` | Carriage return (` Chr(13)`)              |
-| `` `t `` | Tab (` Chr(9)`)                           |
-| `` `b `` | Backspace (` Chr(8)`)                     |
-| `` `v `` | Vertical tab (` Chr(11)`)                 |
-| `` `a `` | Alert/bell (` Chr(7)`)                    |
-| `` `f `` | Form feed (` Chr(12)`)                    |
+| `` `n `` | Newline (`Chr(10)`)                       |
+| `` `r `` | Carriage return (`Chr(13)`)               |
+| `` `t `` | Tab (`Chr(9)`)                            |
+| `` `b `` | Backspace (`Chr(8)`)                      |
+| `` `v `` | Vertical tab (`Chr(11)`)                  |
+| `` `a `` | Alert/bell (`Chr(7)`)                     |
+| `` `f `` | Form feed (`Chr(12)`)                     |
 | `` `s `` | Literal space (useful in expressions)     |
 | `` `" `` | Literal Double-quote (when Double-quoted) |
 | `` `' `` | Literal single-quote (when Single-quoted) |
@@ -166,15 +96,41 @@ backslash := Chr(92)  ; backslash
 
 ### Regular Expressions
 
+[RegEx](https://www.autohotkey.com/docs/v2/misc/RegEx-QuickRef.htm)
+
 - Use `~=` for regular expression checks.
   - Use `RegExMatch()` only when optional arguments are needed.
-  - [RegEx](https://www.autohotkey.com/docs/v2/misc/RegEx-QuickRef.htm)
+
+### String Formatting
+
+- Use [Format](https://www.autohotkey.com/docs/v2/Format.htm) only when specifying format specifiers.
+  - OK: `value " cm"`
+  - OK: `Format("{:0.2f} cm", value)`
+  - NG: `Format("{} cm", value)`
+
+### Output to Console
+
+- Use [FileAppend](https://www.autohotkey.com/docs/v2/lib/FileAppend.htm) to write to stdout or stderr.
+- Write to stdout:
+
+  ```autohotkey
+  FileAppend("Hello stdout", "*")
+  ```
+
+- Write to stderr:
+
+  ```autohotkey
+  FileAppend("Hello stderr", "**")
+  ```
+
+- This is useful for debugging and error reporting in scripts run via `AutoHotkey.ps1`.
 
 ### System Integration
 
-- Use `DllCall` and COM when no built-in AutoHotkey functions or libraries can achieve the desired functionality.
-  - [DllCall](https://www.autohotkey.com/docs/v2/lib/DllCall.htm)
-  - [Windows Data Types](https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types)
+- Use [ComObjCreate](https://www.autohotkey.com/docs/v2/lib/ComObject.htm) for COM object integration.
+- Use [DllCall](https://www.autohotkey.com/docs/v2/lib/DllCall.htm) when no built-in AutoHotkey functions or libraries can achieve the desired functionality.
+  - Use the following mapping of WINAPI types to AutoHotkey v2 types:
+    - [Windows Data Types](https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types)
 
 | WINAPI      | typedef                                           | type      |
 | ----------- | ------------------------------------------------- | --------- |
@@ -197,13 +153,25 @@ backslash := Chr(92)  ; backslash
 | `PWSTR`     | `typedef wchar_t *LPWSTR, *PWSTR;`                | `WStr`    |
 | `WCHAR`     | `typedef wchar_t WCHAR, *PWCHAR;`                 | `WStr`    |
 
-## Error Handling
+## Running Scripts
 
-- Ensure all scripts include error handling for file operations, invalid inputs, and system calls.
-- Use `Try`-`Catch`-`Finally` blocks where applicable.
-  - [Try](https://www.autohotkey.com/docs/v2/lib/Try.htm)
-  - [Catch](https://www.autohotkey.com/docs/v2/lib/Catch.htm)
-  - [Finally](https://www.autohotkey.com/docs/v2/lib/Finally.htm)
+- Use [AutoHotkey.ps1](./scripts/AutoHotkey.ps1) from PowerShell:
+
+  ```powershell
+  powershell.exe -NoLogo -NoProfile -File '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1' -LiteralPath '.\Script.ahk'
+  ```
+
+- Run multiple scripts with wildcards:
+
+  ```powershell
+  powershell.exe -NoLogo -NoProfile -File '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1' -Path '.\*.Tests.ahk'
+  ```
+
+- Pipe files to the script:
+
+  ```powershell
+  Get-ChildItem -Path '.\Scripts\*.ahk' | '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1'
+  ```
 
 ## References
 

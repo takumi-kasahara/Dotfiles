@@ -1,10 +1,7 @@
 ---
 name: test-retrofit
-description: |
-  Retrofits tests onto existing code that already has functionality but no test coverage.
-  Analyzes implementation, identifies behavior to lock in, and writes tests without changing external behavior.
-argument-hint: "Describe the existing code that needs test coverage."
-user-invocable: true
+description: Guides test retrofitting for existing code without test coverage.
+argument-hint: Describe the existing code to add test coverage for.
 ---
 
 # Test Retrofit Agent
