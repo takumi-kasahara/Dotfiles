@@ -1,4 +1,4 @@
-lockfile_version: "1"
+lockfile_version: '1'
 apm_version: 0.32.0
 dependencies:
   - repo_url: github/awesome-copilot
@@ -789,6 +789,15 @@ deployments:
     content_hash: null
   - kind: uri
     target: mcp
+    value: mdn
+    runtime: copilot
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: uri
+    target: mcp
     value: microsoft-learn
     runtime: copilot
     scope: project
@@ -798,7 +807,7 @@ deployments:
     content_hash: null
   - kind: uri
     target: mcp
-    value: mrc
+    value: microsoft-release-communications
     runtime: copilot
     scope: project
     owners:
@@ -809,7 +818,7 @@ mcp_servers:
   - github-ghas-tools
   - mdn
   - microsoft-learn
-  - mrc
+  - microsoft-release-communications
 mcp_configs:
   github-ghas-tools:
     name: github-ghas-tools
@@ -829,16 +838,17 @@ mcp_configs:
     transport: http
     registry: false
     url: https://learn.microsoft.com/api/mcp
-  mrc:
-    name: mrc
+  microsoft-release-communications:
+    name: microsoft-release-communications
     transport: http
     registry: false
     url: https://www.microsoft.com/releasecommunications/mcp
 mcp_target_servers:
   copilot:
     - github-ghas-tools
+    - mdn
     - microsoft-learn
-    - mrc
+    - microsoft-release-communications
 mcp_config_provenance:
   github-ghas-tools: github/advanced-security
   microsoft-learn: microsoft-docs
