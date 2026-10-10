@@ -611,6 +611,7 @@
   "notebook.experimental.remoteSave": true,
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
+  "notebook.inlineValues": "auto",
   "notebook.multiCursor.enabled": true,
   "notebook.stickyScroll.enabled": true,
   "notebook.variablesView": true,
