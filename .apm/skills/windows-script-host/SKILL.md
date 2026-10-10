@@ -1,6 +1,6 @@
 ---
 name: windows-script-host
-description: Best practices for Windows Script Host JScript (.js) and Windows Script Files (.wsf).
+description: Guidelines for Windows Script Host JScript (.js) and Windows Script Files (.wsf).
 argument-hint: Describe the Windows Script Host file to execute and any command-line arguments.
 ---
 
