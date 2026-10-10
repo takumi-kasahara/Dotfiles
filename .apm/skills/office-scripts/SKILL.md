@@ -1,25 +1,16 @@
 ---
 name: office-scripts
-description: "Create, migrate, and debug Excel Office Scripts. Use when converting VBA macros to Office Scripts, fixing runtime errors, generating scripts, and validating by compiling to `.osts`."
-argument-hint: "Target macro/script and expected behavior"
-user-invocable: true
+description: Best practices for Office Scripts development and integration with Power Automate
+argument-hint: Describe the macro or script and its expected behavior
 ---
 
 # Office Scripts Workflow
 
 Refer to the Office Scripts documentation on Microsoft Learn to create or update Office Scripts (`*.ts`) that run in Excel.
 
-## When to Use
-
-- Convert VBA macro procedures to Office Scripts.
-- Add new scripts under `Office Scripts/`.
-- Debug Office Scripts runtime errors.
-- Resolve API mismatch issues (for example, `Range` vs `RangeAreas`).
-- Rebuild `.osts` artifacts after TypeScript changes.
-
 ## Inputs
 
-1. Target function/procedure name.
+1. Target function name.
 2. Source file path (if converting from VBA).
 3. Required behavior to preserve.
 4. Acceptable behavior changes (if Office Scripts lacks equivalent UI/runtime features).
@@ -32,7 +23,7 @@ Refer to the Office Scripts documentation on Microsoft Learn to create or update
    - **Alternative required**: similar API but different shape.
    - **Unsupported**: no Office Scripts equivalent (for example, VBA `MsgBox` with Yes/No buttons, file picker dialogs).
 3. Verify APIs using Microsoft Learn before coding.
-4. Implement script in `Office Scripts/<Name>.ts`:
+4. Implement script:
 5. Compile with `Compile.OfficeScripts.ps1` to update `.osts` outputs.
 
 ### Basic `main` Function Example
@@ -160,9 +151,8 @@ When parameters/return types change, the "Run script" action in Power Automate m
 
 - Office Scripts source: `Office Scripts/*.ts`
 - Generated artifact: `Office Scripts/*.osts`
-- Compile entrypoint: [`Compile.OfficeScripts.ps1`](../../../Compile.OfficeScripts.ps1)
-- Decompile entrypoint: [`Decompile.OfficeScripts.ps1`](../../../Decompile.OfficeScripts.ps1)
-- Project conventions: [`AGENTS.md`](../../../AGENTS.md)
+- Compile entrypoint: [`Compile.OfficeScripts.ps1`](./scripts/Compile.OfficeScripts.ps1)
+- Decompile entrypoint: [`Decompile.OfficeScripts.ps1`](./scripts/Decompile.OfficeScripts.ps1)
 
 ## References
 

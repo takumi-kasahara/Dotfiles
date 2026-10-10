@@ -1,8 +1,7 @@
 ---
 name: office-scripts-from-vba
-description: "Convert Excel VBA macros to Office Scripts (TypeScript) with Microsoft Learn API checks. Use when asked to migrate VBA procedures."
-argument-hint: "Target VBA procedure name(s) and expected behavior"
-user-invocable: true
+description: Convert Excel VBA macros to Office Scripts (TypeScript) with Microsoft Learn API checks.
+argument-hint: Target VBA procedure name(s) and its expected behavior
 ---
 
 # Office Scripts from VBA Conversion
@@ -72,15 +71,6 @@ Convert VBA macros into runnable Office Scripts.
 
 ## Output Contract
 
-- Add or update `Office Scripts/<ProcedureName>.ts`.
-- Run compile workflow to update matching `.osts` artifact.
-- Report:
-  - What was preserved
-  - What changed (and why)
-  - Any non-convertible VBA features left as explicit gaps, especially `MsgBox` and COM API usage
-
-## Repository References
-
-- Agent/project workflow: [AGENTS.md](../../../AGENTS.md)
-- Compile script: [Compile.OfficeScripts.ps1](../../../Compile.OfficeScripts.ps1)
-- Decompile script: [Decompile.OfficeScripts.ps1](../../../Decompile.OfficeScripts.ps1)
+- What was preserved
+- What changed (and why)
+- Any non-convertible VBA features left as explicit gaps, especially `MsgBox` and COM API usage
