@@ -20,7 +20,7 @@ dependencies:
       registry: false
       transport: http
       url: https://mcp.mdn.mozilla.net
-    - name: mrc
+    - name: microsoft-release-communications
       registry: false
       transport: http
       url: https://www.microsoft.com/releasecommunications/mcp
