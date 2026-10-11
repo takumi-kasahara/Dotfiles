@@ -46,13 +46,11 @@ user_pref("media.hardwaremediakeys.enabled", false);
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
-user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.cookie.cookieBehavior", 2);
 user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", false);
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.http.idempotencyKey.enabled", true);   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#idempotency-key} */
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.http.windows-sso.enabled", true);
 user_pref("network.IDN_show_punycode", true);             /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
@@ -61,7 +59,7 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
-user_pref("network.trr.mode", 3); // DNS-over-HTTPS: Max Protection
+user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
 user_pref("places.history.enabled", false);
 user_pref("pref.privacy.disable_button.view_passwords", false);
 user_pref("privacy.clearOnShutdown_v2.cache", true);
@@ -336,4 +334,9 @@ user_pref("offline.download.download_messages", 0); // Ask me
 user_pref("offline.send.unsent_messages", 0); // Ask me
 user_pref("offline.startup_state", 4); // Automatically follow detected online state
 user_pref("searchintegration.enable", false);
+// #endregion
+user_pref("dom.security.featurepolicy.header.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.security.featurepolicy.header.enabled} */
+user_pref("network.cookie.sameSite.laxByDefault", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.cookie.samesite.laxbydefault} */
+user_pref("network.http.idempotencyKey.enabled", true);       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.http.idempotencykey.enabled} */
+// #region Experimental Features
 // #endregion
