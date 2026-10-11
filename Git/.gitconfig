@@ -1,7 +1,5 @@
 [alias]
   export = !git-export.sh
-  reinit = !git-reinit.sh
-  sync = !git-sync.sh
   # https://git-scm.com/docs/git-add
   a = add --verbose
   aa = a .
@@ -27,14 +25,16 @@
   # https://git-scm.com/docs/git-commit
   ci = commit --verbose
   cia = ci --all
-  amend = !git-amend.sh
-  reword = ci --amend
-  rw = reword
-  fixup = ci --fixup
-  fx = fixup
-  set-date = "!_() { GIT_COMMITTER_DATE=\"$(date --iso-8601=seconds --date=\"${1:-now}\")\" git commit --amend --no-edit --date=\"${1:-now}\"; }; _"
   squash = !git-squash.sh
   sq = squash
+  set-date = "!_() { if [[ -z \"$(git diff --name-status --cached)\" ]]; then GIT_COMMITTER_DATE=\"$(date --iso-8601=seconds --date=\"${1:-now}\")\" git commit --amend --no-edit --date=\"${1:-now}\"; fi }; _"
+  sync-date = !git-sync.sh
+  # https://git-scm.com/docs/git-history
+  drop = history --drop
+  reword = !git-reword.sh
+  rw = reword
+  fixup = !git-fixup.sh
+  fx = fixup
   # https://git-scm.com/docs/git-config
   cf = config
   cfg = cf --edit --global
@@ -135,6 +135,10 @@
   gca = gc --aggressive
   # https://git-scm.com/docs/git-for-each-ref
   refs = for-each-ref --format "%(refname)%09%(authordate:iso-local)%09%(authorname)%09%(contents:subject)" --sort -authordate
+# https://git-scm.com/docs/git-branch
+[branch]
+  autoSetupMerge = simple   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
+  autoSetupRebase = always  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupRebase
 [commit]
   gpgSign = true
   template = ~/.gitmessage.txt

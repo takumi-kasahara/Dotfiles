@@ -129,89 +129,89 @@ Install()
 #region Application
 # Firefox
 [Installer]::new().
-Source('Firefox\user.js').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Mozilla.MozillaFirefoxNightly_jag0gd4e3s9p2\LocalCache\Roaming\Mozilla\Firefox\Profiles\Default')).
+Source('.\Firefox\user.js').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\Packages\Mozilla.MozillaFirefoxNightly_jag0gd4e3s9p2\LocalCache\Roaming\Mozilla\Firefox\Profiles\Default')).
 Install()
 
 # Tor Browser
 # winget install --id TorProject.TorBrowser --exact --location %LOCALAPPDATA%\Programs
 [Installer]::new().
-Source('Firefox\user.tor.js', 'user.js').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs\Browser\TorBrowser\Data\Browser\profile.default')).
+Source('.\Firefox\user.tor.js', 'user.js').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\Programs\Browser\TorBrowser\Data\Browser\profile.default')).
 Install()
 
 # Thunderbird
 [Installer]::new().
-Source('Thunderbird\user.js').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\MozillaThunderbird.MozillaThunderbird_jag0gd4e3s9p2\LocalCache\Roaming\Thunderbird\Profiles\Default')).
+Source('.\Thunderbird\user.js').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\Packages\MozillaThunderbird.MozillaThunderbird_jag0gd4e3s9p2\LocalCache\Roaming\Thunderbird\Profiles\Default')).
 Install()
 
 # Visual Studio Code
 # https://code.visualstudio.com/docs/agent-customization/prompt-files#_prompt-file-locations
 [Installer]::new().
-Source('Code\*.json').
-Source('Code\prompts').
-Source('Code\snippets').
-Destination(($env:APPDATA | Join-Path -ChildPath 'Code\User')).
-Destination(($env:APPDATA | Join-Path -ChildPath 'Code - Insiders\User')).
+Source('.\Code\*.json').
+Source('.\Code\prompts').
+Source('.\Code\snippets').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\Code\User')).
+Destination(($env:APPDATA | Join-Path -ChildPath '.\Code - Insiders\User')).
 Install()
 # https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=visualstudio
 [Installer]::new().
-Source('Code\mcp.json', '.mcp.json').
+Source('.\Code\mcp.json', '.mcp.json').
 Destination($env:USERPROFILE).
 Install()
 
 # Eclipsecod
 [Installer]::new().
-Source('Eclipse\*.json').
-Destination(($env:USERPROFILE | Join-Path -ChildPath '.theia-ide')).
+Source('.\Eclipse\*.json').
+Destination(($env:USERPROFILE | Join-Path -ChildPath '.\theia-ide')).
 Install()
 
 # ILSpy
 [Installer]::new().
-Source('ICSharpCode\ILSpy.xml').
-Destination(($env:APPDATA | Join-Path -ChildPath 'ICSharpCode')).
+Source('.\ICSharpCode\ILSpy.xml').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\ICSharpCode')).
 Install()
 
 # LINQPad
 [Installer]::new().
-Source('LINQPad\LocalUserOptions.xml').
-Source('LINQPad\WindowLayout.xml').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'LINQPad')).
+Source('.\LINQPad\LocalUserOptions.xml').
+Source('.\LINQPad\WindowLayout.xml').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\LINQPad')).
 Install()
 
 # Rubberduck
 [Installer]::new().
-Source('Rubberduck\rubberduck.config').
-Destination(($env:APPDATA | Join-Path -ChildPath 'Rubberduck')).
+Source('.\Rubberduck\rubberduck.config').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\Rubberduck')).
 Install()
 
 # Notepad++
 [Installer]::new().
-Source('Notepad++\*.xml').
-Destination(($env:APPDATA | Join-Path -ChildPath 'Notepad++')).
+Source('.\Notepad++\*.xml').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\Notepad++')).
 Install()
 
 # WinMerge
 [Installer]::new().
-Source('WinMerge\MergePlugins').
-Destination(($env:APPDATA | Join-Path -ChildPath 'WinMerge')).
+Source('.\WinMerge\MergePlugins').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\WinMerge')).
 Install()
 [Installer]::new().
-Source('WinMerge\Filters').
-Destination(($shell.NameSpace('shell:Personal').Self.Path | Join-Path -ChildPath 'WinMerge')).
+Source('.\WinMerge\Filters').
+Destination(($shell.NameSpace('shell:Personal').Self.Path | Join-Path -ChildPath '.\WinMerge')).
 Install()
 
 # RStudio
 [Installer]::new().
-Source('RStudio\rstudio-prefs.json').
-Destination(($env:APPDATA | Join-Path -ChildPath 'RStudio')).
+Source('.\RStudio\rstudio-prefs.json').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\RStudio')).
 Install()
 
 # Sumatra PDF
 [Installer]::new().
-Source('SumatraPDF\SumatraPDF-settings.txt').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'SumatraPDF')).
+Source('.\SumatraPDF\SumatraPDF-settings.txt').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\SumatraPDF')).
 Install()
 #endregion
 
@@ -246,26 +246,26 @@ if ($ssh_keygen) {
 } else {
   git.exe config unset --global gpg.ssh.program
 }
-Copy-Item -LiteralPath ($PSScriptRoot | Join-Path -ChildPath 'Git\ignore') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.config\git') -Force:$Force -PassThru
+Copy-Item -LiteralPath ($PSScriptRoot | Join-Path -ChildPath '.\Git\.gitignore') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.config\git\ignore') -Force:$Force -PassThru
 [Installer]::new().
-Source('Git\gitconfig').
+Source('.\Git\gitconfig').
 Destination(($env:ProgramFiles | Join-Path -ChildPath 'Git\etc')).
 Install()
 [Installer]::new().
-Source('Git\.profile').
-Source('Git\.bashrc').
-Source('Git\.bash_aliases').
-Source('Git\.bash_logout').
-Source('Git\.gitconfig').
-Source('Git\.gitmessage.txt').
-Source('Git\.inputrc').
-Source('Git\.minttyrc').
-Source('Git\.vimrc').
+Source('.\Git\.profile').
+Source('.\Git\.bashrc').
+Source('.\Git\.bash_aliases').
+Source('.\Git\.bash_logout').
+Source('.\Git\.gitconfig').
+Source('.\Git\.gitmessage.txt').
+Source('.\Git\.inputrc').
+Source('.\Git\.minttyrc').
+Source('.\Git\.vimrc').
 Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
-Source('Git\*.sh').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs')).
+Source('.\Git\*.sh').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\Programs')).
 Install()
 
 # Copilot
@@ -276,9 +276,9 @@ Install()
 Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
-Source('.agents\skills').
-Source('.github\agents').
-Source('.github\instructions').
+Source('.\agents\skills').
+Source('.\github\agents').
+Source('.\github\instructions').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 Copy-Item -Path ([WildcardPattern]::Escape($PSScriptRoot) | Join-Path -ChildPath '.copilot\*.json') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.copilot') -Force:$Force -PassThru
@@ -290,26 +290,26 @@ ConvertFrom-Json |
 Where-Object { -not $_.enabled } |
 ForEach-Object { apm.exe experimental enable $_.name }
 [Installer]::new().
-Source('.apm\*.json').
-Source('.apm\*.yml').
+Source('.\apm\*.json').
+Source('.\apm\*.yml').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.apm')).
 Install()
 apm.exe install --global
 
 # Subversion
 [Installer]::new().
-Source('Subversion\config').
-Source('Subversion\servers').
-Destination(($env:APPDATA | Join-Path -ChildPath 'Subversion')).
+Source('.\Subversion\config').
+Source('.\Subversion\servers').
+Destination(($env:APPDATA | Join-Path -ChildPath '.\Subversion')).
 Install()
 [Installer]::new().
-Source('Subversion\*.bat').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs')).
+Source('.\Subversion\*.bat').
+Destination(($env:LOCALAPPDATA | Join-Path -ChildPath '.\Programs')).
 Install()
 
 # npm
 [Installer]::new().
-Source('npm\.npmrc').
+Source('.\npm\.npmrc').
 Destination($env:USERPROFILE).
 Install()
 
@@ -363,37 +363,37 @@ cmd.exe /c '.\Chocolatey\choco.feature.bat'
 
 # WinGet
 [Installer]::new().
-Source('WinGet\settings.json').
+Source('.\WinGet\settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState')).
 Install()
 
 # Windows Terminal
 [Installer]::new().
-Source('wt\settings.json').
+Source('.\wt\settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState')).
 Install()
 [Installer]::new().
-Source('wt\settings.preview.json', 'settings.json').
+Source('.\wt\settings.preview.json', 'settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState')).
 Install()
 [Installer]::new().
-Source('wtai\settings.json').
+Source('.\wtai\settings.json').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Packages\Microsoft.IntelligentTerminal_8wekyb3d8bbwe\LocalState')).
 Install()
 
 # Command Prompt
 [Installer]::new().
-Source('Windows\autoexec.bat').
+Source('.\Windows\autoexec.bat').
 Destination($env:USERPROFILE).
 Install()
 
 # PowerShell
 [Installer]::new().
-Source('Windows\PowerShell.5.ps1', 'profile.ps1').
+Source('.\Windows\PowerShell.5.ps1', 'profile.ps1').
 Destination(([WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent)).
 Install()
 [Installer]::new().
-Source('Windows\PowerShell.7.ps1', 'profile.ps1').
+Source('.\Windows\PowerShell.7.ps1', 'profile.ps1').
 Destination(([WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent)).
 Install()
 if ($PSEdition -eq 'Core') {
@@ -404,7 +404,7 @@ if ($PSEdition -eq 'Core') {
 
 # Event Viewer
 [Installer]::new().
-Source('Windows\Events\*.xml').
+Source('.\Windows\Events\*.xml').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Microsoft\Event Viewer\Views')).
 Install()
 
@@ -416,7 +416,7 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
     wsl.exe --install
   }
   [Installer]::new().
-  Source('Linux\.wslconfig').
+  Source('.\Linux\.wslconfig').
   Destination($env:USERPROFILE).
   Install()
   # https://learn.microsoft.com/en-us/windows/wsl/filesystems#share-environment-variables-between-windows-and-wsl-with-wslenv

@@ -23,5 +23,6 @@ else
   else
     hash="$1~"
   fi
+  # TODO Replace with `git history --fixup <commit>` when [git-history](https://git-scm.com/docs/git-history) adds an equivalent option to `--committer-date-is-author-date`.
   git commit --verbose --fixup "$1" && git rebase --verbose --reapply-cherry-picks --interactive --committer-date-is-author-date "$hash" || git reset --soft '@{1}'
 fi
