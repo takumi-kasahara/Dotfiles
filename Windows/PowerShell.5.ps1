@@ -1,6 +1,5 @@
 Set-PSReadLineOption -HistoryNoDuplicates -HistorySearchCursorMovesToEnd -ShowToolTips
 Register-EngineEvent -SourceIdentifier PowerShell.Exiting -SupportEvent -Action {
-  Clear-Host
   Clear-History
   Clear-Content -LiteralPath (Get-PSReadLineOption).HistorySavePath
 } | Out-Null
