@@ -60,14 +60,14 @@
       "hide": true
     },
     {
-      "label": "uv",
+      "label": "uv-install",
       "type": "shell",
       "command": "uv",
       "args": ["sync"],
       "problemMatcher": []
     },
     {
-      "label": "uv-upgrade",
+      "label": "uv-update",
       "type": "shell",
       "command": "uv",
       "args": ["sync", "--upgrade"],
