@@ -161,8 +161,7 @@ def expand_inputs(patterns: list[str]) -> list[Path]:
 
     if not matches:
         joined = ", ".join(patterns)
-        raise PlantUmlInputError(
-            f"No files matched input pattern(s): {joined}")
+        raise PlantUmlInputError(f"No files matched input pattern(s): {joined}")
 
     return sorted(matches, key=lambda p: str(p).lower())
 
