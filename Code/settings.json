@@ -47,9 +47,8 @@
   "appmod.experimental.enableExperimentalTasks": true,
   "appmod.experimental.task.websphere.lite": true,
   "appmod.javaUpgrade.enableQuickPick": true,
-  "chat.agent.sandbox.allowNetwork": true,
   "chat.agent.sandbox.enabled": "on",
-  "chat.agent.sandbox.enabledWindows": "on",
+  "chat.agent.sandbox.network.allowLocalNetwork": true,
   "chat.agentHost.cloudSandbox.enabled": true,
   "chat.agentHost.customTerminalTool.enabled": true,
   "chat.agentHost.experimental.autoAttachPullRequests": true,
@@ -61,8 +60,8 @@
   "chat.agentMerge.mergePullRequest": "always",
   "chat.agentSessionProjection.enabled": true,
   "chat.agentSessions.migrateLegacyCopilotCli": true,
-  "chat.agentsHandoffTip.mode": "default",
-  "chat.agentsParallelWorkBanner.enabled": true,
+  "chat.agentsWindowBanner.developerMode": true,
+  "chat.agentsWindowBanner.enabled": true,
   "chat.artifacts.enabled": true,
   "chat.autopilot.advanced.enabled": true,
   "chat.autoReply": true,
@@ -72,7 +71,11 @@
   "chat.closedPromoNotification": "copilotIconPopup",
   "chat.copilot.claudeAdvisor.enabled": true,
   "chat.copilot.hydraFusion.enabled": true,
+  "chat.copilot.memory.enabled": true,
+  "chat.copilot.memory.local.enabled": true,
+  "chat.copilot.searchSubagent.enabled": true,
   "chat.copilot.semanticSearch.enabled": true,
+  "chat.copilot.stabilityOrderedPrompt.enabled": true,
   "chat.copilot.tgrep.enabled": true,
   "chat.customizations.copilotConnectors.enabled": true,
   "chat.customizations.locationsMigration.enabled": true,
@@ -84,10 +87,7 @@
     "approvals": "allowAll",
     "mode": "autopilot"
   },
-  "chat.defaultToCopilotHarness": true,
   "chat.editing.explainChanges.enabled": true,
-  "chat.editor.codex.preferAgentHost": true,
-  "chat.editor.preferCopilotHarness": true,
   "chat.exitAfterDelegation": true,
   "chat.experimental.collectInstructionsInExtension": true,
   "chat.experimental.incrementalRendering.buffering": "paragraph",
@@ -96,7 +96,6 @@
   "chat.experimental.richLinks.enabled": true,
   "chat.experimental.sessionStateIndicator.enabled": true,
   "chat.experimental.useSkillAdherencePrompt": true,
-  "chat.experimentalModelPicker": true,
   "chat.experimentalSessionsWindowOverride": true,
   "chat.growthNotification.enabled": true,
   "chat.includeReferencedInstructions": true,
@@ -105,7 +104,7 @@
   "chat.mcp.discovery.enabled": {
     "copilot": true
   },
-  "chat.microsoftAuthentication.enabled": true,
+  "chat.microsoftAuthentication.enabled": "auto",
   "chat.permissions.default": "autopilot",
   "chat.restoreLastPanelSession": true,
   "chat.subagents.defaultToAuto": true,
@@ -124,8 +123,6 @@
   "copilotUpgrade.allowPrerelease": true,
   "inlineChat.affordance": "editor",
   "inlineChat.notebookAgent": true,
-  // #endregion
-  // #region github
   "github.copilot.chat.agent.autoFix": true,
   "github.copilot.chat.agent.longToolCallCachePreservation.enabled": true,
   "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
@@ -152,6 +149,7 @@
   "github.copilot.chat.executionSubagent.useAgenticProxy": true,
   "github.copilot.chat.feedback.onChange": true,
   "github.copilot.chat.gemini3GetChangedFilesTool.enabled": true,
+  "github.copilot.chat.geminiFlashPromptAdditions.enabled": true,
   "github.copilot.chat.getChangedFilesTool.enabled": true,
   "github.copilot.chat.githubMcpServer.channel": "insiders",
   "github.copilot.chat.githubMcpServer.enabled": true,
@@ -197,17 +195,10 @@
     "markdown": true,
     "scminput": true
   },
-  "githubIssues.alwaysPromptForNewIssueRepo": true,
-  "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
-  "githubPullRequests.deleteBranchAfterMerge": true,
-  "githubPullRequests.devMode": true,
-  "githubPullRequests.experimental.useQuickChat": true,
-  "githubPullRequests.pullRequestDescription": "Copilot",
-  "githubPullRequests.quickDiff": true,
-  "githubPullRequests.showPullRequestNumberInTree": true,
   // #endregion
   // #region C++
   "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.autoFoldInactiveRegions": true,
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.mergeConfigurations": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
@@ -341,14 +332,13 @@
   "js/ts.implementationsCodeLens.showOnInterfaceMethods": true,
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  "js/ts.implicitProjectConfig.module": "ESNext",
-  "js/ts.implicitProjectConfig.target": "ESNext",
   "js/ts.inlayHints.enumMemberValues.enabled": true,
   "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
   "js/ts.inlayHints.parameterNames.enabled": "literals",
   "js/ts.inlayHints.parameterTypes.enabled": true,
   "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
   "js/ts.inlayHints.variableTypes.enabled": true,
+  "js/ts.preferences.autoImportEntrypointDirectorySearch": true,
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
   "js/ts.referencesCodeLens.enabled": true,
@@ -382,7 +372,11 @@
   "python.analysis.enableExternalTypeServer": true,
   "python.analysis.enableMangleName": true,
   "python.analysis.enableParallelIndexing": true,
+  "python.analysis.enablePydanticSupport": true,
+  "python.analysis.enablePyreflyNotificationForAll": true,
+  "python.analysis.enablePyreflyShadowExperiment": true,
   "python.analysis.enableSyntaxArtifactSharing": true,
+  "python.analysis.enableTreeSitterColorization": true,
   "python.analysis.enableTroubleshootMissingImports": true,
   "python.analysis.extraCommitChars": true,
   "python.analysis.findRefsInBackgroundThread": true,
@@ -454,8 +448,10 @@
   "diffEditor.experimental.useTrueInlineView": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": true,
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "multiDiffEditor.experimental.variant": "cards",
   // #endregion
   // #region editor
   "editor.aiStats.enabled": true,
@@ -581,6 +577,19 @@
   "git.untrackedChanges": "separate",
   "git.verboseCommit": true,
   // #endregion
+  // #region github
+  "githubIssues.alwaysPromptForNewIssueRepo": true,
+  "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
+  "githubPullRequests.deleteBranchAfterMerge": true,
+  "githubPullRequests.devMode": true,
+  "githubPullRequests.experimental.useQuickChat": true,
+  "githubPullRequests.pullBranch": "always",
+  "githubPullRequests.pullRequestAvatarDisplay": "state",
+  "githubPullRequests.pullRequestDescription": "Copilot",
+  "githubPullRequests.pushBranch": "always",
+  "githubPullRequests.quickDiff": true,
+  "githubPullRequests.showPullRequestNumberInTree": true,
+  // #endregion
   // #region http
   "http.experimental.systemCertificatesV2": true,
   "http.systemCertificatesNode": true,
@@ -606,6 +615,7 @@
   "notebook.experimental.remoteSave": true,
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
+  "notebook.inlineValues": "auto",
   "notebook.multiCursor.enabled": true,
   "notebook.stickyScroll.enabled": true,
   "notebook.variablesView": true,
@@ -787,6 +797,9 @@
   // #region plantuml
   "plantuml.exportMapFile": true,
   // #endregion
+  // #region shellcheck
+  "shellcheck.markdownDiagnostics": true,
+  // #endregion
   // #region svn-scm
   "svn.conflicts.autoResolve": true,
   "svn.experimental.detect_encoding": true,
@@ -866,9 +879,22 @@
   "xml.validation.xInclude.enabled": true,
   // #endregion
   // #region vscode-yaml
-  "yaml.disableAdditionalProperties": true,
-  "yaml.disableDefaultProperties": true,
-  "yaml.format.singleQuote": true
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
   // #endregion
   // #endregion
 }
