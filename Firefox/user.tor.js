@@ -1,5 +1,4 @@
 /**
- * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}
@@ -48,11 +47,9 @@ user_pref("media.peerconnection.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
-user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.dns.disableIPv6", false);
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.http.idempotencyKey.enabled", true);   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#idempotency-key} */
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.http.windows-sso.enabled", true);
 user_pref("network.IDN_show_punycode", true);             /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
@@ -61,7 +58,7 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
-user_pref("network.trr.mode", 3); // DNS-over-HTTPS: Max Protection
+user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
 user_pref("places.history.enabled", false);
 user_pref("privacy.clearHistory.formdata", true);
 user_pref("privacy.clearHistory.siteSettings", true);
@@ -82,8 +79,6 @@ user_pref("privacy.trackingprotection.emailtracking.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.webrtc.globalMuteToggles", true);
-user_pref("security.integrity_policy.enabled", true);
-user_pref("security.integrity_policy.stylesheet.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#integrity_policy_for_stylesheet_resources} */
 user_pref("signon.autofillForms", true);
 user_pref("signon.autologin.proxy", true);
 user_pref("signon.generation.enabled", true);
@@ -234,8 +229,6 @@ user_pref("devtools.webconsole.timestampMessages", true);
 // #endregion
 // #region layout.css.*
 user_pref("layout.css.always_underline_links", true);
-user_pref("layout.forms.input-type-search.enabled", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout_for_input_typesearch} */
-user_pref("layout.forms.reveal-password-button.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#toggle_password_display} */
 // #endregion
 // #region print.*
 user_pref("print.more-settings.open", false);
@@ -390,6 +383,12 @@ user_pref("permissions.default.geo", 2);                  // 2: Disabled
 user_pref("permissions.default.microphone", 2);           // 2: Disabled
 user_pref("permissions.default.xr", 2);                   // 2: Disabled
 // #endregion
+// #endregion
+// #region Experimental Features
+user_pref("browser.urlbar.trimhttps", true);                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
+user_pref("dom.security.featurepolicy.header.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.security.featurepolicy.header.enabled} */
+user_pref("network.cookie.sameSite.laxByDefault", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.cookie.samesite.laxbydefault} */
+user_pref("network.http.idempotencyKey.enabled", true);       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.http.idempotencykey.enabled} */
 // #endregion
 // #region Tor Browser
 user_pref("browser.new_identity.confirm_newnym", false);

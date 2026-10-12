@@ -1,5 +1,4 @@
 /**
- * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}
@@ -50,11 +49,9 @@ user_pref("media.peerconnection.enabled", true);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
-user_pref("network.cookie.sameSite.laxByDefault", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#samesitelax_by_default} */
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.dns.disableIPv6", false);
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.http.idempotencyKey.enabled", true);   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#idempotency-key} */
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.http.windows-sso.enabled", true);
 user_pref("network.IDN_show_punycode", true);             /** @see {@link https://kb.mozillazine.org/Network.IDN_show_punycode} */
@@ -88,7 +85,6 @@ user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.webrtc.globalMuteToggles", true);
 user_pref("security.integrity_policy.enabled", true);
-user_pref("security.integrity_policy.stylesheet.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#integrity_policy_for_stylesheet_resources} */
 user_pref("signon.autofillForms", true);
 user_pref("signon.autologin.proxy", true);
 user_pref("signon.generation.enabled", true);
@@ -239,8 +235,6 @@ user_pref("devtools.webconsole.timestampMessages", true);
 // #endregion
 // #region layout.css.*
 user_pref("layout.css.always_underline_links", true);
-user_pref("layout.forms.input-type-search.enabled", true);      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout_for_input_typesearch} */
-user_pref("layout.forms.reveal-password-button.enabled", true); /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#toggle_password_display} */
 // #endregion
 // #region print.*
 user_pref("print.more-settings.open", false);
@@ -369,7 +363,7 @@ user_pref("findbar.highlightAll", true);
 // #region browser.uiCustomization.*
 user_pref("browser.uiCustomization.horizontalTabstrip", "[\"tabbrowser-tabs\",\"new-tab-button\",\"spring\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"]");
 user_pref("browser.uiCustomization.navBarWhenVerticalTabs", "[\"vertical-spacer\",\"back-button\",\"forward-button\",\"urlbar-container\",\"reset-pbm-toolbar-button\",\"sync-button\",\"bookmarks-menu-button\",\"history-panelmenu\",\"downloads-button\",\"unified-extensions-button\"]");
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"admin_2fas_com-browser-action\",\"_2fa5f682-d4c4-40e3-8ad2-c8404283d4f9_-browser-action\",\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"_74145f27-f039-47ce-a470-a662b129930a_-browser-action\",\"_e4a8a97b-f2ed-450b-b12d-ee082ba24781_-browser-action\",\"_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action\",\"_506e023c-7f2b-40a3-8066-bc5deb40aebe_-browser-action\",\"_a3650a89-273e-474b-9e32-46ba5397cf46_-browser-action\",\"_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action\",\"control-panel-for-youtube_jbscript_dev-browser-action\"],\"nav-bar\":[\"vertical-spacer\",\"back-button\",\"forward-button\",\"urlbar-container\",\"reset-pbm-toolbar-button\",\"bookmarks-menu-button\",\"history-panelmenu\",\"downloads-button\",\"unified-extensions-button\",\"ipprotection-button\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"reset-pbm-toolbar-button\",\"profiler-button\",\"_7e79d10d-9667-4d38-838d-471281c568c3_-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"admin_2fas_com-browser-action\",\"control-panel-for-youtube_jbscript_dev-browser-action\",\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"_506e023c-7f2b-40a3-8066-bc5deb40aebe_-browser-action\",\"_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action\",\"_74145f27-f039-47ce-a470-a662b129930a_-browser-action\",\"_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action\",\"_a3650a89-273e-474b-9e32-46ba5397cf46_-browser-action\",\"_e4a8a97b-f2ed-450b-b12d-ee082ba24781_-browser-action\",\"_2fa5f682-d4c4-40e3-8ad2-c8404283d4f9_-browser-action\",\"developer-button\",\"screenshot-button\",\"ipprotection-button\",\"ai-window-toggle\",\"smartwindow-group-tabs-button\"],\"dirtyAreaCache\":[\"unified-extensions-area\",\"nav-bar\",\"vertical-tabs\",\"TabsToolbar\",\"widget-overflow-fixed-list\",\"toolbar-menubar\",\"PersonalToolbar\"],\"currentVersion\":28,\"newElementCount\":0}");
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"admin_2fas_com-browser-action\",\"_2fa5f682-d4c4-40e3-8ad2-c8404283d4f9_-browser-action\",\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"_74145f27-f039-47ce-a470-a662b129930a_-browser-action\",\"_e4a8a97b-f2ed-450b-b12d-ee082ba24781_-browser-action\",\"_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action\",\"_506e023c-7f2b-40a3-8066-bc5deb40aebe_-browser-action\",\"_a3650a89-273e-474b-9e32-46ba5397cf46_-browser-action\",\"_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action\",\"control-panel-for-youtube_jbscript_dev-browser-action\"],\"nav-bar\":[\"vertical-spacer\",\"back-button\",\"forward-button\",\"urlbar-container\",\"reset-pbm-toolbar-button\",\"sync-button\",\"bookmarks-menu-button\",\"history-panelmenu\",\"downloads-button\",\"unified-extensions-button\",\"ipprotection-button\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"reset-pbm-toolbar-button\",\"profiler-button\",\"_7e79d10d-9667-4d38-838d-471281c568c3_-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"admin_2fas_com-browser-action\",\"control-panel-for-youtube_jbscript_dev-browser-action\",\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"_506e023c-7f2b-40a3-8066-bc5deb40aebe_-browser-action\",\"_5cce4ab5-3d47-41b9-af5e-8203eea05245_-browser-action\",\"_74145f27-f039-47ce-a470-a662b129930a_-browser-action\",\"_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-browser-action\",\"_a3650a89-273e-474b-9e32-46ba5397cf46_-browser-action\",\"_e4a8a97b-f2ed-450b-b12d-ee082ba24781_-browser-action\",\"_2fa5f682-d4c4-40e3-8ad2-c8404283d4f9_-browser-action\",\"developer-button\",\"screenshot-button\",\"ipprotection-button\",\"ai-window-toggle\",\"smartwindow-group-tabs-button\"],\"dirtyAreaCache\":[\"unified-extensions-area\",\"nav-bar\",\"vertical-tabs\",\"TabsToolbar\",\"widget-overflow-fixed-list\",\"toolbar-menubar\",\"PersonalToolbar\"],\"currentVersion\":28,\"newElementCount\":0}");
 user_pref("sidebar.backupState", "{}");
 user_pref("sidebar.main.tools", "");
 user_pref("sidebar.position_start", true);
@@ -400,12 +394,38 @@ user_pref("permissions.default.microphone", 2);           // 2: Disabled
 user_pref("permissions.default.xr", 2);                   // 2: Disabled
 // #endregion
 // #endregion
-// #region Firefox
+// #region Experimental Features
+user_pref("browser.urlbar.trimhttps", true);                                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
+user_pref("dom.enable_container_timing", true);                               /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.enable_container_timing} */
+user_pref("dom.headingoffset.enabled", true);                                 /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.headingoffset.enabled} */
+user_pref("dom.multiple_import_maps.enabled", true);                          /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.multiple_import_maps.enabled} */
+user_pref("dom.payments.request.enabled", true);                              /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.payments.request.enabled} */
+user_pref("dom.select.customizable_select.enabled", true);                    /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.select.customizable_select.enabled} */
+user_pref("javascript.options.experimental.export_star_default", true);       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#javascript.options.experimental.export_star_default} */
+user_pref("javascript.options.experimental.regexp_buffer_boundaries", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#javascript.options.experimental.regexp_buffer_boundaries} */
+user_pref("layout.css.anchor-positioning.follows-transforms.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.anchor-positioning.follows-transforms.enabled} */
+user_pref("layout.css.appearance-base.enabled", true);                        /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.appearance-base.enabled} */
+user_pref("layout.css.convertFromNode.enabled", true);                        /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.convertfromnode.enabled} */
+user_pref("layout.css.custom-media.enabled", true);                           /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.custom-media.enabled} */
+user_pref("layout.css.fit-content-function.enabled", true);                   /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.fit-content-function.enabled} */
+user_pref("layout.css.initial-letter.enabled", true);                         /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.initial-letter.enabled} */
+user_pref("layout.css.inverted-colors.enabled", true);                        /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.inverted-colors.enabled} */
+user_pref("layout.css.prefers-reduced-transparency.enabled", true);           /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.prefers-reduced-transparency.enabled} */
+user_pref("layout.css.text-decoration-inset-percentage.enabled", true);       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.text-decoration-inset-percentage.enabled} */
+user_pref("layout.forms.input-type-search.enabled", true);                    /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.forms.input-type-search.enabled} */
+user_pref("layout.forms.reveal-password-button.enabled", true);               /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.forms.reveal-password-button.enabled} */
+user_pref("media.track.enabled", true);                                       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#media.track.enabled} */
+user_pref("network.cookie.sameSite.laxByDefault", true);                      /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.cookie.samesite.laxbydefault} */
+user_pref("network.http.idempotencyKey.enabled", true);                       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#network.http.idempotencykey.enabled} */
+user_pref("security.integrity_policy.stylesheet.enabled", true);              /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#security.integrity_policy.stylesheet.enabled} */
+// #endregion
+// #region Firefox Nightly
 user_pref("browser.ipProtection.autoRestoreEnabled", true);
 user_pref("browser.ipProtection.autoStartEnabled", true);
 user_pref("browser.ipProtection.autoStartPrivateEnabled", true);
 user_pref("browser.ipProtection.enabled", true);
 user_pref("browser.ipProtection.features.autoStart", true);
+user_pref("browser.ipProtection.userEnableCount", 0);
 user_pref("browser.ipProtection.userEnabled", true);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
@@ -422,7 +442,7 @@ user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 4);
 user_pref("browser.newtabpage.activity-stream.widgets.enabled", false);
 user_pref("browser.newtabpage.blocked", "{}");
-user_pref("browser.newtabpage.pinned", "[{\"url\":\"https://www.amazon.co.jp\",\"label\":\"Amazon\",\"baseDomain\":\"amazon.co.jp\"},{\"url\":\"https://www.rakuten.co.jp\",\"label\":\"Rakuten\",\"baseDomain\":\"rakuten.co.jp\"},{\"url\":\"https://www.rebates.jp\",\"label\":\"Rebates\",\"baseDomain\":\"rebates.jp\"},{\"url\":\"https://www.e-hon.ne.jp/bec/EB/Top\",\"label\":\"e-hon\",\"baseDomain\":\"e-hon.ne.jp\"},{\"url\":\"https://shopping.bookoff.co.jp\",\"label\":\"bookoff\",\"baseDomain\":\"shopping.bookoff.co.jp\"},{\"url\":\"https://booklog.jp/home\",\"label\":\"booklog\",\"baseDomain\":\"booklog.jp\"},{\"url\":\"https://calil.jp/list\",\"label\":\"calil\",\"baseDomain\":\"calil.jp\"},{\"url\":\"https://rewards.bing.com/dashboard\",\"label\":\"rewards.bing\",\"baseDomain\":\"rewards.bing.com\"},{\"url\":\"https://www.web.nhk\",\"label\":\"NHK\",\"baseDomain\":\"web.nhk\"},{\"url\":\"https://www.47news.jp\",\"label\":\"47NEWS\",\"baseDomain\":\"47news.jp\"},{\"url\":\"https://www.jiji.com\",\"label\":\"jiji.com\",\"baseDomain\":\"jiji.com\"},{\"url\":\"https://www.nikkei.com\",\"label\":\"nikkei.com\",\"baseDomain\":\"nikkei.com\"},{\"url\":\"https://www.afpbb.com\",\"label\":\"AFP\",\"baseDomain\":\"afpbb.com\"},{\"url\":\"https://www.bbc.com/japanese\",\"label\":\"BBC\",\"baseDomain\":\"bbc.com\"},{\"url\":\"https://apnews.com/\",\"label\":\"AP\",\"baseDomain\":\"apnews.com\"},{\"url\":\"https://jp.reuters.com\",\"label\":\"Reuters\",\"baseDomain\":\"jp.reuters.com\"},{\"url\":\"https://www.itmedia.co.jp\",\"label\":\"ITmedia\",\"baseDomain\":\"itmedia.co.jp\"},{\"url\":\"https://www.watch.impress.co.jp\",\"label\":\"Impress\",\"baseDomain\":\"watch.impress.co.jp\"},{\"url\":\"https://github.com\",\"label\":\"GitHub\"},{\"url\":\"https://techfeed.io/\",\"label\":\"TechFeed\"},{\"url\":\"https://qiita.com/\",\"label\":\"Qiita\"},{\"url\":\"https://zenn.dev/\",\"label\":\"Zenn\"},{\"url\":\"https://note.com/\",\"label\":\"note\"},{\"url\":\"https://x.com/home\",\"label\":\"Twitter\"}]");
+user_pref("browser.newtabpage.pinned", "[{\"url\":\"https://www.amazon.co.jp\",\"label\":\"Amazon\"},{\"url\":\"https://www.rakuten.co.jp\",\"label\":\"Rakuten\"},{\"url\":\"https://www.rebates.jp\",\"label\":\"Rebates\"},{\"url\":\"https://www.e-hon.ne.jp/bec/EB/Top\",\"label\":\"e-hon\"},{\"url\":\"https://shopping.bookoff.co.jp\",\"label\":\"bookoff\"},{\"url\":\"https://booklog.jp/home\",\"label\":\"booklog\"},{\"url\":\"https://calil.jp/list\",\"label\":\"calil\"},{\"url\":\"https://rewards.bing.com/dashboard\",\"label\":\"rewards.bing\"},{\"url\":\"https://www.web.nhk\",\"label\":\"NHK\"},{\"url\":\"https://www.47news.jp\",\"label\":\"47NEWS\"},{\"url\":\"https://www.jiji.com\",\"label\":\"jiji.com\"},{\"url\":\"https://www.nikkei.com\",\"label\":\"nikkei.com\"},{\"url\":\"https://www.afpbb.com\",\"label\":\"AFP\"},{\"url\":\"https://www.bbc.com/japanese\",\"label\":\"BBC\"},{\"url\":\"https://apnews.com/\",\"label\":\"AP\"},{\"url\":\"https://www.reuters.com/\",\"label\":\"Reuters\"},{\"url\":\"https://www.itmedia.co.jp\",\"label\":\"ITmedia\"},{\"url\":\"https://www.watch.impress.co.jp\",\"label\":\"Impress\"},{\"url\":\"https://japan.cnet.com/\",\"label\":\"CNET\"},{\"url\":\"https://japan.zdnet.com/\",\"label\":\"ZDNet\"},{\"url\":\"https://techfeed.io/\",\"label\":\"TechFeed\"},{\"url\":\"https://qiita.com/\",\"label\":\"Qiita\"},{\"url\":\"https://zenn.dev/\",\"label\":\"Zenn\"},{\"url\":\"https://github.com\",\"label\":\"GitHub\"}]");
 user_pref("browser.privatebrowsing.resetPBM.enabled", true);
 user_pref("browser.privatebrowsing.resetPBM.showConfirmationDialog", false);
 user_pref("browser.tabs.firefox-view.ui-state.opentabs.open", true);
