@@ -10,18 +10,18 @@
   # https://git-scm.com/docs/git-branch
   b = branch --verbose --verbose
   bb = b --all
-  brm = b --delete
   bmv = b --move
+  brm = b --delete
   bprune = "!_() { current=$(git rev-parse --abbrev-ref ${1:-@}); git branch --format=\"%(refname:short)\" --merged $current | grep -v \"^${current}$\" | xargs -r -n 1 git branch -d; }; _"
   # https://git-scm.com/docs/git-checkout
   co = checkout
   # https://git-scm.com/docs/git-cherry-pick
-  cp = cherry-pick --ff
-  cpa = cherry-pick --abort
-  cpc = cherry-pick --continue
-  cpn = cherry-pick --no-commit
-  cpq = cherry-pick --quit
-  cps = cherry-pick --skip
+  cp = cherry-pick
+  cpn = cp --no-commit
+  cpa = cp --abort
+  cpc = cp --continue
+  cpq = cp --quit
+  cps = cp --skip
   # https://git-scm.com/docs/git-commit
   ci = commit --verbose
   cia = ci --all
@@ -46,8 +46,8 @@
   ft = fetch --verbose
   fta = ft --all
   # https://git-scm.com/docs/git-merge
-  mg = merge --verbose --no-ff
-  mgn = merge --no-commit
+  mg = merge --verbose
+  mgn = mg --no-commit
   mga = merge --abort
   mgc = merge --continue
   mgs = merge --skip
@@ -59,15 +59,13 @@
   psd = ps --delete
   psf = ps --force-with-lease --force-if-includes
   # https://git-scm.com/docs/git-rebase
-  rb = rebase --verbose --reapply-cherry-picks
+  rb = rebase --verbose --reapply-cherry-picks --committer-date-is-author-date
   rbi = rb --interactive
   rbu = rbi @{u}
   rba = rebase --abort
   rbc = rebase --continue
   rbq = rebase --quit
   rbs = rebase --skip
-  fix-date = "!_() { git rebase --committer-date-is-author-date ${1:-@}~; }; _"
-  reset-date = "!_() { git rebase --reset-author-date ${1:-@}~; }; _"
   # https://git-scm.com/docs/git-rm
   rmc = rm --cached
   rmf = rm --force
@@ -111,30 +109,29 @@
   m = winmerge
   # https://git-scm.com/docs/git-revert
   rv = revert
+  rvn = rv --no-commit
   rva = rv --abort
   rvc = rv --continue
-  rvn = rv --no-commit
   rvq = rv --quit
   rvs = rv --skip
   # https://git-scm.com/docs/git-reset
   rs = reset
   rsh = rs --hard
   rss = rs --soft
-  unstage = rs --mixed @
-  us = unstage
   undo = rss @{1}
-  u = undo
   # https://git-scm.com/docs/git-restore
-  r = restore
+  unstage = restore --staged
   # https://git-scm.com/docs/git-update-index
   skip = update-index --verbose --skip-worktree
-  noskip = update-index --verbose --no-skip-worktree
+  no-skip = update-index --verbose --no-skip-worktree
   # https://git-scm.com/docs/git-ls-files
-  ls = ls-files -t
+  ls-skip = !git ls-files -v | grep -E \"^S\"
   # https://git-scm.com/docs/git-gc
   gca = gc --aggressive
   # https://git-scm.com/docs/git-for-each-ref
-  refs = for-each-ref --format "%(refname)%09%(authordate:iso-local)%09%(authorname)%09%(contents:subject)" --sort -authordate
+  ls-refs = !git for-each-ref --sort -authordate | git format-rev --stdin-mode=text --format \"%C(auto)%h%x09%ai\"
+  # https://git-scm.com/docs/git-last-modified
+  ls-mods = !git last-modified --recursive | git format-rev --stdin-mode=text --format \"%C(auto)%h%x09%ai\"
 # https://git-scm.com/docs/git-branch
 [branch]
   autoSetupMerge = simple   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
@@ -166,7 +163,7 @@
 [fetch]
   prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
 [format]
-  pretty = format:%C(auto)%h%x09%ad%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
+  pretty = format:%C(auto)%h%x09%ai%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
