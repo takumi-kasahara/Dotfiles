@@ -451,6 +451,7 @@
   "diffEditor.renderSideBySide": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "multiDiffEditor.experimental.fileList": true,
   "multiDiffEditor.experimental.variant": "cards",
   // #endregion
   // #region editor
