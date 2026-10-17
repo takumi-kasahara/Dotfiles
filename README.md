@@ -5,8 +5,8 @@ This repository is a collection of personal dotfiles and environment configurati
 ## Usage
 
 1. Clone this repository.
-1. Check the configuration files in each folder and apply them as needed for your environment.
-1. Review the contents of any `Install.*` scripts or registry files before running, as they depend on your local environment.
+2. Check the configuration files in each folder and apply them as needed for your environment.
+3. Review the contents of any `Install.*` scripts or registry files before running, as they depend on your local environment.
 
 ## Notes
 
