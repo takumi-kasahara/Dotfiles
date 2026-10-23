@@ -53,19 +53,19 @@
   "ai-features.huggingFace.models": [],
   "ai-features.languageModelAliases": {
     "default/code": {
-      "selectedModel": "ollama/ornith-1.5:9b"
+      "selectedModel": "ollama/bonsai-2:latest"
     },
     "default/universal": {
-      "selectedModel": "ollama/ornith-1.5:9b"
+      "selectedModel": "ollama/bonsai-2:latest"
     },
     "default/code-completion": {
-      "selectedModel": "ollama/granite4.2:3b"
+      "selectedModel": "ollama/bonsai-2:latest"
     },
     "default/summarize": {
-      "selectedModel": "ollama/granite4.2:3b"
+      "selectedModel": "ollama/bonsai-2:latest"
     },
     "default/fast": {
-      "selectedModel": "ollama/granite4.2:3b"
+      "selectedModel": "ollama/bonsai-2:latest"
     }
   },
   // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
@@ -87,7 +87,7 @@
     }
   },
   "ai-features.notifications.default": "os-notification",
-  "ai-features.ollama.ollamaModels": ["granite4.2:3b", "ornith-1.5:9b"],
+  "ai-features.ollama.ollamaModels": ["bonsai-2:latest"],
   "ai-features.openAiOfficial.officialOpenAiModels": [],
   "ai-features.openAiOfficial.serverSideCompaction": "enabled",
   "ai-features.openAiOfficial.useResponseApi": true,
