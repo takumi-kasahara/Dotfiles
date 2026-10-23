@@ -22,7 +22,7 @@
   cpq = cp --quit
   cps = cp --skip
   # https://git-scm.com/docs/git-commit
-  ci = commit --verbose
+  ci = commit --verbose --signoff
   cia = ci --all
   squash = !git-squash.sh
   sq = squash
