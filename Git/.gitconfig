@@ -40,7 +40,7 @@
   cfg = cf --edit --global
   cfl = cf --edit --local
   cfs = cf --edit --system
-  alias = "!_() { git config --get alias.$1; }; _"
+  alias = "!_() { git config --get \"alias.$1\"; }; _"
   me = "!git cf --get user.name; git cf --get user.email"
   # https://git-scm.com/docs/git-fetch
   ft = fetch --verbose
@@ -87,7 +87,7 @@
   # https://git-scm.com/docs/git-tag
   t = tag
   trm = t --delete
-  tmv = "!_() { git t ${1} ${2} && git trm ${2}; }; _"
+  tmv = "!_() { git t \"$1\" \"$2\" && git trm \"$2\"; }; _"
   # https://git-scm.com/docs/git-log
   l = log --graph
   ll = l --name-status
@@ -102,8 +102,8 @@
   windiff = difftool --dir-diff --tool winmerge
   d = windiff
   dc = d --cached
-  dp = "!_() { git d ${1:-@}~..${1:-@}; }; _"
-  du = d @{upstream}
+  dp = "!_() { git d \"${1:-@}~\" \"${1:-@}\"; }; _"
+  du = d "@{upstream}"
   # https://git-scm.com/docs/git-mergetool
   winmerge = mergetool --tool winmerge
   m = winmerge
