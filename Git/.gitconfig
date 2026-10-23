@@ -201,3 +201,5 @@
 [submodule]
   propagateBranches = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulepropagateBranches
   recurse = true            # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulerecurse
+[user]
+  useConfigOnly = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-useruseConfigOnly
