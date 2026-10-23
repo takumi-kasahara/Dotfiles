@@ -136,9 +136,9 @@
   autoSetupMerge = simple   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
   autoSetupRebase = always  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupRebase
 [commit]
-  gpgSign = true
-  template = ~/.gitmessage.txt
-  verbose = true
+  gpgSign = true            # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
+  template = ~/.gitmessage  # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
+  verbose = true            # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
 [core]
 	editor = C:/WINDOWS/system32/edit.exe
   pager = LESSCHARSET=utf-8 less -IFJKNMRX

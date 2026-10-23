@@ -257,7 +257,7 @@ Source('.\Git\.bashrc').
 Source('.\Git\.bash_aliases').
 Source('.\Git\.bash_logout').
 Source('.\Git\.gitconfig').
-Source('.\Git\.gitmessage.txt').
+Source('.\Git\.gitmessage').
 Source('.\Git\.inputrc').
 Source('.\Git\.minttyrc').
 Source('.\Git\.vimrc').
