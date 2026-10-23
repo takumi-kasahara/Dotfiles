@@ -12,7 +12,6 @@
   bb = b --all
   bmv = b --move
   brm = b --delete
-  bprune = "!_() { current=$(git rev-parse --abbrev-ref ${1:-@}); git branch --format=\"%(refname:short)\" --merged $current | grep -v \"^${current}$\" | xargs -r -n 1 git branch -d; }; _"
   # https://git-scm.com/docs/git-checkout
   co = checkout
   # https://git-scm.com/docs/git-cherry-pick
@@ -168,6 +167,16 @@
 [log]
   date = iso-local  # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logdate
   follow = true     # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logfollow
+# https://git-scm.com/docs/git-hook
+[hook "prune-branch"]
+  event = post-checkout
+  command = git-prune-branch.sh "$2"
+[hook "reject-commit"]
+  event = pre-commit
+  command = git-reject-commit.sh
+[hook "reject-push"]
+  event = pre-push
+  command = git-reject-push.sh
 [include]
   path = ~/user.gitconfig
 [merge]
