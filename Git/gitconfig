@@ -1,17 +1,29 @@
-[http]
-  sslBackend = schannel
-[diff "astextplain"]
-  textconv = astextplain
-[diff "utf-16le-bom"]
-  textconv = iconv --from-code UTF-16LE --to-code UTF-8
 [add "interactive"]
   useBuiltin = true
 [core]
-  symlinks = false # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks
+  autocrlf = input    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
+  fscache = true      # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
+  ignorecase = false  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
+  longpaths = true    # https://gitforwindows.org/git-cannot-create-a-file-or-directory-with-a-long-path.html#opt-in-configuration
+  preloadindex = true # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
+  quotepath = false   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
+  safepcrlf = true    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
+  symlinks = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks
 [credential]
   helper = manager
 [credential "https://dev.azure.com"]
   useHttpPath = true
+[diff "astextplain"]
+  textconv = astextplain
+[diff "utf-16le-bom"]
+  textconv = iconv --from-code UTF-16LE --to-code UTF-8
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[http]
+  sslBackend = schannel
 [init]
   defaultBranch = main
 [safe]

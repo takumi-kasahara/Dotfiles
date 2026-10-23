@@ -103,7 +103,7 @@
   d = windiff
   dc = d --cached
   dp = "!_() { git d ${1:-@}~..${1:-@}; }; _"
-  du = d @{u}..@
+  du = d @{u}
   # https://git-scm.com/docs/git-mergetool
   winmerge = mergetool --tool winmerge
   m = winmerge
@@ -141,14 +141,8 @@
   template = ~/.gitmessage.txt
   verbose = true
 [core]
-  autocrlf = input      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
 	editor = C:/WINDOWS/system32/edit.exe
-  fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
-  ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
   pager = LESSCHARSET=utf-8 less -IFJKNMRX
-  preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
-  quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
-  safepcrlf = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
 	sshCommand = C:/Program Files/OpenSSH/ssh.exe
 # https://git-scm.com/docs/diff-config
 [diff]
@@ -164,11 +158,6 @@
   prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
 [format]
   pretty = format:%C(auto)%h%x09%ai%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [gpg]
 	program = C:/Program Files/GnuPG/bin/gpg.exe
 [gpg "ssh"]
