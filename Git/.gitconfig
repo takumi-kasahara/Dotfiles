@@ -61,7 +61,7 @@
   # https://git-scm.com/docs/git-rebase
   rb = rebase --verbose --reapply-cherry-picks --committer-date-is-author-date
   rbi = rb --interactive
-  rbu = rbi @{u}
+  rbu = rbi @{upstream}
   rba = rebase --abort
   rbc = rebase --continue
   rbq = rebase --quit
@@ -72,7 +72,7 @@
   # https://git-scm.com/docs/git-show
   v = show --pretty=fuller
   vp = v @~
-  vu = v @{u}
+  vu = v @{upstream}
   # https://git-scm.com/docs/git-stash
   ls-stash = stash list
   apply = stash apply
@@ -93,7 +93,7 @@
   ll = l --name-status
   la = log --graph --all
   lla = la --name-status
-  lu = l --left-right @{u}...@
+  lu = l --left-right @{upstream}...@
   llu = lu --name-status
   # https://stackoverflow.com/questions/89332/how-do-i-recover-a-dropped-stash-in-git
   rescue = !git l --all $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
@@ -103,7 +103,7 @@
   d = windiff
   dc = d --cached
   dp = "!_() { git d ${1:-@}~..${1:-@}; }; _"
-  du = d @{u}
+  du = d @{upstream}
   # https://git-scm.com/docs/git-mergetool
   winmerge = mergetool --tool winmerge
   m = winmerge
