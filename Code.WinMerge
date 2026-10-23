@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <paths>
-    <left>Code\settings.json</left>
-    <right>Eclipse\settings.json</right>
-    <filter>*.*</filter>
-    <subfolders>1</subfolders>
+    <left>Code</left>
+    <right>Eclipse</right>
+    <filter>*.json</filter>
+    <subfolders>0</subfolders>
     <left-readonly>0</left-readonly>
     <right-readonly>0</right-readonly>
     <unpacker>&lt;Automatic&gt;</unpacker>
     <prediffer>&lt;Automatic&gt;</prediffer>
-    <window-type>1</window-type>
     <white-spaces>1</white-spaces>
     <ignore-blank-lines>1</ignore-blank-lines>
     <ignore-case>0</ignore-case>
