@@ -18,7 +18,7 @@ if [[ -n "$(git diff --name-status --cached)" ]]; then
 fi
 
 if [[ -z "${1:-}" ]]; then
-  hash='@{u}'
+  hash='@{upstream}'
 else
   hash=$1~
 fi

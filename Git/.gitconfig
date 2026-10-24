@@ -12,7 +12,6 @@
   bb = b --all
   bmv = b --move
   brm = b --delete
-  bprune = "!_() { current=$(git rev-parse --abbrev-ref ${1:-@}); git branch --format=\"%(refname:short)\" --merged $current | grep -v \"^${current}$\" | xargs -r -n 1 git branch -d; }; _"
   # https://git-scm.com/docs/git-checkout
   co = checkout
   # https://git-scm.com/docs/git-cherry-pick
@@ -23,7 +22,7 @@
   cpq = cp --quit
   cps = cp --skip
   # https://git-scm.com/docs/git-commit
-  ci = commit --verbose
+  ci = commit --verbose --signoff
   cia = ci --all
   squash = !git-squash.sh
   sq = squash
@@ -40,7 +39,7 @@
   cfg = cf --edit --global
   cfl = cf --edit --local
   cfs = cf --edit --system
-  alias = "!_() { git config --get alias.$1; }; _"
+  alias = "!_() { git config --get \"alias.$1\"; }; _"
   me = "!git cf --get user.name; git cf --get user.email"
   # https://git-scm.com/docs/git-fetch
   ft = fetch --verbose
@@ -61,7 +60,7 @@
   # https://git-scm.com/docs/git-rebase
   rb = rebase --verbose --reapply-cherry-picks --committer-date-is-author-date
   rbi = rb --interactive
-  rbu = rbi @{u}
+  rbu = rbi @{upstream}
   rba = rebase --abort
   rbc = rebase --continue
   rbq = rebase --quit
@@ -72,7 +71,7 @@
   # https://git-scm.com/docs/git-show
   v = show --pretty=fuller
   vp = v @~
-  vu = v @{u}
+  vu = v @{upstream}
   # https://git-scm.com/docs/git-stash
   ls-stash = stash list
   apply = stash apply
@@ -87,13 +86,13 @@
   # https://git-scm.com/docs/git-tag
   t = tag
   trm = t --delete
-  tmv = "!_() { git t ${1} ${2} && git trm ${2}; }; _"
+  tmv = "!_() { git t \"$1\" \"$2\" && git trm \"$2\"; }; _"
   # https://git-scm.com/docs/git-log
   l = log --graph
   ll = l --name-status
   la = log --graph --all
   lla = la --name-status
-  lu = l --left-right @{u}...@
+  lu = l --left-right @{upstream}...@
   llu = lu --name-status
   # https://stackoverflow.com/questions/89332/how-do-i-recover-a-dropped-stash-in-git
   rescue = !git l --all $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
@@ -102,8 +101,8 @@
   windiff = difftool --dir-diff --tool winmerge
   d = windiff
   dc = d --cached
-  dp = "!_() { git d ${1:-@}~..${1:-@}; }; _"
-  du = d @{u}..@
+  dp = "!_() { git d \"${1:-@}~\" \"${1:-@}\"; }; _"
+  du = d "@{upstream}"
   # https://git-scm.com/docs/git-mergetool
   winmerge = mergetool --tool winmerge
   m = winmerge
@@ -137,18 +136,12 @@
   autoSetupMerge = simple   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
   autoSetupRebase = always  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupRebase
 [commit]
-  gpgSign = true
-  template = ~/.gitmessage.txt
-  verbose = true
+  gpgSign = true            # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
+  template = ~/.gitmessage  # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
+  verbose = true            # https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-commitgpgSign
 [core]
-  autocrlf = input      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
 	editor = C:/WINDOWS/system32/edit.exe
-  fscache = true        # https://gitforwindows.org/diagnosing-performance-issues.html#enable-the-filesystem-cache
-  ignorecase = false    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase
   pager = LESSCHARSET=utf-8 less -IFJKNMRX
-  preloadindex = true   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepreloadIndex
-  quotepath = false     # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
-  safepcrlf = true      # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
 	sshCommand = C:/Program Files/OpenSSH/ssh.exe
 # https://git-scm.com/docs/diff-config
 [diff]
@@ -164,11 +157,6 @@
   prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
 [format]
   pretty = format:%C(auto)%h%x09%ai%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [gpg]
 	program = C:/Program Files/GnuPG/bin/gpg.exe
 [gpg "ssh"]
@@ -179,6 +167,16 @@
 [log]
   date = iso-local  # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logdate
   follow = true     # https://git-scm.com/docs/git-log#Documentation/git-log.txt-logfollow
+# https://git-scm.com/docs/git-hook
+[hook "prune-branch"]
+  event = post-checkout
+  command = git-prune-branch.sh "$2"
+[hook "reject-commit"]
+  event = pre-commit
+  command = git-reject-commit.sh
+[hook "reject-push"]
+  event = pre-push
+  command = git-reject-push.sh
 [include]
   path = ~/user.gitconfig
 [merge]
@@ -212,3 +210,5 @@
 [submodule]
   propagateBranches = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulepropagateBranches
   recurse = true            # https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulerecurse
+[user]
+  useConfigOnly = true  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-useruseConfigOnly

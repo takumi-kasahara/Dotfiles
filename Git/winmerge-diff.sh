@@ -28,7 +28,7 @@ else
   WinMerge=$(wslpath -a -u "$WinMerge")
 fi
 if [[ ! -e "$WinMerge" ]]; then
-  echo "fatal: WinMerge not found." >&2
+  echo 'fatal: WinMerge not found.' >&2
   exit 69
 fi
 
