@@ -21,6 +21,6 @@ fi
 
 branch=$(git rev-parse --abbrev-ref @)
 if [[ "$branch" = "$(git config --get init.defaultBranch)" ]]; then
-  printf 'fatal: committing on the default branch (%s) is not allowed.\n' "$branch" >&2
+  printf "fatal: committing on the default branch (%s) is not allowed.\n" "$branch" >&2
   exit 1
 fi

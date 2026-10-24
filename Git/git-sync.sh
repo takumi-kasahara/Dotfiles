@@ -27,7 +27,7 @@ fi
 echo "$repo"
 git ls-files -z | while IFS= read -r -d '' file; do
   echo "$file"
-  # authorDate=$(git log --follow --format='%aI' -- "$file" | sort | head -1)
-  commitDate=$(git log --follow --format='%cI' -- "$file" | sort | tail -1)
+  # authorDate=$(git log --follow --format=%aI -- "$file" | sort | head -1)
+  commitDate=$(git log --follow --format=%cI -- "$file" | sort | tail -1)
   touch -d "$commitDate" -- "$file" || printf 'touch failed for %s\n' "$file" >&2
 done

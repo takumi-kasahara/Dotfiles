@@ -24,7 +24,7 @@ if [[ "$remote_head" != "$remote_tracking_prefix"* ]]; then
 fi
 
 head_ref="refs/heads/${remote_head#"$remote_tracking_prefix"}"
-if ! push_ref=$(git rev-parse --symbolic-full-name '@{push}' 2>/dev/null); then
+if ! push_ref=$(git rev-parse --symbolic-full-name "@{push}" 2>/dev/null); then
   exit 0
 fi
 if [[ "$push_ref" != "$remote_tracking_prefix"* ]]; then
@@ -37,7 +37,7 @@ fi
 
 while read -r commit; do
   if ! git verify-commit "$commit" >/dev/null 2>&1; then
-    printf "fatal: unverified commit (%s) detected.\n" "$commit" >&2
+    printf 'fatal: unverified commit (%s) detected.\n' "$commit" >&2
     exit 1
   fi
-done < <(git rev-list "@{push}"..HEAD)
+done < <(git rev-list '@{push}'..HEAD)

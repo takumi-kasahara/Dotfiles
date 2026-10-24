@@ -18,6 +18,6 @@ for remote in $(git remote); do
   git branch --delete-merged "$remote"
 done
 current=$(git rev-parse --abbrev-ref "${1:-@}")
-if [[ -n "$current" ]] && [[ "$current" != "HEAD" ]]; then
-  git branch --format="%(refname:short)" --merged "$current" | grep -v "^${current}$" | xargs -r -n 1 git branch -d
+if [[ -n "$current" ]] && [[ "$current" != 'HEAD' ]]; then
+  git branch --format='%(refname:short)' --merged "$current" | grep -v "^$current$" | xargs -r -n 1 git branch -d
 fi
