@@ -79,6 +79,8 @@ user_pref("privacy.firstparty.isolate", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("privacy.history.custom", true);
 user_pref("privacy.resistFingerprinting", false);
+user_pref("privacy.sanitize.pending", "[{\"id\":\"shutdown\",\"itemsToClear\":[\"cache\",\"formdata\",\"siteSettings\"],\"options\":{}}]");
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("privacy.trackingprotection.emailtracking.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
@@ -94,9 +96,9 @@ user_pref("webgl.disabled", false);
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
 // #region mousewheel.*
-user_pref("middlemouse.paste", true);
-user_pref("mousewheel.autodir.enabled", true);
-user_pref("mousewheel.autodir.honourroot", true);
+user_pref("middlemouse.paste", false);
+user_pref("mousewheel.autodir.enabled", false);
+user_pref("mousewheel.autodir.honourroot", false);
 // #endregion
 // #region browser.cache.*
 /**
@@ -348,9 +350,9 @@ user_pref("browser.tabs.insertRelatedAfterCurrent", true); // Open new tabs to t
 user_pref("browser.tabs.loadBookmarksInBackground", true);
 user_pref("browser.tabs.loadBookmarksInTabs", true);
 user_pref("browser.tabs.loadDivertedInBackground", true);
-user_pref("browser.tabs.warnOnClose", false);
-user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-user_pref("browser.tabs.warnOnOpen", false);
+user_pref("browser.tabs.warnOnClose", true);
+user_pref("browser.tabs.warnOnCloseOtherTabs", true);
+user_pref("browser.tabs.warnOnOpen", true);
 user_pref("browser.taskbar.previews.enable", false);
 user_pref("browser.taskbarTabs.enabled", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);

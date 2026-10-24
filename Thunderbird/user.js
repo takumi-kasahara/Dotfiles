@@ -85,9 +85,9 @@ user_pref("webgl.disabled", true);
 user_pref("xpinstall.signatures.required", true);
 user_pref("xpinstall.whitelist.required", true);
 // #region mousewheel.*
-user_pref("middlemouse.paste", true);
-user_pref("mousewheel.autodir.enabled", true);
-user_pref("mousewheel.autodir.honourroot", true);
+user_pref("middlemouse.paste", false);
+user_pref("mousewheel.autodir.enabled", false);
+user_pref("mousewheel.autodir.honourroot", false);
 // #endregion
 // #region browser.cache.*
 /**
