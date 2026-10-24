@@ -1,7 +1,7 @@
 ---
 name: batchfile
-description: "Skill for authoring and updating Windows batch files (*.bat). Generates consistent templates, for/if/set constructs, label-based functions, argument handling, and error handling. Standardizes placing redirection operators at the front of the line to avoid trailing-digit misinterpretation and accidental whitespace insertion."
-argument-hint: "Specify the purpose, inputs, outputs, and whether admin elevation is required for the .bat you want to create"
+description: 'Skill for authoring and updating Windows batch files (*.bat). Generates consistent templates, for/if/set constructs, label-based functions, argument handling, and error handling. Standardizes placing redirection operators at the front of the line to avoid trailing-digit misinterpretation and accidental whitespace insertion.'
+argument-hint: 'Specify the purpose, inputs, outputs, and whether admin elevation is required for the .bat you want to create'
 ---
 
 # Batch File Authoring
