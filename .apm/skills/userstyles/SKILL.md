@@ -1,6 +1,6 @@
 ---
 name: userstyles
-description: "CSS coding conventions for Stylus-compatible user-style files (*.user.css). Use when writing or editing user styles in src/ — covers modern CSS targeting, selector naming, property grouping order, color formats, comments, and the Stylus metadata header."
+description: 'CSS coding conventions for Stylus-compatible user-style files (*.user.css). Use when writing or editing user styles in src/ — covers modern CSS targeting, selector naming, property grouping order, color formats, comments, and the Stylus metadata header.'
 ---
 
 # CSS User Styles

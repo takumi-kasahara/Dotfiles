@@ -1,14 +1,13 @@
-lockfile_version: "1"
-apm_version: 0.33.0
+lockfile_version: '1'
+apm_version: 0.35.0
 dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agent-skills
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: 1.0.0
     virtual_path: instructions/agent-skills.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agent-skills.instructions.md
     deployed_file_hashes:
@@ -17,11 +16,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agents
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: 1.0.0
     virtual_path: instructions/agents.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agents.instructions.md
     deployed_file_hashes:
@@ -30,11 +28,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-instructions
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: 1.0.0
     virtual_path: instructions/instructions.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/instructions.instructions.md
     deployed_file_hashes:
@@ -43,11 +40,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-markdown
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: 1.0.0
     virtual_path: instructions/markdown.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/markdown.instructions.md
     deployed_file_hashes:
@@ -56,11 +52,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-prompt
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: 1.0.0
     virtual_path: instructions/prompt.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/prompt.instructions.md
     deployed_file_hashes:
@@ -69,30 +64,20 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-branch
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: unknown
     virtual_path: skills/conventional-branch
     is_virtual: true
     package_type: claude_skill
-    deployed_files:
-      - .agents/skills/conventional-branch
-      - .agents/skills/conventional-branch/SKILL.md
-    deployed_file_hashes:
-      .agents/skills/conventional-branch/SKILL.md: sha256:94b962ff93ac639c8b760a29465ca48f51d6af1ad1b4bdd242d52f1260959b07
-    content_hash: sha256:62d556675f48fd45ebe77b13ce7cac1e37a4982e648f389b4db237864f6702c4
+    content_hash: sha256:12238ae18d36e1f57007483a406dd2f3a427f42e23948344630ca0d45136ff7d
   - repo_url: github/awesome-copilot
     name: conventional-commit
     host: github.com
-    resolved_commit: cb64ad12e32737ae764becd6885462e9b4c7cb00
+    resolved_commit: d85f762d6e521abf5fe16703946e9b38adc42da7
     version: unknown
     virtual_path: skills/conventional-commit
     is_virtual: true
     package_type: claude_skill
-    deployed_files:
-      - .agents/skills/conventional-commit
-      - .agents/skills/conventional-commit/SKILL.md
-    deployed_file_hashes:
-      .agents/skills/conventional-commit/SKILL.md: sha256:250235f71b8c501a7744ded911281292324bcd1a2d014e34b25041e2d2c8bf73
     content_hash: sha256:f29c9486cede6c7b2df0cfb0a2e4aa67446552b991bcf17d1b309e903171f03d
   - repo_url: github/copilot-advanced-security-plugin
     name: github/advanced-security
@@ -100,14 +85,6 @@ dependencies:
     resolved_commit: 9c8cd1a00c1290bf89db8f068aded1fb5dace200
     version: 1.0.0
     package_type: skill_bundle
-    deployed_files:
-      - .agents/skills/dependency-scanning
-      - .agents/skills/dependency-scanning/SKILL.md
-      - .agents/skills/secret-scanning
-      - .agents/skills/secret-scanning/SKILL.md
-    deployed_file_hashes:
-      .agents/skills/dependency-scanning/SKILL.md: sha256:3e9df91dba4a65357ced43553b47c768c4630d054eed37f0fffebfb2495bad14
-      .agents/skills/secret-scanning/SKILL.md: sha256:29f70ce41559819ac14bf5a2c8fa7c9afc43cfc2cee586277db02a8530b87865
     content_hash: sha256:22d81aa813d066194a8c5a53255a4277941ab6ab652a8ae559b06d6a214356e4
   - repo_url: microsoftdocs/mcp
     name: microsoft-docs
@@ -132,58 +109,130 @@ dependencies:
 deployments:
   - kind: project-relative
     target: copilot
-    value: .agents/skills/conventional-branch
+    value: .agents/skills/autohotkey
     runtime: null
     scope: project
     owners:
-      - github/awesome-copilot/skills/conventional-branch
-    active_owner: github/awesome-copilot/skills/conventional-branch
+      - .
+    active_owner: .
     content_hash: null
   - kind: project-relative
     target: copilot
-    value: .agents/skills/conventional-branch/SKILL.md
+    value: .agents/skills/autohotkey/SKILL.md
     runtime: null
     scope: project
     owners:
-      - github/awesome-copilot/skills/conventional-branch
-    active_owner: github/awesome-copilot/skills/conventional-branch
-    content_hash: sha256:94b962ff93ac639c8b760a29465ca48f51d6af1ad1b4bdd242d52f1260959b07
+      - .
+    active_owner: .
+    content_hash: sha256:b11504076e5917fbec490600452a064f4b72f41d63c771f0e5da37f1afb053e6
   - kind: project-relative
     target: copilot
-    value: .agents/skills/conventional-commit
+    value: .agents/skills/autohotkey/scripts/AutoHotkey.ps1
     runtime: null
     scope: project
     owners:
-      - github/awesome-copilot/skills/conventional-commit
-    active_owner: github/awesome-copilot/skills/conventional-commit
+      - .
+    active_owner: .
+    content_hash: sha256:fd79cfba80cb01bb23c57bd9ab40565dfff9bade63626966d1002ccc2227183f
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/batchfile
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
     content_hash: null
   - kind: project-relative
     target: copilot
-    value: .agents/skills/conventional-commit/SKILL.md
+    value: .agents/skills/batchfile/SKILL.md
     runtime: null
     scope: project
     owners:
-      - github/awesome-copilot/skills/conventional-commit
-    active_owner: github/awesome-copilot/skills/conventional-commit
-    content_hash: sha256:250235f71b8c501a7744ded911281292324bcd1a2d014e34b25041e2d2c8bf73
+      - .
+    active_owner: .
+    content_hash: sha256:f10a6c5ce51a9af9b50d655fbe5fd64fd138eed291493caf2629c3ab0bbc6796
   - kind: project-relative
     target: copilot
-    value: .agents/skills/dependency-scanning
+    value: .agents/skills/batchfile/references/gotchas-argument-expansion.md
     runtime: null
     scope: project
     owners:
-      - github/copilot-advanced-security-plugin
-    active_owner: github/copilot-advanced-security-plugin
+      - .
+    active_owner: .
+    content_hash: sha256:0246c76a512c1ae19359c53a2eec3048a3296d80c4b933ec85a4de6212233ac3
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/batchfile/scripts/script.bat
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:c4873f67984fc830d4f2159cb08d4904f5499e324df83f58320f41736a1622ea
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/batchfile/scripts/script.runas.bat
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:f88baff41b503da1b06645a2636e0943354e557228d354e01bb73e139abb32da
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/bookmarklets
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
     content_hash: null
   - kind: project-relative
     target: copilot
-    value: .agents/skills/dependency-scanning/SKILL.md
+    value: .agents/skills/bookmarklets/SKILL.md
     runtime: null
     scope: project
     owners:
-      - github/copilot-advanced-security-plugin
-    active_owner: github/copilot-advanced-security-plugin
-    content_hash: sha256:3e9df91dba4a65357ced43553b47c768c4630d054eed37f0fffebfb2495bad14
+      - .
+    active_owner: .
+    content_hash: sha256:c71d3fd21a4975442d9fae4d7f0477b921133933e31cb3c8b8225f7dd5210b44
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/csharp-for-powershell-5
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/csharp-for-powershell-5/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:bd3e8c15c5f0e7e57026f791e8a0e0ab683705f2b4ea1d925896e420158774ff
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/csharp-for-powershell-7
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/csharp-for-powershell-7/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:bd438575d217c494bb1b85d0b796a1fbd9fcc407b10ebbe79e4ce3499ba89eed
   - kind: project-relative
     target: copilot
     value: .agents/skills/microsoft-code-reference
@@ -249,22 +298,373 @@ deployments:
     content_hash: sha256:ff30f0b66e3d4ce70fa97fb764491fd33728a2b47baf9c37f892bc2b64fe73f6
   - kind: project-relative
     target: copilot
-    value: .agents/skills/secret-scanning
+    value: .agents/skills/office-scripts
     runtime: null
     scope: project
     owners:
-      - github/copilot-advanced-security-plugin
-    active_owner: github/copilot-advanced-security-plugin
+      - .
+    active_owner: .
     content_hash: null
   - kind: project-relative
     target: copilot
-    value: .agents/skills/secret-scanning/SKILL.md
+    value: .agents/skills/office-scripts-from-vba
     runtime: null
     scope: project
     owners:
-      - github/copilot-advanced-security-plugin
-    active_owner: github/copilot-advanced-security-plugin
-    content_hash: sha256:29f70ce41559819ac14bf5a2c8fa7c9afc43cfc2cee586277db02a8530b87865
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts-from-vba/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:b98eb5a0079e7660371b3ace3f6fe0ffb9a32fc8eed04f364a4357d57da2e513
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts-to-vba
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts-to-vba/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:94d1fd13dd03a883ea700d47f64f0262ed46e665eb3295e09d103f19fa5edc65
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:4e70c58b4f08fe2d7a29ea2ddad7580dbc02b6692d8b39a9438f430102fd497d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts/scripts/Compile.OfficeScripts.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:97dab79806c86890393ddcbe1fad52a6efa0127f904f6973fc0fe47d3c147dcd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/office-scripts/scripts/Decompile.OfficeScripts.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:55e7db02a1d70b496280b5aeea2f7ec8232a4873d8011f4bf6a97601a11635b1
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/plantuml
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/plantuml/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:10ec7895f90cb894cde31a08d6acbf269d5972c2229a22df02af861a32bfe1bf
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/plantuml/scripts/plantuml.py
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:8f6c88a42b3c8effe0adca00712f2f64dd5e9d6dc43b61b87da0eebd6847f36c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/plantuml/tests/test_encoding.py
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:fa103b5280920465254f212aa4c6994048827535f2f7cefda775bd6f382b02aa
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:7beed2e1d3959a7e51748d817ca82b5394eb4d2d28eb278d8006ea20c060f27e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/references/comment-based-help.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:0b763c723378d5ab3bfbb77d554d2f0519e6f57c7d33eda19094e7a81faf32c6
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/references/powershell-cmdlet.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:9425b00bef14efc97d9a43cf7f3444a2d84e1bf9f3125674db88ed30c6d2e017
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/references/powershell-pester.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:2c42edebb0639b6f4a0d1506817512fe792391e7674be0acfcc0b1094eb08b3d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/Help.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:6045e578ddf7319aafe7241d778bbf5ffce043f9fed398cdc017091d8c18c629
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/PSScriptAnalyzerSettings.psd1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:00272d34f89b0bb23650fad354d5d6459f8d88f0a548c62e8f70e4787e9489ab
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/ParseFile.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:e93d21919f87598a6b7c0cae395fabced6ca907b528fd5956baf525447156c97
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/Pester.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:52eb926346ebc40a4127b8174dc6a9e8f434969736c958acefd094c937d8de4f
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/ScriptAnalyzer.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:102527a31e9a929ef29f165f20347a1f16e1beb28f7654440d2499aa773a23f9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:fd38f91e73e63cf0d72a99935b537443bf1b34506914a78fa5c488accb63a675
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/references/comment-based-help.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:8d044838f2d70086d3e41d177fce308990f2ec2ccc95d8b749dab22fbc8fcbb1
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/references/powershell-cmdlet.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:f33058c01f60d4b0c5604ac25a738252d36cb5a54dfdc0e8ed8d47db77dd4859
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/references/powershell-pester.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:2c42edebb0639b6f4a0d1506817512fe792391e7674be0acfcc0b1094eb08b3d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/Help.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:6db6d185c021f362ed72cdea1ad1d9c4fcdeaab97f2a74788be1e38665ec1fea
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/PSScriptAnalyzerSettings.psd1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:00272d34f89b0bb23650fad354d5d6459f8d88f0a548c62e8f70e4787e9489ab
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/ParseFile.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:cf1aa71204b31cec9ac18936ce51ae6f30900191d5099bbd69d26e1efa9a28bb
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/Pester.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:231c49eb1842507162b89ea256a3358c8a31cce0cc74e04275ad9f83baf42c74
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/ScriptAnalyzer.ps1
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:1f4ecae80c4b2012193d2ae3a20cb8f925a6479ab50d50932b11253b76c50fdd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/rubberduck-vba
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/rubberduck-vba/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:a631f26585cb261925205f17ef570c59611486607979ca4de8ba34ae5cb83dd5
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/rubberduck-vba/assets/TestModule.bas
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:fe1ce4894d5cb7e46f07cda2e2ddb3d8ffc4a7819806fc460491539a5ee8d087
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/userscripts
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/userscripts/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:ee0bb1c08c720d375445596549e887503e8362db0d94389502bab265057bd3ae
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/userstyles
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/userstyles/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:fa524ba9a4695b70cd5aca603cd3dec69db445d0cfc112b1c2f71a66cb374450
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/windows-script-host
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/windows-script-host/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:42b68bca4b42574698f929206c9adfe24bddb8aca44473556834b8cf78b23905
   - kind: project-relative
     target: copilot
     value: .github/agents/test-first.agent.md
@@ -330,447 +730,6 @@ deployments:
     content_hash: sha256:01cc2cbf50c7a000295eab5083048d0c0158c7c8e651ab0845ee8870bc6183dd
   - kind: project-relative
     target: legacy
-    value: .agents/skills/autohotkey
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/autohotkey/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:b11504076e5917fbec490600452a064f4b72f41d63c771f0e5da37f1afb053e6
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/autohotkey/scripts/AutoHotkey.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:fd79cfba80cb01bb23c57bd9ab40565dfff9bade63626966d1002ccc2227183f
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/batchfile
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/batchfile/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:f10a6c5ce51a9af9b50d655fbe5fd64fd138eed291493caf2629c3ab0bbc6796
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/batchfile/references/gotchas-argument-expansion.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:0246c76a512c1ae19359c53a2eec3048a3296d80c4b933ec85a4de6212233ac3
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/batchfile/scripts/script.bat
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:c4873f67984fc830d4f2159cb08d4904f5499e324df83f58320f41736a1622ea
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/batchfile/scripts/script.runas.bat
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:f88baff41b503da1b06645a2636e0943354e557228d354e01bb73e139abb32da
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/bookmarklets
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/bookmarklets/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:c71d3fd21a4975442d9fae4d7f0477b921133933e31cb3c8b8225f7dd5210b44
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/csharp-for-powershell-5
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/csharp-for-powershell-5/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:bd3e8c15c5f0e7e57026f791e8a0e0ab683705f2b4ea1d925896e420158774ff
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/csharp-for-powershell-7
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/csharp-for-powershell-7/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:bd438575d217c494bb1b85d0b796a1fbd9fcc407b10ebbe79e4ce3499ba89eed
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts-from-vba
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts-from-vba/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:b98eb5a0079e7660371b3ace3f6fe0ffb9a32fc8eed04f364a4357d57da2e513
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts-to-vba
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts-to-vba/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:94d1fd13dd03a883ea700d47f64f0262ed46e665eb3295e09d103f19fa5edc65
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:4e70c58b4f08fe2d7a29ea2ddad7580dbc02b6692d8b39a9438f430102fd497d
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts/scripts/Compile.OfficeScripts.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:97dab79806c86890393ddcbe1fad52a6efa0127f904f6973fc0fe47d3c147dcd
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/office-scripts/scripts/Decompile.OfficeScripts.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:55e7db02a1d70b496280b5aeea2f7ec8232a4873d8011f4bf6a97601a11635b1
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/plantuml
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/plantuml/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:10ec7895f90cb894cde31a08d6acbf269d5972c2229a22df02af861a32bfe1bf
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/plantuml/scripts/plantuml.py
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:8f6c88a42b3c8effe0adca00712f2f64dd5e9d6dc43b61b87da0eebd6847f36c
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/plantuml/tests/test_encoding.py
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:fa103b5280920465254f212aa4c6994048827535f2f7cefda775bd6f382b02aa
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:7beed2e1d3959a7e51748d817ca82b5394eb4d2d28eb278d8006ea20c060f27e
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/references/comment-based-help.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:0b763c723378d5ab3bfbb77d554d2f0519e6f57c7d33eda19094e7a81faf32c6
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/references/powershell-cmdlet.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:9425b00bef14efc97d9a43cf7f3444a2d84e1bf9f3125674db88ed30c6d2e017
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/references/powershell-pester.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:2c42edebb0639b6f4a0d1506817512fe792391e7674be0acfcc0b1094eb08b3d
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/scripts/Help.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:6045e578ddf7319aafe7241d778bbf5ffce043f9fed398cdc017091d8c18c629
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/scripts/PSScriptAnalyzerSettings.psd1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:00272d34f89b0bb23650fad354d5d6459f8d88f0a548c62e8f70e4787e9489ab
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/scripts/ParseFile.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:e93d21919f87598a6b7c0cae395fabced6ca907b528fd5956baf525447156c97
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/scripts/Pester.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:52eb926346ebc40a4127b8174dc6a9e8f434969736c958acefd094c937d8de4f
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-5/scripts/ScriptAnalyzer.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:102527a31e9a929ef29f165f20347a1f16e1beb28f7654440d2499aa773a23f9
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:fd38f91e73e63cf0d72a99935b537443bf1b34506914a78fa5c488accb63a675
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/references/comment-based-help.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:8d044838f2d70086d3e41d177fce308990f2ec2ccc95d8b749dab22fbc8fcbb1
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/references/powershell-cmdlet.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:f33058c01f60d4b0c5604ac25a738252d36cb5a54dfdc0e8ed8d47db77dd4859
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/references/powershell-pester.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:2c42edebb0639b6f4a0d1506817512fe792391e7674be0acfcc0b1094eb08b3d
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/scripts/Help.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:6db6d185c021f362ed72cdea1ad1d9c4fcdeaab97f2a74788be1e38665ec1fea
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/scripts/PSScriptAnalyzerSettings.psd1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:00272d34f89b0bb23650fad354d5d6459f8d88f0a548c62e8f70e4787e9489ab
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/scripts/ParseFile.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:cf1aa71204b31cec9ac18936ce51ae6f30900191d5099bbd69d26e1efa9a28bb
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/scripts/Pester.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:231c49eb1842507162b89ea256a3358c8a31cce0cc74e04275ad9f83baf42c74
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/powershell-7/scripts/ScriptAnalyzer.ps1
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:1f4ecae80c4b2012193d2ae3a20cb8f925a6479ab50d50932b11253b76c50fdd
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/rubberduck-vba
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/rubberduck-vba/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:a631f26585cb261925205f17ef570c59611486607979ca4de8ba34ae5cb83dd5
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/rubberduck-vba/assets/TestModule.bas
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:fe1ce4894d5cb7e46f07cda2e2ddb3d8ffc4a7819806fc460491539a5ee8d087
-  - kind: project-relative
-    target: legacy
     value: .agents/skills/rubberduck-vba/assets/TestModule1.bas
     runtime: null
     scope: project
@@ -778,60 +737,6 @@ deployments:
       - .
     active_owner: .
     content_hash: sha256:aa75247199523a7c8993cd19770ece95aa0a3698b0989605fabc22feb3efd8b4
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/userscripts
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/userscripts/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:ee0bb1c08c720d375445596549e887503e8362db0d94389502bab265057bd3ae
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/userstyles
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/userstyles/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:fa524ba9a4695b70cd5aca603cd3dec69db445d0cfc112b1c2f71a66cb374450
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/windows-script-host
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: project-relative
-    target: legacy
-    value: .agents/skills/windows-script-host/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:42b68bca4b42574698f929206c9adfe24bddb8aca44473556834b8cf78b23905
   - kind: uri
     target: mcp
     value: github-ghas-tools

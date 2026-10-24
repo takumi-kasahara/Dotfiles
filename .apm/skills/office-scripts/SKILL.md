@@ -33,7 +33,7 @@ function main(workbook: ExcelScript.Workbook) {
   const selectedCell = workbook.getActiveCell();
   const selectedSheet = workbook.getActiveWorksheet();
 
-  selectedCell.getFormat().getFill().setColor("yellow");
+  selectedCell.getFormat().getFill().setColor('yellow');
 }
 ```
 
