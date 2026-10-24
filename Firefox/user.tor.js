@@ -88,9 +88,9 @@ user_pref("webgl.disabled", true);
 user_pref("xpinstall.signatures.required", true);
 user_pref("xpinstall.whitelist.required", true);
 // #region mousewheel.*
-user_pref("middlemouse.paste", true);
-user_pref("mousewheel.autodir.enabled", true);
-user_pref("mousewheel.autodir.honourroot", true);
+user_pref("middlemouse.paste", false);
+user_pref("mousewheel.autodir.enabled", false);
+user_pref("mousewheel.autodir.honourroot", false);
 // #endregion
 // #region browser.cache.*
 /**
@@ -341,9 +341,9 @@ user_pref("browser.tabs.insertRelatedAfterCurrent", true); // Open new tabs to t
 user_pref("browser.tabs.loadBookmarksInBackground", true);
 user_pref("browser.tabs.loadBookmarksInTabs", true);
 user_pref("browser.tabs.loadDivertedInBackground", true);
-user_pref("browser.tabs.warnOnClose", false);
-user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-user_pref("browser.tabs.warnOnOpen", false);
+user_pref("browser.tabs.warnOnClose", true);
+user_pref("browser.tabs.warnOnCloseOtherTabs", true);
+user_pref("browser.tabs.warnOnOpen", true);
 user_pref("browser.taskbar.previews.enable", false);
 user_pref("browser.taskbarTabs.enabled", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", false);
