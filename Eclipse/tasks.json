@@ -7,41 +7,33 @@
   },
   "tasks": [
     {
-      "label": "apm-install",
+      "label": "apm:install",
       "type": "shell",
       "command": "apm",
       "args": ["install"],
       "problemMatcher": []
     },
     {
-      "label": "apm-update",
+      "label": "apm:update",
       "type": "shell",
       "command": "apm",
-      "args": ["update", "--yes"],
+      "args": ["install", "--update"],
       "problemMatcher": []
     },
     {
-      "label": "npm-install",
+      "label": "npm:install",
       "type": "shell",
       "command": "npm",
       "args": ["install"],
       "problemMatcher": []
     },
     {
-      "label": "npm-update",
+      "label": "npm:update",
       "type": "shell",
       "command": "npm",
       "args": ["update"],
       "problemMatcher": [],
       "dependsOn": ["npm-check-updates"]
-    },
-    {
-      "label": "npm-update (semver)",
-      "type": "shell",
-      "command": "npm",
-      "args": ["update"],
-      "problemMatcher": [],
-      "dependsOn": ["npm-check-updates (semver)"]
     },
     {
       "label": "npm-check-updates",
@@ -52,22 +44,14 @@
       "hide": true
     },
     {
-      "label": "npm-check-updates (semver)",
-      "type": "shell",
-      "command": "npx",
-      "args": ["npm-check-updates", "--target", "semver", "--upgrade"],
-      "problemMatcher": [],
-      "hide": true
-    },
-    {
-      "label": "uv-install",
+      "label": "uv:install",
       "type": "shell",
       "command": "uv",
       "args": ["sync"],
       "problemMatcher": []
     },
     {
-      "label": "uv-update",
+      "label": "uv:update",
       "type": "shell",
       "command": "uv",
       "args": ["sync", "--upgrade"],

@@ -17,7 +17,7 @@
       "label": "apm:update",
       "type": "shell",
       "command": "apm",
-      "args": ["update", "--yes"],
+      "args": ["install", "--update"],
       "problemMatcher": []
     },
     {
@@ -39,7 +39,7 @@
       "label": "npm-check-updates",
       "type": "shell",
       "command": "npx",
-      "args": ["npm-check-updates", "--target", "semver", "--upgrade"],
+      "args": ["npm-check-updates", "--upgrade"],
       "problemMatcher": [],
       "hide": true
     },
