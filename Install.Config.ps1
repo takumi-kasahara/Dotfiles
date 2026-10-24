@@ -1,3 +1,15 @@
+<#
+.SYNOPSIS
+  Installs personal configuration files and application settings.
+
+.DESCRIPTION
+  Copies or creates symbolic links for personal configuration files, such as editor settings, browser profiles, and tool configurations, into their respective application data directories.
+  Supports skipping identical files and creating symlinks when -SymLink is specified.
+
+.NOTES
+  Some destinations require the target application to be installed first.
+  Creating symbolic links may require elevated privileges or Developer Mode.
+#>
 using namespace System.IO
 
 [CmdletBinding()]
@@ -7,7 +19,6 @@ param (
   [switch]
   $Force
 )
-
 Set-StrictMode -Version Latest
 Set-Location -LiteralPath $PSScriptRoot
 
