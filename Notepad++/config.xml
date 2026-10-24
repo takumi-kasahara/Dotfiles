@@ -19,7 +19,8 @@
   </ColumnEditor>
   <GUIConfigs>
     <GUIConfig name="ToolBar" visible="no" fluentColor="0" fluentCustomColor="10825519"
-      fluentMono="no">standard</GUIConfig>
+      fluentMono="no">standard
+    </GUIConfig>
     <GUIConfig name="StatusBar">show</GUIConfig>
     <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes"
       closeButton="yes" pinButton="yes" showOnlyPinnedButton="yes" buttonsOninactiveTabs="yes"
@@ -95,7 +96,8 @@
     <GUIConfig name="searchEngine" searchEngineChoice="1" searchEngineCustom="" />
     <GUIConfig name="MarkAll" matchCase="yes" wholeWordOnly="yes" />
     <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="no" useFindSettings="yes"
-      onAnotherView="yes">yes</GUIConfig>
+      onAnotherView="yes">yes
+    </GUIConfig>
     <GUIConfig name="DarkMode" enable="yes" colorTone="0" customColorTop="2105376"
       customColorMenuHotTrack="4210752" customColorActive="4210752" customColorMain="2105376"
       customColorError="176" customColorText="14737632" customColorDarkText="12632256"
