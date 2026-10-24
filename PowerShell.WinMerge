@@ -4,7 +4,7 @@
     <left>Windows\PowerShell.5.ps1</left>
     <right>Windows\PowerShell.7.ps1</right>
     <filter>*.*</filter>
-    <subfolders>1</subfolders>
+    <subfolders>0</subfolders>
     <left-readonly>0</left-readonly>
     <right-readonly>0</right-readonly>
     <unpacker>&lt;Automatic&gt;</unpacker>
