@@ -17,7 +17,14 @@ shopt -s shift_verbose
 for remote in $(git remote); do
   git branch --delete-merged "$remote"
 done
-current=$(git rev-parse --abbrev-ref "${1:-@}")
-if [[ -n "$current" ]] && [[ "$current" != 'HEAD' ]]; then
-  git branch --format='%(refname:short)' --merged "$current" | grep -v "^$current$" | xargs -r -n 1 git branch -d
+
+if ! git symbolic-ref --short "${1:-@}" >/dev/null 2>&1; then
+  exit 0
 fi
+
+current=$(git branch --show-current)
+while read -r branch; do
+  if [[ "$current" != "$branch" ]]; then
+    git branch --delete "$branch"
+  fi
+done < <(git branch --format='%(refname:short)' --merged "${1:-@}")
