@@ -4,7 +4,6 @@
 
 .DESCRIPTION
   The script validates the provided path, locates the corresponding module and test files, configures Pester settings, and invokes Pester.
-  It supports code coverage collection and outputs results in NUnitXml format.
   If not running in PowerShell Desktop edition, the script exits without running tests.
 
 .PARAMETER Path
@@ -13,18 +12,29 @@
 .PARAMETER LineNumber
   The line number in the test file to filter tests to. Only applicable when a single test file is specified. Default is 0 (no line filter).
 
+.PARAMETER TagFilter
+  One or more tags to filter tests by. Only tests with at least one matching tag are run. Default is no tag filter.
+
 .EXAMPLE
   ```powershell
-  .\Pester.ps1 -Path ".\MyModule.Tests.ps1"
+  .\Pester.ps1 -Path ".\Module.Tests.ps1"
+  ```
 
   Runs all tests in the specified test file.
 
 .EXAMPLE
   ```powershell
-  .\Pester.ps1 -Path ".\MyModule.Tests.ps1" -LineNumber 42
+  .\Pester.ps1 -Path ".\Module.Tests.ps1" -LineNumber 42
   ```
 
   Runs only the test at or near line 42 in the specified test file.
+
+.EXAMPLE
+  ```powershell
+  .\Pester.ps1 -Path ".\Modules"
+  ```
+
+  Runs all tests for the module.
 
 .OUTPUTS
   None
@@ -40,6 +50,8 @@ param (
   [ValidateScript({ Test-Path -LiteralPath $_ })]
   [string]
   $Path,
+  [string[]]
+  $TagFilter,
   [int]
   $LineNumber = 0
 )
@@ -72,11 +84,13 @@ if (-not (Test-Path -LiteralPath $test)) {
   throw "Test not found: $test"
 }
 $config = New-PesterConfiguration
+$config.Run.Exit = $true
+if ($TagFilter.Count -gt 0) {
+  $config.Filter.Tag = $TagFilter
+}
 if ($LineNumber -gt 0 -and @($test).Count -eq 1) {
   $config.Filter.Line = "$((Resolve-Path -LiteralPath $test).Path):$($LineNumber)"
 }
-$config.Run.Path = (Resolve-Path -LiteralPath $test).Path
-$config.TestResult.OutputFormat = 'NUnitXml'
-$config.CodeCoverage.OutputFormat = 'JaCoCo'
 $config.CodeCoverage.Path = (Resolve-Path -LiteralPath $module).Path
+$config.TestResult.Enabled = $true
 Invoke-Pester -Configuration $config

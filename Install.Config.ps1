@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Installs personal configuration files and application settings.
 
@@ -287,9 +287,9 @@ Install()
 Destination($env:USERPROFILE).
 Install()
 [Installer]::new().
-Source('.\agents\skills').
-Source('.\github\agents').
-Source('.\github\instructions').
+Source('.\.agents\skills').
+Source('.\.github\agents').
+Source('.\.github\instructions').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 Copy-Item -Path ([WildcardPattern]::Escape($PSScriptRoot) | Join-Path -ChildPath '.copilot\*.json') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.copilot') -Force:$Force -PassThru
@@ -301,8 +301,8 @@ ConvertFrom-Json |
 Where-Object { -not $_.enabled } |
 ForEach-Object { apm.exe experimental enable $_.name }
 [Installer]::new().
-Source('.\apm\*.json').
-Source('.\apm\*.yml').
+Source('.\.apm\*.json').
+Source('.\.apm\*.yml').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.apm')).
 Install()
 apm.exe install --global
