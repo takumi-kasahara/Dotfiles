@@ -170,7 +170,7 @@
 # https://git-scm.com/docs/git-hook
 [hook "prune-branch"]
   event = post-checkout
-  command = git-prune-branch.sh "$2"
+  command = git-prune-branch.sh
 [hook "reject-commit"]
   event = pre-commit
   command = git-reject-commit.sh

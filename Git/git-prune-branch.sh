@@ -14,17 +14,20 @@ shopt -s nullglob
 shopt -s shift_verbose
 
 # https://git-scm.com/docs/githooks#_post_checkout
+if [[ "$3" != "1" ]]; then
+  exit 0
+fi
+if ! git symbolic-ref --quiet HEAD >/dev/null 2>&1; then
+  exit 0
+fi
+
 for remote in $(git remote); do
   git branch --delete-merged "$remote"
 done
-
-if ! git symbolic-ref --short "${1:-@}" >/dev/null 2>&1; then
-  exit 0
-fi
 
 current=$(git branch --show-current)
 while read -r branch; do
   if [[ "$current" != "$branch" ]]; then
     git branch --delete "$branch"
   fi
-done < <(git branch --format='%(refname:short)' --merged "${1:-@}")
+done < <(git branch --format='%(refname:short)' --merged "$2")
