@@ -40,4 +40,4 @@ while read -r commit; do
     printf 'fatal: unverified commit (%s) detected.\n' "$commit" >&2
     exit 1
   fi
-done < <(git rev-list '@{push}'..HEAD)
+done < <(git rev-list '@{push}'..@)
