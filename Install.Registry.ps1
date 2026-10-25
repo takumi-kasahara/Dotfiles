@@ -1,6 +1,16 @@
+<#
+.SYNOPSIS
+  Imports registry settings and runs configuration scripts.
+
+.DESCRIPTION
+  Imports all *.reg files under Windows\Settings recursively and runs all *.bat scripts under Windows\Scripts.
+  Also copies user international settings to the welcome screen and new user profile, then restarts Explorer.
+
+.NOTES
+  Requires administrator privileges to import registry settings and modify system configuration.
+#>
 [CmdletBinding()]
 param ()
-
 Set-StrictMode -Version Latest
 Set-Location -LiteralPath $PSScriptRoot
 

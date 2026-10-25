@@ -16,6 +16,7 @@ if errorlevel 1 (
 )
 
 :process
+pwsh -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File "Environment.ps1"
 pwsh -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File "Install.Config.ps1" -SymLink -Force
 pwsh -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File "Install.Registry.ps1"
 
