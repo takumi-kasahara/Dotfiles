@@ -422,9 +422,9 @@ user_pref("network.http.idempotencyKey.enabled", true);                       /*
 user_pref("security.integrity_policy.stylesheet.enabled", true);              /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#security.integrity_policy.stylesheet.enabled} */
 // #endregion
 // #region Firefox Nightly
-user_pref("browser.ipProtection.autoRestoreEnabled", true);
-user_pref("browser.ipProtection.autoStartEnabled", true);
-user_pref("browser.ipProtection.autoStartPrivateEnabled", true);
+user_pref("browser.ipProtection.autoRestoreEnabled", false);
+user_pref("browser.ipProtection.autoStartEnabled", false);
+user_pref("browser.ipProtection.autoStartPrivateEnabled", false);
 user_pref("browser.ipProtection.enabled", true);
 user_pref("browser.ipProtection.features.autoStart", true);
 user_pref("browser.ipProtection.userEnableCount", 0);
