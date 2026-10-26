@@ -98,14 +98,12 @@
   rescue = !git l --all $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
   bleach = !git reflog expire --verbose --expire=now --all && git gc --prune=now --aggressive && git prune --verbose --expire=now
   # https://git-scm.com/docs/git-difftool
-  windiff = difftool --dir-diff --tool winmerge
-  d = windiff
+  d = difftool --dir-diff --tool winmerge
   dc = d --cached
   dp = "!_() { git d \"${1:-@}~\" \"${1:-@}\"; }; _"
   du = d '@{upstream}'
   # https://git-scm.com/docs/git-mergetool
-  winmerge = mergetool --tool winmerge
-  m = winmerge
+  m = mergetool --tool winmerge
   # https://git-scm.com/docs/git-revert
   rv = revert
   rvn = rv --no-commit

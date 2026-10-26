@@ -24,7 +24,6 @@ Refer to the Office Scripts documentation on Microsoft Learn to create or update
    - **Unsupported**: no Office Scripts equivalent (for example, VBA `MsgBox` with Yes/No buttons, file picker dialogs).
 3. Verify APIs using Microsoft Learn before coding.
 4. Implement script:
-5. Compile with `Compile.OfficeScripts.ps1` to update `.osts` outputs.
 
 ### Basic `main` Function Example
 
@@ -151,8 +150,8 @@ When parameters/return types change, the "Run script" action in Power Automate m
 
 - Office Scripts source: `Office Scripts/*.ts`
 - Generated artifact: `Office Scripts/*.osts`
-- Compile entrypoint: [`Compile.OfficeScripts.ps1`](./scripts/Compile.OfficeScripts.ps1)
-- Decompile entrypoint: [`Decompile.OfficeScripts.ps1`](./scripts/Decompile.OfficeScripts.ps1)
+- Compile entrypoint: [Compile.OfficeScripts.ps1](./scripts/Compile.OfficeScripts.ps1)
+- Decompile entrypoint: [Decompile.OfficeScripts.ps1](./scripts/Decompile.OfficeScripts.ps1)
 
 ## References
 

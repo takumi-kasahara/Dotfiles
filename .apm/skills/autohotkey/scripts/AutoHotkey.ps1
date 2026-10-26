@@ -37,7 +37,7 @@
 
 .EXAMPLE
   ```powershell
-    powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
+  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
   ```
 
   Runs the specified AutoHotkey script with additional switches passed to AutoHotkey.exe before the script path, and additional arguments passed to AutoHotkey.exe after the script path.

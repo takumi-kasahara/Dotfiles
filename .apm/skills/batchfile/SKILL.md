@@ -74,8 +74,8 @@ Additional rules:
 
 ### 1. Template scripts
 
-- [script.bat](./scripts/script.bat)
-- [script.runas.bat](./scripts/script.runas.bat)
+- [script.bat](./assets/script.bat)
+- [script.runas.bat](./assets/script.runas.bat)
 
 ### 2. Script idioms
 

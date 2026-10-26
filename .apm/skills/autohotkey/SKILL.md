@@ -155,7 +155,7 @@ backslash := Chr(92)  ; backslash
 
 ## Running Scripts
 
-- Use [AutoHotkey.ps1](./scripts/AutoHotkey.ps1) from PowerShell:
+- Use [AutoHotkey.ps1](./assets/AutoHotkey.ps1) from PowerShell:
 
   ```powershell
   powershell.exe -NoLogo -NoProfile -File '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1' -LiteralPath '.\Script.ahk'

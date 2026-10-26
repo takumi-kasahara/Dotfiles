@@ -4,13 +4,25 @@
   command = npm run lint && git update-index --again
 [hook "parse-build"]
   event = pre-commit
-  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Parse.ps1' -Path '.'
+  command = .apm/skills/powershell-7/scripts/Parse.bat -Path '.'
 [hook "analyze-build"]
   event = pre-commit
-  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Analyze.ps1' -Path '.' && git update-index --again
+  command = .apm/skills/powershell-7/scripts/Analyze.bat -Path '.' && git update-index --again
 [hook "parse-apm"]
   event = pre-commit
-  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Parse.ps1' -Path '.apm' -Recurse
+  command = .apm/skills/powershell-7/scripts/Parse.bat -Path '.apm' -Recurse
 [hook "analyze-apm"]
   event = pre-commit
-  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Analyze.ps1' -Path '.apm' -Recurse && git update-index --again
+  command = .apm/skills/powershell-7/scripts/Analyze.bat -Path '.apm' -Recurse && git update-index --again
+[hook "parse-profile-5"]
+  event = pre-commit
+  command = .apm/skills/powershell-5/scripts/Parse.bat -Path 'Windows/PowerShell.5.ps1'
+[hook "analyze-profile-5"]
+  event = pre-commit
+  command = .apm/skills/powershell-5/scripts/Analyze.bat -Path 'Windows/PowerShell.5.ps1' && git update-index --again
+[hook "parse-profile-7"]
+  event = pre-commit
+  command = .apm/skills/powershell-7/scripts/Parse.bat -Path 'Windows/PowerShell.7.ps1'
+[hook "analyze-profile-7"]
+  event = pre-commit
+  command = .apm/skills/powershell-7/scripts/Analyze.bat -Path 'Windows/PowerShell.7.ps1' && git update-index --again

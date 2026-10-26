@@ -51,7 +51,7 @@ param (
   [string]
   $Path,
   [string[]]
-  $TagFilter,
+  $TagFilter = @(),
   [int]
   $LineNumber = 0
 )
