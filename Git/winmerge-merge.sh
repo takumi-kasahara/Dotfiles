@@ -15,7 +15,7 @@ shopt -s shift_verbose
 
 if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" ]]; then
   echo "Usage: $0 <LOCAL> <REMOTE> <BASE> <MERGED>" >&2
-  exit 64
+  exit 1
 fi
 
 WinMerge='C:/Program Files/WinMerge/WinMergeU.exe'
@@ -33,7 +33,7 @@ else
 fi
 if [[ ! -f "$WinMerge" ]]; then
   echo 'fatal: WinMerge not found.' >&2
-  exit 69
+  exit 1
 fi
 
 "$WinMerge" -e -u -x -r -wl -wm -fr -ar -dl "Base" -dm "Theirs" -dr "Mine" "$BASE" "$REMOTE" "$LOCAL" -o "$MERGED"
