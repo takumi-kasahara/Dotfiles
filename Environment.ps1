@@ -25,13 +25,13 @@ reg.exe export 'HKCU\Environment' ($env:TEMP | Join-Path -ChildPath "User.$(Get-
     ForEach-Object { $_.Trim() -replace '\\$' } |
     Where-Object { ![string]::IsNullOrEmpty($_) } |
     Where-Object {
-      if ((Test-Path -LiteralPath $_) -or (Test-Path -LiteralPath (Expand-EnvironmentVariable -InputString $_))) {
+      if ((Test-Path -LiteralPath $_) -or (Test-Path -LiteralPath ([Environment]::ExpandEnvironmentVariables($_)))) {
         return $true
       }
       Write-Warning -Message "$_ not found."
       return $false
     } |
-    ForEach-Object { Expand-EnvironmentVariable -InputString $_ }
+    ForEach-Object { [Environment]::ExpandEnvironmentVariables($_) }
   ) | Sort-Object -Unique
   $added = @(
     "$env:LOCALAPPDATA\Programs"
@@ -52,13 +52,13 @@ reg.exe export 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environmen
     ForEach-Object { $_.Trim() -replace '\\$' } |
     Where-Object { ![string]::IsNullOrEmpty($_) } |
     Where-Object {
-      if ((Test-Path -LiteralPath $_) -or (Test-Path -LiteralPath (Expand-EnvironmentVariable -InputString $_))) {
+      if ((Test-Path -LiteralPath $_) -or (Test-Path -LiteralPath ([Environment]::ExpandEnvironmentVariables($_)))) {
         return $true
       }
       Write-Warning -Message "$_ not found."
       return $false
     } |
-    ForEach-Object { Expand-EnvironmentVariable -InputString $_ }
+    ForEach-Object { [Environment]::ExpandEnvironmentVariables($_) }
   ) | Sort-Object -Unique
   $added = @(
     '7z.exe'

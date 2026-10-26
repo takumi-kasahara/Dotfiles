@@ -7,6 +7,13 @@
   },
   "tasks": [
     {
+      "label": "hook:pre-commit",
+      "type": "shell",
+      "command": "git",
+      "args": ["hook", "run", "pre-commit"],
+      "problemMatcher": []
+    },
+    {
       "label": "apm:install",
       "type": "shell",
       "command": "apm",

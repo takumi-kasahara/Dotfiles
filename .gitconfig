@@ -2,3 +2,15 @@
 [hook "lint"]
   event = pre-commit
   command = npm run lint && git update-index --again
+[hook "parse-build"]
+  event = pre-commit
+  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Parse.ps1' -Path '.'
+[hook "analyze-build"]
+  event = pre-commit
+  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Analyze.ps1' -Path '.' && git update-index --again
+[hook "parse-apm"]
+  event = pre-commit
+  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Parse.ps1' -Path '.apm' -Recurse
+[hook "analyze-apm"]
+  event = pre-commit
+  command = pwsh.exe -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File '.apm/skills/powershell-7/scripts/Analyze.ps1' -Path '.apm' -Recurse && git update-index --again

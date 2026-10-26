@@ -134,7 +134,6 @@ Use this checklist by section:
 
 4. Add clear, user-friendly terminating errors for invalid or unsupported parameter values, including valid alternatives.
 
-- Follow parameter naming and attribute usage conventions from the official PowerShell docs: https://learn.microsoft.com/powershell/.
 - If using `[CmdletBinding(SupportsShouldProcess)]`, always implement `-WhatIf`/`-Confirm` behavior.
 - Refer to existing similar functions and tests.
 - If a parameter value is invalid or unsupported, throw a clear terminating error that states the issue and valid alternatives.
@@ -203,7 +202,7 @@ Use this checklist by section:
 ### Cmdlet Resources
 
 - See the [cmdlet reference](./references/powershell-cmdlet.md).
-- Use [ParseFile.ps1](./scripts/ParseFile.ps1) to parse PowerShell files.
+- Use [Parse.ps1](./scripts/Parse.ps1) to parse PowerShell files.
 - Use [ScriptAnalyzer.ps1](./scripts/ScriptAnalyzer.ps1) for PSScriptAnalyzer.
 
 ## Comment-Based Help
@@ -215,7 +214,7 @@ Follow these steps in order:
 3. Supporting sections: add or refresh `.EXAMPLE`, `.OUTPUTS`, and `.NOTES`.
 4. Validation: verify with `Get-Help [-Path <Path>] -Name <Name> -Full`.
 
-- Follow the official PowerShell comment-based help documentation: https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help.
+- Follow the official PowerShell comment-based help documentation: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help.
 - `.SYNOPSIS` should describe the function purpose concisely.
 - `.DESCRIPTION` should describe behavior details, notes, and overall `ShouldProcess` behavior.
 - `.PARAMETER <Name>` should match the parameter definition in the function signature, including order, type, and required/optional behavior.
@@ -227,11 +226,9 @@ Follow these steps in order:
     - `[OutputType([string[]])]`: `.OUTPUTS System.String[]`
     - `[OutputType([System.IO.FileInfo])]`: `.OUTPUTS System.IO.FileInfo`
 - `.NOTES` should include supplementary information or caveats.
-- After editing, always verify output with `Get-Help [-Path <Path>] -Name <Name> -Full`.
 
 ### Help Resource
 
-- Use [Help.ps1](./scripts/Help.ps1) to automate verification.
 - See the [comment-based help reference](./references/comment-based-help.md).
 
 ## Pester v6 Tests

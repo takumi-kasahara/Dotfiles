@@ -4,7 +4,7 @@
     "prefix": "template-script",
     "body": [
       "[CmdletBinding()]",
-      "param ()\n",
+      "param ()",
       "Set-StrictMode -Version Latest",
       "Set-Location -LiteralPath \\$PSScriptRoot",
       "$0"
@@ -19,7 +19,7 @@
       "\t[ValidateScript({ Test-Path -LiteralPath \\$_ })]",
       "\t[string[]]",
       "\t\\$Path",
-      ")\n",
+      ")",
       "Set-StrictMode -Version Latest",
       "Set-Location -LiteralPath \\$PSScriptRoot",
       "$0"

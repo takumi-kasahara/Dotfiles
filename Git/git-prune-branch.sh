@@ -14,7 +14,10 @@ shopt -s nullglob
 shopt -s shift_verbose
 
 # https://git-scm.com/docs/githooks#_post_checkout
-if [[ "$3" != "1" ]]; then
+ante_head=${1:-@}
+post_head=${2:-@}
+branch_checkout=${3:-1}
+if [[ "$branch_checkout" != "1" ]]; then
   exit 0
 fi
 if ! git symbolic-ref --quiet HEAD >/dev/null 2>&1; then
@@ -30,4 +33,4 @@ while read -r branch; do
   if [[ "$current" != "$branch" ]]; then
     git branch --delete "$branch"
   fi
-done < <(git branch --format='%(refname:short)' --merged "$2")
+done < <(git branch --format='%(refname:short)' --merged "$post_head")
