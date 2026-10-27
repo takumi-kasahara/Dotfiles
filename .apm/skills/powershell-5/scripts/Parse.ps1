@@ -19,7 +19,8 @@
 .PARAMETER Recurse
   Searches the specified path recursively.
 
-.EXAMPLE
+.PARAMETER OutputPath
+  Path to the JSON file to write the parse errors. Defaults to errors.json in the current directory.
   ```powershell
   .\Parse.ps1 -Path .\Script.ps1
   ```
@@ -49,7 +50,9 @@ param (
   [string[]]
   $Exclude,
   [switch]
-  $Recurse
+  $Recurse,
+  [string]
+  $OutputPath = 'errors.json'
 )
 if ($PSEdition -ne 'Desktop') {
   return
@@ -93,11 +96,16 @@ ForEach-Object {
     return $errors
   }
 }
-$results | ConvertTo-Json -Depth 100
 if ($results) {
-  "$($results.Length) parse errors found."
-  exit $results.Length
+  if (-not [System.IO.Path]::IsPathRooted($OutputPath)) {
+    $OutputPath = (Get-Location).Path | Join-Path -ChildPath $OutputPath
+  }
+  "$($results.Length) parse errors found." | Out-Host
+  $results |
+  ConvertTo-Json -Depth 100 |
+  Out-File -FilePath $OutputPath
+  exit 1
 } else {
-  '0 parse errors found.'
+  '0 parse errors found.' | Out-Host
   exit 0
 }

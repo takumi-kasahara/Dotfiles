@@ -4,7 +4,7 @@
 
 .DESCRIPTION
   Installs and imports PSScriptAnalyzer if needed, analyzes the given path(s) using the specified settings file,
-  and outputs results as objects by default, or as JSON when -AsJson is specified.
+  and outputs results as objects and writes JSON to the specified output path.
 
 .PARAMETER Path
   One or more paths to analyze. Wildcard characters are treated as literals and are not expanded.
@@ -15,8 +15,8 @@
 .PARAMETER Recurse
   Analyzes all files under the specified path recursively.
 
-.PARAMETER AsJson
-  Outputs the analysis results as a JSON string. When omitted, outputs the raw results.
+.PARAMETER OutputPath
+  Path to the JSON file to write the analysis results. Defaults to violations.json.
 
 .EXAMPLE
   ```powershell
@@ -27,7 +27,7 @@
 
 .EXAMPLE
   ```powershell
-  .\Analyze.ps1 -Path .\Script.ps1 -AsJson
+  .\Analyze.ps1 -Path .\Script.ps1 -OutputPath .\violations.json
   ```
 
   Analyzes the specified PowerShell script and outputs results as JSON.
@@ -54,8 +54,8 @@ param(
   $Recurse,
   [string]
   $Settings = 'PSScriptAnalyzerSettings.psd1',
-  [switch]
-  $AsJson
+  [string]
+  $OutputPath = 'violations.json'
 )
 if ($PSEdition -ne 'Core') {
   return
@@ -63,15 +63,21 @@ if ($PSEdition -ne 'Core') {
 Set-StrictMode -Version Latest
 
 if (-not (Get-Module -ListAvailable -Name PSScriptAnalyzer)) {
-  Install-Module -Name PSScriptAnalyzer -Force
+  Install-Module -Name PSScriptAnalyzer
 }
 if (-not [Path]::IsPathRooted($Settings)) {
-  $Settings = $Settings = $PSScriptRoot | Join-Path -ChildPath 'PSScriptAnalyzerSettings.psd1'
+  $Settings = (Get-Location).Path | Join-Path -ChildPath $Settings
 }
-Import-Module PSScriptAnalyzer -Force
+if (-not (Test-Path -LiteralPath $Settings)) {
+  $Settings = $null
+}
+Import-Module PSScriptAnalyzer
 $results = Invoke-ScriptAnalyzer -EnableExit -Fix -Path ([WildcardPattern]::Escape($Path)) -Recurse:$Recurse -Settings $Settings -ReportSummary
-if ($AsJson) {
-  $results | ConvertTo-Json -Depth 100
-} else {
-  $results
+if ($results) {
+  if (-not [Path]::IsPathRooted($OutputPath)) {
+    $OutputPath = (Get-Location).Path | Join-Path -ChildPath $OutputPath
+  }
+  $results |
+  ConvertTo-Json -Depth 100 |
+  Out-File -FilePath $OutputPath
 }
