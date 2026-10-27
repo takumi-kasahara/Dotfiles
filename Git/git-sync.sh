@@ -17,12 +17,12 @@ shopt -s shift_verbose
 
 if ! command -v touch >/dev/null 2>&1; then
   printf 'fatal: touch not found.\n' >&2
-  exit 69
+  exit 1
 fi
 
 repo=$(git rev-parse --show-toplevel --show-superproject-working-tree | head -1)
 if [[ -z "$repo" ]]; then
-  exit 64
+  exit 1
 fi
 echo "$repo"
 git ls-files -z | while IFS= read -r -d '' file; do

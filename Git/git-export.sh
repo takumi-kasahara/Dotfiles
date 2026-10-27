@@ -15,7 +15,7 @@ shopt -s shift_verbose
 
 repo=$(basename -- "$(git rev-parse --show-toplevel --show-superproject-working-tree | head -1)")
 if [[ -z "$repo" ]]; then
-  exit 64
+  exit 1
 fi
 hash=$(git rev-parse --short "${1:-@}")
 tag=$(git describe --tags --exact-match "${1:-@}" 2>/dev/null || true)
