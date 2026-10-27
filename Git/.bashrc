@@ -23,4 +23,8 @@ if [ -f "$HOME/.bash_aliases" ]; then
   . "$HOME/.bash_aliases"
 fi
 
+if [ -f "$HOME/completion.bash" ]; then
+  . "$HOME/completion.bash"
+fi
+
 PS1='\[\e[1;32m\]\u@\h \[\e[1;35m\]$MSYSTEM \[\e[1;33m\]\w\[\e[1;36m\]`__git_ps1`\[\e[0m\]\n$ \[\]'

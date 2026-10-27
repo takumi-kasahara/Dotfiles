@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "prettier --write . && markdownlint-cli2 --fix ."
+    "lint": "prettier --write . && markdownlint-cli2 --fix . && uvx ruff check --fix ."
   },
   "devDependencies": {
     "markdownlint-cli2": "^0.24.0",
