@@ -79,5 +79,5 @@ if ($results) {
   }
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath
+  Out-File -FilePath $OutputPath -Encoding utf8
 }
