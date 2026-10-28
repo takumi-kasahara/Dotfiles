@@ -103,7 +103,7 @@ if ($results) {
   "$($results.Length) parse errors found." | Out-Host
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath
+  Out-File -FilePath $OutputPath -Encoding utf8
   exit 1
 } else {
   '0 parse errors found.' | Out-Host
