@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Runs Pester tests for a specified script or module.
 
@@ -14,6 +14,12 @@
 
 .PARAMETER TagFilter
   One or more tags to filter tests by. Only tests with at least one matching tag are run. Default is no tag filter.
+
+.PARAMETER ExcludeTagFilter
+  One or more tags to exclude tests by. Tests with at least one matching tag are skipped. Default is no tag exclusion.
+
+.PARAMETER PassThru
+  If specified, returns the Pester run result object instead of suppressing output. Default is no pass-through.
 
 .EXAMPLE
   ```powershell
@@ -52,8 +58,12 @@ param (
   $Path,
   [string[]]
   $TagFilter = @(),
+  [string[]]
+  $ExcludeTagFilter = @(),
   [int]
-  $LineNumber = 0
+  $LineNumber = 0,
+  [switch]
+  $PassThru
 )
 if ($PSEdition -ne 'Desktop') {
   return
@@ -62,12 +72,16 @@ Set-StrictMode -Version Latest
 
 $ext = [Path]::GetExtension($Path)
 if (Test-Path -LiteralPath $Path -PathType Container) {
-  $module = Get-ChildItem -Path "$([WildcardPattern]::Escape($Path))\*" -File -Include '*.ps1', '*.psm1' | Where-Object { $_.Name -notlike '*.Tests.ps1' }
+  $module = Get-ChildItem -Path "$([WildcardPattern]::Escape($Path))\*" -File -Include '*.ps1', '*.psm1' |
+  Where-Object { $_.Name -notlike '*.Tests.ps1' }
   $test = Get-ChildItem -LiteralPath $Path -File -Filter '*.Tests.ps1'
 } elseif ($ext -eq '.ps1') {
   $parent = [WildcardPattern]::Escape($Path) | Split-Path -Parent
   $base = [Path]::GetFileNameWithoutExtension($Path) -replace '\.Tests$', [string]::Empty
   $module = $parent | Join-Path -ChildPath "$base.ps1"
+  if (-not (Test-Path -LiteralPath $module)) {
+    $module = $parent | Join-Path -ChildPath "$base.psm1"
+  }
   $test = $parent | Join-Path -ChildPath "$base.Tests.ps1"
 } elseif ($ext -eq '.psm1') {
   $parent = [WildcardPattern]::Escape($Path) | Split-Path -Parent
@@ -85,8 +99,13 @@ if (-not (Test-Path -LiteralPath $test)) {
 }
 $config = New-PesterConfiguration
 $config.Run.Exit = $true
+$config.Run.Path = (Resolve-Path -LiteralPath $test).Path
+$config.Run.PassThru = $PassThru.IsPresent
 if ($TagFilter.Count -gt 0) {
   $config.Filter.Tag = $TagFilter
+}
+if ($ExcludeTagFilter.Count -gt 0) {
+  $config.Filter.ExcludeTag = $ExcludeTagFilter
 }
 if ($LineNumber -gt 0 -and @($test).Count -eq 1) {
   $config.Filter.Line = "$((Resolve-Path -LiteralPath $test).Path):$($LineNumber)"

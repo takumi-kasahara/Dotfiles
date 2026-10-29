@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Runs PSScriptAnalyzer on the specified path.
 
@@ -27,13 +27,6 @@
 
 .EXAMPLE
   ```powershell
-  .\Analyze.ps1 -Path .\Script.ps1 -OutputPath .\violations.json
-  ```
-
-  Analyzes the specified PowerShell script and outputs results as JSON.
-
-.EXAMPLE
-  ```powershell
   .\Analyze.ps1 -Path .\Modules -Recurse
   ```
 
@@ -42,6 +35,7 @@
 .NOTES
   Requires PowerShell 5.
 #>
+using namespace System.Globalization
 using namespace System.IO
 
 [CmdletBinding()]
@@ -79,5 +73,12 @@ if ($results) {
   }
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath -Encoding utf8
+  ForEach-Object {
+    [Regex]::Replace(
+      $_,
+      '\\u(?<Value>[a-zA-Z0-9]{4})',
+      { param($m) ([char]([int]::Parse($m.Groups['Value'].Value, [NumberStyles]::HexNumber))).ToString() }
+    )
+  } |
+  Out-File -LiteralPath $OutputPath -Encoding utf8
 }

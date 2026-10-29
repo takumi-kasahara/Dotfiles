@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Parses PowerShell files and reports syntax errors.
 
@@ -37,6 +37,7 @@
 .NOTES
   Requires PowerShell 5.
 #>
+using namespace System.Globalization
 using namespace System.Management.Automation.Language
 
 [CmdletBinding()]
@@ -66,8 +67,12 @@ ForEach-Object {
       LiteralPath = $_.FullName
       Recurse     = $Recurse.IsPresent
     }
-    if ($Include) { $arguments['Include'] = $Include }
-    if ($Exclude) { $arguments['Exclude'] = $Exclude }
+    if ($Include) {
+      $arguments['Include'] = $Include
+    }
+    if ($Exclude) {
+      $arguments['Exclude'] = $Exclude
+    }
     Get-ChildItem @arguments |
     Where-Object -Property Extension -In '.ps1', '.psm1', '.psd1'
   } elseif ($_.Extension -in '.ps1', '.psm1', '.psd1') {
@@ -75,16 +80,22 @@ ForEach-Object {
     if ($Include) {
       $includeMatch = $false
       foreach ($pattern in $Include) {
-        if ($_.Name -like $pattern) { $includeMatch = $true; break }
+        if ($_.Name -like $pattern) {
+          $includeMatch = $true; break
+        }
       }
     }
     $excludeMatch = $false
     if ($Exclude) {
       foreach ($pattern in $Exclude) {
-        if ($_.Name -like $pattern) { $excludeMatch = $true; break }
+        if ($_.Name -like $pattern) {
+          $excludeMatch = $true; break
+        }
       }
     }
-    if ($includeMatch -and -not $excludeMatch) { $_ }
+    if ($includeMatch -and -not $excludeMatch) {
+      $_
+    }
   }
 }
 $results = $items |
@@ -103,7 +114,14 @@ if ($results) {
   "$($results.Length) parse errors found." | Out-Host
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath -Encoding utf8
+  ForEach-Object {
+    [Regex]::Replace(
+      $_,
+      '\\u(?<Value>[a-zA-Z0-9]{4})',
+      { param($m) ([char]([int]::Parse($m.Groups['Value'].Value, [NumberStyles]::HexNumber))).ToString() }
+    )
+  } |
+  Out-File -LiteralPath $OutputPath -Encoding utf8
   exit 1
 } else {
   '0 parse errors found.' | Out-Host

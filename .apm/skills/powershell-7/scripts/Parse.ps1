@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Parses PowerShell files and reports syntax errors.
 
@@ -66,8 +66,12 @@ ForEach-Object {
       LiteralPath = $_.FullName
       Recurse     = $Recurse.IsPresent
     }
-    if ($Include) { $arguments['Include'] = $Include }
-    if ($Exclude) { $arguments['Exclude'] = $Exclude }
+    if ($Include) {
+      $arguments['Include'] = $Include
+    }
+    if ($Exclude) {
+      $arguments['Exclude'] = $Exclude
+    }
     Get-ChildItem @arguments |
     Where-Object -Property Extension -In '.ps1', '.psm1', '.psd1'
   } elseif ($_.Extension -in '.ps1', '.psm1', '.psd1') {
@@ -75,16 +79,22 @@ ForEach-Object {
     if ($Include) {
       $includeMatch = $false
       foreach ($pattern in $Include) {
-        if ($_.Name -like $pattern) { $includeMatch = $true; break }
+        if ($_.Name -like $pattern) {
+          $includeMatch = $true; break
+        }
       }
     }
     $excludeMatch = $false
     if ($Exclude) {
       foreach ($pattern in $Exclude) {
-        if ($_.Name -like $pattern) { $excludeMatch = $true; break }
+        if ($_.Name -like $pattern) {
+          $excludeMatch = $true; break
+        }
       }
     }
-    if ($includeMatch -and -not $excludeMatch) { $_ }
+    if ($includeMatch -and -not $excludeMatch) {
+      $_
+    }
   }
 }
 $results = $items |
@@ -103,7 +113,7 @@ if ($results) {
   "$($results.Length) parse errors found." | Out-Host
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath
+  Out-File -LiteralPath $OutputPath
   exit 1
 } else {
   '0 parse errors found.' | Out-Host

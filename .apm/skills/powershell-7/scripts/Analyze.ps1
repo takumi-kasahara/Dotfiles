@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Runs PSScriptAnalyzer on the specified path.
 
@@ -24,13 +24,6 @@
   ```
 
   Analyzes the specified PowerShell script and outputs PSScriptAnalyzer results.
-
-.EXAMPLE
-  ```powershell
-  .\Analyze.ps1 -Path .\Script.ps1 -OutputPath .\violations.json
-  ```
-
-  Analyzes the specified PowerShell script and outputs results as JSON.
 
 .EXAMPLE
   ```powershell
@@ -79,5 +72,5 @@ if ($results) {
   }
   $results |
   ConvertTo-Json -Depth 100 |
-  Out-File -FilePath $OutputPath
+  Out-File -LiteralPath $OutputPath
 }
