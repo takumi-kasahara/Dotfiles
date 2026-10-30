@@ -8,12 +8,16 @@
   Output from each script is streamed to the console.
 
 .PARAMETER Path
-  One or more paths to AutoHotkey script files. Wildcards are supported.
-  This parameter accepts pipeline input and property-name binding.
+  One or more file paths to AutoHotkey script files.
 
-.PARAMETER LiteralPath
-  One or more literal paths to AutoHotkey script files. Wildcards are not supported.
-  This parameter accepts pipeline input by property name and has the aliases PSPath and LP.
+.PARAMETER Include
+  Specifies glob patterns to include. Only items matching at least one pattern are considered.
+
+.PARAMETER Exclude
+  Specifies glob patterns to exclude. Items matching any pattern are excluded.
+
+.PARAMETER Recurse
+  Searches the specified path recursively.
 
 .PARAMETER Switches
   Additional switches to pass to AutoHotkey.exe. These are inserted before the script path.
@@ -23,21 +27,21 @@
 
 .EXAMPLE
   ```powershell
-  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk
+  .\AutoHotkey.ps1 -Path .\Script.ahk
   ```
 
-  Runs the test suite from a clean PowerShell session.
+  Runs the specified AutoHotkey script from a clean PowerShell session.
 
 .EXAMPLE
   ```powershell
-  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -Path .\Tests\*.ahk
+  .\AutoHotkey.ps1 -Path .\Tests -Recurse
   ```
 
-  Runs all AutoHotkey scripts in the specified directory.
+  Runs all AutoHotkey scripts under the specified directory recursively.
 
 .EXAMPLE
   ```powershell
-  powershell.exe -NoLogo -NoProfile -File AutoHotkey.ps1 -LiteralPath .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
+  .\AutoHotkey.ps1 -Path .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
   ```
 
   Runs the specified AutoHotkey script with additional switches passed to AutoHotkey.exe before the script path, and additional arguments passed to AutoHotkey.exe after the script path.
@@ -48,53 +52,61 @@
 .OUTPUTS
   None.
 #>
-[CmdletBinding(DefaultParameterSetName = 'PathSet', SupportsShouldProcess)]
+[CmdletBinding()]
 param (
-  [Parameter(Mandatory, ParameterSetName = 'PathSet', Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-  [SupportsWildcards()]
-  [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
+  [Parameter(Mandatory, Position = 0)]
+  [ValidateScript({ Test-Path -LiteralPath $_ })]
   [string[]]
   $Path,
-  [Alias('PSPath', 'LP')]
-  [Parameter(Mandatory, ParameterSetName = 'LiteralPathSet', ValueFromPipelineByPropertyName)]
-  [ValidateScript({ Test-Path -LiteralPath $_ -PathType Leaf })]
   [string[]]
-  $LiteralPath,
+  $Include,
+  [string[]]
+  $Exclude,
+  [switch]
+  $Recurse,
   [string[]]
   $Switches = @('/ErrorStdOut'),
   [string[]]
   [Parameter(ValueFromRemainingArguments)]
   $ArgumentList
 )
-begin {
-  Set-StrictMode -Version Latest
+if ($PSEdition -ne 'Desktop') {
+  return
+}
+Set-StrictMode -Version Latest
 
-  $ahk = @(where.exe AutoHotkey.exe)[0]
-  if (-not $ahk) {
-    $ahk = @(where.exe /r $env:ProgramFiles AutoHotkey.exe 2>$null)[0]
-  }
-  if (-not $ahk) {
-    throw 'AutoHotkey.exe not found.'
-  }
+$ahk = @(where.exe AutoHotkey.exe)[0]
+if (-not $ahk) {
+  $ahk = @(where.exe /r $env:ProgramFiles AutoHotkey.exe 2>$null)[0]
 }
-process {
-  $items = @(
-    switch -Exact -CaseSensitive ($PSCmdlet.ParameterSetName) {
-      'PathSet' {
-        Get-Item -Path $Path -Force
-      }
-      'LiteralPathSet' {
-        Get-Item -LiteralPath $LiteralPath -Force
-      }
+if (-not $ahk) {
+  throw 'AutoHotkey.exe not found.'
+}
+
+$items = Get-Item -LiteralPath $Path -Force |
+ForEach-Object {
+  if ($_.PSIsContainer) {
+    $arguments = @{
+      LiteralPath = $_.FullName
+      Recurse     = $Recurse.IsPresent
     }
-  )
-  $result = $items |
-  ForEach-Object {
-    & $ahk @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
-    return $LASTEXITCODE
+    if ($Include) {
+      $arguments['Include'] = $Include
+    }
+    if ($Exclude) {
+      $arguments['Exclude'] = $Exclude
+    }
+    Get-ChildItem @arguments |
+    Where-Object -Property Extension -In '.ahk'
+  } elseif ($_.Extension -in '.ahk') {
+    $_
   }
 }
-end {
-  $m = Measure-Object -InputObject $result -Maximum -Minimum
-  exit $m.Maximum -gt 0 -or $m.Minimum -lt 0
+$result = $items |
+ForEach-Object {
+  "Running:`t$_" | Out-Host
+  & $ahk @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
+  return $LASTEXITCODE
 }
+$m = Measure-Object -InputObject $result -Maximum -Minimum
+exit $m.Maximum -gt 0 -or $m.Minimum -lt 0
