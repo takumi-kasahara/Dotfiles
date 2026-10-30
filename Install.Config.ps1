@@ -410,9 +410,9 @@ Destination($ps7).
 Install()
 if ((Get-Command -Name gh.exe -ErrorAction SilentlyContinue)) {
   $completion = gh.exe completion --shell powershell | Out-String
-  $completion | Out-File -FilePath ($ps5 | Join-Path -ChildPath 'completion.ps1')
-  $completion | Out-File -FilePath ($ps7 | Join-Path -ChildPath 'completion.ps1')
-  gh.exe completion --shell bash | Out-File -FilePath ($env:USERPROFILE | Join-Path -ChildPath 'completion.bash')
+  $completion | Out-File -LiteralPath ($ps5 | Join-Path -ChildPath 'completion.ps1')
+  $completion | Out-File -LiteralPath ($ps7 | Join-Path -ChildPath 'completion.ps1')
+  gh.exe completion --shell bash | Out-File -LiteralPath ($env:USERPROFILE | Join-Path -ChildPath 'completion.bash')
 }
 if ($PSEdition -eq 'Core') {
   Get-ExperimentalFeature |

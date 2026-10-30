@@ -1,4 +1,4 @@
-# wsl.exe --list --online --quiet
+﻿# wsl.exe --list --online --quiet
 @{
   'Debian'         = @{
     'Folder' = 'Debian'

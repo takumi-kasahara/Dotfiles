@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Imports registry settings and runs configuration scripts.
 

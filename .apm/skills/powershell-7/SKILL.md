@@ -8,6 +8,10 @@ argument-hint: Describe the PowerShell 7.6 script or function and its expected b
 
 Guidelines for writing and editing PowerShell 7.6 scripts and modules in this repository.
 
+- [Documentation](https://learn.microsoft.com/en-us/powershell/)
+- [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
+- [PowerShell Gallery](https://www.powershellgallery.com/)
+
 ## When to Use This Skill
 
 - Writing or editing any `*.ps1` or `*.psm1` file
@@ -111,11 +115,17 @@ Do not use `+` for string concatenation.
 
 - [Join-Path](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/join-path?view=powershell-7.6)
 
-## References
+### File Content Output
 
-- [Documentation](https://learn.microsoft.com/en-us/powershell/)
-- [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
-- [PowerShell Gallery](https://www.powershellgallery.com/)
+- Use `Out-File` instead of `Set-Content` or `Add-Content`.
+  - It can both create new files and append (with `-Append`).
+  - It supports `-NoClobber` to prevent overwriting existing files.
+  - It does not take a read lock on the target file, avoiding sharing violations.
+
+#### References
+
+- [Out-File](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-7.6)
+- [about_Character_Encoding](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1)
 
 ## Cmdlet Guidelines
 

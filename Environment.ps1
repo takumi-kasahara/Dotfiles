@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Cleans and optimizes environment variables.
 
