@@ -10,8 +10,6 @@
   # https://git-scm.com/docs/git-branch
   b = branch --verbose --verbose
   bb = b --all
-  bmv = b --move
-  brm = b --delete
   # https://git-scm.com/docs/git-checkout
   co = checkout
   # https://git-scm.com/docs/git-cherry-pick
@@ -145,6 +143,8 @@
 [diff]
   algorithm = histogram   # https://git-scm.com/docs/diff-config#Documentation/diff-config.txt-diffalgorithm
   indentHeuristic = true  # https://git-scm.com/docs/diff-config#Documentation/diff-config.txt-diffindentHeuristic
+[diff "astextplain"]
+  textconv = astextplain
 # https://git-scm.com/docs/git-difftool
 [difftool]
   prompt = false
@@ -153,6 +153,11 @@
   trustExitCode = false
 [fetch]
   prune = true  # https://git-scm.com/docs/git-fetch#Documentation/git-fetch.txt-fetchprune
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [format]
   pretty = format:%C(auto)%h%x09%ai%x09%an%x09%s%d  # https://git-scm.com/docs/pretty-formats
 [gpg]

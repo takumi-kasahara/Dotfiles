@@ -13,15 +13,6 @@
   helper = manager
 [credential "https://dev.azure.com"]
   useHttpPath = true
-[diff "astextplain"]
-  textconv = astextplain
-[diff "utf-16le-bom"]
-  textconv = iconv --from-code UTF-16LE --to-code UTF-8
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [http]
   sslBackend = schannel
 [init]
