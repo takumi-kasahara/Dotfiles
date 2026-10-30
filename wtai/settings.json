@@ -56,14 +56,14 @@
       "location": "local",
       "models": [
         {
-          "id": "bonsai-2:latest",
-          "name": "bonsai-2:latest"
+          "id": "lfm3:latest",
+          "name": "lfm3:latest"
         }
       ],
       "name": "localhost"
     }
   ],
-  "customModelSelection": "custom:ollama:bonsai-2:latest",
+  "customModelSelection": "custom:ollama:lfm3:latest",
   "debugFeatures": true,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
   "delegateAgent": "copilot",
