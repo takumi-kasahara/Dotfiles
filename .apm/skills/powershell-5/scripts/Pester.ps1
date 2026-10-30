@@ -74,7 +74,7 @@ $ext = [Path]::GetExtension($Path)
 if (Test-Path -LiteralPath $Path -PathType Container) {
   $module = Get-ChildItem -Path "$([WildcardPattern]::Escape($Path))\*" -File -Include '*.ps1', '*.psm1' |
   Where-Object { $_.Name -notlike '*.Tests.ps1' }
-  $test = Get-ChildItem -LiteralPath $Path -File -Filter '*.Tests.ps1'
+  $test = Get-ChildItem -LiteralPath $Path -File -Filter '*.Tests.ps1' | Select-Object -ExpandProperty FullName
 } elseif ($ext -eq '.ps1') {
   $parent = [WildcardPattern]::Escape($Path) | Split-Path -Parent
   $base = [Path]::GetFileNameWithoutExtension($Path) -replace '\.Tests$', [string]::Empty
