@@ -41,6 +41,7 @@
   },
   // #region ai-features
   "ai-features.agentMode.enabled": true,
+  "ai-features.AiEnable.enableAI": true,
   "ai-features.anthropic.AnthropicModels": [],
   "ai-features.anthropic.serverSideCompaction": "enabled",
   "ai-features.chat.bypassModelRequirement": true,
@@ -105,6 +106,7 @@
   "powershell.buttons.showPanelMovementButtons": true,
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+  "powershell.codeFormatting.ignoreOneLineBlock": false,
   "powershell.codeFormatting.preset": "OTBS",
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
@@ -122,6 +124,7 @@
   "java.codeGeneration.generateCommentsInMarkdown": true,
   "java.codeGeneration.hashCodeEquals.useInstanceof": true,
   "java.codeGeneration.useBlocks": true,
+  "java.debug.settings.hotCodeReplace": "auto",
   "java.edit.smartSemicolonDetection.enabled": true,
   "java.codeGeneration.toString.skipNullValues": true,
   "java.inlayHints.formatParameters.enabled": true,
@@ -188,9 +191,11 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
   "javascript.inlayHints.parameterTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.preferGoToSourceDefinition": true,
   "javascript.referencesCodeLens.enabled": true,
   "javascript.referencesCodeLens.showOnAllFunctions": true,
   "javascript.suggest.completeFunctionCalls": true,
@@ -204,9 +209,11 @@
   "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.preferGoToSourceDefinition": true,
   "typescript.referencesCodeLens.enabled": true,
   "typescript.referencesCodeLens.showOnAllFunctions": true,
   "typescript.suggest.completeFunctionCalls": true,
@@ -229,6 +236,7 @@
   // #region debug
   "debug.autoExpandLazyVariables": "on",
   "debug.confirmOnExit": "always",
+  "debug.inlineValues": true,
   "debug.javascript.autoAttachFilter": "smart",
   "debug.javascript.breakOnConditionalError": true,
   "debug.trace": true,
@@ -282,10 +290,8 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
   "editor.suggest.shareSuggestSelections": true,
-  "editor.suggest.showSnippets": true,
   "editor.suggest.showStatusBar": true,
   "editor.tabCompletion": "on",
-  "editor.tabSize": 2,
   "editor.unicodeHighlight.allowedLocales": {
     "ja": true
   },
@@ -366,7 +372,6 @@
   "terminal.external.windowsExec": "wtai.exe",
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.cursorBlinking": true,
   // #endregion
   // #region updates
   "updates.channel": "preview",
@@ -379,12 +384,6 @@
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.tree.renderIndentGuides": "always",
-  // #endregion
-  // #region security
-  "security.workspace.trust.trustedFolders": [
-    "file:///d%3A/source",
-    "file:///e%3A/source"
-  ],
   // #endregion
   // #region Extensions
   // #region bookmarks
@@ -438,6 +437,7 @@
   "svn.sourceControl.combineExternalIfSameServer": true,
   // #endregion
   // #region todo-tree
+  "todo-tree.general.enableFileWatcher": true,
   "todo-tree.filtering.excludeGlobs": [
     ".nuget",
     ".venv",

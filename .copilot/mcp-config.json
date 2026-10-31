@@ -12,19 +12,8 @@
     },
     "github": {
       "tools": ["*"],
-      "type": "local",
-      "command": "wslc",
-      "args": [
-        "run",
-        "--interactive",
-        "--rm",
-        "--env",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "ghcr.io/github/github-mcp-server"
-      ],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
-      }
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp"
     },
     "microsoft-learn": {
       "tools": ["*"],
@@ -49,10 +38,9 @@
       "args": ["-y", "@playwright/mcp@latest"]
     },
     "github-ghas-tools": {
+      "tools": ["*"],
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp/",
-      "tools": ["*"],
-      "id": "",
       "headers": {
         "X-MCP-Toolsets": "code_security,secret_protection,security_advisories,dependabot",
         "X-MCP-Tools": "run_secret_scanning"
