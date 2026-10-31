@@ -17,14 +17,14 @@
       "label": "apm:install",
       "type": "shell",
       "command": "apm",
-      "args": ["install"],
+      "args": ["install", "--force"],
       "problemMatcher": []
     },
     {
       "label": "apm:update",
       "type": "shell",
       "command": "apm",
-      "args": ["install", "--update"],
+      "args": ["install", "--update", "--force"],
       "problemMatcher": []
     },
     {
