@@ -10,11 +10,9 @@
 
 .PARAMETER Include
   Specifies glob patterns to include. Only items matching at least one pattern are considered.
-  Follows Get-ChildItem semantics.
 
 .PARAMETER Exclude
   Specifies glob patterns to exclude. Items matching any pattern are excluded.
-  Follows Get-ChildItem semantics.
 
 .PARAMETER Recurse
   Searches the specified path recursively.
@@ -76,26 +74,7 @@ ForEach-Object {
     Get-ChildItem @arguments |
     Where-Object -Property Extension -In '.ps1', '.psm1', '.psd1'
   } elseif ($_.Extension -in '.ps1', '.psm1', '.psd1') {
-    $includeMatch = $true
-    if ($Include) {
-      $includeMatch = $false
-      foreach ($pattern in $Include) {
-        if ($_.Name -like $pattern) {
-          $includeMatch = $true; break
-        }
-      }
-    }
-    $excludeMatch = $false
-    if ($Exclude) {
-      foreach ($pattern in $Exclude) {
-        if ($_.Name -like $pattern) {
-          $excludeMatch = $true; break
-        }
-      }
-    }
-    if ($includeMatch -and -not $excludeMatch) {
-      $_
-    }
+    $_
   }
 }
 $results = $items |
