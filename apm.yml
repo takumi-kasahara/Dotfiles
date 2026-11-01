@@ -15,14 +15,6 @@ dependencies:
     - github/awesome-copilot/skills/conventional-commit
     - github/copilot-advanced-security-plugin
     - microsoftdocs/mcp
-  mcp:
-    - name: mdn
-      registry: false
-      transport: http
-      url: https://mcp.mdn.mozilla.net
-    - name: microsoft-release-communications
-      registry: false
-      transport: http
-      url: https://www.microsoft.com/releasecommunications/mcp
+  mcp: []
 includes: auto
 scripts: {}

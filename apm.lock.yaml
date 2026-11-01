@@ -165,7 +165,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:41609e5be3463a4c596dd2cb9f31e4a6dc68d82028b159684c5df2d008d5801d
+    content_hash: sha256:0c986bc4b1bd3ae637a9faa03184661358002b6587393926a68f8f87419675ee
   - kind: project-relative
     target: copilot
     value: .agents/skills/batchfile
@@ -570,7 +570,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:c46beedefe4793996150ab38acb70ebe0e1a5829d11a520b3aab842885c555e0
+    content_hash: sha256:fbf3e877c18f4a1d03d77b7c8687eb4c811ef3460cc6d6105c577837d08645b8
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-5/scripts/Pester.bat
@@ -588,7 +588,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:3ce8929af35e8d4c72c9933c504640dd0122b3f5585599969c28aa15702acdc9
+    content_hash: sha256:3f143e6dab449dab920a055d8a81b8054d4d21d3576a01de90a42b55b38432b6
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-7
@@ -669,7 +669,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:ce5dbf37a4c348ee2208261209b79c1dd1c1164e4faa4175a6f5a8d421ece83e
+    content_hash: sha256:ed4016c9e2c284fb4de7f3cd77546c3f62532cb6b79a409552d49bfd3b897c7f
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-7/scripts/Pester.bat
@@ -870,25 +870,7 @@ deployments:
     content_hash: null
   - kind: uri
     target: mcp
-    value: mdn
-    runtime: copilot
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: uri
-    target: mcp
     value: microsoft-learn
-    runtime: copilot
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: null
-  - kind: uri
-    target: mcp
-    value: microsoft-release-communications
     runtime: copilot
     scope: project
     owners:
@@ -897,9 +879,7 @@ deployments:
     content_hash: null
 mcp_servers:
   - github-ghas-tools
-  - mdn
   - microsoft-learn
-  - microsoft-release-communications
 mcp_configs:
   github-ghas-tools:
     name: github-ghas-tools
@@ -909,27 +889,15 @@ mcp_configs:
       X-MCP-Toolsets: code_security,secret_protection,security_advisories,dependabot
       X-MCP-Tools: run_secret_scanning
     url: https://api.githubcopilot.com/mcp/
-  mdn:
-    name: mdn
-    transport: http
-    registry: false
-    url: https://mcp.mdn.mozilla.net
   microsoft-learn:
     name: microsoft-learn
     transport: http
     registry: false
     url: https://learn.microsoft.com/api/mcp
-  microsoft-release-communications:
-    name: microsoft-release-communications
-    transport: http
-    registry: false
-    url: https://www.microsoft.com/releasecommunications/mcp
 mcp_target_servers:
   copilot:
     - github-ghas-tools
-    - mdn
     - microsoft-learn
-    - microsoft-release-communications
 mcp_config_provenance:
   github-ghas-tools: github/advanced-security
   microsoft-learn: microsoft-docs
@@ -998,7 +966,7 @@ local_deployed_files:
 local_deployed_file_hashes:
   .agents/skills/autohotkey/SKILL.md: sha256:b7d6e38d7cab4d6767708830461f765319d96636598dc251442a09d1307f7745
   .agents/skills/autohotkey/scripts/AutoHotkey.bat: sha256:87687a42bbacc168f5c4c097fa49104ef46863a820f3783c26fbdee884d94c12
-  .agents/skills/autohotkey/scripts/AutoHotkey.ps1: sha256:41609e5be3463a4c596dd2cb9f31e4a6dc68d82028b159684c5df2d008d5801d
+  .agents/skills/autohotkey/scripts/AutoHotkey.ps1: sha256:0c986bc4b1bd3ae637a9faa03184661358002b6587393926a68f8f87419675ee
   .agents/skills/batchfile/SKILL.md: sha256:23ee3e9837bea196c9086650f6dcecad60a23ddf568b81a4ac4159bd33d184bd
   .agents/skills/batchfile/assets/script.bat: sha256:c4873f67984fc830d4f2159cb08d4904f5499e324df83f58320f41736a1622ea
   .agents/skills/batchfile/assets/script.runas.bat: sha256:f88baff41b503da1b06645a2636e0943354e557228d354e01bb73e139abb32da
@@ -1021,9 +989,9 @@ local_deployed_file_hashes:
   .agents/skills/powershell-5/scripts/Analyze.bat: sha256:87687a42bbacc168f5c4c097fa49104ef46863a820f3783c26fbdee884d94c12
   .agents/skills/powershell-5/scripts/Analyze.ps1: sha256:5371b3e891328466cb62f0ea7f7e724c12220baa1cc9191bff3fb4bdd81da5c7
   .agents/skills/powershell-5/scripts/Parse.bat: sha256:87687a42bbacc168f5c4c097fa49104ef46863a820f3783c26fbdee884d94c12
-  .agents/skills/powershell-5/scripts/Parse.ps1: sha256:c46beedefe4793996150ab38acb70ebe0e1a5829d11a520b3aab842885c555e0
+  .agents/skills/powershell-5/scripts/Parse.ps1: sha256:fbf3e877c18f4a1d03d77b7c8687eb4c811ef3460cc6d6105c577837d08645b8
   .agents/skills/powershell-5/scripts/Pester.bat: sha256:87687a42bbacc168f5c4c097fa49104ef46863a820f3783c26fbdee884d94c12
-  .agents/skills/powershell-5/scripts/Pester.ps1: sha256:3ce8929af35e8d4c72c9933c504640dd0122b3f5585599969c28aa15702acdc9
+  .agents/skills/powershell-5/scripts/Pester.ps1: sha256:3f143e6dab449dab920a055d8a81b8054d4d21d3576a01de90a42b55b38432b6
   .agents/skills/powershell-7/SKILL.md: sha256:bc8820c0f03c99559d4a58b9a52e7918b4d201f402970a6c2e8b19488ff050fc
   .agents/skills/powershell-7/references/comment-based-help.md: sha256:8d044838f2d70086d3e41d177fce308990f2ec2ccc95d8b749dab22fbc8fcbb1
   .agents/skills/powershell-7/references/powershell-cmdlet.md: sha256:2d763844d43faff9fe9fd56ff3cc3b49c9649eee1e4341c6345f4d83e7dbed02
@@ -1031,7 +999,7 @@ local_deployed_file_hashes:
   .agents/skills/powershell-7/scripts/Analyze.bat: sha256:a1088a163efbf6967cb172a404417cad30a29be1f6090c198395088832bd0462
   .agents/skills/powershell-7/scripts/Analyze.ps1: sha256:bcf00610c63a059f9c85d02ff7ce83e25b69f5904ea102cc50e97b08e895c1dd
   .agents/skills/powershell-7/scripts/Parse.bat: sha256:a1088a163efbf6967cb172a404417cad30a29be1f6090c198395088832bd0462
-  .agents/skills/powershell-7/scripts/Parse.ps1: sha256:ce5dbf37a4c348ee2208261209b79c1dd1c1164e4faa4175a6f5a8d421ece83e
+  .agents/skills/powershell-7/scripts/Parse.ps1: sha256:ed4016c9e2c284fb4de7f3cd77546c3f62532cb6b79a409552d49bfd3b897c7f
   .agents/skills/powershell-7/scripts/Pester.bat: sha256:a1088a163efbf6967cb172a404417cad30a29be1f6090c198395088832bd0462
   .agents/skills/powershell-7/scripts/Pester.ps1: sha256:18d9ac87970a0f4af75f5d35c8d1d1a7e002a64e65b6afb5966fc35439f61f08
   .agents/skills/rubberduck-vba/SKILL.md: sha256:a631f26585cb261925205f17ef570c59611486607979ca4de8ba34ae5cb83dd5
