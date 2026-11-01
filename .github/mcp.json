@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "github-ghas-tools": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "tools": ["*"],
+      "id": "",
+      "headers": {
+        "X-MCP-Toolsets": "code_security,secret_protection,security_advisories,dependabot",
+        "X-MCP-Tools": "run_secret_scanning"
+      }
+    },
+    "microsoft-learn": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "tools": ["*"],
+      "id": ""
+    }
+  }
+}
