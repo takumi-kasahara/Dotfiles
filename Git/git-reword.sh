@@ -15,7 +15,7 @@ shopt -s shift_verbose
 
 if [[ -z "${1:-}" ]]; then
   [[ -n "$(git diff --name-status --cached)" ]] && exit 0
-  GIT_COMMITTER_DATE="$(git log -1 --format=%aI)" git commit --verbose --amend --signoff
+  GIT_COMMITTER_DATE="$(git log -1 --format=%aI)" git commit --verbose --amend --signoff --no-verify
 else
   # TODO Replace with `git history --reword <commit>` when [git-history](https://git-scm.com/docs/git-history) adds an equivalent option to `--committer-date-is-author-date`.
   :
