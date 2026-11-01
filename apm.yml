@@ -6,6 +6,7 @@ targets:
   - copilot
 dependencies:
   apm:
+    - awesome-skills/code-review-skill
     - github/awesome-copilot/instructions/agent-skills.instructions.md
     - github/awesome-copilot/instructions/agents.instructions.md
     - github/awesome-copilot/instructions/instructions.instructions.md

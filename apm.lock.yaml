@@ -1,6 +1,116 @@
 lockfile_version: '1'
 apm_version: 0.35.0
 dependencies:
+  - repo_url: awesome-skills/code-review-skill
+    name: code-review-skill
+    host: github.com
+    resolved_commit: 4850184dfd7765ea7b3c5c4e9b6cf8e0815ee7cb
+    version: unknown
+    package_type: claude_skill
+    deployed_files:
+      - .agents/skills/code-review-skill
+      - .agents/skills/code-review-skill/.gitignore
+      - .agents/skills/code-review-skill/.hive/PROTOCOL.md
+      - .agents/skills/code-review-skill/.hive/memory.md
+      - .agents/skills/code-review-skill/.hive/tasks.md
+      - .agents/skills/code-review-skill/.nojekyll
+      - .agents/skills/code-review-skill/CONTRIBUTING.md
+      - .agents/skills/code-review-skill/LICENSE
+      - .agents/skills/code-review-skill/README.md
+      - .agents/skills/code-review-skill/SKILL.md
+      - .agents/skills/code-review-skill/assets/pr-review-template.md
+      - .agents/skills/code-review-skill/assets/review-checklist.md
+      - .agents/skills/code-review-skill/index.en.html
+      - .agents/skills/code-review-skill/index.html
+      - .agents/skills/code-review-skill/reference/angular.md
+      - .agents/skills/code-review-skill/reference/architecture-review-guide.md
+      - .agents/skills/code-review-skill/reference/c.md
+      - .agents/skills/code-review-skill/reference/code-quality-universal.md
+      - .agents/skills/code-review-skill/reference/code-review-best-practices.md
+      - .agents/skills/code-review-skill/reference/common-bugs-checklist.md
+      - .agents/skills/code-review-skill/reference/cpp.md
+      - .agents/skills/code-review-skill/reference/cross-cutting/async-concurrency-patterns.md
+      - .agents/skills/code-review-skill/reference/cross-cutting/error-handling-principles.md
+      - .agents/skills/code-review-skill/reference/cross-cutting/n-plus-one-queries.md
+      - .agents/skills/code-review-skill/reference/cross-cutting/sql-injection-prevention.md
+      - .agents/skills/code-review-skill/reference/cross-cutting/xss-prevention.md
+      - .agents/skills/code-review-skill/reference/csharp.md
+      - .agents/skills/code-review-skill/reference/css-less-sass.md
+      - .agents/skills/code-review-skill/reference/dart.md
+      - .agents/skills/code-review-skill/reference/django.md
+      - .agents/skills/code-review-skill/reference/fastapi.md
+      - .agents/skills/code-review-skill/reference/go.md
+      - .agents/skills/code-review-skill/reference/java.md
+      - .agents/skills/code-review-skill/reference/java8.md
+      - .agents/skills/code-review-skill/reference/kotlin.md
+      - .agents/skills/code-review-skill/reference/nestjs.md
+      - .agents/skills/code-review-skill/reference/performance-review-guide.md
+      - .agents/skills/code-review-skill/reference/php.md
+      - .agents/skills/code-review-skill/reference/python.md
+      - .agents/skills/code-review-skill/reference/qt.md
+      - .agents/skills/code-review-skill/reference/react.md
+      - .agents/skills/code-review-skill/reference/ruby.md
+      - .agents/skills/code-review-skill/reference/rust.md
+      - .agents/skills/code-review-skill/reference/security-review-guide.md
+      - .agents/skills/code-review-skill/reference/svelte.md
+      - .agents/skills/code-review-skill/reference/swift.md
+      - .agents/skills/code-review-skill/reference/typescript.md
+      - .agents/skills/code-review-skill/reference/vue.md
+      - .agents/skills/code-review-skill/reference/zig.md
+      - .agents/skills/code-review-skill/scripts/pr-analyzer.py
+      - .agents/skills/code-review-skill/scripts/test_pr_analyzer.py
+    deployed_file_hashes:
+      .agents/skills/code-review-skill/.gitignore: sha256:86d5559b8a128b1e1cb8051b0969dc4084a0ed3d6b6ccb2321057d673309510d
+      .agents/skills/code-review-skill/.hive/PROTOCOL.md: sha256:c13150693b2b72459a15a2d5cc2960d3f1dfee31358e70e6e4e4fb89d1f72db7
+      .agents/skills/code-review-skill/.hive/memory.md: sha256:fab5cbed0f671bd8b9dafc8b79cbb2ec2a112ff34862e93c9e335a884be32df8
+      .agents/skills/code-review-skill/.hive/tasks.md: sha256:9ad2fa7cab00c308b089fcb0a9ec9a0f14862f2cb1ea594ff902d36c50f9a955
+      .agents/skills/code-review-skill/.nojekyll: sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      .agents/skills/code-review-skill/CONTRIBUTING.md: sha256:535823fcc93635caa2b239f9362678ed4897059749089b829e7e3ce221daea12
+      .agents/skills/code-review-skill/LICENSE: sha256:0595e8e4d9beae7270b2882bcf7cfb78f85fbb54747ea9d83061a7cb2ee569ce
+      .agents/skills/code-review-skill/README.md: sha256:d9c95989bfa1c33e2bb49f68d30a7128ac44afec09945dbf1520f561d3a851be
+      .agents/skills/code-review-skill/SKILL.md: sha256:69a5d837bbf641bcf9fbc0d25b6bb1dfd90b04efbd8de1c3dcd9e2b508171a63
+      .agents/skills/code-review-skill/assets/pr-review-template.md: sha256:a440ec7aa749aeb3164f0a7ddded9a0ede40aa83786383e28d841cfb09f37eb3
+      .agents/skills/code-review-skill/assets/review-checklist.md: sha256:e9866256d76f3476d85bdac361412eeb4311cf22ce6133a74ec7f0c7000af574
+      .agents/skills/code-review-skill/index.en.html: sha256:4fd2031d24084e7354171eaeb8e35eb4d3439689ffc40cb892315e558e099021
+      .agents/skills/code-review-skill/index.html: sha256:f9488a99098d9ef60055e6a75a46b08baa1db87cb6566d616849f919accc32a4
+      .agents/skills/code-review-skill/reference/angular.md: sha256:ce9013d7b60c6f8a928f0616f656817aed289090da5e2cc960e5d59febb9dac1
+      .agents/skills/code-review-skill/reference/architecture-review-guide.md: sha256:8e0004f23fd72d3c016a08a682d9b2deafb208e08d8ff8b53fffa782c319cf08
+      .agents/skills/code-review-skill/reference/c.md: sha256:c153b752e298ba8e85ceaa13cfb0c5352b07251848c678ebd9da491aa78a4713
+      .agents/skills/code-review-skill/reference/code-quality-universal.md: sha256:32cfde463bc721a6d576f19cf1ca170a3b5db64f2c4b4323fb0568fc7c422ec4
+      .agents/skills/code-review-skill/reference/code-review-best-practices.md: sha256:8dcab3be4c30805bfd755aed84dd1bc70b639b6b57af17fd1bf1d69d9244ac8d
+      .agents/skills/code-review-skill/reference/common-bugs-checklist.md: sha256:17a6b67cf7b43184c77c709e4fbe3a8cd22f6acb3cebd00273f5e8d3eb57d557
+      .agents/skills/code-review-skill/reference/cpp.md: sha256:8bf4da1da035ec0db5cc55deab021e6042b250b014d07c2d7505aa4bc1917a04
+      .agents/skills/code-review-skill/reference/cross-cutting/async-concurrency-patterns.md: sha256:70cd46106c863c0722dbc7ca034c684bda2af21ed213a1d7f7759819e49e2ee2
+      .agents/skills/code-review-skill/reference/cross-cutting/error-handling-principles.md: sha256:a2b2139bffa96482e1f14d7de94a9d4648749b1b1eb0925dbf3cd07a50f226bf
+      .agents/skills/code-review-skill/reference/cross-cutting/n-plus-one-queries.md: sha256:015bb5d3291882f792d12858500bbf59e98a14d1a5d0700db5640dbf06386a1a
+      .agents/skills/code-review-skill/reference/cross-cutting/sql-injection-prevention.md: sha256:c54b67fd73e280e0db7e89199b57212e3627dc460e670c3cc6d144c8c6d1d7e5
+      .agents/skills/code-review-skill/reference/cross-cutting/xss-prevention.md: sha256:2d9118e7498f27c63ecb3c78ff9c549ec135a6c9cc170f9989181e0d9fc1cb36
+      .agents/skills/code-review-skill/reference/csharp.md: sha256:4c7fcde3ae2d4ad14e1fe9d8af5c1baac669e536e0c5fb1e6da6bc109b837838
+      .agents/skills/code-review-skill/reference/css-less-sass.md: sha256:22148c2ef86004f28c3c6af94d3d68ad4e19f92b86ef1010bc487cc0588f3bcc
+      .agents/skills/code-review-skill/reference/dart.md: sha256:b166f34ca91978670a59179236be8277dfb7e999da819cdcfa35f9219e6ec4f3
+      .agents/skills/code-review-skill/reference/django.md: sha256:b7ffaf6da75ca3b16408c121ff173f02928c29a4dba0cd71509d569b26603196
+      .agents/skills/code-review-skill/reference/fastapi.md: sha256:bf52fb055aceba62aaa16de6e946a7c4c55cb79f1d52c3d3468fe6c6949ca915
+      .agents/skills/code-review-skill/reference/go.md: sha256:c183c3ab9440f4f4ab6f2e6862648781042f5cd4de2ca505ee6a9af3acd528c4
+      .agents/skills/code-review-skill/reference/java.md: sha256:07083e47b279f8a72bba16a7a5bfafe2af5c03ce14dbd048e0561eb84779edf9
+      .agents/skills/code-review-skill/reference/java8.md: sha256:ffa415e3d7f2ce70cefb631977a17454d43b69bf2d72a56108e867761ac8adb3
+      .agents/skills/code-review-skill/reference/kotlin.md: sha256:8bc062bf0a675471cb7ba1fe9becf3ab4f64861432b1aec3300b451017f95457
+      .agents/skills/code-review-skill/reference/nestjs.md: sha256:786016c5b692ce0b5fa34d4db96160ca53b479c787059db68fb54daf46fb3a46
+      .agents/skills/code-review-skill/reference/performance-review-guide.md: sha256:5118a40ad85d53a3df459810abb18987806f4a1266a2f214646f42b98ce2f08d
+      .agents/skills/code-review-skill/reference/php.md: sha256:2e40d0e04b9a37f5d42792b1ee401070a2b3decc726a711ba4200e5c03329b95
+      .agents/skills/code-review-skill/reference/python.md: sha256:e0df57bd897f2dd344a21791b04f739a00c7b93a32fc64ec505195048a2ef94c
+      .agents/skills/code-review-skill/reference/qt.md: sha256:922ed0fe1362bd0a0959e7be81f62c1cf9b77b4e9ad285e189db66fac7751b0e
+      .agents/skills/code-review-skill/reference/react.md: sha256:119a2b0be6966d162fbd2be76d3d10c0fd09cdb3d8e76be6ec9d5ed901332bd9
+      .agents/skills/code-review-skill/reference/ruby.md: sha256:4cd96f8d5062bea49c06eca7db790bf06d35ace42eced0d6d019d7e55254c2f2
+      .agents/skills/code-review-skill/reference/rust.md: sha256:1bb761f7aada1c597f0a4a7d857f3762673d7e017710402dc17b093fdd9fb569
+      .agents/skills/code-review-skill/reference/security-review-guide.md: sha256:a0271fe590ff17cbf983477e82603fdc184943b70dd6a6805d7bc6390c7ae02c
+      .agents/skills/code-review-skill/reference/svelte.md: sha256:519da3dc582688b6d71e30898b5944192ee4904d69e2aac08655226c585b42e6
+      .agents/skills/code-review-skill/reference/swift.md: sha256:c4d7f298265244f34f4a2a9d18116e2c047ee87ca20646ff6d5117802d5e537c
+      .agents/skills/code-review-skill/reference/typescript.md: sha256:fca6e0e384c5542123a2781adc833599129e24d9881aa9ec7c802a42d8e13bf4
+      .agents/skills/code-review-skill/reference/vue.md: sha256:49686f8c59b2069f0b3b322a97555615ec071d991412d98a70b8425dbe94bdd4
+      .agents/skills/code-review-skill/reference/zig.md: sha256:9a5e9b727d206d91d687ec3cf3caf3ed85e1cbf92b2df5675f82476abe45e017
+      .agents/skills/code-review-skill/scripts/pr-analyzer.py: sha256:cdaadc3f937f1c6a6fb4a5920904f3af4a88bee07032c997e20e1be0e8ef48c8
+      .agents/skills/code-review-skill/scripts/test_pr_analyzer.py: sha256:c2f2204f369c7bdd8978ded74a2159312e1b72f64dc57cef0767c2f489d69aba
+    content_hash: sha256:3df874fd0401e9d3cbf134d2eeb4793b18740b81df206987076b55f9b2cf9a26
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agent-skills
     host: github.com
@@ -229,6 +339,465 @@ deployments:
       - .
     active_owner: .
     content_hash: sha256:11392cb4ddd29d627b0433fc073c5d1d8d5c9b0db8d3c070a62aacfabab233a8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/.gitignore
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:86d5559b8a128b1e1cb8051b0969dc4084a0ed3d6b6ccb2321057d673309510d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/.hive/PROTOCOL.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c13150693b2b72459a15a2d5cc2960d3f1dfee31358e70e6e4e4fb89d1f72db7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/.hive/memory.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:fab5cbed0f671bd8b9dafc8b79cbb2ec2a112ff34862e93c9e335a884be32df8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/.hive/tasks.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:9ad2fa7cab00c308b089fcb0a9ec9a0f14862f2cb1ea594ff902d36c50f9a955
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/.nojekyll
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/CONTRIBUTING.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:535823fcc93635caa2b239f9362678ed4897059749089b829e7e3ce221daea12
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/LICENSE
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:0595e8e4d9beae7270b2882bcf7cfb78f85fbb54747ea9d83061a7cb2ee569ce
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/README.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:d9c95989bfa1c33e2bb49f68d30a7128ac44afec09945dbf1520f561d3a851be
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:69a5d837bbf641bcf9fbc0d25b6bb1dfd90b04efbd8de1c3dcd9e2b508171a63
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/assets/pr-review-template.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:a440ec7aa749aeb3164f0a7ddded9a0ede40aa83786383e28d841cfb09f37eb3
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/assets/review-checklist.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:e9866256d76f3476d85bdac361412eeb4311cf22ce6133a74ec7f0c7000af574
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/index.en.html
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:4fd2031d24084e7354171eaeb8e35eb4d3439689ffc40cb892315e558e099021
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/index.html
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:f9488a99098d9ef60055e6a75a46b08baa1db87cb6566d616849f919accc32a4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/angular.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:ce9013d7b60c6f8a928f0616f656817aed289090da5e2cc960e5d59febb9dac1
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/architecture-review-guide.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:8e0004f23fd72d3c016a08a682d9b2deafb208e08d8ff8b53fffa782c319cf08
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/c.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c153b752e298ba8e85ceaa13cfb0c5352b07251848c678ebd9da491aa78a4713
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/code-quality-universal.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:32cfde463bc721a6d576f19cf1ca170a3b5db64f2c4b4323fb0568fc7c422ec4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/code-review-best-practices.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:8dcab3be4c30805bfd755aed84dd1bc70b639b6b57af17fd1bf1d69d9244ac8d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/common-bugs-checklist.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:17a6b67cf7b43184c77c709e4fbe3a8cd22f6acb3cebd00273f5e8d3eb57d557
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cpp.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:8bf4da1da035ec0db5cc55deab021e6042b250b014d07c2d7505aa4bc1917a04
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cross-cutting/async-concurrency-patterns.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:70cd46106c863c0722dbc7ca034c684bda2af21ed213a1d7f7759819e49e2ee2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cross-cutting/error-handling-principles.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:a2b2139bffa96482e1f14d7de94a9d4648749b1b1eb0925dbf3cd07a50f226bf
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cross-cutting/n-plus-one-queries.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:015bb5d3291882f792d12858500bbf59e98a14d1a5d0700db5640dbf06386a1a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cross-cutting/sql-injection-prevention.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c54b67fd73e280e0db7e89199b57212e3627dc460e670c3cc6d144c8c6d1d7e5
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/cross-cutting/xss-prevention.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:2d9118e7498f27c63ecb3c78ff9c549ec135a6c9cc170f9989181e0d9fc1cb36
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/csharp.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:4c7fcde3ae2d4ad14e1fe9d8af5c1baac669e536e0c5fb1e6da6bc109b837838
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/css-less-sass.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:22148c2ef86004f28c3c6af94d3d68ad4e19f92b86ef1010bc487cc0588f3bcc
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/dart.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:b166f34ca91978670a59179236be8277dfb7e999da819cdcfa35f9219e6ec4f3
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/django.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:b7ffaf6da75ca3b16408c121ff173f02928c29a4dba0cd71509d569b26603196
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/fastapi.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:bf52fb055aceba62aaa16de6e946a7c4c55cb79f1d52c3d3468fe6c6949ca915
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/go.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c183c3ab9440f4f4ab6f2e6862648781042f5cd4de2ca505ee6a9af3acd528c4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/java.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:07083e47b279f8a72bba16a7a5bfafe2af5c03ce14dbd048e0561eb84779edf9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/java8.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:ffa415e3d7f2ce70cefb631977a17454d43b69bf2d72a56108e867761ac8adb3
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/kotlin.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:8bc062bf0a675471cb7ba1fe9becf3ab4f64861432b1aec3300b451017f95457
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/nestjs.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:786016c5b692ce0b5fa34d4db96160ca53b479c787059db68fb54daf46fb3a46
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/performance-review-guide.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:5118a40ad85d53a3df459810abb18987806f4a1266a2f214646f42b98ce2f08d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/php.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:2e40d0e04b9a37f5d42792b1ee401070a2b3decc726a711ba4200e5c03329b95
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/python.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:e0df57bd897f2dd344a21791b04f739a00c7b93a32fc64ec505195048a2ef94c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/qt.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:922ed0fe1362bd0a0959e7be81f62c1cf9b77b4e9ad285e189db66fac7751b0e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/react.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:119a2b0be6966d162fbd2be76d3d10c0fd09cdb3d8e76be6ec9d5ed901332bd9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/ruby.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:4cd96f8d5062bea49c06eca7db790bf06d35ace42eced0d6d019d7e55254c2f2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/rust.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:1bb761f7aada1c597f0a4a7d857f3762673d7e017710402dc17b093fdd9fb569
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/security-review-guide.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:a0271fe590ff17cbf983477e82603fdc184943b70dd6a6805d7bc6390c7ae02c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/svelte.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:519da3dc582688b6d71e30898b5944192ee4904d69e2aac08655226c585b42e6
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/swift.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c4d7f298265244f34f4a2a9d18116e2c047ee87ca20646ff6d5117802d5e537c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/typescript.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:fca6e0e384c5542123a2781adc833599129e24d9881aa9ec7c802a42d8e13bf4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/vue.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:49686f8c59b2069f0b3b322a97555615ec071d991412d98a70b8425dbe94bdd4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/reference/zig.md
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:9a5e9b727d206d91d687ec3cf3caf3ed85e1cbf92b2df5675f82476abe45e017
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/scripts/pr-analyzer.py
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:cdaadc3f937f1c6a6fb4a5920904f3af4a88bee07032c997e20e1be0e8ef48c8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/code-review-skill/scripts/test_pr_analyzer.py
+    runtime: null
+    scope: project
+    owners:
+      - awesome-skills/code-review-skill
+    active_owner: awesome-skills/code-review-skill
+    content_hash: sha256:c2f2204f369c7bdd8978ded74a2159312e1b72f64dc57cef0767c2f489d69aba
   - kind: project-relative
     target: copilot
     value: .agents/skills/conventional-branch
