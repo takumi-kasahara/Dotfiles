@@ -10,12 +10,12 @@
     <unpacker>&lt;Automatic&gt;</unpacker>
     <prediffer>&lt;Automatic&gt;</prediffer>
     <white-spaces>1</white-spaces>
-    <ignore-blank-lines>1</ignore-blank-lines>
+    <ignore-blank-lines>0</ignore-blank-lines>
     <ignore-case>0</ignore-case>
-    <ignore-carriage-return-diff>1</ignore-carriage-return-diff>
+    <ignore-carriage-return-diff>0</ignore-carriage-return-diff>
     <ignore-numbers>0</ignore-numbers>
-    <ignore-codepage-diff>1</ignore-codepage-diff>
-    <ignore-missing-trailing-eol>1</ignore-missing-trailing-eol>
+    <ignore-codepage-diff>0</ignore-codepage-diff>
+    <ignore-missing-trailing-eol>0</ignore-missing-trailing-eol>
     <ignore-line-breaks>0</ignore-line-breaks>
     <ignore-comment-diff>0</ignore-comment-diff>
     <compare-method>0</compare-method>
