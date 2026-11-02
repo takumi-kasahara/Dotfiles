@@ -21,6 +21,8 @@
 .PARAMETER PassThru
   If specified, returns the Pester run result object instead of suppressing output. Default is no pass-through.
 
+.PARAMETER Parallel
+  Run tests in parallel. When this switch is used, code coverage collection is skipped.
 .EXAMPLE
   ```powershell
   .\Pester.ps1 -Path ".\Module.Tests.ps1"
@@ -37,10 +39,10 @@
 
 .EXAMPLE
   ```powershell
-  .\Pester.ps1 -Path ".\Modules"
+  .\Pester.ps1 -Path ".\Modules" -Parallel
   ```
 
-  Runs all tests for the module.
+  Runs all tests for the module in parallel.
 
 .OUTPUTS
   None
@@ -63,7 +65,9 @@ param (
   [int]
   $LineNumber = 0,
   [switch]
-  $PassThru
+  $PassThru,
+  [switch]
+  $Parallel
 )
 if ($PSEdition -ne 'Desktop') {
   return
@@ -99,6 +103,7 @@ if (-not (Test-Path -LiteralPath $test)) {
 }
 $config = New-PesterConfiguration
 $config.Run.Exit = $true
+$config.Run.Parallel = $Parallel.IsPresent
 $config.Run.Path = (Resolve-Path -LiteralPath $test).Path
 $config.Run.PassThru = $PassThru.IsPresent
 if ($TagFilter.Count -gt 0) {
