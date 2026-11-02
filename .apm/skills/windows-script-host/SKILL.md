@@ -1,6 +1,6 @@
 ---
 name: windows-script-host
-description: Guidelines for Windows Script Host JScript (.js) and Windows Script Files (.wsf).
+description: Guidelines for JScript File (*.js) and Windows Script File (*.wsf).
 argument-hint: Describe the Windows Script Host file to execute and any command-line arguments.
 ---
 
@@ -20,8 +20,10 @@ argument-hint: Describe the Windows Script Host file to execute and any command-
 
 ## References
 
-- [Windows Script Host overview and object model](<https://learn.microsoft.com/en-us/previous-versions//9bbdkx3k(v=vs.85)>)
+- [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
   - [cscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript)
-  - [Object Model](<https://learn.microsoft.com/en-us/previous-versions//a74hyyw0(v=vs.85)>)
-  - [XML Elements](<https://learn.microsoft.com/en-us/previous-versions//x4d5a2tx(v=vs.85)>)
-- [Using COM Objects in Windows Script Host](https://learn.microsoft.com/en-us/windows/win32/com/using-com-objects-in-windows-script-host)
+  - [wscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript)
+- [Windows Script Host](<https://learn.microsoft.com/en-us/previous-versions/9bbdkx3k(v=vs.85)>)
+  - [Object Model](<https://learn.microsoft.com/en-us/previous-versions/a74hyyw0(v=vs.85)>)
+  - [XML Elements](<https://learn.microsoft.com/en-us/previous-versions/x4d5a2tx(v=vs.85)>)
+- [Windows Shell](https://learn.microsoft.com/en-us/windows/win32/shell/shell-entry)
