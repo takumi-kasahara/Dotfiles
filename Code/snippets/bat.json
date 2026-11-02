@@ -5,13 +5,11 @@
     "prefix": "template-script",
     "body": [
       "@echo off",
-      "cd /d \"%~dp0\"",
       "setlocal\n",
       ":begin\n",
       ":process",
       "${0::: statement}\n",
       ":end",
-      "pause",
       "exit /b %errorlevel%"
     ]
   },
@@ -19,7 +17,6 @@
     "prefix": "template-script-runas",
     "body": [
       "@echo off",
-      "cd /d \"%~dp0\"",
       "setlocal\n",
       ":begin",
       "net session >nul 2>&1",
@@ -33,11 +30,10 @@
       "goto :end\n",
       ":elevate",
       "sudo --inline \"%~0\" %*",
-      "exit /b %errorlevel%\n",
+      "goto :end\n",
       ":process",
       "${0::: statement}\n",
       ":end",
-      "pause",
       "exit /b %errorlevel%"
     ]
   },

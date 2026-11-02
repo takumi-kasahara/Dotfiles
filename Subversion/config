@@ -1,4 +1,4 @@
 [helpers]
-diff-cmd = winmerge-diff.bat
-diff3-cmd = winmerge-diff3.bat
-merge-tool-cmd = winmerge-merge.bat
+diff-cmd = winmerge-diff.cmd
+diff3-cmd = winmerge-diff3.cmd
+merge-tool-cmd = winmerge-merge.cmd

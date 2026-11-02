@@ -3,7 +3,7 @@
   Imports registry settings and runs configuration scripts.
 
 .DESCRIPTION
-  Imports all *.reg files under Windows\Settings recursively and runs all *.bat scripts under Windows\Scripts.
+  Imports all *.reg files under Windows\Settings recursively and runs all *.cmd scripts under Windows\Scripts.
   Also copies user international settings to the welcome screen and new user profile, then restarts Explorer.
 
 .NOTES
@@ -22,7 +22,7 @@ try {
     reg.exe import $_.FullName
     "Imported:`t$relative" | Out-Host
   }
-  Get-ChildItem -LiteralPath 'Windows\Scripts' -Filter '*.bat' -Recurse |
+  Get-ChildItem -LiteralPath 'Windows\Scripts' -Filter '*.cmd' -Recurse |
   ForEach-Object {
     $relative = Resolve-Path -LiteralPath $_ -Relative
     Write-Progress -Activity 'Running scripts' -Status $relative
