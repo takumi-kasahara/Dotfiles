@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 :: https://svnbook.red-bean.com/en/1.7/svn.advanced.externaldifftools.html#svn.advanced.externaldifftools.merge
 :: %%1 = base        (common ancestor)
@@ -6,7 +7,6 @@
 :: %%3 = mine        (working copy)
 :: %%4 = target      (file to write the resolved result)
 
-setlocal
 set "WinMerge=%ProgramFiles%\WinMerge\WinMergeU.exe"
 if not exist "%WinMerge%" (
   echo fatal: WinMerge not found.

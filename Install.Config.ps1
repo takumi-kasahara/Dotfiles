@@ -313,7 +313,7 @@ Source('.\Subversion\servers').
 Destination(($env:APPDATA | Join-Path -ChildPath 'Subversion')).
 Install()
 [Installer]::new().
-Source('.\Subversion\*.bat').
+Source('.\Subversion\*.cmd').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs')).
 Install()
 
@@ -369,7 +369,7 @@ if ($devDrive) {
 }
 
 # Chocolatey
-cmd.exe /c '.\Chocolatey\choco.feature.bat'
+cmd.exe /c '.\Chocolatey\choco.feature.cmd'
 
 # WinGet
 [Installer]::new().

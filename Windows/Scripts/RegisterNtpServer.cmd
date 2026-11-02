@@ -1,19 +1,22 @@
 @echo off
-cd /d "%~dp0"
 setlocal
 
 :begin
 net session >nul 2>&1
-if errorlevel 1 (
-  where /q sudo >nul 2>&1
-  if errorlevel 1 (
-    echo ERROR: Access is denied.
-    goto :end
-  ) else (
-    sudo --inline "%~0" %*
-    exit /b %errorlevel%
-  )
-)
+if errorlevel 1 goto :elevate
+goto :process
+
+:elevate
+where /q sudo >nul 2>&1
+if errorlevel 1 goto :powershell
+
+sudo --inline "%~0"
+goto :end
+
+:powershell
+set "PSModulePath="
+powershell -NoLogo -NoProfile -Command "Start-Process '%~0' -Verb RunAs"
+goto :end
 
 :process
 :: https://www.nict.go.jp/sts/ntp.html
