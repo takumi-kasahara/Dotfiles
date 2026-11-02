@@ -9,10 +9,11 @@ Clear `PSModulePath` before starting Windows PowerShell. Windows PowerShell then
 
 ```js
 WshShell.Environment('Process').Remove('PSModulePath');
-WshShell.Run('powershell.exe -NoLogo -NoProfile -File "script.ps1"', 0, true);
+WScript.Quit(
+  WshShell.Run('powershell.exe -NoLogo -NoProfile -File "script.ps1"', 0, true)
+);
 ```
 
-This clears the variable only in the `cscript.exe` process and its child process; it does not change the environment of the current `pwsh.exe` session or the persistent user or system environment.
-The [PowerShell launcher](../assets/powershell.js) in this skill uses this approach.
+This clears the variable only in the `cscript.exe` process and its child process; it does not change the environment of the current `pwsh.exe` session or the persistent user or system environment. The [PowerShell launcher](../assets/powershell.js) in this skill uses this approach.
 
 See [about_PSModulePath](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.6#starting-windows-powershell-from-powershell-7) for details.

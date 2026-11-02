@@ -1382,7 +1382,25 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:42b68bca4b42574698f929206c9adfe24bddb8aca44473556834b8cf78b23905
+    content_hash: sha256:f5eb31d05df2bb390b59729745d1adda2af1b6197e154c2a5749cfa0d78693f4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/windows-script-host/assets/powershell.js
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:2e917c9661fb1a8239bcb3567648ae52e76321c12bf3c3a4762b39581fdea467
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/windows-script-host/assets/runas.js
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:12d216c66b78b278f4e8b1f84c7ad086219e34cdcd0d4d6437ba5f60d87c9a52
   - kind: project-relative
     target: copilot
     value: .agents/skills/windows-script-host/references/powershell.md
@@ -1391,7 +1409,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:76e1cb8988c86f7753581583d3a143bdf402cd6868ee0f20040137be19313ec6
+    content_hash: sha256:43c4fc7ae1562c5536d1524ce9a52e5a09b7e6a2880f4f16f0725b7899cf7194
   - kind: project-relative
     target: copilot
     value: .github/agents/test-first.agent.md
@@ -1569,6 +1587,8 @@ local_deployed_files:
   - .agents/skills/windows-command/references/powershell.md
   - .agents/skills/windows-script-host
   - .agents/skills/windows-script-host/SKILL.md
+  - .agents/skills/windows-script-host/assets/powershell.js
+  - .agents/skills/windows-script-host/assets/runas.js
   - .agents/skills/windows-script-host/references/powershell.md
   - .github/agents/test-first.agent.md
   - .github/agents/test-retrofit.agent.md
@@ -1618,7 +1638,9 @@ local_deployed_file_hashes:
   .agents/skills/windows-command/assets/runas.cmd: sha256:5b3816404e6c888ce59174f7e75f2a29fb45586cd23227184ad4f3c418fd5648
   .agents/skills/windows-command/references/argument-expansion.md: sha256:0246c76a512c1ae19359c53a2eec3048a3296d80c4b933ec85a4de6212233ac3
   .agents/skills/windows-command/references/powershell.md: sha256:27ea886213b27ac856e1814b888d6193bcaf3395fd28b39faca950c3b0381e0b
-  .agents/skills/windows-script-host/SKILL.md: sha256:42b68bca4b42574698f929206c9adfe24bddb8aca44473556834b8cf78b23905
-  .agents/skills/windows-script-host/references/powershell.md: sha256:76e1cb8988c86f7753581583d3a143bdf402cd6868ee0f20040137be19313ec6
+  .agents/skills/windows-script-host/SKILL.md: sha256:f5eb31d05df2bb390b59729745d1adda2af1b6197e154c2a5749cfa0d78693f4
+  .agents/skills/windows-script-host/assets/powershell.js: sha256:2e917c9661fb1a8239bcb3567648ae52e76321c12bf3c3a4762b39581fdea467
+  .agents/skills/windows-script-host/assets/runas.js: sha256:12d216c66b78b278f4e8b1f84c7ad086219e34cdcd0d4d6437ba5f60d87c9a52
+  .agents/skills/windows-script-host/references/powershell.md: sha256:43c4fc7ae1562c5536d1524ce9a52e5a09b7e6a2880f4f16f0725b7899cf7194
   .github/agents/test-first.agent.md: sha256:42c9ef314ec587857847e4ec6d4b4a72650d9899e89b9ef9a836bf3ff7aabe39
   .github/agents/test-retrofit.agent.md: sha256:0ec09bd1f8a4ad0be50ecfb1e565af6502aa184959cf6d8e81f5b6b2d4f583b7
