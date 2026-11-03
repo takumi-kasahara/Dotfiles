@@ -92,7 +92,7 @@
   lu = l --left-right '@{upstream}'...@
   llu = lu --name-status
   # https://stackoverflow.com/questions/89332/how-do-i-recover-a-dropped-stash-in-git
-  rescue = !git l --all $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
+  rescue = !git log --name-status $(git fsck --no-reflog | awk '/dangling commit/ { print $NF }')
   bleach = !git reflog expire --verbose --expire=now --all && git gc --prune=now --aggressive && git prune --verbose --expire=now
   # https://git-scm.com/docs/git-difftool
   d = difftool --dir-diff --tool winmerge
