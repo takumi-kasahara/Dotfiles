@@ -1,16 +1,16 @@
 ---
-name: batchfile
-description: 'Skill for authoring and updating Windows batch files (*.bat). Generates consistent templates, for/if/set constructs, label-based functions, argument handling, and error handling. Standardizes placing redirection operators at the front of the line to avoid trailing-digit misinterpretation and accidental whitespace insertion.'
-argument-hint: 'Specify the purpose, inputs, outputs, and whether admin elevation is required for the .bat you want to create'
+name: windows-command
+description: 'Guidelines for Windows Batch File (.bat) and Windows Command Script File (.cmd).'
+argument-hint: 'Describe the batch file to create and any command-line arguments'
 ---
 
-# Batch File Authoring
+# Windows Command
 
-Practical skill for creating Windows `*.bat` files that are reusable, robust, and maintainable.
+Practical skill for creating Windows `*.bat`, `*.cmd` files that are reusable, robust, and maintainable.
 
 ## When to Use This Skill
 
-- Creating a new `*.bat`
+- Creating a new `*.bat`, `*.cmd` file
 - Refactoring an existing `*.bat` into a safe structure
 - Unifying `for` / `if` / `setlocal` / label-based functions
 - Stabilizing stdout/stderr handling
@@ -21,10 +21,9 @@ Practical skill for creating Windows `*.bat` files that are reusable, robust, an
 Prefer the following skeleton:
 
 1. `@echo off`
-2. `cd /d "%~dp0"`
-3. `setlocal`
-4. `:begin` / `:process` / `:end` labels
-5. Terminate with `exit /b %errorlevel%`
+2. `setlocal`
+3. `:begin` / `:process` / `:end` labels
+4. Terminate with `exit /b %errorlevel%`
 
 For scripts that require elevation, perform a `net session` check and branch to elevation at the very top.
 
@@ -74,8 +73,8 @@ Additional rules:
 
 ### 1. Template scripts
 
-- [script.bat](./assets/script.bat)
-- [script.runas.bat](./assets/script.runas.bat)
+- [run.cmd](./assets/run.cmd)
+- [runas.cmd](./assets/runas.cmd)
 
 ### 2. Script idioms
 
@@ -114,7 +113,7 @@ Use a label-based helper for a subroutine that returns with `exit /b`.
 ```bat
 :: label-based helper
 :subroutine
-	rem Add body logic here.
+	rem add logic here.
 	exit /b
 :: end subroutine
 ```
@@ -142,17 +141,17 @@ Validate required arguments before continuing. This produces a clean usage messa
 
 ## Completion Checklist
 
-- [ ] `@echo off` / `cd /d "%~dp0"` / `setlocal` are in the right places
+- [ ] `@echo off` / `setlocal` are in the right places
 - [ ] `:begin` $\rightarrow$ `:process` $\rightarrow$ `:end` flow is clear
 - [ ] Argument validation and command-existence checks are present where needed
-- [ ] Variable assignments use `set "NAME=value"` form
+- [ ] Variable assignments use `set "name=value"` form
 - [ ] Redirection follows the front-placement policy
 - [ ] Exit code is returned via `exit /b %errorlevel%`
 
 ## Gotchas
 
 - `%*` inside `if (...) else (...)` blocks breaks on parentheses in arguments
-  — When `%*` expands to something containing `)` (e.g., `temp().txt`), it closes the block prematurely. Use `goto` labels instead of blocks for branching. See [Argument Expansion Gotchas](./references/gotchas-argument-expansion.md).
+  — When `%*` expands to something containing `)` (e.g., `temp().txt`), it closes the block prematurely. Use `goto` labels instead of blocks for branching. See [Argument Expansion Gotchas](./gotchas-powershell.md/gotchas-argument-expansion.md).
 
 ## Troubleshooting
 
@@ -167,4 +166,4 @@ Validate required arguments before continuing. This produces a clean usage messa
 ## References
 
 - [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-- [SS64 Command Reference](https://ss64.com/nt/)
+  - [cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)

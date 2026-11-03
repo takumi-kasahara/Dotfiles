@@ -6,6 +6,7 @@ targets:
   - copilot
 dependencies:
   apm:
+    - awesome-skills/code-review-skill
     - github/awesome-copilot/instructions/agent-skills.instructions.md
     - github/awesome-copilot/instructions/agents.instructions.md
     - github/awesome-copilot/instructions/instructions.instructions.md
@@ -15,14 +16,6 @@ dependencies:
     - github/awesome-copilot/skills/conventional-commit
     - github/copilot-advanced-security-plugin
     - microsoftdocs/mcp
-  mcp:
-    - name: mdn
-      registry: false
-      transport: http
-      url: https://mcp.mdn.mozilla.net
-    - name: microsoft-release-communications
-      registry: false
-      transport: http
-      url: https://www.microsoft.com/releasecommunications/mcp
+  mcp: []
 includes: auto
 scripts: {}
