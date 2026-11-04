@@ -19,21 +19,9 @@
 
 .PARAMETER OutputPath
   Path to the JSON file to write the parse errors. Defaults to errors.json in the current directory.
-  ```powershell
-  .\Parse.ps1 -Path .\Script.ps1
-  ```
 
-  Parses the specified PowerShell file and reports any syntax errors.
-
-.EXAMPLE
-  ```powershell
-  .\Parse.ps1 -Path .\Modules -Recurse
-  ```
-
-  Parses all PowerShell files under the specified directory recursively.
-
-.NOTES
-  Requires PowerShell 7 or later.
+.LINK
+  https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-7.4.0
 #>
 using namespace System.Management.Automation.Language
 
@@ -79,7 +67,6 @@ ForEach-Object {
 $results = $items |
 ForEach-Object {
   $errors = $null
-  # https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-7.4.0
   [Parser]::ParseFile($_.FullName, [ref]$null, [ref]$errors) | Out-Null
   if ($errors -and $errors.Count -gt 0) {
     return $errors

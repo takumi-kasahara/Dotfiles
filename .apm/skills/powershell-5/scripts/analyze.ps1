@@ -18,22 +18,8 @@
 .PARAMETER OutputPath
   Path to the JSON file to write the analysis results. Defaults to violations.json.
 
-.EXAMPLE
-  ```powershell
-  .\Analyze.ps1 -Path .\Script.ps1
-  ```
-
-  Analyzes the specified PowerShell script and outputs PSScriptAnalyzer results.
-
-.EXAMPLE
-  ```powershell
-  .\Analyze.ps1 -Path .\Modules -Recurse
-  ```
-
-  Analyzes all PowerShell files under the specified directory recursively.
-
-.NOTES
-  Requires PowerShell 5.
+.LINK
+  https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules
 #>
 using namespace System.Globalization
 using namespace System.IO
@@ -73,12 +59,5 @@ if ($results) {
   }
   $results |
   ConvertTo-Json -Depth 100 |
-  ForEach-Object {
-    [Regex]::Replace(
-      $_,
-      '\\u(?<Value>[a-zA-Z0-9]{4})',
-      { param($m) ([char]([int]::Parse($m.Groups['Value'].Value, [NumberStyles]::HexNumber))).ToString() }
-    )
-  } |
   Out-File -LiteralPath $OutputPath -Encoding utf8
 }

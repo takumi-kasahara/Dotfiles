@@ -18,22 +18,8 @@
 .PARAMETER OutputPath
   Path to the JSON file to write the analysis results. Defaults to violations.json.
 
-.EXAMPLE
-  ```powershell
-  .\Analyze.ps1 -Path .\Script.ps1
-  ```
-
-  Analyzes the specified PowerShell script and outputs PSScriptAnalyzer results.
-
-.EXAMPLE
-  ```powershell
-  .\Analyze.ps1 -Path .\Modules -Recurse
-  ```
-
-  Analyzes all PowerShell files under the specified directory recursively.
-
-.NOTES
-  Requires PowerShell 7 or later.
+.LINK
+  https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules
 #>
 using namespace System.IO
 

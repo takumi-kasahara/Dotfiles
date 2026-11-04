@@ -24,32 +24,8 @@
 .PARAMETER Parallel
   Run tests in parallel. When this switch is used, code coverage collection is skipped.
 
-.EXAMPLE
-  ```powershell
-  .\Pester.ps1 -Path ".\Module.Tests.ps1"
-  ```
-
-  Runs all tests in the specified test file.
-
-.EXAMPLE
-  ```powershell
-   .\Pester.ps1 -Path ".\Module.Tests.ps1" -LineNumber 42
-  ```
-
-   Runs only the test at or near line 42 in the specified test file.
-
-.EXAMPLE
-  ```powershell
-  .\Pester.ps1 -Path ".\Modules" -Parallel
-  ```
-
-  Runs all tests for the module in parallel.
-
-.OUTPUTS
-  None
-
-.NOTES
-  For more information about Pester, see https://pester.dev
+.LINK
+   https://pester.dev
 #>
 [CmdletBinding()]
 param (
