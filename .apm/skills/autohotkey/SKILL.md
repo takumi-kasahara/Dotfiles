@@ -123,7 +123,7 @@ backslash := Chr(92)  ; backslash
   FileAppend("Hello stderr", "**")
   ```
 
-- This is useful for debugging and error reporting in scripts run via `AutoHotkey.ps1`.
+- Use [run.cmd](./scripts/run.cmd) to execute AutoHotkey scripts.
 
 ### System Integration
 
@@ -152,26 +152,6 @@ backslash := Chr(92)  ; backslash
 | `PCWSTR`    | `typedef const WCHAR *PCWSTR;`                    | `WStr`    |
 | `PWSTR`     | `typedef wchar_t *LPWSTR, *PWSTR;`                | `WStr`    |
 | `WCHAR`     | `typedef wchar_t WCHAR, *PWCHAR;`                 | `WStr`    |
-
-## Running Scripts
-
-- Use [AutoHotkey.ps1](./assets/AutoHotkey.ps1) from PowerShell:
-
-  ```powershell
-  powershell.exe -NoLogo -NoProfile -File '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1' -LiteralPath '.\Script.ahk'
-  ```
-
-- Run multiple scripts with wildcards:
-
-  ```powershell
-  powershell.exe -NoLogo -NoProfile -File '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1' -Path '.\*.Tests.ahk'
-  ```
-
-- Pipe files to the script:
-
-  ```powershell
-  Get-ChildItem -Path '.\Scripts\*.ahk' | '.\.agents\skills\autohotkey\scripts\AutoHotkey.ps1'
-  ```
 
 ## References
 
