@@ -1,9 +1,3 @@
----
-name: csharp-for-powershell-7
-description: Guidelines for C# code that can be loaded by PowerShell 7.6 Add-Type.
-argument-hint: Describe the desired functionality and type overview for the C# file.
----
-
 # C# for PowerShell
 
 - The goal is for `Add-Type -LiteralPath '<file>.cs'` to succeed in compilation and loading for PowerShell 7.6.
@@ -19,3 +13,8 @@ argument-hint: Describe the desired functionality and type overview for the C# f
 4. Include only namespaces that are actually used by the generated code.
    - Start with `using System;` when needed.
    - Common examples: `System`, `System.IO`, `System.Collections.Generic`.
+
+## References
+
+- [Add-Type](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-type?view=powershell-7.6)
+- [C# documentation](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
