@@ -1,10 +1,4 @@
----
-name: office-scripts-from-vba
-description: Convert Excel VBA macros to Office Scripts (TypeScript) with Microsoft Learn API checks.
-argument-hint: Target VBA procedure name(s) and its expected behavior
----
-
-# Office Scripts from VBA Conversion
+# VBA to Office Scripts Conversion
 
 Convert VBA macros into runnable Office Scripts.
 
