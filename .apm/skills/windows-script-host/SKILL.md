@@ -20,6 +20,7 @@ Windows Script Host (WSH) is a Windows administration tool.
 - [Windows Script Host](<https://learn.microsoft.com/en-us/previous-versions/9bbdkx3k(v=vs.85)>)
   - [Object Model](<https://learn.microsoft.com/en-us/previous-versions/a74hyyw0(v=vs.85)>)
 - [Windows Shell](https://learn.microsoft.com/en-us/windows/win32/shell/shell-entry)
+  - [Run a command with elevated privileges](./assets/runas.js)
 
 ## Windows Script File
 
@@ -58,6 +59,7 @@ WSF files are XML documents (start with `<?XML?>`) that group one or more script
 
 ### References
 
+- [Launching Windows PowerShell from PowerShell 7 via WSH](./references/powershell.md)
 - [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
   - [cscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript)
   - [wscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript)

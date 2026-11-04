@@ -151,7 +151,7 @@ Validate required arguments before continuing. This produces a clean usage messa
 ## Gotchas
 
 - `%*` inside `if (...) else (...)` blocks breaks on parentheses in arguments
-  — When `%*` expands to something containing `)` (e.g., `temp().txt`), it closes the block prematurely. Use `goto` labels instead of blocks for branching. See [Argument Expansion Gotchas](./gotchas-powershell.md/gotchas-argument-expansion.md).
+  — When `%*` expands to something containing `)` (e.g., `temp().txt`), it closes the block prematurely. Use `goto` labels instead of blocks for branching. See [Gotchas](./references/argument-expansion.md).
 
 ## Troubleshooting
 
@@ -165,5 +165,6 @@ Validate required arguments before continuing. This produces a clean usage messa
 
 ## References
 
+- [Launching Windows PowerShell from PowerShell 7 via CMD](./references/powershell.md)
 - [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
   - [cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
