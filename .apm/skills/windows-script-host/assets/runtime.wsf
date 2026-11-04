@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/b1zyx449(v=vs.85) -->
+<job id="RuntimeSample">
+  <runtime>
+    <named name="Input" helpstring="Input path" type="string" required="true" />
+    <unnamed name="Output" helpstring="Output path" many="false" required="false" />
+  </runtime>
+  <script language="JScript">
+    WScript.Arguments.ShowUsage();
+  </script>
+</job>

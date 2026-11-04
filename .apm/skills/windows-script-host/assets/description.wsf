@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/yh50kfd4(v=vs.85) -->
+<job id="DescriptionSample">
+  <runtime>
+    <description>Print a message.</description>
+  </runtime>
+  <script language="JScript">
+    WScript.Arguments.ShowUsage();
+  </script>
+</job>

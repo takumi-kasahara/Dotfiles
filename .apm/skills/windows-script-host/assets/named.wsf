@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/y2d0z4f9(v=vs.85) -->
+<job id="NamedSample">
+    <runtime>
+        <named name="Verbose" helpstring="Verbose output" type="boolean" />
+    </runtime>
+    <script language="JScript">
+    WScript.Arguments.ShowUsage();
+  </script>
+</job>

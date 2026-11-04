@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/zhxaf4yw(v=vs.85) -->
+<job id="ObjectSample">
+  <object id="shell" progid="WScript.Shell" />
+  <script language="JScript">
+    WScript.Echo(shell.CurrentDirectory);
+  </script>
+</job>

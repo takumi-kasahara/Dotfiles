@@ -4,7 +4,7 @@
   "singleQuote": true,
   "overrides": [
     {
-      "files": [".apm/skills/windows-script-host/**/*"],
+      "files": ["**/.apm/skills/windows-script-host/assets/*.js"],
       "options": {
         "trailingComma": "none"
       }

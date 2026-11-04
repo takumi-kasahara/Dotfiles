@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/x3c407wx(v=vs.85) -->
+<job id="UnnamedSample">
+  <runtime>
+    <unnamed name="File" helpstring="Input file" many="false" required="true" />
+  </runtime>
+  <script language="JScript">
+    WScript.Arguments.ShowUsage();
+  </script>
+</job>
