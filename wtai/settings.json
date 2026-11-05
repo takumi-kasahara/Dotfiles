@@ -140,6 +140,12 @@
         "name": "Linux",
         "pathTranslationStyle": "wsl",
         "startingDirectory": "~"
+      },
+      {
+        "guid": "{72ffe5ea-2267-5559-b464-ea3f41417ca1}",
+        "hidden": false,
+        "name": "GitHub Copilot",
+        "source": "IntelligentTerminal.AgentProfiles"
       }
     ]
   },
@@ -151,6 +157,9 @@
   "showTabsInTitlebar": true,
   "showTerminalTitleInTitlebar": true,
   "showTokenUsageAndCost": true,
+  "sidebarShowAgentsOnly": true,
+  "tabLayout": "vertical",
+  "tabLayoutVerticalWidth": 180,
   "tabWidthMode": "titleLength",
   "theme": "system",
   "themes": [],
