@@ -397,7 +397,7 @@ user_pref("permissions.default.xr", 2);                   // 2: Disabled
 // #endregion
 // #endregion
 // #region Experimental Features
-user_pref("browser.urlbar.trimhttps", true);                                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
+user_pref("browser.urlbar.trimHttps", true);                                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
 user_pref("dom.enable_container_timing", true);                               /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.enable_container_timing} */
 user_pref("dom.headingoffset.enabled", true);                                 /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.headingoffset.enabled} */
 user_pref("dom.multiple_import_maps.enabled", true);                          /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.multiple_import_maps.enabled} */
