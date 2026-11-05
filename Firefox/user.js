@@ -46,8 +46,7 @@ user_pref("media.gmp-gmpopenh264.enabled", true);
 user_pref("media.gmp-widevinecdm.enabled", true);
 user_pref("media.hardwaremediakeys.enabled", true);
 user_pref("media.peerconnection.enabled", true);
-user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
-user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.dns.disableIPv6", false);
@@ -60,7 +59,6 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
-user_pref("network.trr_ui.fallback_was_checked", true);
 user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
 user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
 user_pref("places.history.enabled", false);
