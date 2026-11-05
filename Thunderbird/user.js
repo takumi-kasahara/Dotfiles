@@ -60,6 +60,7 @@ user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
 user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
+user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
 user_pref("places.history.enabled", false);
 user_pref("pref.privacy.disable_button.view_passwords", false);
 user_pref("privacy.clearOnShutdown_v2.cache", true);
