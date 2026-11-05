@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/17h25e5a(v=vs.85) -->
+<job id="ExampleSample">
+  <runtime>
+    <example>Example usage text.</example>
+  </runtime>
+  <script language="JScript">
+    WScript.Arguments.ShowUsage();
+  </script>
+</job>

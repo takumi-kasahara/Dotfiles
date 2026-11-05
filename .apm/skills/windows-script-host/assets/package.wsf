@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/20cxbyht(v=vs.85) -->
+<package>
+  <job id="ExampleJob">
+    <script language="JScript">
+      WScript.Echo("Hello from package.wsf");
+    </script>
+  </job>
+</package>

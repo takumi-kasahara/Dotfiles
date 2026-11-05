@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/479dafxb(v=vs.85) -->
+<job id="ReferenceSample">
+  <reference object="Scripting.FileSystemObject" />
+  <script language="JScript">
+    WScript.Echo("reference sample");
+  </script>
+</job>

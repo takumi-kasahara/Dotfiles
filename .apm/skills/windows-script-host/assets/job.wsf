@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://learn.microsoft.com/en-us/previous-versions/aky1xc03(v=vs.85) -->
+<job id="ExampleJob">
+  <script language="JScript">
+    WScript.Echo("Hello from job.wsf");
+  </script>
+</job>

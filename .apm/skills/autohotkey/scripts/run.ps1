@@ -25,32 +25,8 @@
 .PARAMETER ArgumentList
   Additional arguments to pass to Script. These are forwarded after the script path.
 
-.EXAMPLE
-  ```powershell
-  .\AutoHotkey.ps1 -Path .\Script.ahk
-  ```
-
-  Runs the specified AutoHotkey script from a clean PowerShell session.
-
-.EXAMPLE
-  ```powershell
-  .\AutoHotkey.ps1 -Path .\Tests -Recurse
-  ```
-
-  Runs all AutoHotkey scripts under the specified directory recursively.
-
-.EXAMPLE
-  ```powershell
-  .\AutoHotkey.ps1 -Path .\Script.ahk -Switches '/ErrorStdOut', '/Validate' -ArgumentList 'foo', 'bar', 'baz'
-  ```
-
-  Runs the specified AutoHotkey script with additional switches passed to AutoHotkey.exe before the script path, and additional arguments passed to AutoHotkey.exe after the script path.
-
 .LINK
   - [Command Line Parameters](https://www.autohotkey.com/docs/v2/Scripts.htm#cmd)
-
-.OUTPUTS
-  None.
 #>
 [CmdletBinding()]
 param (

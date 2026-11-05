@@ -19,21 +19,12 @@
 
 .PARAMETER OutputPath
   Path to the JSON file to write the parse errors. Defaults to errors.json in the current directory.
-  ```powershell
   .\Parse.ps1 -Path .\Script.ps1
-  ```
 
   Parses the specified PowerShell file and reports any syntax errors.
 
-.EXAMPLE
-  ```powershell
-  .\Parse.ps1 -Path .\Modules -Recurse
-  ```
-
-  Parses all PowerShell files under the specified directory recursively.
-
-.NOTES
-  Requires PowerShell 5.
+.LINK
+  https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-1.1.0
 #>
 using namespace System.Globalization
 using namespace System.Management.Automation.Language
@@ -80,7 +71,6 @@ ForEach-Object {
 $results = $items |
 ForEach-Object {
   $errors = $null
-  # https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-1.1.0
   [Parser]::ParseFile($_.FullName, [ref]$null, [ref]$errors) | Out-Null
   if ($errors -and $errors.Count -gt 0) {
     return $errors
@@ -93,13 +83,6 @@ if ($results) {
   "$($results.Length) parse errors found." | Out-Host
   $results |
   ConvertTo-Json -Depth 100 |
-  ForEach-Object {
-    [Regex]::Replace(
-      $_,
-      '\\u(?<Value>[a-zA-Z0-9]{4})',
-      { param($m) ([char]([int]::Parse($m.Groups['Value'].Value, [NumberStyles]::HexNumber))).ToString() }
-    )
-  } |
   Out-File -LiteralPath $OutputPath -Encoding utf8
   exit 1
 } else {
