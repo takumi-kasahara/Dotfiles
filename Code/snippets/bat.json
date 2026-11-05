@@ -29,7 +29,7 @@
       "echo ERROR: Access is denied.",
       "goto :end\n",
       ":elevate",
-      "sudo --inline \"%~0\" %*",
+      "sudo \"%~0\" %*",
       "goto :end\n",
       ":process",
       "${0::: statement}\n",
