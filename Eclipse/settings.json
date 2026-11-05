@@ -1,27 +1,27 @@
 {
   // #region File Extension
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -39,6 +39,7 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  // #endregion
   // #region ai-features
   "ai-features.agentMode.enabled": true,
   "ai-features.AiEnable.enableAI": true,
@@ -69,24 +70,8 @@
       "selectedModel": "ollama/lfm3:latest"
     }
   },
-  // https://theia-ide.org/docs/user_ai/#openai-compatible-models-eg-via-vllm
-  "ai-features.mcp.mcpServers": {
-    "mdn": {
-      "serverUrl": "https://mcp.mdn.mozilla.net/",
-      "autostart": true,
-      "deferLoading": true
-    },
-    "microsoft-learn": {
-      "serverUrl": "https://learn.microsoft.com/api/mcp",
-      "autostart": true,
-      "deferLoading": true
-    },
-    "mrc": {
-      "serverUrl": "https://www.microsoft.com/releasecommunications/mcp",
-      "autostart": true,
-      "deferLoading": true
-    }
-  },
+  // https://theia-ide.org/docs/user_ai/#mcp-integration
+  "ai-features.mcp.mcpServers": {},
   "ai-features.notifications.default": "os-notification",
   "ai-features.ollama.ollamaModels": ["lfm3:latest"],
   "ai-features.openAiOfficial.officialOpenAiModels": [],

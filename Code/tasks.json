@@ -7,35 +7,35 @@
   },
   "tasks": [
     {
-      "label": "hook:pre-commit",
+      "label": "hook: pre-commit",
       "type": "shell",
       "command": "git",
       "args": ["hook", "run", "pre-commit"],
       "problemMatcher": []
     },
     {
-      "label": "apm:install",
+      "label": "apm: install",
       "type": "shell",
       "command": "apm",
       "args": ["install", "--force"],
       "problemMatcher": []
     },
     {
-      "label": "apm:update",
+      "label": "apm: update",
       "type": "shell",
       "command": "apm",
       "args": ["install", "--update", "--force"],
       "problemMatcher": []
     },
     {
-      "label": "npm:install",
+      "label": "npm: install",
       "type": "shell",
       "command": "npm",
       "args": ["install"],
       "problemMatcher": []
     },
     {
-      "label": "npm:update",
+      "label": "npm: update",
       "type": "shell",
       "command": "npm",
       "args": ["update"],
@@ -51,14 +51,14 @@
       "hide": true
     },
     {
-      "label": "uv:install",
+      "label": "uv: install",
       "type": "shell",
       "command": "uv",
       "args": ["sync"],
       "problemMatcher": []
     },
     {
-      "label": "uv:update",
+      "label": "uv: update",
       "type": "shell",
       "command": "uv",
       "args": ["sync", "--upgrade"],
