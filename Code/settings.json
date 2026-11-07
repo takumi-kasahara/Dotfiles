@@ -666,7 +666,7 @@
   "task.quickOpen.history": 0,
   // #endregion
   // #region terminal
-  "terminal.external.windowsExec": "wtai.exe",
+  "terminal.external.windowsExec": "wt.exe",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.confirmOnKill": "always",
