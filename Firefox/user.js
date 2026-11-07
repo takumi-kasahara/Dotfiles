@@ -46,8 +46,7 @@ user_pref("media.gmp-gmpopenh264.enabled", true);
 user_pref("media.gmp-widevinecdm.enabled", true);
 user_pref("media.hardwaremediakeys.enabled", true);
 user_pref("media.peerconnection.enabled", true);
-user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
-user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.dns.disableIPv6", false);
@@ -60,7 +59,6 @@ user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
-user_pref("network.trr_ui.fallback_was_checked", true);
 user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
 user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
 user_pref("places.history.enabled", false);
@@ -397,7 +395,7 @@ user_pref("permissions.default.xr", 2);                   // 2: Disabled
 // #endregion
 // #endregion
 // #region Experimental Features
-user_pref("browser.urlbar.trimhttps", true);                                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
+user_pref("browser.urlbar.trimHttps", true);                                  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#browser.urlbar.trimhttps} */
 user_pref("dom.enable_container_timing", true);                               /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.enable_container_timing} */
 user_pref("dom.headingoffset.enabled", true);                                 /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.headingoffset.enabled} */
 user_pref("dom.multiple_import_maps.enabled", true);                          /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.multiple_import_maps.enabled} */
@@ -422,9 +420,9 @@ user_pref("network.http.idempotencyKey.enabled", true);                       /*
 user_pref("security.integrity_policy.stylesheet.enabled", true);              /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#security.integrity_policy.stylesheet.enabled} */
 // #endregion
 // #region Firefox Nightly
-user_pref("browser.ipProtection.autoRestoreEnabled", false);
-user_pref("browser.ipProtection.autoStartEnabled", false);
-user_pref("browser.ipProtection.autoStartPrivateEnabled", false);
+user_pref("browser.ipProtection.autoRestoreEnabled", true);
+user_pref("browser.ipProtection.autoStartEnabled", true);
+user_pref("browser.ipProtection.autoStartPrivateEnabled", true);
 user_pref("browser.ipProtection.enabled", true);
 user_pref("browser.ipProtection.features.autoStart", true);
 user_pref("browser.ipProtection.userEnableCount", 0);

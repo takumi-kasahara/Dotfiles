@@ -1,27 +1,27 @@
 {
   // #region File Extension
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -61,6 +61,7 @@
   "chat.agentHost.experimental.prewarmSessions": true,
   "chat.agentHost.experimental.titleGeneration": "agentReview",
   "chat.agentHost.experimentalMissionControl.useLocalCredentials": true,
+  "chat.agentHost.mcpSkills.enabled": true,
   "chat.agentHost.moveChats.enabled": true,
   "chat.agentHost.multipleChatProviders.enabled": true,
   "chat.agentHost.opus48Prompt.enabled": true,
@@ -80,11 +81,9 @@
   "chat.checkpoints.showFileChanges": true,
   "chat.closedPromoNotification": "copilotIconPopup",
   "chat.copilot.claudeAdvisor.enabled": true,
-  "chat.copilot.dynamicAutoTiers.enabled": true,
   "chat.copilot.imageGeneration.model": "off",
   "chat.copilot.localModel.enabled": true,
   "chat.copilot.localModel.useInAuto": true,
-  "chat.copilot.memory.enabled": true,
   "chat.copilot.memory.local.enabled": true,
   "chat.copilot.searchSubagent.enabled": true,
   "chat.copilot.stabilityOrderedPrompt.enabled": true,
@@ -103,7 +102,6 @@
   "chat.editor.workingSet.enabled": true,
   "chat.exitAfterDelegation": true,
   "chat.experimental.collectInstructionsInExtension": true,
-  "chat.experimental.incrementalRendering.animationStyle": "none",
   "chat.experimental.incrementalRendering.buffering": "paragraph",
   "chat.experimental.incrementalRendering.enabled": true,
   "chat.experimental.richLinks.enabled": true,
@@ -706,6 +704,10 @@
   "testing.coverageToolbarEnabled": true,
   "testing.followRunningTest": true,
   "testing.showAllMessages": true,
+  // #endregion
+  // #region update
+  "update.showPostInstallInfo": true,
+  "update.restartWhenIdle": true,
   // #endregion
   // #region window
   "window.autoDetectColorScheme": true,

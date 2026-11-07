@@ -1,5 +1,4 @@
 /**
- * @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features}
  * @see {@link https://github.com/mozilla-firefox/firefox/blob/main/browser/app/profile/firefox.js}
  * @see {@link https://kb.mozillazine.org/About:config_entries}
  * @see {@link https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections}
@@ -44,7 +43,7 @@ user_pref("media.gmp-gmpopenh264.enabled", false);
 user_pref("media.gmp-widevinecdm.enabled", false);
 user_pref("media.hardwaremediakeys.enabled", false);
 user_pref("media.peerconnection.enabled", false);
-user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.enabled", false);
 user_pref("network.cookie.cookieBehavior", 2);
@@ -60,6 +59,7 @@ user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks5_remote_dns", true);
 user_pref("network.trr.mode", 3);                         /** @see {@link https://firefox-source-docs.mozilla.org/networking/dns/dns-over-https-trr.html#implementation} */
+user_pref("network.trr.uri", "https://firefox.dns.nextdns.io/");
 user_pref("places.history.enabled", false);
 user_pref("pref.privacy.disable_button.view_passwords", false);
 user_pref("privacy.clearOnShutdown_v2.cache", true);
