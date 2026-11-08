@@ -18,18 +18,16 @@ if [[ -z "$1" || -z "$2" ]]; then
   exit 1
 fi
 
-WinMerge='C:/Program Files/WinMerge/WinMergeU.exe'
 if [[ -z "${WSL_DISTRO_NAME:-}" ]]; then
   LOCAL="$1"
   REMOTE="$2"
 else
   LOCAL=$(wslpath -a -w "$1")
   REMOTE=$(wslpath -a -w "$2")
-  WinMerge=$(wslpath -a -u "$WinMerge")
 fi
-if [[ ! -e "$WinMerge" ]]; then
+
+if ! command -v WinMergeU >/dev/null 2>&1; then
   echo 'fatal: WinMerge not found.' >&2
   exit 1
 fi
-
-"$WinMerge" -e -u -x -r -wl -fr -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE"
+WinMergeU -e -u -x -r -m Quick -wl -fr -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE"

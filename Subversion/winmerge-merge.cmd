@@ -7,9 +7,9 @@ setlocal
 :: %%3 = mine        (working copy)
 :: %%4 = target      (file to write the resolved result)
 
-set "WinMerge=%ProgramFiles%\WinMerge\WinMergeU.exe"
-if not exist "%WinMerge%" (
+where WinMergeU >nul 2>&1
+if errorlevel 1 (
   echo fatal: WinMerge not found.
   exit /b 1
 )
-"%WinMerge%" /e /u /3 /wl /wr /dl "Mine: %~nx3" /dm "Base: %~nx1" /dr "Theirs: %~nx2" /o "%~4" "%~3" "%~1" "%~2"
+WinMergeU /e /u /x /wl /wm /fr /ar /dl "Base: %~nx1" /dm "Theirs: %~nx2" /dr "Mine: %~nx3" /o "%~4" "%~1" "%~2" "%~3"
