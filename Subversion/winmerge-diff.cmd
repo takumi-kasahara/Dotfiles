@@ -6,9 +6,9 @@ setlocal
 :: Only the sixth and seventh arguments (%%6 and %%7) are guaranteed to be the
 :: left and right file paths, respectively. The other arguments are diff flags.
 
-set "WinMerge=%ProgramFiles%\WinMerge\WinMergeU.exe"
-if not exist "%WinMerge%" (
+where WinMergeU >nul 2>&1
+if errorlevel 1 (
   echo fatal: WinMerge not found.
   exit /b 1
 )
-"%WinMerge%" /e /u /x /r /wl /fr "%~6" "%~7"
+WinMergeU /e /u /x /wl /fr /dl "Base: %~nx6" /dr "Mine: %~nx7" "%~6" "%~7"

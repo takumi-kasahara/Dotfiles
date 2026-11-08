@@ -6,17 +6,15 @@ setlocal
 :: parameters. The useful file paths are the 9th, 10th, and 11th arguments,
 :: representing mine, older (base), and yours, respectively. Because batch files
 :: can only access %%1-%%9 at a time, shift the window twice to reach them.
-
-set "WinMerge=%ProgramFiles%\WinMerge\WinMergeU.exe"
-if not exist "%WinMerge%" (
-  echo fatal: WinMerge not found.
-  exit /b 1
-)
-
 shift
 shift
 set "MINE=%~7"
 set "OLDER=%~8"
 set "YOURS=%~9"
 
-"%WinMerge%" /e /u /x /3 /wl /wr /dl "Mine: %~nxMINE%" /dm "Base: %~nxOLDER%" /dr "Theirs: %~nxYOURS%" "%MINE%" "%OLDER%" "%YOURS%"
+where WinMergeU >nul 2>&1
+if errorlevel 1 (
+  echo fatal: WinMerge not found.
+  exit /b 1
+)
+WinMergeU /e /u /x /wl /wm /fr /ar /dl "Base: %~nx8%" /dm "Theirs: %~nx9%" /dr "Mine: %~nx7%" "%OLDER%" "%YOURS%" "%MINE%"
