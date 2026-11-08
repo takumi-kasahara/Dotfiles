@@ -3,7 +3,7 @@
   Parses PowerShell files and reports syntax errors.
 
 .DESCRIPTION
-  Uses System.Management.Automation.Language.Parser to parse each specified file and outputs any parse errors as JSON.
+  Uses `System.Management.Automation.Language.Parser` to parse each specified file and outputs any parse errors as JSON.
 
 .PARAMETER Path
   One or more file paths to parse. Supports pipeline and remaining arguments.

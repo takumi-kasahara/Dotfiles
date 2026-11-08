@@ -26,7 +26,7 @@
   Additional arguments to pass to Script. These are forwarded after the script path.
 
 .LINK
-  - [Command Line Parameters](https://www.autohotkey.com/docs/v2/Scripts.htm#cmd)
+  https://www.autohotkey.com/docs/v2/Scripts.htm#cmd
 #>
 [CmdletBinding()]
 param (
