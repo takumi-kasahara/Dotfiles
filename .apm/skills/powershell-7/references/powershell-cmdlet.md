@@ -8,12 +8,12 @@ Use this checklist by section:
 
 ### Parameters and Behavior
 
-2. Apply parameter and attribute rules from the parameter section.
-3. If `SupportsShouldProcess` is enabled, verify `-WhatIf` and `-Confirm` behavior.
+1. Apply parameter and attribute rules from the parameter section.
+2. If `SupportsShouldProcess` is enabled, verify `-WhatIf` and `-Confirm` behavior.
 
 ### Error Handling
 
-4. Add clear, user-friendly terminating errors for invalid or unsupported parameter values, including valid alternatives.
+1. Add clear, user-friendly terminating errors for invalid or unsupported parameter values, including valid alternatives.
 
 - If using `[CmdletBinding(SupportsShouldProcess)]`, always implement `-WhatIf`/`-Confirm` behavior.
 - Refer to existing similar functions and tests.

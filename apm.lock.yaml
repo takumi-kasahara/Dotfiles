@@ -114,11 +114,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agent-skills
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: 1.0.0
     virtual_path: instructions/agent-skills.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agent-skills.instructions.md
     deployed_file_hashes:
@@ -127,11 +126,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agents
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: 1.0.0
     virtual_path: instructions/agents.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agents.instructions.md
     deployed_file_hashes:
@@ -140,11 +138,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-instructions
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: 1.0.0
     virtual_path: instructions/instructions.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/instructions.instructions.md
     deployed_file_hashes:
@@ -153,11 +150,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-markdown
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: 1.0.0
     virtual_path: instructions/markdown.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/markdown.instructions.md
     deployed_file_hashes:
@@ -166,11 +162,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-prompt
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: 1.0.0
     virtual_path: instructions/prompt.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/prompt.instructions.md
     deployed_file_hashes:
@@ -179,7 +174,7 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-branch
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: unknown
     virtual_path: skills/conventional-branch
     is_virtual: true
@@ -193,7 +188,7 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-commit
     host: github.com
-    resolved_commit: 5269f7ea2d6c3a9bfda5ed878b6726cf509121fd
+    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
     version: unknown
     virtual_path: skills/conventional-commit
     is_virtual: true
@@ -275,7 +270,16 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:8e5ded259feffaafb89883017d0266bc076b113424cc5a374047a0061b7c7d7c
+    content_hash: sha256:7121bbfb784029f1fa577ff9b7126617e680ba2afd3e4b11e04e49cbb42152c0
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/autohotkey/scripts/run.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:ac96c2b12db594d97f0d236e038e72ed0cdae71caf71f3d2d84853b9c84e125e
   - kind: project-relative
     target: copilot
     value: .agents/skills/bookmarklets
@@ -1016,6 +1020,15 @@ deployments:
     content_hash: sha256:011695c75435e00f91b88753a34dc93608a43687b55e0bfd702aa876ab29c8ff
   - kind: project-relative
     target: copilot
+    value: .agents/skills/powershell-5/scripts/analyze.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:b7f6c4b962967de892bf485ea9b791f51adc8d340ab5641e34a7bc66ce714b8d
+  - kind: project-relative
+    target: copilot
     value: .agents/skills/powershell-5/scripts/parse.cmd
     runtime: null
     scope: project
@@ -1031,7 +1044,16 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:df25e45e2cc91a952cd88b108ba3e1294cb47ef66eb8d8fc28102f2ac3a051b3
+    content_hash: sha256:82e13e2dbdce6e66babfef1c660567257eae8e57150a46bf46dfd44717c60d27
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/parse.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:2eaa1c7cd9886e0774cd047a5d9e3fcf6d4554333d3222180e55762f698ab334
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-5/scripts/pester.cmd
@@ -1050,6 +1072,15 @@ deployments:
       - .
     active_owner: .
     content_hash: sha256:8deb66b047a1fc0eda0e27d47906aae4e80ab8a95dbe4d11a2aade59e090e393
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-5/scripts/pester.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:b48918eb299969b1924ea4401ebdbd87fa9254b780969ed5b0764244354089f5
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-7
@@ -1094,7 +1125,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:e9fef9df7928930ce2969321c98a2be743ef2277efc8885ac0f932415be9d12e
+    content_hash: sha256:decfddcf62571b53212406b76c79b632c70963a88fd3215b9a7c971ff825b45e
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-7/references/powershell-pester.md
@@ -1124,6 +1155,15 @@ deployments:
     content_hash: sha256:8c05d776ea492c4785d0de512e0b925b74c49fad9655a5f01a89e6863969a45c
   - kind: project-relative
     target: copilot
+    value: .agents/skills/powershell-7/scripts/analyze.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:b7f6c4b962967de892bf485ea9b791f51adc8d340ab5641e34a7bc66ce714b8d
+  - kind: project-relative
+    target: copilot
     value: .agents/skills/powershell-7/scripts/parse.cmd
     runtime: null
     scope: project
@@ -1139,7 +1179,16 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:1494e2c254e6bd77d0827c8761f1d60c751197f78fde0b146e3e2bae94693322
+    content_hash: sha256:0a86598ab8027276fabd83e1b1f519c52b8ddf9365b1cf9ee9e3ad0c41a2eeef
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/parse.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:6b53462b2d40708c02fc68888f9a6885a38e806a353f7f82ef3182fad65c59d2
   - kind: project-relative
     target: copilot
     value: .agents/skills/powershell-7/scripts/pester.cmd
@@ -1158,6 +1207,15 @@ deployments:
       - .
     active_owner: .
     content_hash: sha256:c64e36dd1cff8e53aca80f01ce0d691ee9370edbce356cb17f294a78f13d8255
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/powershell-7/scripts/pester.ps1.md
+    runtime: null
+    scope: project
+    owners:
+      - .
+    active_owner: .
+    content_hash: sha256:4a49542c032dc65cf516f40dccbb367dbdb592f13eca4961173237a6072cff05
   - kind: project-relative
     target: copilot
     value: .agents/skills/rubberduck-vba
@@ -1283,7 +1341,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:5b3816404e6c888ce59174f7e75f2a29fb45586cd23227184ad4f3c418fd5648
+    content_hash: sha256:d6199781c78c816e7c5c43e90a109bc75e0e9be7815773489061770be94ce7bb
   - kind: project-relative
     target: copilot
     value: .agents/skills/windows-command/references/argument-expansion.md
@@ -1565,6 +1623,7 @@ local_deployed_files:
   - .agents/skills/autohotkey/SKILL.md
   - .agents/skills/autohotkey/scripts/run.cmd
   - .agents/skills/autohotkey/scripts/run.ps1
+  - .agents/skills/autohotkey/scripts/run.ps1.md
   - .agents/skills/bookmarklets
   - .agents/skills/bookmarklets/SKILL.md
   - .agents/skills/office-scripts
@@ -1583,10 +1642,13 @@ local_deployed_files:
   - .agents/skills/powershell-5/references/powershell-pester.md
   - .agents/skills/powershell-5/scripts/analyze.cmd
   - .agents/skills/powershell-5/scripts/analyze.ps1
+  - .agents/skills/powershell-5/scripts/analyze.ps1.md
   - .agents/skills/powershell-5/scripts/parse.cmd
   - .agents/skills/powershell-5/scripts/parse.ps1
+  - .agents/skills/powershell-5/scripts/parse.ps1.md
   - .agents/skills/powershell-5/scripts/pester.cmd
   - .agents/skills/powershell-5/scripts/pester.ps1
+  - .agents/skills/powershell-5/scripts/pester.ps1.md
   - .agents/skills/powershell-7
   - .agents/skills/powershell-7/SKILL.md
   - .agents/skills/powershell-7/references/comment-based-help.md
@@ -1595,10 +1657,13 @@ local_deployed_files:
   - .agents/skills/powershell-7/references/powershell-pester.md
   - .agents/skills/powershell-7/scripts/analyze.cmd
   - .agents/skills/powershell-7/scripts/analyze.ps1
+  - .agents/skills/powershell-7/scripts/analyze.ps1.md
   - .agents/skills/powershell-7/scripts/parse.cmd
   - .agents/skills/powershell-7/scripts/parse.ps1
+  - .agents/skills/powershell-7/scripts/parse.ps1.md
   - .agents/skills/powershell-7/scripts/pester.cmd
   - .agents/skills/powershell-7/scripts/pester.ps1
+  - .agents/skills/powershell-7/scripts/pester.ps1.md
   - .agents/skills/rubberduck-vba
   - .agents/skills/rubberduck-vba/SKILL.md
   - .agents/skills/rubberduck-vba/assets/TestModule.bas
@@ -1635,7 +1700,8 @@ local_deployed_files:
 local_deployed_file_hashes:
   .agents/skills/autohotkey/SKILL.md: sha256:7bda5b04ff25fcab906546eae66856f5b77fc86c00825a88eebba3125b882ce9
   .agents/skills/autohotkey/scripts/run.cmd: sha256:c59ffd922c3fad9e01755ab55d28f971d64818500d28212cda5eb79b3ac421f7
-  .agents/skills/autohotkey/scripts/run.ps1: sha256:8e5ded259feffaafb89883017d0266bc076b113424cc5a374047a0061b7c7d7c
+  .agents/skills/autohotkey/scripts/run.ps1: sha256:7121bbfb784029f1fa577ff9b7126617e680ba2afd3e4b11e04e49cbb42152c0
+  .agents/skills/autohotkey/scripts/run.ps1.md: sha256:ac96c2b12db594d97f0d236e038e72ed0cdae71caf71f3d2d84853b9c84e125e
   .agents/skills/bookmarklets/SKILL.md: sha256:11392cb4ddd29d627b0433fc073c5d1d8d5c9b0db8d3c070a62aacfabab233a8
   .agents/skills/office-scripts/SKILL.md: sha256:d1033b1a2196f3f05ff28b6a07049c010a3cdeb86f40b665b4b29de74d235b1e
   .agents/skills/office-scripts/references/office-scripts-to-vba.md: sha256:8db40573fc075317be73ae0193b41ac15da934ba35b731e52d27f40d498eb231
@@ -1650,21 +1716,27 @@ local_deployed_file_hashes:
   .agents/skills/powershell-5/references/powershell-pester.md: sha256:16dcac5734a29b9904fd0c370ac2a88466e2c857f9245be11e790dd5b0266fcf
   .agents/skills/powershell-5/scripts/analyze.cmd: sha256:c59ffd922c3fad9e01755ab55d28f971d64818500d28212cda5eb79b3ac421f7
   .agents/skills/powershell-5/scripts/analyze.ps1: sha256:011695c75435e00f91b88753a34dc93608a43687b55e0bfd702aa876ab29c8ff
+  .agents/skills/powershell-5/scripts/analyze.ps1.md: sha256:b7f6c4b962967de892bf485ea9b791f51adc8d340ab5641e34a7bc66ce714b8d
   .agents/skills/powershell-5/scripts/parse.cmd: sha256:c59ffd922c3fad9e01755ab55d28f971d64818500d28212cda5eb79b3ac421f7
-  .agents/skills/powershell-5/scripts/parse.ps1: sha256:df25e45e2cc91a952cd88b108ba3e1294cb47ef66eb8d8fc28102f2ac3a051b3
+  .agents/skills/powershell-5/scripts/parse.ps1: sha256:82e13e2dbdce6e66babfef1c660567257eae8e57150a46bf46dfd44717c60d27
+  .agents/skills/powershell-5/scripts/parse.ps1.md: sha256:2eaa1c7cd9886e0774cd047a5d9e3fcf6d4554333d3222180e55762f698ab334
   .agents/skills/powershell-5/scripts/pester.cmd: sha256:c59ffd922c3fad9e01755ab55d28f971d64818500d28212cda5eb79b3ac421f7
   .agents/skills/powershell-5/scripts/pester.ps1: sha256:8deb66b047a1fc0eda0e27d47906aae4e80ab8a95dbe4d11a2aade59e090e393
+  .agents/skills/powershell-5/scripts/pester.ps1.md: sha256:b48918eb299969b1924ea4401ebdbd87fa9254b780969ed5b0764244354089f5
   .agents/skills/powershell-7/SKILL.md: sha256:b2eb9aec39cd31646657eeb6916777f618444c64ca6994293f6ffd99e34a8696
   .agents/skills/powershell-7/references/comment-based-help.md: sha256:32750b5e72423b4473e1b92df9969da594cc18a53a865d26025f2b419e3fe56b
   .agents/skills/powershell-7/references/csharp.md: sha256:98e745b6501c8855e58a8389de57e1f9d5b39c284947ad454d1a941531e3767b
-  .agents/skills/powershell-7/references/powershell-cmdlet.md: sha256:e9fef9df7928930ce2969321c98a2be743ef2277efc8885ac0f932415be9d12e
+  .agents/skills/powershell-7/references/powershell-cmdlet.md: sha256:decfddcf62571b53212406b76c79b632c70963a88fd3215b9a7c971ff825b45e
   .agents/skills/powershell-7/references/powershell-pester.md: sha256:16dcac5734a29b9904fd0c370ac2a88466e2c857f9245be11e790dd5b0266fcf
   .agents/skills/powershell-7/scripts/analyze.cmd: sha256:93c26394d0376bfcde1bc51d06c9c4722a8beda4c18b46baf85bf55b1e166dac
   .agents/skills/powershell-7/scripts/analyze.ps1: sha256:8c05d776ea492c4785d0de512e0b925b74c49fad9655a5f01a89e6863969a45c
+  .agents/skills/powershell-7/scripts/analyze.ps1.md: sha256:b7f6c4b962967de892bf485ea9b791f51adc8d340ab5641e34a7bc66ce714b8d
   .agents/skills/powershell-7/scripts/parse.cmd: sha256:93c26394d0376bfcde1bc51d06c9c4722a8beda4c18b46baf85bf55b1e166dac
-  .agents/skills/powershell-7/scripts/parse.ps1: sha256:1494e2c254e6bd77d0827c8761f1d60c751197f78fde0b146e3e2bae94693322
+  .agents/skills/powershell-7/scripts/parse.ps1: sha256:0a86598ab8027276fabd83e1b1f519c52b8ddf9365b1cf9ee9e3ad0c41a2eeef
+  .agents/skills/powershell-7/scripts/parse.ps1.md: sha256:6b53462b2d40708c02fc68888f9a6885a38e806a353f7f82ef3182fad65c59d2
   .agents/skills/powershell-7/scripts/pester.cmd: sha256:93c26394d0376bfcde1bc51d06c9c4722a8beda4c18b46baf85bf55b1e166dac
   .agents/skills/powershell-7/scripts/pester.ps1: sha256:c64e36dd1cff8e53aca80f01ce0d691ee9370edbce356cb17f294a78f13d8255
+  .agents/skills/powershell-7/scripts/pester.ps1.md: sha256:4a49542c032dc65cf516f40dccbb367dbdb592f13eca4961173237a6072cff05
   .agents/skills/rubberduck-vba/SKILL.md: sha256:a631f26585cb261925205f17ef570c59611486607979ca4de8ba34ae5cb83dd5
   .agents/skills/rubberduck-vba/assets/TestModule.bas: sha256:fe1ce4894d5cb7e46f07cda2e2ddb3d8ffc4a7819806fc460491539a5ee8d087
   .agents/skills/rubberduck-vba/assets/TestModule1.bas: sha256:aa75247199523a7c8993cd19770ece95aa0a3698b0989605fabc22feb3efd8b4
@@ -1673,7 +1745,7 @@ local_deployed_file_hashes:
   .agents/skills/windows-command/SKILL.md: sha256:98b86cc227a9db6a7ae8a1e8105575177fc9592ac2b5611a1ef5cfe0cb5b2635
   .agents/skills/windows-command/assets/powershell.cmd: sha256:a51ada6dc559a86542fabe0a822269852fc45f4f4bf9e4123dcad6cb836c8d37
   .agents/skills/windows-command/assets/run.cmd: sha256:ae99171eb0b8b4b8a1e543fe41bc73ec311e7c5fe7c51bdc6a07fc67dda2551e
-  .agents/skills/windows-command/assets/runas.cmd: sha256:5b3816404e6c888ce59174f7e75f2a29fb45586cd23227184ad4f3c418fd5648
+  .agents/skills/windows-command/assets/runas.cmd: sha256:d6199781c78c816e7c5c43e90a109bc75e0e9be7815773489061770be94ce7bb
   .agents/skills/windows-command/references/argument-expansion.md: sha256:0246c76a512c1ae19359c53a2eec3048a3296d80c4b933ec85a4de6212233ac3
   .agents/skills/windows-command/references/powershell.md: sha256:27ea886213b27ac856e1814b888d6193bcaf3395fd28b39faca950c3b0381e0b
   .agents/skills/windows-script-host/SKILL.md: sha256:58a01e464d345661b849c6a65ea7a10c05e958a96eac0262dda529e7fa92d0b6

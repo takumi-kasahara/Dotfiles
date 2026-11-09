@@ -5,5 +5,23 @@
     "reveal": "silent",
     "revealProblems": "onProblem"
   },
-  "tasks": []
+  "tasks": [
+    {
+      "label": "build",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["build: docs"]
+    },
+    {
+      "label": "build: docs",
+      "type": "shell",
+      "command": "pwsh.exe",
+      "args": ["-NoLogo", "-NoProfile", "-File", "Docs.ps1"],
+      "problemMatcher": [],
+      "hide": true
+    }
+  ]
 }

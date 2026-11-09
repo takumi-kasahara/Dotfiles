@@ -22,7 +22,7 @@
   If specified, returns the Pester run result object instead of suppressing output. Default is no pass-through.
 
 .PARAMETER Parallel
-  Run tests in parallel. When this switch is used, code coverage collection is skipped.
+  Run tests in parallel.
 
 .LINK
    https://pester.dev
