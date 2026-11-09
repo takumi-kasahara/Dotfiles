@@ -18,9 +18,6 @@
   "[scss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -71,6 +68,7 @@
   "chat.agentSessions.migrateLegacyCopilotCli": true,
   "chat.agentSessions.openInEditor": true,
   "chat.agentsWindowBanner.developerMode": true,
+  "chat.agentHost.copilot.progressUpdatesPrompt.enabled": true,
   "chat.agentsWindowBanner.enabled": true,
   "chat.artifactIntegrations.enabled": true,
   "chat.artifacts.enabled": true,
@@ -86,6 +84,7 @@
   "chat.copilot.localModel.useInAuto": true,
   "chat.copilot.memory.local.enabled": true,
   "chat.copilot.searchSubagent.enabled": true,
+  "chat.copilot.searchSubagent.grepNudge.enabled": true,
   "chat.copilot.stabilityOrderedPrompt.enabled": true,
   "chat.copilotHarnessIntroduction.mode": "afterRequest",
   "chat.customizations.copilotConnectors.enabled": true,
@@ -106,8 +105,8 @@
   "chat.experimental.incrementalRendering.enabled": true,
   "chat.experimental.richLinks.enabled": true,
   "chat.experimental.sessionStateIndicator.enabled": true,
-  "chat.welcomePage.agentsWindowGraphic": "auto",
   "chat.experimental.useSkillAdherencePrompt": true,
+  "chat.experimental.workspaceSnapshot": true,
   "chat.experimentalSessionsWindowOverride": true,
   "chat.growthNotification.enabled": true,
   "chat.includeReferencedInstructions": true,
@@ -119,6 +118,7 @@
   "chat.microsoftAuthentication.enabled": "auto",
   "chat.permissions.default": "autopilot",
   "chat.restoreLastPanelSession": true,
+  "chat.sendInBackgroundTip.enabled": true,
   "chat.subagents.showCreditUsage": true,
   "chat.terminal.agentHost.enabled": true,
   "chat.tools.compressOutput.enabled": true,
@@ -129,6 +129,7 @@
   "chat.useCustomizationsInParentRepositories": true,
   "chat.useNestedAgentsMdFiles": true,
   "chat.viewProgressBadge.enabled": true,
+  "chat.welcomePage.agentsWindowGraphic": "auto",
   "chat.welcomePage.signIn.enabled": true,
   "chatCustomizationsEvaluations.waza.alwaysRunAfterFixDiagnostics": true,
   "copilotUpgrade.allowPrerelease": true,
@@ -273,7 +274,6 @@
   "java.signatureHelp.description.enabled": true,
   "java.symbols.includeGeneratedCode": true,
   "java.symbols.includeSourceMethodDeclarations": true,
-  "java.typeHierarchy.lazyLoad": true,
   "maven.pomfile.autoUpdateEffectivePOM": true,
   "maven.pomfile.prefetchEffectivePom": true,
   "vscode-java-dependency.enableLspTools": true,
@@ -666,7 +666,7 @@
   "task.quickOpen.history": 0,
   // #endregion
   // #region terminal
-  "terminal.external.windowsExec": "wtai.exe",
+  "terminal.external.windowsExec": "wt.exe",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.confirmOnKill": "always",

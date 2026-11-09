@@ -18,9 +18,6 @@
   "[scss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
