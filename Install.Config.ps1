@@ -398,12 +398,12 @@ Install()
 reg.exe add 'HKCU\Software\Microsoft\Command Processor' /v AutoRun /t REG_EXPAND_SZ /d 'call "%USERPROFILE%\autoexec.bat"' /f
 
 # PowerShell
-$ps5 = [WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -NonInteractive -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
+$ps5 = [WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
 [Installer]::new().
 Source('.\Windows\PowerShell.5.ps1', 'profile.ps1').
 Destination($ps5).
 Install()
-$ps7 = [WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -NonInteractive -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
+$ps7 = [WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
 [Installer]::new().
 Source('.\Windows\PowerShell.7.ps1', 'profile.ps1').
 Destination($ps7).
