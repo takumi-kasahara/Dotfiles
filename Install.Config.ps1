@@ -369,7 +369,7 @@ if ($devDrive) {
 }
 
 # Chocolatey
-cmd.exe /c '.\Chocolatey\choco.feature.cmd'
+cmd.exe /D /E:ON /V:OFF /S /C '.\Chocolatey\choco.feature.cmd'
 
 # WinGet
 [Installer]::new().
@@ -396,6 +396,7 @@ Install()
 Source('.\Windows\autoexec.bat').
 Destination($env:USERPROFILE).
 Install()
+reg.exe add 'HKCU\Software\Microsoft\Command Processor' /v AutoRun /t REG_EXPAND_SZ /d 'call "%USERPROFILE%\autoexec.bat"' /f
 
 # PowerShell
 $ps5 = [WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
