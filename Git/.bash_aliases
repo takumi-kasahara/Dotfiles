@@ -20,28 +20,28 @@ alias ll='ls -alF'
 alias cls='clear'
 alias g='git'
 alias h='history'
-alias restart='taskkill -IM explorer.exe -F >/dev/null && start explorer.exe'
+alias restart='taskkill -IM explorer -F >/dev/null && start explorer'
 
 if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
-  ex() { for p in "$@"; do explorer.exe "$(wslpath -a -w "$p")"; done; }
+  ex() { for p in "$@"; do explorer "$(wslpath -a -w "$p")"; done; }
 else
-  ex() { for p in "$@"; do explorer.exe "$(cygpath -a -w "$p")"; done; }
+  ex() { for p in "$@"; do explorer "$(cygpath -a -w "$p")"; done; }
 fi
 
 if command -v sudo >/dev/null 2>&1; then
-  alias logout='sudo --disable-input shutdown /l /soft'
-  alias reboot='sudo --disable-input shutdown /g /soft'
+  alias logout='sudo shutdown /l /soft'
+  alias reboot='sudo shutdown /g /soft'
 else
   alias logout='runas /user:"$USERNAME" shutdown /l /soft'
   alias reboot='runas /user:"$USERNAME" shutdown /g /soft'
 fi
 
-cinst() { sudo.exe --disable-input choco.exe install "$1" --accept-license --pre "${2-}"; }
-cremove() { sudo.exe --disable-input choco.exe uninstall "$1" --all-versions "${2-}"; }
-cpurge() { sudo.exe --disable-input choco.exe uninstall "$1" --all-versions --remove-dependencies "${2-}"; }
-cup() { sudo.exe --disable-input choco upgrade all --accept-license --pre "$@"; }
+cinst() { sudo choco install "$1" --accept-license --pre "${2-}"; }
+cremove() { sudo choco uninstall "$1" --all-versions "${2-}"; }
+cpurge() { sudo choco uninstall "$1" --all-versions --remove-dependencies "${2-}"; }
+cup() { sudo choco upgrade all --accept-license --pre "$@"; }
 
-winst() { sudo.exe --disable-input winget.exe install --id "$1" --exact --accept-package-agreements --accept-source-agreements "${2-}"; }
-wremove() { sudo.exe --disable-input winget.exe uninstall --id "$1" --exact --all-versions "${2-}"; }
-wpurge() { sudo.exe --disable-input winget.exe uninstall --id "$1" --exact --all-versions --purge "${2-}"; }
-wup() { sudo.exe --disable-input winget.exe upgrade --all --include-unknown "$@"; }
+winst() { sudo winget install --id "$1" --exact --accept-package-agreements --accept-source-agreements "${2-}"; }
+wremove() { sudo winget uninstall --id "$1" --exact --all-versions "${2-}"; }
+wpurge() { sudo winget uninstall --id "$1" --exact --all-versions --purge "${2-}"; }
+wup() { sudo winget upgrade --all --include-unknown "$@"; }
