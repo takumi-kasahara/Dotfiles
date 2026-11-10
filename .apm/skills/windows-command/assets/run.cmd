@@ -1,9 +1,9 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 
 :process
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%

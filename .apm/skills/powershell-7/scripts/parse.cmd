@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 if "%~1"=="" goto :help
@@ -13,4 +13,4 @@ pwsh -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "Get-Help -Name '
 goto :end
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%

@@ -56,7 +56,7 @@ This works because labels are not affected by parentheses in expanded variables.
 3. If you must use blocks, quote carefully
    — but even `"%*"` doesn't help because the `)` is still a `)` to the parser.
 4. This applies to `for` loops too
-   — `for /f "tokens=*" %%I in ("%*") do (...)` has the same issue.
+   — `for /F "tokens=*" %%I in ("%*") do (...)` has the same issue.
 
 ## When This Matters
 
