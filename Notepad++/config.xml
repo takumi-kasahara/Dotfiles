@@ -6,7 +6,8 @@
     fifFolderFollowsDoc="no" searchMode="1" transparencyMode="0" transparency="200"
     dotMatchesNewline="no" isSearch2ButtonsMode="yes" regexBackward4PowerUser="no"
     fifProjectPanel1="no" fifProjectPanel2="no" fifProjectPanel3="no" bookmarkLine="no" purge="no"
-    incrementalMatchCase="no" incrementalHighlightAll="no" incrementalCount="yes" />
+    incrementalMatchCase="no" incrementalHighlightAll="no" incrementalCount="yes"
+    findDlgHighlightMatches="no" incrementalSearchBarAtTop="no" />
   <FileBrowser />
   <History nbMaxFile="0" inSubMenu="no" customLength="-1" />
   <ProjectPanels>
@@ -94,7 +95,7 @@
     <GUIConfig name="Searching" monospacedFontFindDlg="yes" fillFindFieldWithSelected="yes"
       fillFindFieldSelectCaret="yes" findDlgAlwaysVisible="yes" confirmReplaceInAllOpenDocs="yes"
       replaceStopsWithoutFindingNext="yes" inSelectionAutocheckThreshold="1024"
-      fillFindWhatThreshold="1024" fillDirFieldFromActiveDoc="yes" incrementalSearchBarAtTop="no" />
+      fillFindWhatThreshold="1024" fillDirFieldFromActiveDoc="yes" />
     <GUIConfig name="searchEngine" searchEngineChoice="1" searchEngineCustom="" />
     <GUIConfig name="MarkAll" matchCase="yes" wholeWordOnly="yes" />
     <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="no" useFindSettings="yes"
