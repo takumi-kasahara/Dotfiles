@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 net session >nul 2>&1
@@ -7,7 +7,7 @@ if errorlevel 1 goto :elevate
 goto :process
 
 :elevate
-where /q sudo >nul 2>&1
+where /Q sudo >nul 2>&1
 if errorlevel 1 goto :powershell
 
 sudo "%~0"
@@ -25,8 +25,8 @@ net stop w32time
 w32tm /config /manualpeerlist:ntp.nict.jp,0x8
 w32tm /config /syncfromflags:ALL
 net start w32time
-w32tm /resync
-w32tm /query /peers /verbose
+w32tm /Resync
+w32tm /Query /peers /verbose
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%

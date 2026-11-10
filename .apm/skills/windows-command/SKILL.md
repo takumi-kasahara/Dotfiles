@@ -21,9 +21,9 @@ Practical skill for creating Windows `*.bat`, `*.cmd` files that are reusable, r
 Prefer the following skeleton:
 
 1. `@echo off`
-2. `setlocal`
+2. `setlocal enableextensions disabledelayedexpansion`
 3. `:begin` / `:process` / `:end` labels
-4. Terminate with `exit /b %errorlevel%`
+4. Terminate with `exit /B %errorlevel%`
 
 For scripts that require elevation, perform a `net session` check and branch to elevation at the very top.
 
@@ -33,22 +33,22 @@ For scripts that require elevation, perform a `net session` check and branch to 
 
 - Use `if (...) else (...)` for branching; name jump-target labels by role.
 - Choose the loop form by purpose:
-  - Numeric sequence: `for /l`
-  - File/directory pattern: `for` (optionally `/d`, `/r`)
-  - Line-by-line reading: `for /f`
-  - Command-output iteration: `for /f "usebackq" %%I in (`command`) do (...)`
+  - Numeric sequence: `for /L`
+  - File/directory pattern: `for` (optionally `/D`, `/R`)
+  - Line-by-line reading: `for /F`
+  - Command-output iteration: `for /F "usebackq" %%I in (`command`) do (...)`
 
 ### Variables and Expansion
 
 - Assign with `set "NAME=value"`.
-- Command substitution via `for /f ... do set "NAME=%%I"`.
+- Command substitution via `for /F ... do set "NAME=%%I"`.
 - Enable `setlocal enabledelayedexpansion` only where needed, scoped locally.
 - Prefer `%VAR:~start,len%` and `%VAR:find=replace%` for string manipulation.
 
 ### Error Handling
 
-- Verify external commands with `where /q` + `if errorlevel 1 (...)`.
-- Return the script's exit code to the caller with `exit /b %errorlevel%`.
+- Verify external commands with `where /Q` + `if errorlevel 1 (...)`.
+- Return the script's exit code to the caller with `exit /B %errorlevel%`.
 
 ## Redirection Policy
 
@@ -81,7 +81,7 @@ Additional rules:
 Use `choice` + `goto` to turn a prompt into clear branches. This is the standard menu-style flow in the repo.
 
 ```bat
-choice /c YN /m "Continue?"
+choice /C YN /M "Continue?"
 goto :case_%errorlevel%
 :case_1
 :: yes branch
@@ -105,16 +105,16 @@ goto :loop
 Use `set /p` for inline prompt-like output without a trailing newline.
 
 ```bat
-set /p ="Processing..."<nul
+set /P ="Processing..."<nul
 ```
 
-Use a label-based helper for a subroutine that returns with `exit /b`.
+Use a label-based helper for a subroutine that returns with `exit /B`.
 
 ```bat
 :: label-based helper
 :subroutine
 	rem add logic here.
-	exit /b
+	exit /B
 :: end subroutine
 ```
 
@@ -123,7 +123,7 @@ Use a label-based helper for a subroutine that returns with `exit /b`.
 These are defensive checks that keep the script from failing in confusing ways.
 
 ```bat
-where /q some-command
+where /Q command
 if errorlevel 1 goto :end
 ```
 
@@ -146,7 +146,7 @@ Validate required arguments before continuing. This produces a clean usage messa
 - [ ] Argument validation and command-existence checks are present where needed
 - [ ] Variable assignments use `set "name=value"` form
 - [ ] Redirection follows the front-placement policy
-- [ ] Exit code is returned via `exit /b %errorlevel%`
+- [ ] Exit code is returned via `exit /B %errorlevel%`
 
 ## Gotchas
 
@@ -160,7 +160,7 @@ Validate required arguments before continuing. This produces a clean usage messa
 | Output breaks when value ends with a digit | Move redirection to the front (e.g., `> "log.txt" echo %VAR%`)           |
 | Stderr not captured                        | Explicitly use `2>`; if merging, standardize on `> "log.txt" 2>&1` order |
 | Loop variable not updating                 | Add `setlocal enabledelayedexpansion` and use `!VAR!`                    |
-| Control flow breaks after subroutine       | Standardize on `exit /b` returns; verify `goto` target labels            |
+| Control flow breaks after subroutine       | Standardize on `exit /B` returns; verify `goto` target labels            |
 | `.{ext} was unexpected at this time`       | Parentheses in `%*` broke an `if` block — use `goto` labels instead      |
 
 ## References

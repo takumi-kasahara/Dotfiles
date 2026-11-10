@@ -7,33 +7,33 @@
 @doskey alias=if "$1"=="" (doskey /MACROS:ALL) else (doskey /MACROS $b findstr /B $*=)
 @doskey basename=for %%I in ("$1") do @echo %%~nxI
 @doskey cat=type $*
-@doskey cd=cd /d $*
+@doskey cd=cd /D $*
 @doskey cp=copy $*
-@doskey del=del /p $*
+@doskey del=del /P $*
 @doskey dirname=for %%I in ("$1") do @echo %%~dpI
-@doskey erase=erase /p $*
+@doskey erase=erase /P $*
 @doskey h=doskey /history
 @doskey history=doskey /history
 @doskey ip=ipconfig $*
 @doskey kill=taskkill $*
-@doskey l=dir /b $*
-@doskey la=dir /a $*
-@doskey ll=dir /a $*
-@doskey ls=dir /b $*
+@doskey l=dir /B $*
+@doskey la=dir /A $*
+@doskey ll=dir /A $*
+@doskey ls=dir /B $*
 @doskey mv=move $*
 @doskey ps=tasklist $*
-@doskey replace=replace /p $*
-@doskey rm=del /p $*
-@doskey source=cmd /c $*
+@doskey replace=replace /P $*
+@doskey rm=del /P $*
+@doskey source=cmd /D /E:ON /V:OFF /S /C $*
 @doskey ss=netstat $*
 @doskey touch=type nul $G $*
-@doskey tree=tree /f $B more
+@doskey tree=tree /F $B more
 @doskey which=where $*
 
 @doskey g=git $*
 @doskey wslpath=wsl wslpath $*
 @doskey ex=explorer $*
-@where /q sudo >nul 2>&1
+@where /Q sudo >nul 2>&1
 @if errorlevel 1 (
   @doskey logout=runas /user:"%USERNAME%" shutdown /l /soft
   @doskey reboot=runas /user:"%USERNAME%" shutdown /g /soft

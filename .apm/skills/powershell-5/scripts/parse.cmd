@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 set "PSModulePath="
@@ -14,4 +14,4 @@ powershell -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "Get-Help -
 goto :end
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%

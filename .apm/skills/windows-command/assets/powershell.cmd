@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 set "PSModulePath="
@@ -8,4 +8,4 @@ set "PSModulePath="
 powershell -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File "%~dp0%~n0.ps1" %*
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%

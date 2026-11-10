@@ -53,7 +53,7 @@ Set-StrictMode -Version Latest
 
 $ahk = @(where.exe AutoHotkey.exe)[0]
 if (-not $ahk) {
-  $ahk = @(where.exe /r $env:ProgramFiles AutoHotkey.exe 2>$null)[0]
+  $ahk = @(where.exe /R $env:ProgramFiles AutoHotkey.exe 2>$null)[0]
 }
 if (-not $ahk) {
   throw 'AutoHotkey.exe not found.'

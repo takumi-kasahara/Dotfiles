@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enableextensions disabledelayedexpansion
 
 :begin
 net session >nul 2>&1
@@ -7,7 +7,7 @@ if errorlevel 1 goto :elevate
 goto :process
 
 :elevate
-where /q sudo >nul 2>&1
+where /Q sudo >nul 2>&1
 if errorlevel 1 goto :powershell
 
 sudo "%~0"
@@ -22,4 +22,4 @@ goto :end
 powercfg /hibernate off
 
 :end
-exit /b %errorlevel%
+exit /B %errorlevel%
