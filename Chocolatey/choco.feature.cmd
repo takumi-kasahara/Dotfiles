@@ -15,7 +15,7 @@ goto :end
 
 :powershell
 set "PSModulePath="
-powershell -NoLogo -NoProfile -Command 'Start-Process "%~0" -Verb RunAs'
+powershell -NoLogo -NoProfile -NonInteractive -Command 'Start-Process "%~0" -Verb RunAs'
 goto :end
 
 :process

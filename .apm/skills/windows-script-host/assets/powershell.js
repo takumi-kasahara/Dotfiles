@@ -16,7 +16,7 @@ var file = FileSystemObject.BuildPath(
 WshShell.Environment('Process').Remove('PSModulePath');
 WScript.Quit(
   WshShell.Run(
-    'powershell -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File "' +
+    'powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -File "' +
       file +
       '"' +
       (args.length ? ' "' + args.join('" "') + '"' : ''),
