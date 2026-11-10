@@ -10,7 +10,7 @@ goto :process
 where /Q sudo >nul 2>&1
 if errorlevel 1 goto :powershell
 
-sudo "%~0"
+sudo --disable-input "%~0"
 goto :end
 
 :powershell
