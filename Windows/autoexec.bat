@@ -1,12 +1,5 @@
 @prompt %USERNAME%@%COMPUTERNAME%$S%OS%$S$P$_$G$S
 
-@if exist "%LOCALAPPDATA%\Programs" (
-  @set "PATH=%LOCALAPPDATA%\Programs;%PATH%"
-)
-@if exist "%USERPROFILE%\.local\bin" (
-  @set "PATH=%USERPROFILE%\.local\bin;%PATH%"
-)
-
 :: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/doskey
 @doskey #=rem $*
 @doskey ..=cd ..
@@ -29,7 +22,6 @@
 @doskey ls=dir /b $*
 @doskey mv=move $*
 @doskey ps=tasklist $*
-@doskey pwd=cd
 @doskey replace=replace /p $*
 @doskey rm=del /p $*
 @doskey source=cmd /c $*
