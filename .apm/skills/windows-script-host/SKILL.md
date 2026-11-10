@@ -59,7 +59,7 @@ WSF files are XML documents (start with `<?XML?>`) that group one or more script
 
 ### References
 
-- [Launching Windows PowerShell from PowerShell 7 via WSH](./references/powershell.md)
+- [Recommended `powershell.exe` invocation options](./references/powershell.md)
 - [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
   - [cscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript)
   - [wscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript)

@@ -1,4 +1,4 @@
-# Launching Windows PowerShell from PowerShell 7 via WSH
+# Recommended `powershell.exe` invocation options
 
 When PowerShell 7 (`pwsh.exe`) starts Windows PowerShell (`powershell.exe`) directly, it removes PowerShell 7 module paths from the environment passed to Windows PowerShell.
 This filtering does not happen when an intermediate process such as `cscript.exe` is involved.
