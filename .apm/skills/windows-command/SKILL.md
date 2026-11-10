@@ -148,6 +148,6 @@ Use a label-based helper for a subroutine that returns with `exit /B`.
 
 ## References
 
+- [Recommended `cmd.exe` invocation options](./references/cmd.md)
 - [Launching Windows PowerShell from PowerShell 7 via CMD](./references/powershell.md)
 - [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-  - [cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
