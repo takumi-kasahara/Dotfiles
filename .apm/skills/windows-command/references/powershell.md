@@ -8,7 +8,7 @@ The resulting module path can contain duplicate entries or PowerShell 7 module p
 Clear `PSModulePath` before starting Windows PowerShell. Windows PowerShell then constructs its default module path at startup:
 
 ```powershell
-cmd.exe /D /E:ON /V:OFF /S /C "set PSModulePath=&&  -NoLogo -NoProfile -File script.ps1"
+cmd.exe /D /E:ON /V:OFF /S /C "set PSModulePath=&& powershell -NoLogo -NoProfile -NonInteractive -File script.ps1"
 ```
 
 This clears the variable only in the `cmd.exe` process and its child process; it does not change the environment of the current `pwsh.exe` session or the persistent user or system environment.

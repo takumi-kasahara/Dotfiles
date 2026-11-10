@@ -19,7 +19,15 @@
       "label": "build: docs",
       "type": "shell",
       "command": "pwsh.exe",
-      "args": ["-NoLogo", "-NoProfile", "-File", "Docs.ps1"],
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "RemoteSigned",
+        "-File",
+        "Docs.ps1"
+      ],
       "problemMatcher": [],
       "hide": true
     }

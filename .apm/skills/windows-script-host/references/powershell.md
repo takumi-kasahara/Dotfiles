@@ -10,7 +10,11 @@ Clear `PSModulePath` before starting Windows PowerShell. Windows PowerShell then
 ```js
 WshShell.Environment('Process').Remove('PSModulePath');
 WScript.Quit(
-  WshShell.Run('powershell -NoLogo -NoProfile -File "script.ps1"', 0, true),
+  WshShell.Run(
+    'powershell -NoLogo -NoProfile -NonInteractive -File "script.ps1"',
+    0,
+    true,
+  ),
 );
 ```
 

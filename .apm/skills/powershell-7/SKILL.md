@@ -148,3 +148,7 @@ Follow the [C# guidelines](./references/csharp.md) when creating or updating C# 
 - [analyze.cmd](./scripts/analyze.cmd) runs PSScriptAnalyzer.
 - [parse.cmd](./scripts/parse.cmd) parses PowerShell files.
 - [pester.cmd](./scripts/pester.cmd) runs the repository test wrapper.
+
+## References
+
+- [Recommended `pwsh.exe` Invocation Options](./references/cmd.md)
