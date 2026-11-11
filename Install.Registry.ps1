@@ -26,7 +26,7 @@ try {
   ForEach-Object {
     $relative = Resolve-Path -LiteralPath $_ -Relative
     Write-Progress -Activity 'Running scripts' -Status $relative
-    cmd.exe /c `"$($_.FullName)`"
+    cmd.exe /D /E:ON /V:OFF /S /C `"$($_.FullName)`"
     "Ran:`t$relative" | Out-Host
   }
   Copy-UserInternationalSettingsToSystem -WelcomeScreen:$true -NewUser:$true

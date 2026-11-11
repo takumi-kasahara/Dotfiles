@@ -48,18 +48,7 @@ WSF files are XML documents (start with `<?XML?>`) that group one or more script
 
 - [XML Elements](<https://learn.microsoft.com/en-us/previous-versions/x4d5a2tx(v=vs.85)>)
 
-## Execute with `cscript.exe`
-
-- `cscript.exe` runs scripts in a command-line environment where all console output is visible. This is the only host the agent uses.
-- To inspect a script from a terminal, run it with `cscript.exe //NoLogo "script.js"`.
-  - `//NoLogo` hides only the startup banner.
-  - Leave off `//B` while diagnosing: batch mode suppresses alerts, script errors, and input prompts.
-- To run a job in a Windows Script File (WSF), pass the matching job identifier with `//Job`. WSF files can contain multiple jobs and scripting engines; check the file's `<JobID>` before choosing the invocation.
-- `//T:<seconds>` interrupts and ends a script after the limit. Use it only when a bounded run is useful; a timeout terminates the script rather than reporting a normal script-level failure.
-
 ### References
 
-- [Launching Windows PowerShell from PowerShell 7 via WSH](./references/powershell.md)
-- [Windows Commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-  - [cscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript)
-  - [wscript](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript)
+- [Recommended `cscript.exe` invocation options](./references/cmd.md)
+- [Recommended `powershell.exe` invocation options](./references/powershell.md)
