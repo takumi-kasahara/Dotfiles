@@ -115,7 +115,7 @@
   "Set.TimeStamp": {
     "prefix": "Set.TimeStamp",
     "body": [
-      "for /F \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -NonInteractive -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\""
+      "for /F \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\""
     ]
   },
   // #endregion
