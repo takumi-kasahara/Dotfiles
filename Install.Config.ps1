@@ -363,13 +363,12 @@ if ($devDrive) {
     # https://docs.ollama.com/faq#how-do-i-configure-ollama-server
     setx.exe OLLAMA_FLASH_ATTENTION 1
     setx.exe OLLAMA_IGPU_ENABLE 1
-    setx.exe OLLAMA_KEEP_ALIVE -1
     setx.exe OLLAMA_KV_CACHE_TYPE q4_0
   }
 }
 
 # Chocolatey
-cmd.exe /c '.\Chocolatey\choco.feature.cmd'
+cmd.exe /D /E:ON /V:OFF /S /C '.\Chocolatey\choco.feature.cmd'
 
 # WinGet
 [Installer]::new().
@@ -396,14 +395,15 @@ Install()
 Source('.\Windows\autoexec.bat').
 Destination($env:USERPROFILE).
 Install()
+reg.exe add 'HKCU\Software\Microsoft\Command Processor' /v AutoRun /t REG_EXPAND_SZ /d 'call "%USERPROFILE%\autoexec.bat"' /f
 
 # PowerShell
-$ps5 = [WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
+$ps5 = [WildcardPattern]::Escape((powershell.exe -NoLogo -NoProfile -NonInteractive -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
 [Installer]::new().
 Source('.\Windows\PowerShell.5.ps1', 'profile.ps1').
 Destination($ps5).
 Install()
-$ps7 = [WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
+$ps7 = [WildcardPattern]::Escape((pwsh.exe -NoLogo -NoProfile -NonInteractive -Command '$PROFILE.CurrentUserAllHosts')) | Split-Path -Parent
 [Installer]::new().
 Source('.\Windows\PowerShell.7.ps1', 'profile.ps1').
 Destination($ps7).

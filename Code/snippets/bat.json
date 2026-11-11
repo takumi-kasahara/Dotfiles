@@ -5,23 +5,23 @@
     "prefix": "template-script",
     "body": [
       "@echo off",
-      "setlocal\n",
+      "setlocal enableextensions disabledelayedexpansion\n",
       ":begin\n",
       ":process",
       "${0::: statement}\n",
       ":end",
-      "exit /b %errorlevel%"
+      "exit /B %errorlevel%"
     ]
   },
   "Template.Basic.RunAs": {
     "prefix": "template-script-runas",
     "body": [
       "@echo off",
-      "setlocal\n",
+      "setlocal enableextensions disabledelayedexpansion\n",
       ":begin",
       "net session >nul 2>&1",
       "if errorlevel 1 (",
-      "  where /q sudo >nul 2>&1",
+      "  where /Q sudo >nul 2>&1",
       "  if errorlevel 1 goto :no_sudo",
       "  goto :elevate",
       ")\n",
@@ -29,12 +29,12 @@
       "echo ERROR: Access is denied.",
       "goto :end\n",
       ":elevate",
-      "sudo \"%~0\" %*",
+      "sudo --disable-input \"%~0\" %*",
       "goto :end\n",
       ":process",
       "${0::: statement}\n",
       ":end",
-      "exit /b %errorlevel%"
+      "exit /B %errorlevel%"
     ]
   },
   // #endregion
@@ -42,7 +42,7 @@
   "Syntax.For.Sequence": {
     "prefix": "for",
     "body": [
-      "for /l %%I in (${1:start},${2:inc::ent},${3:end}) do (",
+      "for /L %%I in (${1:start},${2:inc::ent},${3:end}) do (",
       "\t${0::: statements}",
       ")"
     ]
@@ -50,7 +50,7 @@
   "Syntax.For.Pattern": {
     "prefix": ["find", "for-pattern"],
     "body": [
-      "for${1: /d}${2: /r \"${3:path}\"} %%I in (${4:pattern}) do (",
+      "for ${1:/D }${2:/R \"${3:path}\" }%%I in (${4:pattern}) do (",
       "\t${0::: statements}",
       ")"
     ]
@@ -58,7 +58,7 @@
   "Syntax.For.F": {
     "prefix": "while-read",
     "body": [
-      "for /f \"${1:usebackq}${2: skip=${3:0}}${4: eol=${5:;}}${6: delims=${7}}${8: tokens=${9:1}}\" %%I in (${10:pattern}) do (",
+      "for /F \"${1:usebackq}${2: skip=${3:0}}${4: eol=${5:;}}${6: delims=${7}}${8: tokens=${9:1}}\" %%I in (${10:pattern}) do (",
       "\t${0::: statements}",
       ")"
     ]
@@ -66,7 +66,7 @@
   "Syntax.For.ReadEachCommand": {
     "prefix": "for-each-command",
     "body": [
-      "for /f \"usebackq\" %%I in (`${1:command}`) do (",
+      "for /F \"usebackq\" %%I in (`${1:command}`) do (",
       "\t${0::: statements}",
       ")"
     ]
@@ -101,16 +101,6 @@
     "body": ["if not exist \"${1:path}\" (", "\t${0::: statements}", ")"]
   },
   // #endregion
-  // #region Using
-  "Using.SetLocal": {
-    "prefix": "Using.SetLocal",
-    "body": [
-      "setlocal${1: enabledelayedexpansion}",
-      "${0::: statements}",
-      "endlocal"
-    ]
-  },
-  // #endregion
   // #region Set
   "Set": {
     "prefix": "Set",
@@ -119,13 +109,13 @@
   "Set.From": {
     "prefix": "$()",
     "body": [
-      "for /f \"usebackq\" %%I in (`${1:command}`) do set \"${2:variable}=%%I\""
+      "for /F \"usebackq\" %%I in (`${1:command}`) do set \"${2:variable}=%%I\""
     ]
   },
   "Set.TimeStamp": {
     "prefix": "Set.TimeStamp",
     "body": [
-      "for /f \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\""
+      "for /F \"usebackq\" %%I in (`powershell -NoLogo -NoProfile -NonInteractive -Command \"Get-Date -Format 'yyyyMMdd''T''HHmmss'\"`) do set \"TIMESTAMP=%%I\""
     ]
   },
   // #endregion
@@ -149,7 +139,7 @@
   "Idiom.Confirm": {
     "prefix": ["Case", "Confirm"],
     "body": [
-      "choice ${1:/c ${2:choices}}${3: /n}${4: /m \"${5:message}\"}${6: /t ${7:timeout} /d ${8:default}}",
+      "choice ${1:/c ${2:choices} }${3:/n }${4:/m \"${5:message}\" }${6:/t ${7:timeout} /D ${8:default}}",
       "goto :case_%errorlevel%",
       ":case_0",
       ":: case_0",
@@ -176,7 +166,7 @@
   },
   "Idiom.Print": {
     "prefix": "Print",
-    "body": ["set /p =\"${1:value}\"<nul"]
+    "body": ["set /P =\"${1:value}\"<nul"]
   },
   "Idiom.Function": {
     "prefix": ["Fn", "Func"],
@@ -184,7 +174,7 @@
       ":: ${1:discription}",
       ":${2:label}",
       "\t$0",
-      "exit /b",
+      "exit /B",
       ":: end {2:label}"
     ]
   },
@@ -193,7 +183,7 @@
   "MaybeError.Try": {
     "prefix": "Try",
     "body": [
-      "where /q ${1:command}",
+      "where /Q ${1:command}",
       "if errorlevel 1 goto :handle_error",
       "goto :continue\n",
       ":handle_error",
