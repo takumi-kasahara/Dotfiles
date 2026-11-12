@@ -1,14 +1,15 @@
 @echo off
 setlocal enableextensions disabledelayedexpansion
 
-:: https://svnbook.red-bean.com/en/1.7/svn.advanced.externaldifftools.html#svn.advanced.externaldifftools.diff
-:: Subversion calls external diff programs with GNU diff-compatible parameters.
-:: Only the sixth and seventh arguments (%%6 and %%7) are guaranteed to be the
-:: left and right file paths, respectively. The other arguments are diff flags.
-
+:begin
 where WinMergeU >nul 2>&1
 if errorlevel 1 (
   echo fatal: WinMerge not found.
   exit /B 1
 )
-WinMergeU /e /u /x /wl /fr /dl "Base: %~nx6" /dr "Mine: %~nx7" "%~6" "%~7"
+
+:process
+:: https://svnbook.red-bean.com/en/1.7/svn.advanced.externaldifftools.html#svn.advanced.externaldifftools.diff
+set "BASE=%~6"
+set "MINE=%~7"
+WinMergeU /e /u /x /wl /fr /dl "Base: %~nx6" /dr "Mine: %~nx7" "%BASE%" "%MINE%"
