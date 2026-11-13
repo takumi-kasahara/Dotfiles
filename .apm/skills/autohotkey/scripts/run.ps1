@@ -51,11 +51,8 @@ if ($PSEdition -ne 'Desktop') {
 }
 Set-StrictMode -Version Latest
 
-$ahk = @(where.exe AutoHotkey.exe)[0]
-if (-not $ahk) {
-  $ahk = @(where.exe /R $env:ProgramFiles AutoHotkey.exe 2>$null)[0]
-}
-if (-not $ahk) {
+where.exe /Q AutoHotkey.exe
+if ($LASTEXITCODE -ne 0) {
   throw 'AutoHotkey.exe not found.'
 }
 
@@ -81,7 +78,7 @@ ForEach-Object {
 $result = $items |
 ForEach-Object {
   "Running:`t$_" | Out-Host
-  & $ahk @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
+  AutoHotkey.exe @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
   return $LASTEXITCODE
 }
 $m = Measure-Object -InputObject $result -Maximum -Minimum

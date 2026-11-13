@@ -275,7 +275,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:efe7824e1d707a02c3a1eb5d872693d5266d6f41ea5cd123a9f3604e032cec4d
+    content_hash: sha256:573aebc716267dbbadf4f215c8db29c06a80517c9f97d75a6681e39721478889
   - kind: project-relative
     target: copilot
     value: .agents/skills/autohotkey/scripts/run.ps1.md
@@ -1745,7 +1745,7 @@ local_deployed_files:
 local_deployed_file_hashes:
   .agents/skills/autohotkey/SKILL.md: sha256:7bda5b04ff25fcab906546eae66856f5b77fc86c00825a88eebba3125b882ce9
   .agents/skills/autohotkey/scripts/run.cmd: sha256:d8298130f9ee65f8df019efa2691fe9de1b4f4305ace55fe9430a52d408fa110
-  .agents/skills/autohotkey/scripts/run.ps1: sha256:efe7824e1d707a02c3a1eb5d872693d5266d6f41ea5cd123a9f3604e032cec4d
+  .agents/skills/autohotkey/scripts/run.ps1: sha256:573aebc716267dbbadf4f215c8db29c06a80517c9f97d75a6681e39721478889
   .agents/skills/autohotkey/scripts/run.ps1.md: sha256:ac96c2b12db594d97f0d236e038e72ed0cdae71caf71f3d2d84853b9c84e125e
   .agents/skills/bookmarklets/SKILL.md: sha256:11392cb4ddd29d627b0433fc073c5d1d8d5c9b0db8d3c070a62aacfabab233a8
   .agents/skills/office-scripts/SKILL.md: sha256:d1033b1a2196f3f05ff28b6a07049c010a3cdeb86f40b665b4b29de74d235b1e
