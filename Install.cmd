@@ -1,5 +1,6 @@
 @echo off
 setlocal enableextensions disabledelayedexpansion
+cd /D "%~dp0"
 
 :begin
 net session >nul 2>&1
