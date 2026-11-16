@@ -6,5 +6,6 @@
   <GlobalZoomPercent>100</GlobalZoomPercent>
   <MacOSModifierKeyHandlingMode>0</MacOSModifierKeyHandlingMode>
   <PresentationMode>true</PresentationMode>
+  <RdpHardwareAcceleration>Automatic</RdpHardwareAcceleration>
   <UseDarkTheme>true</UseDarkTheme>
 </LocalUserOptions>

@@ -1,5 +1,5 @@
 lockfile_version: '1'
-apm_version: 0.35.0
+apm_version: 0.35.1
 dependencies:
   - repo_url: awesome-skills/code-review-skill
     name: code-review-skill
@@ -114,11 +114,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agent-skills
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: 1.0.0
     virtual_path: instructions/agent-skills.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agent-skills.instructions.md
     deployed_file_hashes:
@@ -127,11 +126,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agents
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: 1.0.0
     virtual_path: instructions/agents.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/agents.instructions.md
     deployed_file_hashes:
@@ -140,11 +138,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-instructions
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: 1.0.0
     virtual_path: instructions/instructions.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/instructions.instructions.md
     deployed_file_hashes:
@@ -153,11 +150,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-markdown
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: 1.0.0
     virtual_path: instructions/markdown.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/markdown.instructions.md
     deployed_file_hashes:
@@ -166,11 +162,10 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: awesome-copilot-prompt
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: 1.0.0
     virtual_path: instructions/prompt.instructions.md
     is_virtual: true
-    package_type: apm_package
     deployed_files:
       - .github/instructions/prompt.instructions.md
     deployed_file_hashes:
@@ -179,7 +174,7 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-branch
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: unknown
     virtual_path: skills/conventional-branch
     is_virtual: true
@@ -193,7 +188,7 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-commit
     host: github.com
-    resolved_commit: b13e55f85ffdf451d40d09839cb1e337bf3eda98
+    resolved_commit: 8ecd5b17f02fe5fbebf35eccd1867265eded811f
     version: unknown
     virtual_path: skills/conventional-commit
     is_virtual: true
