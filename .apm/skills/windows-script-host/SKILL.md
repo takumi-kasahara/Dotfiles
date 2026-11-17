@@ -1,6 +1,6 @@
 ---
 name: windows-script-host
-description: Guidelines for JScript File (*.js) and Windows Script File (*.wsf).
+description: Guidelines for JScript File (*.js), Windows Script File (*.wsf), and Windows Script Component (*.wsc).
 argument-hint: Describe the Windows Script Host file to execute and any command-line arguments.
 ---
 
@@ -57,7 +57,37 @@ WSF files are XML documents (start with `<?xml?>`) that group one or more script
 
 ### References
 
-- [XML Elements](<https://learn.microsoft.com/en-us/previous-versions/x4d5a2tx(v=vs.85)>)
+- [XML Elements](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/x4d5a2tx(v=vs.84)>)
+
+## Windows Script Components
+
+Windows Script Components (`.wsc`) are XML documents that define COM components implemented in script. They are registered with `regsvr32` and instantiated from other applications via `CreateObject`.
+
+- `<?xml?>` must be the first element in the file. It puts the compiler into strict XML mode (case-sensitive names, quoted attribute values).
+- `<?component error="true" debug="true"?>` enables error messages and the script debugger during development; both default to `false`.
+- Enclose script source in a `<![CDATA[ ... ]]>` section when the `<?xml?>` declaration is present; otherwise the XML parser misinterprets `<`, `>`, and `&` in the script.
+- Provide a `classid` in `<registration>` so the component has the same class ID on every computer. If omitted, `regsvr32` generates a new one at each registration.
+- Register with `regsvr32 component.wsc`; unregister with `regsvr32 /u component.wsc`.
+
+### Elements
+
+| Element          | Purpose                                                      | Assets                                      |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| `<?component?>`  | Enables component-level error handling and debugging.        |                                             |
+| `<?xml?>`        | Declares the file is XML.                                    |                                             |
+| `<comment>`      | Marks text to be ignored by the compiler.                    | [component.wsc](./assets/wsc/component.wsc) |
+| `<component>`    | Defines one script component.                                | [component.wsc](./assets/wsc/component.wsc) |
+| `<event>`        | Declares a custom event.                                     | [component.wsc](./assets/wsc/component.wsc) |
+| `<implements>`   | Declares handlers for an additional COM interface.           | [component.wsc](./assets/wsc/component.wsc) |
+| `<method>`       | Declares a method and its script procedure.                  | [component.wsc](./assets/wsc/component.wsc) |
+| `<object>`       | Same as WSF.                                                 | [object.wsf](./assets/wsf/object.wsf)       |
+| `<package>`      | Same as WSF.                                                 | [package.wsf](./assets/wsf/package.wsf)     |
+| `<property>`     | Declares a property and its optional accessor procedures.    | [component.wsc](./assets/wsc/component.wsc) |
+| `<public>`       | Groups the component's declarations.                         | [component.wsc](./assets/wsc/component.wsc) |
+| `<reference>`    | Same as WSF.                                                 | [reference.wsf](./assets/wsf/reference.wsf) |
+| `<registration>` | Defines component registration details and optional scripts. | [component.wsc](./assets/wsc/component.wsc) |
+| `<resource>`     | Same as WSF.                                                 | [resource.wsf](./assets/wsf/resource.wsf)   |
+| `<script>`       | Same as WSF.                                                 | [package.wsf](./assets/wsf/package.wsf)     |
 
 ### References
 
