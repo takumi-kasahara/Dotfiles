@@ -30,25 +30,30 @@ Windows Script Host (WSH) is a Windows administration tool.
 
 ## Windows Script File
 
-WSF files are XML documents (start with `<?XML?>`) that group one or more scripts as "jobs".
+WSF files are XML documents (start with `<?xml?>`) that group one or more scripts as "jobs".
+
+- `<?xml?>` must be the first element in the file. It puts the compiler into strict XML mode (case-sensitive names, quoted attribute values).
+- `<?job error="true" debug="true"?>` enables error messages and the script debugger during development; both default to `false`.
+- Enclose script source in a `<![CDATA[ ... ]]>` section when the `<?xml?>` declaration is present; otherwise the XML parser misinterprets `<`, `>`, and `&` in the script.
 
 ### Elements
 
-| Element         | Purpose                                                                    | Assets                                      |
-| --------------- | -------------------------------------------------------------------------- | ------------------------------------------- |
-| `<?xml?>`       | Declares the file is XML.                                                  |                                             |
-| `<?job?>`       | Processing instruction for job-level error handling (e.g. `error="true"`). |                                             |
-| `<package>`     | Wraps multiple `<job>` definitions in one file.                            | [package.wsf](./assets/package.wsf)         |
-| `<job>`         | Marks the start/end of one script job; selected via `/Job:<id>`.           | [job.wsf](./assets/job.wsf)                 |
-| `<script>`      | Holds the actual script source (JScript/VBScript).                         | [script.wsf](./assets/script.wsf)           |
-| `<object>`      | Declares a COM object available to script.                                 | [object.wsf](./assets/object.wsf)           |
-| `<reference>`   | Imports an external type library.                                          | [reference.wsf](./assets/reference.wsf)     |
-| `<resource>`    | Stores text/numeric data kept out of the script source.                    | [resource.wsf](./assets/resource.wsf)       |
-| `<runtime>`     | Groups the script's command-line arguments.                                | [runtime.wsf](./assets/runtime.wsf)         |
-| `<named>`       | Declares a named argument (`/name:value`).                                 | [named.wsf](./assets/named.wsf)             |
-| `<unnamed>`     | Declares an unnamed positional argument.                                   | [unnamed.wsf](./assets/unnamed.wsf)         |
-| `<description>` | Help text shown by `ShowUsage()` or `/?`.                                  | [description.wsf](./assets/description.wsf) |
-| `<example>`     | Self-documentation example for `ShowUsage()`.                              | [example.wsf](./assets/example.wsf)         |
+| Element         | Purpose                                                            | Assets                                      |
+| --------------- | ------------------------------------------------------------------ | ------------------------------------------- |
+| `<?job?>`       | Enables job-level error handling and debugging.                    |                                             |
+| `<?xml?>`       | Declares the file is XML.                                          |                                             |
+| `<description>` | Help text shown by `ShowUsage()` or `/?`.                          | [runtime.wsf](./assets/wsf/runtime.wsf)     |
+| `<example>`     | Self-documentation example for `ShowUsage()`.                      | [runtime.wsf](./assets/wsf/runtime.wsf)     |
+| `<job>`         | Marks the start/end of one script job; selected via `/Job:<id>`.   | [package.wsf](./assets/wsf/package.wsf)     |
+| `<named>`       | Declares a named argument (`/name:value`).                         | [named.wsf](./assets/wsf/named.wsf)         |
+| `<object>`      | Declares a COM object available to script.                         | [object.wsf](./assets/wsf/object.wsf)       |
+| `<package>`     | Wraps multiple `<job>` definitions in one file.                    | [package.wsf](./assets/wsf/package.wsf)     |
+| `<reference>`   | Imports an external type library.                                  | [reference.wsf](./assets/wsf/reference.wsf) |
+| `<resource>`    | Stores text or numeric data kept out of the script source.         | [resource.wsf](./assets/wsf/resource.wsf)   |
+| `<runtime>`     | Groups the script's command-line arguments.                        | [runtime.wsf](./assets/wsf/runtime.wsf)     |
+| `<script>`      | Holds the actual script source.                                    | [package.wsf](./assets/wsf/package.wsf)     |
+| `<unnamed>`     | Declares an unnamed positional argument.                           | [unnamed.wsf](./assets/wsf/unnamed.wsf)     |
+| `<usage>`       | Overrides the usage display; other `<runtime>` content is ignored. | [usage.wsf](./assets/wsf/usage.wsf)         |
 
 ### References
 

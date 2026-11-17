@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+<package>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/20cxbyht(v=vs.84)
+-->
+<!--
+<job>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/aky1xc03(v=vs.84)
+-->
+<!--
+<script>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/dzfdccyf(v=vs.84)
+-->
+<package>
+  <job id="DoneInJS">
+    <?job debug="true"?>
+    <script language="JScript">
+      <![CDATA[
+      WScript.Echo("This is JScript");
+      ]]>
+    </script>
+  </job>
+</package>

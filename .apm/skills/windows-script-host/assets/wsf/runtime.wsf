@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+<runtime>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/b1zyx449(v=vs.84)
+-->
+<!--
+<description>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/yh50kfd4(v=vs.84)
+-->
+<!--
+<example>
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/17h25e5a(v=vs.84)
+-->
+<job>
+  <runtime>
+    <description>This script reboots a server</description>
+    <named
+      name="Server"
+      helpstring="Server to run the script on"
+      type="string"
+      required="true"
+    />
+    <example>Example: reboot.wsf /Server:scripting</example>
+  </runtime>
+  <script language="JScript">
+    <![CDATA[
+    WScript.Arguments.ShowUsage();
+    ]]>
+  </script>
+</job>

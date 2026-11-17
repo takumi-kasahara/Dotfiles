@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/eescxkwy(v=vs.84)
+-->
+<package>
+  <job>
+    <resource id="errNonNumeric">Error: A non-numeric value was entered where a number was expected.</resource>
+    <script language="JScript">
+      <![CDATA[
+      function getRandomNumber(upperBound) {
+        var realUpperBound = parseInt(upperBound);
+        if (!isNaN(realUpperBound))
+          return (realUpperBound * Math.random) + 1
+        else {
+          WScript.Echo(getResource("errNonNumeric"));
+          WScript.Quit(-1);
+        }
+      }
+      WScript.Echo(getRandomNumber("Bad Value"));
+      ]]>
+    </script>
+  </job>
+</package>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/y2d0z4f9(v=vs.84)
+-->
+<job>
+  <runtime>
+    <named
+      name="server"
+      helpstring="Server to access"
+      type="string"
+      required="true"
+    />
+    <named
+      name="user"
+      helpstring="User account to use on server. Default is current account."
+      type="string"
+      required="false"
+    />
+    <named
+      name="enable"
+      helpstring="If true (+), enables the action. A minus(-) disables."
+      type="boolean"
+      required="true"
+    />
+    <named
+      name="verbose"
+      helpstring="If specified, output will be verbose."
+      type="boolean"
+      required="false"
+    />
+  </runtime>
+  <script language="JScript">
+    <![CDATA[
+    WScript.Arguments.ShowUsage();
+    ]]>
+  </script>
+</job>
