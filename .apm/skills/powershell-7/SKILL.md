@@ -92,9 +92,9 @@ Do not use `+` for string concatenation.
 
 #### Examples
 
-    - OK: `$PSScriptRoot | Join-Path -ChildPath 'src' | Join-Path -ChildPath 'module.psm1'`
-    - NG: `Join-Path $PSScriptRoot 'src\module.psm1'`
-    - NG: `Join-Path -Path $PSScriptRoot -ChildPath 'src\module.psm1'`
+- OK: `$PSScriptRoot | Join-Path -ChildPath 'src' | Join-Path -ChildPath 'module.psm1'`
+- NG: `Join-Path $PSScriptRoot 'src\module.psm1'`
+- NG: `Join-Path -Path $PSScriptRoot -ChildPath 'src\module.psm1'`
 
 ### Wildcard Handling
 
@@ -126,6 +126,26 @@ Do not use `+` for string concatenation.
 
 - [Out-File](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-7.6)
 - [about_Character_Encoding](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1)
+
+### Command Pipeline
+
+- `Select-Object` with `-First` or `-Index` stops the upstream command as soon as the requested number of objects is produced.
+  - When the upstream command is a native executable, it is terminated early, so `$LASTEXITCODE` may not reflect the command's actual exit code.
+  - Add `-Wait` to turn off this optimization and let the upstream command run to completion.
+- `-Wait` is only needed when the upstream command writes objects one at a time.
+  - Commands that buffer all output before writing, such as `Sort-Object`, are unaffected.
+- `-Wait` is available only in the parameter sets that include `-First` or `-Index`.
+  - It cannot be combined with `-SkipLast` or `-SkipIndex`.
+
+#### Examples
+
+- OK: `git log --oneline | Select-Object -First 1 -Wait`
+- NG: `git log --oneline | Select-Object -First 1`
+
+#### References
+
+- [Select-Object](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-7.6#-wait)
+- [about_Automatic_Variables](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.6#lastexitcode)
 
 ## Cmdlet Guidelines
 
