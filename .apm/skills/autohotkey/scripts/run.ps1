@@ -77,7 +77,6 @@ ForEach-Object {
 }
 $result = $items |
 ForEach-Object {
-  "Running:`t$_" | Out-Host
   AutoHotkey.exe @Switches $_.FullName @ArgumentList 2>&1 | Out-Host
   return $LASTEXITCODE
 }
