@@ -17,10 +17,16 @@ Windows Script Host (WSH) is a Windows administration tool.
 
 ### References
 
-- [Windows Script Host](<https://learn.microsoft.com/en-us/previous-versions/9bbdkx3k(v=vs.85)>)
-  - [Object Model](<https://learn.microsoft.com/en-us/previous-versions/a74hyyw0(v=vs.85)>)
-- [Windows Shell](https://learn.microsoft.com/en-us/windows/win32/shell/shell-entry)
-  - [Run a command with elevated privileges](./assets/runas.js)
+- [Windows Scripting](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/bstcxhf7(v=vs.84)>)
+- [Windows Script Host](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/9bbdkx3k(v=vs.84)>)
+  - [Object Model](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/a74hyyw0(v=vs.84)>)
+  - [Dictionary Object](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/x4k5wbx4(v=vs.84)>)
+  - [FileSystemObject](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/6kxy1a51(v=vs.84)>)
+  - [Microsoft ActiveX Data Objects reference](https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/microsoft-activex-data-objects-reference)
+  - [Shell Objects for Scripting](https://learn.microsoft.com/en-us/windows/win32/shell/objects)
+- [Run a command with elevated privileges](./assets/runas.js)
+- [Recommended `cscript.exe` invocation options](./references/cmd.md)
+- [Recommended `powershell.exe` invocation options](./references/powershell.md)
 
 ## Windows Script File
 
@@ -50,5 +56,4 @@ WSF files are XML documents (start with `<?XML?>`) that group one or more script
 
 ### References
 
-- [Recommended `cscript.exe` invocation options](./references/cmd.md)
-- [Recommended `powershell.exe` invocation options](./references/powershell.md)
+- [XML Elements](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/30f5bff1(v=vs.84)>)
