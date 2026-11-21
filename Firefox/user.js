@@ -450,10 +450,8 @@ user_pref("browser.tabs.firefox-view.ui-state.recentlyclosed.open", true);
 user_pref("browser.tabs.firefox-view.ui-state.syncedtabs.open", true);
 user_pref("browser.translations.automaticallyPopup", false);
 user_pref("browser.translations.enable", true);
-user_pref("image.jxl.enabled", true);
 user_pref("privacy.trackingprotection.allow_list.baseline.enabled", false);
 user_pref("privacy.trackingprotection.allow_list.convenience.enabled", false);
-user_pref("privacy.trackingprotection.allow_list.hasUserInteractedWithETPSettings", true);
 user_pref("privacy.userContext.enabled", false);
 user_pref("privacy.userContext.ui.enabled", false);
 // #endregion
