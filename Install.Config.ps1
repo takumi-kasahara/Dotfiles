@@ -64,7 +64,7 @@ class Installer {
           try {
             if ($SymLink -or -not $resolved.StartsWith($PSScriptRoot)) {
               if ((Test-Path -LiteralPath $target) -and (Get-Item -LiteralPath $target -Force).LinkTarget -ieq $resolved) {
-                "Skiped:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                "Skiped: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                 return
               }
               $arguments = @{
@@ -73,10 +73,10 @@ class Installer {
                 Name  = $name
               }
               if (Test-Path -LiteralPath $target) {
-                "Replace:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                "Replace: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                 Remove-Item -LiteralPath $target -Recurse -Force:$Force
               } else {
-                "Create:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                "Create: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
               }
               New-Item @arguments -ItemType SymbolicLink -Force:$Force
             } else {
@@ -100,22 +100,22 @@ class Installer {
                       }
                     }
                     if (@(Compare-Object -ReferenceObject $srcFiles -DifferenceObject $destFiles -Property Path, Hash).Count -eq 0) {
-                      "Skiped:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                      "Skiped: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                       return
                     }
                   }
                   if (-not $srcItem.PSIsContainer -and -not $destItem.PSIsContainer) {
                     if ((Get-FileHash -LiteralPath $target).Hash -eq (Get-FileHash -LiteralPath $resolved).Hash) {
-                      "Skiped:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                      "Skiped: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                       return
                     }
                   }
                 }
-                "Replace:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                "Replace: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
                 Remove-Item -LiteralPath $target -Recurse -Force:$Force
               }
               if (-not (Test-Path -LiteralPath $target)) {
-                "Create:`t$relative`t->`t$($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
+                "Create: $relative -> $($target -replace [regex]::Escape($env:USERPROFILE), '~')" | Out-Host
               }
               Copy-Item -LiteralPath $resolved -Destination $target -Recurse -Force:$Force -PassThru
             }
@@ -438,7 +438,7 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
   Destination($env:USERPROFILE).
   Install()
   # https://learn.microsoft.com/en-us/windows/wsl/filesystems#share-environment-variables-between-windows-and-wsl-with-wslenv
-  "Config:`tWSLENV" | Out-Host
+  'Config: WSLENV' | Out-Host
   setx.exe WSLENV USERPROFILE/up >$null
 
   $config = Import-PowerShellDataFile -LiteralPath 'Linux.psd1'
@@ -446,7 +446,7 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
   ForEach-Object { $_ -replace '\0', [string]::Empty } |
   Where-Object -Property Length -GT 0 -PipelineVariable distro |
   ForEach-Object {
-    "Distro:`t$distro" | Out-Host
+    "Distro: $distro" | Out-Host
     return $config.GetEnumerator() | Where-Object { $_.Name -eq $distro }
   } |
   ForEach-Object {
@@ -457,7 +457,7 @@ if ((Get-Command -Name wsl.exe -ErrorAction SilentlyContinue)) {
     }
     wsl.exe --distribution $distro sh -c "for u in \`$(cut -d: -f1 /etc/passwd); do id -nG `"\`$u`" | grep -qw `"$($_.Value.Group)`" && echo `"\`$u`"; done" |
     ForEach-Object {
-      "Config:`t$($_)@$distro" | Out-Host
+      "Config: $($_)@$distro" | Out-Host
       wsl.exe --distribution $distro --user $_ $sh $SymLink $Force
     }
   }
