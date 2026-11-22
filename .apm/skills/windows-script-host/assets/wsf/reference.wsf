@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/479dafxb(v=vs.84)
+-->
+<job>
+  <reference object="ADODB.Connection" />
+  <script language="JScript">
+    <![CDATA[
+    WScript.Echo(adStateClosed);
+    ]]>
+  </script>
+</job>

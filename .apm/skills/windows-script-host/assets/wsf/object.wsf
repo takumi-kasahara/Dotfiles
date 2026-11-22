@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/zhxaf4yw(v=vs.84)
+-->
+<job>
+  <object id="WshShell" progid="WScript.Shell" />
+  <script language="JScript">
+    <![CDATA[
+    WScript.Echo(WshShell.CurrentDirectory);
+    ]]>
+  </script>
+</job>

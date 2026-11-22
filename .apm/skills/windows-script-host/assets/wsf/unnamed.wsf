@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/x3c407wx(v=vs.84)
+-->
+<job>
+  <runtime>
+    <unnamed
+      name="filename"
+      helpstring="The file to process"
+      many="false"
+      required="true"
+    />
+  </runtime>
+  <script language="JScript">
+    <![CDATA[
+    WScript.Arguments.ShowUsage();
+    ]]>
+  </script>
+</job>

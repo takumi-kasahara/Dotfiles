@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/s5kadsy8(v=vs.84)
+-->
+<job>
+  <runtime>
+    <named name="arg1" helpstring="the first arg" />
+    <usage>Your usage text goes here.</usage>
+  </runtime>
+  <script language="JScript">
+    <![CDATA[
+    WScript.Arguments.ShowUsage()
+    ]]>
+  </script>
+</job>

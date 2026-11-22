@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/7531dsc9(v=vs.84)
+-->
+<package>
+  <comment>
+    This skeleton shows how script component elements are assembled into a .wsc file.
+  </comment>
+  <implements type="Automation" />
+  <component>
+    <registration
+      progid="progID"
+      description="description"
+      version="1.0.0" />
+    <public>
+      <property name="propertyname" />
+      <method name="methodname" />
+      <event name="eventname" />
+    </public>
+    <script language="JScript" src="script.js" />
+  </component>
+</package>

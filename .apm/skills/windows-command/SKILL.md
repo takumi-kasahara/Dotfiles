@@ -59,7 +59,7 @@ Check whether an external command exists before using it. If missing, exit early
 if "%~1"=="" goto :usage
 
 :usage
-echo USAGE: %~nx0 ARG1 ARG2
+>&2 echo Usage: %~nx0 ARG1 ARG2
 goto :end
 ```
 
