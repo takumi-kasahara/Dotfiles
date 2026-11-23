@@ -136,7 +136,6 @@ user_pref("font.name.monospace.ja", "BIZ UDGothic");
 /** @see {@link https://firefox-source-docs.mozilla.org/intl/locale.html} */
 user_pref("browser.search.region", "JP");
 user_pref("intl.accept_languages", "ja");
-user_pref("intl.locale.requested", "");
 user_pref("intl.regional_prefs.use_os_locales", true);
 user_pref("privacy.spoof_english", 2);
 // #endregion
@@ -401,6 +400,7 @@ user_pref("dom.headingoffset.enabled", true);                                 /*
 user_pref("dom.multiple_import_maps.enabled", true);                          /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.multiple_import_maps.enabled} */
 user_pref("dom.payments.request.enabled", true);                              /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.payments.request.enabled} */
 user_pref("dom.select.customizable_select.enabled", true);                    /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#dom.select.customizable_select.enabled} */
+user_pref("gfx.canvas.colorspace.enabled", true);                             /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#gfx.canvas.colorspace.enabled} */
 user_pref("javascript.options.experimental.export_star_default", true);       /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#javascript.options.experimental.export_star_default} */
 user_pref("javascript.options.experimental.regexp_buffer_boundaries", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#javascript.options.experimental.regexp_buffer_boundaries} */
 user_pref("layout.css.anchor-positioning.follows-transforms.enabled", true);  /** @see {@link https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#layout.css.anchor-positioning.follows-transforms.enabled} */
@@ -450,10 +450,8 @@ user_pref("browser.tabs.firefox-view.ui-state.recentlyclosed.open", true);
 user_pref("browser.tabs.firefox-view.ui-state.syncedtabs.open", true);
 user_pref("browser.translations.automaticallyPopup", false);
 user_pref("browser.translations.enable", true);
-user_pref("image.jxl.enabled", true);
 user_pref("privacy.trackingprotection.allow_list.baseline.enabled", false);
 user_pref("privacy.trackingprotection.allow_list.convenience.enabled", false);
-user_pref("privacy.trackingprotection.allow_list.hasUserInteractedWithETPSettings", true);
 user_pref("privacy.userContext.enabled", false);
 user_pref("privacy.userContext.ui.enabled", false);
 // #endregion

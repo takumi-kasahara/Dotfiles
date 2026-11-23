@@ -20,14 +20,14 @@ try {
     $relative = Resolve-Path -LiteralPath $_ -Relative
     Write-Progress -Activity 'Importing registry settings' -Status $relative
     reg.exe import $_.FullName
-    "Imported:`t$relative" | Out-Host
+    "Imported: $relative" | Out-Host
   }
   Get-ChildItem -LiteralPath 'Windows\Scripts' -Filter '*.cmd' -Recurse |
   ForEach-Object {
     $relative = Resolve-Path -LiteralPath $_ -Relative
     Write-Progress -Activity 'Running scripts' -Status $relative
-    cmd.exe /D /E:ON /V:OFF /S /C `"$($_.FullName)`"
-    "Ran:`t$relative" | Out-Host
+    cmd.exe /D /E:ON /V:OFF /S /C call `"$($_.FullName)`"
+    "Ran: $relative" | Out-Host
   }
   Copy-UserInternationalSettingsToSystem -WelcomeScreen:$true -NewUser:$true
   taskkill.exe /IM explorer.exe /F >$null && Start-Process -FilePath explorer.exe
