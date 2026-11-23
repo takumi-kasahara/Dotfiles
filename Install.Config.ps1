@@ -185,9 +185,8 @@ Install()
 
 # LINQPad
 [Installer]::new().
-Source('.\LINQPad\LocalUserOptions.xml').
-Source('.\LINQPad\WindowLayout.xml').
-Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'LINQPad')).
+Source('.\LINQPad\*.xml').
+Destination(($shell.NameSpace('shell:Personal').Self.Path | Join-Path -ChildPath 'LINQPad Settings')).
 Install()
 
 # Rubberduck

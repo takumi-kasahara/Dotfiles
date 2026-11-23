@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserOptions xmlns="http://schemas.datacontract.org/2004/07/LINQPad">
+  <AutoGenDumpHeading>true</AutoGenDumpHeading>
+  <AutoPopulateEditorFindWithCurrentWord>true</AutoPopulateEditorFindWithCurrentWord>
+  <AutoReloadExternallyModifiedFiles>true</AutoReloadExternallyModifiedFiles>
+  <AutoSaveFilesToggleSwitch>true</AutoSaveFilesToggleSwitch>
+  <BreakWhenExceptionThrown>true</BreakWhenExceptionThrown>
+  <BreakWhenExceptionUnhandled>true</BreakWhenExceptionUnhandled>
+  <CompileVBInStrictMode>true</CompileVBInStrictMode>
+  <ConvertTabsToSpaces>true</ConvertTabsToSpaces>
+  <DefaultLanguage>Expression</DefaultLanguage>
+  <DefaultToLastConnection>true</DefaultToLastConnection>
+  <DontShowStartupLatencyMessage>true</DontShowStartupLatencyMessage>
+  <EnableNullableReferenceTypesByDefault>true</EnableNullableReferenceTypesByDefault>
+  <EnableUIAutomation>true</EnableUIAutomation>
+  <EnableWordWrap>true</EnableWordWrap>
+  <FreshAppDomains>true</FreshAppDomains>
+  <MARS>true</MARS>
+  <MaxQueryRows>1000</MaxQueryRows>
+  <MaxQueryRowsForGrid>25000000</MaxQueryRowsForGrid>
+  <MemberOrderMode>0</MemberOrderMode>
+  <MTAThreadingMode>true</MTAThreadingMode>
+  <NeverShelveOnExit>true</NeverShelveOnExit>
+  <NoMRUs>true</NoMRUs>
+  <NoNativeKeysQuestion>true</NoNativeKeysQuestion>
+  <NuGetVulnerabilityExclusions></NuGetVulnerabilityExclusions>
+  <NumericFormatStringForIntegrals></NumericFormatStringForIntegrals>
+  <NumericFormatStringForReals></NumericFormatStringForReals>
+  <OpenMyScriptsInNewTab>true</OpenMyScriptsInNewTab>
+  <PreserveAppDomains>true</PreserveAppDomains>
+  <ProhibitReadOnlyOverwrite>true</ProhibitReadOnlyOverwrite>
+  <ShowLineNumbersInEditor>true</ShowLineNumbersInEditor>
+  <ShowWhitespace>true</ShowWhitespace>
+  <UseFixedFontForDataInsideTables>true</UseFixedFontForDataInsideTables>
+  <UseInvariantFormatWithNumbers>true</UseInvariantFormatWithNumbers>
+</UserOptions>
