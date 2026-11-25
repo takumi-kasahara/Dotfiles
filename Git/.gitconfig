@@ -1,4 +1,5 @@
 [alias]
+  bash = !bash
   export = !git-export.sh
   # https://git-scm.com/docs/git-add
   a = add --verbose
@@ -33,10 +34,9 @@
   fixup = !git-fixup.sh
   fx = fixup
   # https://git-scm.com/docs/git-config
-  cf = config
-  cfg = cf --edit --global
-  cfgl = cf --edit --local
-  cfgs = cf --edit --system
+  cfg = config --edit --local
+  cfgg = config --edit --global
+  cfgs = config --edit --system
   alias = "!_() { git config --get \"alias.$1\"; }; _"
   # https://git-scm.com/docs/git-fetch
   ft = fetch --verbose
@@ -110,7 +110,6 @@
   rvs = rv --skip
   # https://git-scm.com/docs/git-reset
   rs = reset
-  rsh = rs --hard
   rss = rs --soft
   undo = rss @{1}
   # https://git-scm.com/docs/git-restore
