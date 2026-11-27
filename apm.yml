@@ -15,7 +15,6 @@ dependencies:
     - github/awesome-copilot/skills/conventional-branch
     - github/awesome-copilot/skills/conventional-commit
     - github/copilot-advanced-security-plugin
-    - microsoftdocs/mcp
   mcp: []
 includes: auto
 scripts: {}

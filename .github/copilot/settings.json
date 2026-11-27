@@ -1,13 +1,4 @@
 {
-  "extraKnownMarketplaces": {
-    "apm-p-50a26669": {
-      "source": {
-        "source": "directory",
-        "path": "./.agents/plugins"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "microsoft-docs@apm-p-50a26669": true
-  }
+  "extraKnownMarketplaces": {},
+  "enabledPlugins": {}
 }
