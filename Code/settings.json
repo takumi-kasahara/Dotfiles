@@ -48,8 +48,12 @@
   "copilotUpgrade.allowPrerelease": true,
   "inlineChat.affordance": "editor",
   "inlineChat.notebookAgent": true,
+  "sessions.chat.experimental.workspaceOptOut": true,
+  "sessions.list.canvasesSection": true,
   "sessions.list.externalApplicationBadgeShowFrom": true,
   "sessions.list.inboxEnabled": true,
+  "sessions.list.workspacesFilter.enabled": true,
+  "sessions.workspaces.enabled": true,
   "chat.agent.sandbox.enabled": "on",
   "chat.agent.sandbox.network.allowLocalNetwork": true,
   "chat.agentHost.browserUse.enabled": true,
@@ -67,6 +71,7 @@
   "chat.agentHost.experimental.prewarmSessions": true,
   "chat.agentHost.experimental.titleGeneration": "agentReview",
   "chat.agentHost.experimentalMissionControl.useLocalCredentials": true,
+  "chat.agentHost.git.coalesceReads": true,
   "chat.agentHost.mcpSkills.enabled": true,
   "chat.agentHost.moveChats.enabled": true,
   "chat.agentHost.multipleChatProviders.enabled": true,
@@ -75,7 +80,6 @@
   "chat.agentMerge.mergePullRequest": "always",
   "chat.agentSessionProjection.enabled": true,
   "chat.agentSessions.backgroundImageTint": true,
-  "chat.agentSessions.openInEditor": true,
   "chat.agentSessions.sessionStorageCleanupSuggestion.enabled": true,
   "chat.agentsWindowBanner.developerMode": true,
   "chat.agentsWindowBanner.enabled": true,
@@ -94,6 +98,7 @@
   "chat.copilot.localModel.useInAuto": true,
   "chat.copilot.memory.local.enabled": true,
   "chat.copilot.modelRouter.enabled": true,
+  "chat.copilot.programmaticToolCalling.enabled": true,
   "chat.copilot.searchSubagent.enabled": true,
   "chat.copilot.searchSubagent.grepNudge.enabled": true,
   "chat.copilot.stabilityOrderedPrompt.enabled": true,
@@ -128,13 +133,22 @@
   },
   "chat.nativeComponents.enabled": true,
   "chat.permissions.default": "autopilot",
+  "chat.planAwareness.chatWelcome.enabled": true,
+  "chat.planAwareness.customizationHint.enabled": true,
+  "chat.planAwareness.developerMode": {
+    "agentUsageLimit": true,
+    "chatWelcome": true,
+    "customizationFile": true,
+    "reviewChanges": true,
+    "searchFallback": true
+  },
+  "chat.planAwareness.enabled": true,
   "chat.remoteConnections.compactMenu": true,
   "chat.resources.enabled": true,
   "chat.restoreLastPanelSession": true,
   "chat.sendInBackgroundTip.enabled": true,
   "chat.subagents.showCreditUsage": true,
   "chat.terminal.agentHost.enabled": true,
-  "chat.titleBar.openInAgentsWindow.richHoverOnClick": true,
   "chat.tools.compressOutput.enabled": true,
   "chat.tools.global.autoApprove": true,
   "chat.tools.terminal.outputDeltas": true,
@@ -594,6 +608,7 @@
   "githubPullRequests.defaultDeletionMethod.selectWorktree": true,
   "githubPullRequests.deleteBranchAfterMerge": true,
   "githubPullRequests.devMode": true,
+  "githubPullRequests.experimental.agentsOverviewTabs": true,
   "githubPullRequests.experimental.overviewTabs": true,
   "githubPullRequests.experimental.useQuickChat": true,
   "githubPullRequests.pullBranch": "always",
@@ -634,6 +649,14 @@
   "notebook.variablesView": true,
   // #endregion
   // #region onboarding
+  "onboarding.developerMode": {
+    "chat.agentHost.worktreeSendChoice": true,
+    "chat.onboarding.agentPickerInAttachContext": true,
+    "chat.onboarding.chatInput": true,
+    "markdownEditor.nudge.preview": true,
+    "markdownEditor.nudge.textEditor": true,
+    "workbench.folderLocation.introduction": true
+  },
   "onboarding.spotlight.backdrop": true,
   // #endregion
   // #region problems
@@ -743,12 +766,18 @@
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.experimental.emptyEditorHintActions": true,
+  "workbench.editor.experimental.emptyEditorHintOpenInMarkdownEditor": true,
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.markdownDefaultEditorInAgentsWindow": true,
+  "workbench.editor.newTabButton": true,
   "workbench.editor.preferHistoryBasedLanguageDetection": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.wrapTabs": true,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+    "*.md": "vscode.markdown.editor"
+  },
   "workbench.experimental.cloudChanges.autoStore": "onShutdown",
   "workbench.experimental.cloudChanges.partialMatches.enabled": true,
   "workbench.experimental.share.enabled": true,
@@ -897,6 +926,7 @@
   "xml.codeLens.enabled": true,
   "xml.validation.resolveExternalEntities": true,
   "xml.validation.xInclude.enabled": true,
+  "xml.workspaceIndex.enabled": true,
   // #endregion
   // #region vscode-yaml
   "yaml.disableSchemaDetection": [
