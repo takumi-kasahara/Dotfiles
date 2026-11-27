@@ -3,6 +3,386 @@ apm_version: 0.39.1
 manifest_targets:
   - copilot
 dependencies:
+  - repo_url: anthropics/skills
+    name: docx
+    host: github.com
+    resolved_commit: e4bb5d960d87126ff3b3a8af1a104b7db67560ba
+    version: unknown
+    virtual_path: skills/docx
+    is_virtual: true
+    package_type: claude_skill
+    deployed_files:
+      - .agents/skills/docx
+      - .agents/skills/docx/LICENSE.txt
+      - .agents/skills/docx/SKILL.md
+      - .agents/skills/docx/scripts/__init__.py
+      - .agents/skills/docx/scripts/accept_changes.py
+      - .agents/skills/docx/scripts/comment.py
+      - .agents/skills/docx/scripts/merge_runs.py
+      - .agents/skills/docx/scripts/office/helpers/__init__.py
+      - .agents/skills/docx/scripts/office/helpers/pptx_chart.py
+      - .agents/skills/docx/scripts/office/helpers/pptx_slide.py
+      - .agents/skills/docx/scripts/office/helpers/pptx_theme.py
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+      - .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+      - .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+      - .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+      - .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+      - .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+      - .agents/skills/docx/scripts/office/schemas/mce/mc.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-2010.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-2012.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-2018.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+      - .agents/skills/docx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+      - .agents/skills/docx/scripts/office/soffice.py
+      - .agents/skills/docx/scripts/office/validate.py
+      - .agents/skills/docx/scripts/office/validators/__init__.py
+      - .agents/skills/docx/scripts/office/validators/base.py
+      - .agents/skills/docx/scripts/office/validators/docx.py
+      - .agents/skills/docx/scripts/office/validators/pptx.py
+      - .agents/skills/docx/scripts/office/validators/redlining.py
+      - .agents/skills/docx/scripts/templates/comments.xml
+      - .agents/skills/docx/scripts/templates/commentsExtended.xml
+      - .agents/skills/docx/scripts/templates/commentsExtensible.xml
+      - .agents/skills/docx/scripts/templates/commentsIds.xml
+      - .agents/skills/docx/scripts/templates/people.xml
+    deployed_file_hashes:
+      .agents/skills/docx/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+      .agents/skills/docx/SKILL.md: sha256:895d5aa6c4cd98e4aed4c995d846f056f3549086e79bcd6617afea6014f82288
+      .agents/skills/docx/scripts/__init__.py: sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+      .agents/skills/docx/scripts/accept_changes.py: sha256:0c991d2bc7304a1248e9f3bf9b1498f0b6e76641fc457e7cbd73c99b4eef3a74
+      .agents/skills/docx/scripts/comment.py: sha256:37d116e5f56bb142b208c6c6a4bbcf960495abf470ddb7c6675ccfac864ba3d7
+      .agents/skills/docx/scripts/merge_runs.py: sha256:3ab367fd7fba4647943d0aa5e65203b15458551410f5ffc821d902616a4b9f40
+      .agents/skills/docx/scripts/office/helpers/__init__.py: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+      .agents/skills/docx/scripts/office/helpers/pptx_chart.py: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+      .agents/skills/docx/scripts/office/helpers/pptx_slide.py: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+      .agents/skills/docx/scripts/office/helpers/pptx_theme.py: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+      .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+      .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+      .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+      .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+      .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+      .agents/skills/docx/scripts/office/schemas/mce/mc.xsd: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-2010.xsd: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-2012.xsd: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-2018.xsd: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-cex-2018.xsd: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-cid-2016.xsd: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+      .agents/skills/docx/scripts/office/schemas/microsoft/wml-symex-2015.xsd: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+      .agents/skills/docx/scripts/office/soffice.py: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+      .agents/skills/docx/scripts/office/validate.py: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+      .agents/skills/docx/scripts/office/validators/__init__.py: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+      .agents/skills/docx/scripts/office/validators/base.py: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+      .agents/skills/docx/scripts/office/validators/docx.py: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+      .agents/skills/docx/scripts/office/validators/pptx.py: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+      .agents/skills/docx/scripts/office/validators/redlining.py: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+      .agents/skills/docx/scripts/templates/comments.xml: sha256:a08ba83ee8790ac9e3dc61921f4988f19edd7e06ac09d6f1897a877c1581818d
+      .agents/skills/docx/scripts/templates/commentsExtended.xml: sha256:544eeecfeceed4b468fff163cd9c366d33641c8b8ab691ce002576197846afe8
+      .agents/skills/docx/scripts/templates/commentsExtensible.xml: sha256:bad10b3283e6ad6e7ef6d1ca5169683721ed690ee331282c65df04017e080631
+      .agents/skills/docx/scripts/templates/commentsIds.xml: sha256:db20f9616e004ec42ef736e80c2384e45db0f8d1194d31dc8b37c7d6ecdd6420
+      .agents/skills/docx/scripts/templates/people.xml: sha256:056f63aa1197fd8c9dda980c9f1b9ff016fd5fa4a462df8aec5f384f39d23e37
+    content_hash: sha256:3b8cc6ade6c6f52b75205f44220a44ee29956442cbf4db3216308a895a320313
+  - repo_url: anthropics/skills
+    name: pptx
+    host: github.com
+    resolved_commit: e4bb5d960d87126ff3b3a8af1a104b7db67560ba
+    version: unknown
+    virtual_path: skills/pptx
+    is_virtual: true
+    package_type: claude_skill
+    deployed_files:
+      - .agents/skills/pptx
+      - .agents/skills/pptx/LICENSE.txt
+      - .agents/skills/pptx/SKILL.md
+      - .agents/skills/pptx/scripts/__init__.py
+      - .agents/skills/pptx/scripts/add_slide.py
+      - .agents/skills/pptx/scripts/apply_theme.js
+      - .agents/skills/pptx/scripts/clean.py
+      - .agents/skills/pptx/scripts/office/helpers/__init__.py
+      - .agents/skills/pptx/scripts/office/helpers/pptx_chart.py
+      - .agents/skills/pptx/scripts/office/helpers/pptx_slide.py
+      - .agents/skills/pptx/scripts/office/helpers/pptx_theme.py
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+      - .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+      - .agents/skills/pptx/scripts/office/schemas/mce/mc.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2010.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2012.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2018.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+      - .agents/skills/pptx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+      - .agents/skills/pptx/scripts/office/soffice.py
+      - .agents/skills/pptx/scripts/office/validate.py
+      - .agents/skills/pptx/scripts/office/validators/__init__.py
+      - .agents/skills/pptx/scripts/office/validators/base.py
+      - .agents/skills/pptx/scripts/office/validators/docx.py
+      - .agents/skills/pptx/scripts/office/validators/pptx.py
+      - .agents/skills/pptx/scripts/office/validators/redlining.py
+      - .agents/skills/pptx/scripts/slide_text.py
+      - .agents/skills/pptx/scripts/thumbnail.py
+    deployed_file_hashes:
+      .agents/skills/pptx/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+      .agents/skills/pptx/SKILL.md: sha256:598c981d93f2173b251f86a4bc94e9fb4e4f5ddaa314ba2dd4eca24b7a07808e
+      .agents/skills/pptx/scripts/__init__.py: sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      .agents/skills/pptx/scripts/add_slide.py: sha256:23a4c66a9f43e651189cbc9f82ba0a8271d19dc8d44cf0c426dda66f7eb6a93a
+      .agents/skills/pptx/scripts/apply_theme.js: sha256:e440b33c43f2e707076cb64b57ca926ce886564b115c19ee23ac487bdb1a6259
+      .agents/skills/pptx/scripts/clean.py: sha256:5c808cd4dff7e02661ef3c68b5917f4e25097cc6610c92a3a7df4a6366a5c3c1
+      .agents/skills/pptx/scripts/office/helpers/__init__.py: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+      .agents/skills/pptx/scripts/office/helpers/pptx_chart.py: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+      .agents/skills/pptx/scripts/office/helpers/pptx_slide.py: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+      .agents/skills/pptx/scripts/office/helpers/pptx_theme.py: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+      .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+      .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+      .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+      .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+      .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+      .agents/skills/pptx/scripts/office/schemas/mce/mc.xsd: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2010.xsd: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2012.xsd: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2018.xsd: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cex-2018.xsd: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cid-2016.xsd: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+      .agents/skills/pptx/scripts/office/schemas/microsoft/wml-symex-2015.xsd: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+      .agents/skills/pptx/scripts/office/soffice.py: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+      .agents/skills/pptx/scripts/office/validate.py: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+      .agents/skills/pptx/scripts/office/validators/__init__.py: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+      .agents/skills/pptx/scripts/office/validators/base.py: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+      .agents/skills/pptx/scripts/office/validators/docx.py: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+      .agents/skills/pptx/scripts/office/validators/pptx.py: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+      .agents/skills/pptx/scripts/office/validators/redlining.py: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+      .agents/skills/pptx/scripts/slide_text.py: sha256:0deab09d4ae494411ee893f9c69fffc19fe264a6053990a2f066334c0d88d422
+      .agents/skills/pptx/scripts/thumbnail.py: sha256:94ef83a84346aa2d63913de0d42bb2fe902ccdc17bfac6130096ca758381793c
+    content_hash: sha256:d5c5c8a950aa70980034edf5e04079eba8ce2f260faa7cd9a648659ec730c412
+  - repo_url: anthropics/skills
+    name: xlsx
+    host: github.com
+    resolved_commit: e4bb5d960d87126ff3b3a8af1a104b7db67560ba
+    version: unknown
+    virtual_path: skills/xlsx
+    is_virtual: true
+    package_type: claude_skill
+    deployed_files:
+      - .agents/skills/xlsx
+      - .agents/skills/xlsx/LICENSE.txt
+      - .agents/skills/xlsx/SKILL.md
+      - .agents/skills/xlsx/scripts/office/helpers/__init__.py
+      - .agents/skills/xlsx/scripts/office/helpers/pptx_chart.py
+      - .agents/skills/xlsx/scripts/office/helpers/pptx_slide.py
+      - .agents/skills/xlsx/scripts/office/helpers/pptx_theme.py
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/mce/mc.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2010.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2012.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2018.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+      - .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+      - .agents/skills/xlsx/scripts/office/soffice.py
+      - .agents/skills/xlsx/scripts/office/validate.py
+      - .agents/skills/xlsx/scripts/office/validators/__init__.py
+      - .agents/skills/xlsx/scripts/office/validators/base.py
+      - .agents/skills/xlsx/scripts/office/validators/docx.py
+      - .agents/skills/xlsx/scripts/office/validators/pptx.py
+      - .agents/skills/xlsx/scripts/office/validators/redlining.py
+      - .agents/skills/xlsx/scripts/recalc.py
+    deployed_file_hashes:
+      .agents/skills/xlsx/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+      .agents/skills/xlsx/SKILL.md: sha256:f32b1c2b5d5d31e02964df110d6489613d9345f86830c118cfe24159d8448ce6
+      .agents/skills/xlsx/scripts/office/helpers/__init__.py: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+      .agents/skills/xlsx/scripts/office/helpers/pptx_chart.py: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+      .agents/skills/xlsx/scripts/office/helpers/pptx_slide.py: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+      .agents/skills/xlsx/scripts/office/helpers/pptx_theme.py: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+      .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+      .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+      .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+      .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+      .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+      .agents/skills/xlsx/scripts/office/schemas/mce/mc.xsd: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2010.xsd: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2012.xsd: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2018.xsd: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cex-2018.xsd: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cid-2016.xsd: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+      .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-symex-2015.xsd: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+      .agents/skills/xlsx/scripts/office/soffice.py: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+      .agents/skills/xlsx/scripts/office/validate.py: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+      .agents/skills/xlsx/scripts/office/validators/__init__.py: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+      .agents/skills/xlsx/scripts/office/validators/base.py: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+      .agents/skills/xlsx/scripts/office/validators/docx.py: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+      .agents/skills/xlsx/scripts/office/validators/pptx.py: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+      .agents/skills/xlsx/scripts/office/validators/redlining.py: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+      .agents/skills/xlsx/scripts/recalc.py: sha256:7265aa4a41f5273596ee5694ce8a4d881c18adafb6203fece769107d08403263
+    content_hash: sha256:4ae11899be0e8205afe76b3b144b4285496806859ff6c7545e416e614ef814a9
   - repo_url: awesome-skills/code-review-skill
     name: code-review-skill
     host: github.com
@@ -120,6 +500,7 @@ dependencies:
     version: 1.0.0
     virtual_path: instructions/agent-skills.instructions.md
     is_virtual: true
+    package_type: apm_package
     deployed_files:
       - .github/instructions/agent-skills.instructions.md
     deployed_file_hashes:
@@ -132,6 +513,7 @@ dependencies:
     version: 1.0.0
     virtual_path: instructions/agents.instructions.md
     is_virtual: true
+    package_type: apm_package
     deployed_files:
       - .github/instructions/agents.instructions.md
     deployed_file_hashes:
@@ -144,6 +526,7 @@ dependencies:
     version: 1.0.0
     virtual_path: instructions/instructions.instructions.md
     is_virtual: true
+    package_type: apm_package
     deployed_files:
       - .github/instructions/instructions.instructions.md
     deployed_file_hashes:
@@ -156,6 +539,7 @@ dependencies:
     version: 1.0.0
     virtual_path: instructions/markdown.instructions.md
     is_virtual: true
+    package_type: apm_package
     deployed_files:
       - .github/instructions/markdown.instructions.md
     deployed_file_hashes:
@@ -168,6 +552,7 @@ dependencies:
     version: 1.0.0
     virtual_path: instructions/prompt.instructions.md
     is_virtual: true
+    package_type: apm_package
     deployed_files:
       - .github/instructions/prompt.instructions.md
     deployed_file_hashes:
@@ -245,44 +630,6 @@ dependencies:
       - path: skills/secret-scanning/LICENSE
         source: LICENSE
         hash: sha256:2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7
-  - repo_url: microsoftdocs/mcp
-    name: microsoft-docs
-    host: github.com
-    resolved_commit: f0a9478a954c9b3a7c6525a5183466902ca60731
-    version: 0.3.1
-    package_type: marketplace_plugin
-    content_hash: sha256:113343bf04e6514b47a23124bc004b122c3107d0c9053ee9dca812883892be74
-    carried_licenses:
-      - path: .apm/skills/microsoft-code-reference/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: .apm/skills/microsoft-docs/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: .apm/skills/microsoft-skill-creator/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: cli/assets/microsoft-learn-cli/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: skills/microsoft-code-reference/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: skills/microsoft-docs/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      - path: skills/microsoft-skill-creator/LICENSE
-        source: LICENSE
-        hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-    native_plugin:
-      name: microsoft-docs
-      root: .agents/plugins/microsoft-docs
-      fingerprint: sha256:86a8cebf142f1125b843180c4e6e8681661696432e3cf7986a509c660f195bf6
-      marketplace:
-        name: apm-p-50a26669
-        path: ./.agents/plugins
-    native_declared:
-      - copilot
 deployments:
   - kind: project-relative
     target: copilot
@@ -889,6 +1236,564 @@ deployments:
     content_hash: sha256:3e9df91dba4a65357ced43553b47c768c4630d054eed37f0fffebfb2495bad14
   - kind: project-relative
     target: copilot
+    value: .agents/skills/docx
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/LICENSE.txt
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:895d5aa6c4cd98e4aed4c995d846f056f3549086e79bcd6617afea6014f82288
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/accept_changes.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:0c991d2bc7304a1248e9f3bf9b1498f0b6e76641fc457e7cbd73c99b4eef3a74
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/comment.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:37d116e5f56bb142b208c6c6a4bbcf960495abf470ddb7c6675ccfac864ba3d7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/merge_runs.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3ab367fd7fba4647943d0aa5e65203b15458551410f5ffc821d902616a4b9f40
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/helpers/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/helpers/pptx_chart.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/helpers/pptx_slide.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/helpers/pptx_theme.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/mce/mc.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-2010.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-2012.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/soffice.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validate.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validators/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validators/base.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validators/docx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validators/pptx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/office/validators/redlining.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/templates/comments.xml
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:a08ba83ee8790ac9e3dc61921f4988f19edd7e06ac09d6f1897a877c1581818d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/templates/commentsExtended.xml
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:544eeecfeceed4b468fff163cd9c366d33641c8b8ab691ce002576197846afe8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/templates/commentsExtensible.xml
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:bad10b3283e6ad6e7ef6d1ca5169683721ed690ee331282c65df04017e080631
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/templates/commentsIds.xml
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:db20f9616e004ec42ef736e80c2384e45db0f8d1194d31dc8b37c7d6ecdd6420
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/docx/scripts/templates/people.xml
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/docx
+    active_owner: anthropics/skills/skills/docx
+    content_hash: sha256:056f63aa1197fd8c9dda980c9f1b9ff016fd5fa4a462df8aec5f384f39d23e37
+  - kind: project-relative
+    target: copilot
     value: .agents/skills/office-scripts
     runtime: null
     scope: project
@@ -1249,6 +2154,537 @@ deployments:
     content_hash: sha256:9ca9c50f1cd1288890ecc8209651e90cfbb2b195b740087c966b9447403f6a86
   - kind: project-relative
     target: copilot
+    value: .agents/skills/pptx
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/LICENSE.txt
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:598c981d93f2173b251f86a4bc94e9fb4e4f5ddaa314ba2dd4eca24b7a07808e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/add_slide.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:23a4c66a9f43e651189cbc9f82ba0a8271d19dc8d44cf0c426dda66f7eb6a93a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/apply_theme.js
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:e440b33c43f2e707076cb64b57ca926ce886564b115c19ee23ac487bdb1a6259
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/clean.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:5c808cd4dff7e02661ef3c68b5917f4e25097cc6610c92a3a7df4a6366a5c3c1
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/helpers/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/helpers/pptx_chart.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/helpers/pptx_slide.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/helpers/pptx_theme.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/mce/mc.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2010.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2012.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/soffice.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validate.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validators/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validators/base.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validators/docx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validators/pptx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/office/validators/redlining.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/slide_text.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:0deab09d4ae494411ee893f9c69fffc19fe264a6053990a2f066334c0d88d422
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/pptx/scripts/thumbnail.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/pptx
+    active_owner: anthropics/skills/skills/pptx
+    content_hash: sha256:94ef83a84346aa2d63913de0d42bb2fe902ccdc17bfac6130096ca758381793c
+  - kind: project-relative
+    target: copilot
     value: .agents/skills/pull-request-assistant
     runtime: null
     scope: project
@@ -1582,6 +3018,492 @@ deployments:
     content_hash: sha256:e83f594d5c9318352d61fce9db627ca8d9bdf47889dcb17dc5d2cc92a3761859
   - kind: project-relative
     target: copilot
+    value: .agents/skills/xlsx
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: null
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/LICENSE.txt
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/SKILL.md
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:f32b1c2b5d5d31e02964df110d6489613d9345f86830c118cfe24159d8448ce6
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/helpers/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:5c456ffc522900399b5f9402f92d66aaf2d9f87655d236c69f60bf07f4fd7c9b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/helpers/pptx_chart.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:aed734e9a6c743ae712fc228c868bf0f6abcfb6a53549eefb19081b15d240fda
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/helpers/pptx_slide.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:06fe06953bf038826b85ecc142f4dc9299a37fa0c4e4dd9b00b10486df33524d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/helpers/pptx_theme.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/mce/mc.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2010.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2012.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cex-2018.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-cid-2016.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/schemas/microsoft/wml-symex-2015.xsd
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/soffice.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:bcfa227707681ffbecc0f0af5c4e7155407b3baaf5cec5cdd41387c97cdd40c7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validate.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:8c10ec61d8e880877515019e1fe8fab9a1f590c9e50ed0631418e960aca1e313
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validators/__init__.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validators/base.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:6129ec6a4fc0a4aa78af1434f9baa73994cc24d3261afda4e680e00f215cbf3b
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validators/docx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:7b0f1a23c9cd9ff07187d9d7d359f62317f94a5e389d63fd19766e1688a195a2
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validators/pptx.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:3a100ec5f00ae183bca67f4aaa8e3e902caee60254e141b8120f32c53d85cee7
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/office/validators/redlining.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:f9c4455adc32b3890d5203d6c25d868d98d7e970bbad76b686f502950737599a
+  - kind: project-relative
+    target: copilot
+    value: .agents/skills/xlsx/scripts/recalc.py
+    runtime: null
+    scope: project
+    owners:
+      - anthropics/skills/skills/xlsx
+    active_owner: anthropics/skills/skills/xlsx
+    content_hash: sha256:7265aa4a41f5273596ee5694ce8a4d881c18adafb6203fece769107d08403263
+  - kind: project-relative
+    target: copilot
     value: .github/agents/test-first.agent.md
     runtime: null
     scope: project
@@ -1661,18 +3583,8 @@ deployments:
       - .
     active_owner: .
     content_hash: sha256:0bac3fbf3d347402b844c037a268f26faec2738fbc41d49cd7d50c251e96b6d5
-  - kind: uri
-    target: mcp
-    value: microsoft-learn
-    runtime: copilot
-    scope: project
-    owners:
-      - .
-    active_owner: .
-    content_hash: sha256:3476022fecd0a5da71b13372c38ff1ad685f6ff876a168103d40f7561209b041
 mcp_servers:
   - github-ghas-tools
-  - microsoft-learn
 mcp_configs:
   github-ghas-tools:
     name: github-ghas-tools
@@ -1682,18 +3594,11 @@ mcp_configs:
       X-MCP-Toolsets: code_security,secret_protection,security_advisories,dependabot
       X-MCP-Tools: run_secret_scanning
     url: https://api.githubcopilot.com/mcp/
-  microsoft-learn:
-    name: microsoft-learn
-    transport: http
-    registry: false
-    url: https://learn.microsoft.com/api/mcp
 mcp_target_servers:
   copilot:
     - github-ghas-tools
-    - microsoft-learn
 mcp_config_provenance:
   github-ghas-tools: github/advanced-security
-  microsoft-learn: microsoft-docs
 local_deployed_files:
   - .agents/skills/autohotkey
   - .agents/skills/autohotkey/SKILL.md

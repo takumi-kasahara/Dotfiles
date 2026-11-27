@@ -6,6 +6,9 @@ targets:
   - copilot
 dependencies:
   apm:
+    - anthropics/skills/skills/docx
+    - anthropics/skills/skills/pptx
+    - anthropics/skills/skills/xlsx
     - awesome-skills/code-review-skill
     - github/awesome-copilot/instructions/agent-skills.instructions.md
     - github/awesome-copilot/instructions/agents.instructions.md

@@ -277,7 +277,7 @@ Source('.\Git\*.sh').
 Destination(($env:LOCALAPPDATA | Join-Path -ChildPath 'Programs')).
 Install()
 
-# Copilot
+# GitHub Copilot
 # https://code.visualstudio.com/docs/agent-customization/agent-skills#_create-a-skill
 # https://code.visualstudio.com/docs/agent-customization/custom-agents#_custom-agent-file-locations
 # https://code.visualstudio.com/docs/agent-customization/custom-instructions#_instructions-file-locations
@@ -291,6 +291,28 @@ Source('.\.github\instructions').
 Destination(($env:USERPROFILE | Join-Path -ChildPath '.copilot')).
 Install()
 Copy-Item -Path ([WildcardPattern]::Escape($PSScriptRoot) | Join-Path -ChildPath '.copilot\*.json') -Destination ($env:USERPROFILE | Join-Path -ChildPath '.copilot') -Force:$Force -PassThru
+
+# Microsoft 365 Copilot
+# https://support.microsoft.com/en-gb/microsoft-365-copilot/create-edit-skills-copilot
+$copilot = $shell.NameSpace('shell:Personal').Self.Path | Join-Path -ChildPath 'Copilot'
+# https://support.microsoft.com/en-us/excel/copilot/copilot-in-excel-skills
+$xlsx = $copilot | Join-Path -ChildPath 'Microsoft Excel'
+if (-not (Test-Path -LiteralPath $xlsx)) {
+  New-Item -Path $xlsx -ItemType Directory -Force | Out-Null
+}
+Copy-Item -LiteralPath '.agents\skills\xlsx' -Destination ($xlsx | Join-Path -ChildPath 'skills') -Recurse -Force:$Force -PassThru
+# https://support.microsoft.com/en-us/powerpoint/copilot/copilot-in-powerpoint-skills
+$pptx = $copilot | Join-Path -ChildPath 'Microsoft PowerPoint'
+if (-not (Test-Path -LiteralPath $pptx)) {
+  New-Item -Path $pptx -ItemType Directory -Force | Out-Null
+}
+Copy-Item -LiteralPath '.agents\skills\pptx' -Destination ($pptx | Join-Path -ChildPath 'skills') -Recurse -Force:$Force -PassThru
+# https://support.microsoft.com/en-us/word/copilot/draft-and-add-content-with-copilot-in-word
+$docx = $copilot | Join-Path -ChildPath 'Microsoft Word'
+if (-not (Test-Path -LiteralPath $docx)) {
+  New-Item -Path $docx -ItemType Directory -Force | Out-Null
+}
+Copy-Item -LiteralPath '.agents\skills\docx' -Destination ($docx | Join-Path -ChildPath 'skills') -Recurse -Force:$Force -PassThru
 
 # apm
 # https://microsoft.github.io/apm/reference/cli/experimental/
