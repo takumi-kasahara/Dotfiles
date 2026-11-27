@@ -33,6 +33,7 @@ user_pref("dom.security.https_only_mode.upgrade_local", false);
 user_pref("dom.security.https_only_mode", true);
 user_pref("extensions.blocklist.enabled", true);
 user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.cvv.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("general.smoothScroll", true);
