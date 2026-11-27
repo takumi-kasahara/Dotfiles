@@ -7,7 +7,7 @@ description: 'CSS coding conventions for Stylus-compatible user-style files (*.u
 
 Coding conventions for authoring Stylus-compatible user styles (`.user.css`) in this workspace. These are plain CSS stylesheets with a Stylus metadata header, targeting the latest Firefox.
 
-## When to Use This Skill
+## When to use this skill
 
 - Creating or modifying a `.user.css`
 - Adding a new user style for a site

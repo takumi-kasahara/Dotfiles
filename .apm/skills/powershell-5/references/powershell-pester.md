@@ -35,7 +35,7 @@
     - Do not test constraints defined by `Parameter` or `Validate*` attributes.
 - When changing existing code, run only related tests and verify behavior.
 
-## Pester Mock Best Practices
+## Pester mock best practices
 
 - Declare Mocks inside `BeforeAll` or `It` blocks.
 - A Mock declared in `BeforeAll` applies to all test cases in the same `Describe` block.

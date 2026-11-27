@@ -7,6 +7,11 @@
         "X-MCP-Toolsets": "code_security,secret_protection,security_advisories,dependabot",
         "X-MCP-Tools": "run_secret_scanning"
       }
+    },
+    "textlint": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["--yes", "textlint", "--mcp"]
     }
   }
 }

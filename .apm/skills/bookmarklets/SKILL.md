@@ -8,7 +8,7 @@ license: Complete terms in LICENSE.txt
 
 Coding conventions for authoring browser bookmarklets, Greasemonkey user scripts, and user styles in this workspace. These projects are TypeScript (ES modules) compiled/bundled with esbuild, targeting the latest Firefox.
 
-## When to Use This Skill
+## When to use this skill
 
 - Creating or modifying a `.ts` source file under `src/` (modules or scripts)
 - Writing or editing a build script under `.tools/`

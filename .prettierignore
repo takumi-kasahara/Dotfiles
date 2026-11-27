@@ -1,6 +1,9 @@
-.agents
-apm_modules
-node_modules
+.agents/
+apm_modules/
+node_modules/
+
+.github/agents/
+.github/instructions/
 
 Firefox/*.js
 Thunderbird/*.js

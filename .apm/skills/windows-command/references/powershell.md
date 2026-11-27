@@ -1,6 +1,7 @@
 # Recommended `powershell.exe` invocation options
 
-When PowerShell 7 (`pwsh.exe`) starts Windows PowerShell (`powershell.exe`) directly, it removes PowerShell 7 module paths from the environment passed to Windows PowerShell.
+When PowerShell 7 (`pwsh.exe`) starts Windows PowerShell (`powershell.exe`) directly, it removes PowerShell 7 module paths from the environment passed to the older host.
+
 This filtering does not happen when an intermediate process such as `cmd.exe` is involved.
 `cmd.exe` inherits the unmodified `PSModulePath` from `pwsh.exe` and passes it to `powershell.exe`.
 The resulting module path can contain duplicate entries or PowerShell 7 module paths that Windows PowerShell cannot load, which can break module auto-loading.

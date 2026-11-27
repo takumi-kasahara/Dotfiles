@@ -1,4 +1,4 @@
-# VBA to Office Scripts Conversion
+# VBA to Office Scripts conversion
 
 Convert VBA macros into runnable Office Scripts.
 

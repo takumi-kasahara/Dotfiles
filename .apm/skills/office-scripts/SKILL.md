@@ -36,7 +36,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## Parameterized Scripts: Input and Output
+## Parameterized scripts: input and output
 
 Adding parameters and return values to `main` unlocks powerful capabilities beyond standalone execution.
 
