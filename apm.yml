@@ -16,6 +16,14 @@ dependencies:
     - github/awesome-copilot/skills/conventional-commit
     - github/copilot-advanced-security-plugin
     - microsoftdocs/mcp
-  mcp: []
+  mcp:
+    - name: textlint
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - --yes
+        - textlint
+        - --mcp
 includes: auto
 scripts: {}

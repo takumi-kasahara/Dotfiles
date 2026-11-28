@@ -1,10 +1,12 @@
 {
   "scripts": {
-    "lint": "prettier --write . && markdownlint-cli2 --fix ."
+    "lint": "prettier --write . && markdownlint-cli2 --fix . && textlint --fix . && textlint ."
   },
   "devDependencies": {
     "markdownlint-cli2": "^0.24.2",
-    "prettier": "^3.10.1"
+    "prettier": "^3.10.1",
+    "slopless": "^0.2.42",
+    "textlint": "^16.1.3"
   },
   "private": true
 }

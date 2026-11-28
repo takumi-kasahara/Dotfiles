@@ -6,7 +6,7 @@ argument-hint: 'Describe the batch file to create and any command-line arguments
 
 # Windows Command
 
-Practical skill for creating Windows `*.bat`, `*.cmd` files that are reusable, robust, and maintainable.
+Practical skill for creating Windows `*.bat`, `*.cmd` files that are reusable, reliable, and maintainable.
 
 ## Template scripts
 
@@ -15,7 +15,7 @@ Start from one of these skeletons instead of writing the boilerplate by hand:
 - [run.cmd](./assets/run.cmd) — basic `:begin` / `:process` / `:end` skeleton
 - [runas.cmd](./assets/runas.cmd) — skeleton with elevation via `net session` check at the top (uses `sudo` when available, falls back to PowerShell `Start-Process -Verb RunAs`)
 
-## When to Use This Skill
+## When to use this skill
 
 - Creating a new `*.bat`, `*.cmd` file
 - Refactoring an existing `*.bat` into a safe structure

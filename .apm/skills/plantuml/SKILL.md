@@ -4,11 +4,11 @@ description: Generate PlantUML images from text files using a local or remote Pl
 argument-hint: Describe the input pattern(s), output directory, format, and PlantUML server URL.
 ---
 
-# PlantUML Image Generation Skill
+# PlantUML image generation skill
 
 Create images (or text output) from PlantUML source files by calling a PlantUML server from Python.
 
-## When to Use This Skill
+## When to use this skill
 
 - You want to render `*.puml` or `*.plantuml` files to images.
 - Your PlantUML server runs locally (for example Docker at `http://localhost:8080`).

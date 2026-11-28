@@ -1,4 +1,4 @@
-# `%*` Expansion Gotchas in Batch Files
+# `%*` expansion gotchas in batch files
 
 ## The Problem
 
@@ -30,7 +30,7 @@ The `)` in `().txt` closes the `else (` block prematurely, causing:
 .txt was unexpected at this time.
 ```
 
-## The Solution: Use Goto Labels Instead of Blocks
+## The solution: use goto labels instead of blocks
 
 Replace block-based branching with label-based branching:
 
@@ -52,7 +52,7 @@ This works because labels are not affected by parentheses in expanded variables.
 1. Avoid `if (...) else (...)` blocks when using `%*` or `%1`...`%9`
    — the parentheses in arguments can break the block structure.
 2. Use `goto` labels for branching
-   — labels are parsed at read time, not expansion time, so they're immune to argument content.
+   — labels are parsed at read time, so they're immune to argument content.
 3. If you must use blocks, quote carefully
    — but even `"%*"` doesn't help because the `)` is still a `)` to the parser.
 4. This applies to `for` loops too

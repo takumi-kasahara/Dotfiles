@@ -12,7 +12,7 @@ Guidelines for writing and editing PowerShell 7.6 scripts and modules in this re
 - [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
 - [PowerShell Gallery](https://www.powershellgallery.com/)
 
-## When to Use This Skill
+## When to use this skill
 
 - Writing or editing any `*.ps1` or `*.psm1` file
 - Creating a new function or cmdlet

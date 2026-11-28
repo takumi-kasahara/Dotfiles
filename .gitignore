@@ -1,7 +1,10 @@
-.github/copilot-memories.jsonl
 .agents/
 apm_modules/
 node_modules/
+
+.github/agents/
+.github/instructions/
+.github/copilot-memories.jsonl
 
 .vscode/*
 !.vscode/*.code-snippets
