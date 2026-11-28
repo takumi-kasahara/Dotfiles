@@ -113,21 +113,7 @@
   // #region Idiom
   "Idiom.Force.CommandNotFoundException": {
     "prefix": "force-CommandNotFoundException",
-    "body": ["# Force CommandNotFoundException", "${1:command} >\\$null 2>&1\n"]
-  },
-  "Idiom.Force.ItemNotFoundException": {
-    "prefix": "force-ItemNotFoundException",
-    "body": [
-      "# Force ItemNotFoundException",
-      "Get-Item -LiteralPath ${1:path} >\\$null\n"
-    ]
-  },
-  "Idiom.Force.NativeCommandError": {
-    "prefix": "force-NativeCommandError",
-    "body": [
-      "# Force NativeCommandError",
-      "where.exe ${1:command} >\\$null 2>&1\n"
-    ]
+    "body": ["# Force CommandNotFoundException", "${1:command} >\\$null\n"]
   }
   // #endregion
 }
