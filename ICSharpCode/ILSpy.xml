@@ -1,89 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ILSpy version="10.0.1.8346">
-  <AssemblyLists>
-    <List name=".NET 4 (WPF)">
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</Assembly>
-    </List>
-    <List name="ASP.NET (MVC3)">
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Entity.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Abstractions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Abstractions.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.DynamicData\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.DynamicData.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Web.Entity.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Routing\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Routing.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
-      <Assembly>
-        C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
-    </List>
-    <List name="(Default)" />
-  </AssemblyLists>
+<ILSpy version="11.2.0.10050">
   <SessionSettings>
     <FilterSettings>
       <ShowAPILevel>0</ShowAPILevel>
       <Language></Language>
       <LanguageVersion></LanguageVersion>
     </FilterSettings>
-    <ActiveAssemblyList>(Default)</ActiveAssemblyList>
+    <ActiveAssemblyList>.NET 4 (WPF)</ActiveAssemblyList>
+    <SelectedSearchMode>TypeAndMember</SelectedSearchMode>
     <WindowState>Maximized</WindowState>
     <WindowBounds>10,10,750,550</WindowBounds>
-    <SelectedSearchMode>TypeAndMember</SelectedSearchMode>
     <Theme>Dark</Theme>
+    <MultiLineDocumentTabs>true</MultiLineDocumentTabs>
+    <MouseWheelTogglesTabStripRows>true</MouseWheelTogglesTabStripRows>
     <DockLayout>
       <LayoutRoot>
         <RootPanel Orientation="Horizontal">
@@ -127,19 +56,21 @@
   </SessionSettings>
   <UpdateSettings>
     <AutomaticUpdateCheckEnabled>true</AutomaticUpdateCheckEnabled>
-    <LastSuccessfulUpdateCheck>2026-04-01T00:00:00.0000000Z</LastSuccessfulUpdateCheck>
+    <LastSuccessfulUpdateCheck>2026-10-27T00:00:00.0000000Z</LastSuccessfulUpdateCheck>
   </UpdateSettings>
   <ReadyToRunOptions DisassemblyFormat="Intel" IsShowUnwindInfo="true" IsShowDebugInfo="true"
     IsShowGCInfo="true" xmlns="http://www.ilspy.net/ready-to-run" />
   <MiscSettings AllowMultipleInstances="true" LoadPreviousAssemblies="true" />
-  <DisplaySettings Font="Cascadia Next JP" FontSize="13.333333333333334" ShowLineNumbers="true"
-    ShowMetadataTokens="true" ShowMetadataTokensInBase10="true" ShowDebugInfo="true"
-    EnableWordWrap="true" SortResults="true" FoldBraces="true" ExpandMemberDefinitions="true"
+  <DisplaySettings Font="Cascadia Next JP" FontSize="13.333333333333334" EditorZoomFactor="1"
+    ShowLineNumbers="true" ShowMetadataTokens="true" ShowMetadataTokensInBase10="true"
+    ShowDebugInfo="true" EnableWordWrap="true" SortResults="true" FoldBraces="true"
+    ExpandXmlDocumentationComments="true" ExpandMemberDefinitions="true"
     ExpandUsingDeclarations="true" IndentationUseTabs="true" IndentationSize="4"
     IndentationTabSize="4" HighlightMatchingBraces="true" HighlightCurrentLine="true"
     HideEmptyMetadataTables="true" UseNestedNamespaceNodes="true"
     ShowRawOffsetsAndBytesBeforeInstruction="true" StyleWindowTitleBar="true"
-    EnableSmoothScrolling="true" DecodeCustomAttributeBlobs="true" />
+    DecodeCustomAttributeBlobs="true" EnableOmnibar="true" NavigateOnCtrlClick="true"
+    HighlightSymbolsUnderCaret="true" />
   <DecompilerSettings NativeIntegers="true" NumericIntPtr="true" CovariantReturns="true"
     InitAccessors="true" RecordClasses="true" RecordStructs="true"
     StructDefaultConstructorsAndFieldInitializers="true" WithExpressions="true"
@@ -166,16 +97,56 @@
     IntroduceReadonlyAndInModifiers="true" IntroducePrivateProtectedAccessibility="true"
     ReadOnlyMethods="true" AsyncUsingAndForEachStatement="true" IntroduceUnmanagedConstraint="true"
     StackAllocInitializers="true" PatternBasedFixedStatement="true" TupleTypes="true"
-    ThrowExpressions="true" TupleConversions="true" TupleComparisons="true" NamedArguments="true"
-    NonTrailingNamedArguments="true" OptionalArguments="true" ExpandParamsArguments="true"
-    LocalFunctions="true" Deconstruction="true" PatternMatching="true"
+    ThrowExpressions="true" DefaultLiterals="true" TupleConversions="true" TupleComparisons="true"
+    NamedArguments="true" NonTrailingNamedArguments="true" OptionalArguments="true"
+    ExpandParamsArguments="true" LocalFunctions="true" Deconstruction="true" PatternMatching="true"
     RecursivePatternMatching="true" PatternCombinators="true" RelationalPatterns="true"
     StaticLocalFunctions="true" Ranges="true" NullableReferenceTypes="true" RemoveDeadCode="true"
     RemoveDeadStores="true" ApplyWindowsRuntimeProjections="true" AutoLoadAssemblyReferences="true"
     ForStatement="true" DoWhileStatement="true" RefReadOnlyParameters="true"
-    UsePrimaryConstructorSyntaxForNonRecordTypes="true" InlineArrays="true" ExtensionMembers="true"
-    FirstClassSpanTypes="true" SeparateLocalVariableDeclarations="true"
-    UseSdkStyleProjectFormat="true" UseNestedDirectoriesForNamespaces="true"
-    AggressiveInlining="true" AlwaysUseGlobal="true" AlwaysMoveInitializer="true"
-    SortCustomAttributes="true" CheckForOverflowUnderflow="true" />
+    UsePrimaryConstructorSyntaxForNonRecordTypes="true" InlineArrays="true"
+    LambdaOptionalAndParamsParameters="true" ExtensionMembers="true" FirstClassSpanTypes="true"
+    FieldKeyword="true" SeparateLocalVariableDeclarations="true" UseSdkStyleProjectFormat="true"
+    UseNestedDirectoriesForNamespaces="true" AggressiveInlining="true" AlwaysUseGlobal="true"
+    AlwaysMoveInitializer="true" SortCustomAttributes="true" SortSwitchSections="true"
+    CheckForOverflowUnderflow="true" />
+  <AssemblyLists>
+    <List name=".NET 4 (WPF)">
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</Assembly>
+    </List>
+    <List name="ASP.NET (MVC3)">
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Data.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Entity.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Abstractions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Abstractions.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.DynamicData\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.DynamicData.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Web.Entity.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Routing\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Routing.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</Assembly>
+      <Assembly>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll</Assembly>
+    </List>
+  </AssemblyLists>
 </ILSpy>
