@@ -1,5 +1,7 @@
-lockfile_version: '1'
-apm_version: 0.36.1
+lockfile_version: '4'
+apm_version: 0.39.1
+manifest_targets:
+  - copilot
 dependencies:
   - repo_url: awesome-skills/code-review-skill
     name: code-review-skill
@@ -110,11 +112,11 @@ dependencies:
       .agents/skills/code-review-skill/reference/zig.md: sha256:9a5e9b727d206d91d687ec3cf3caf3ed85e1cbf92b2df5675f82476abe45e017
       .agents/skills/code-review-skill/scripts/pr-analyzer.py: sha256:cdaadc3f937f1c6a6fb4a5920904f3af4a88bee07032c997e20e1be0e8ef48c8
       .agents/skills/code-review-skill/scripts/test_pr_analyzer.py: sha256:c2f2204f369c7bdd8978ded74a2159312e1b72f64dc57cef0767c2f489d69aba
-    content_hash: sha256:3df874fd0401e9d3cbf134d2eeb4793b18740b81df206987076b55f9b2cf9a26
+    content_hash: sha256:a00e115a31865273065191fbb43ba20a28075463afed940227d3980e5b27a3ef
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agent-skills
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: 1.0.0
     virtual_path: instructions/agent-skills.instructions.md
     is_virtual: true
@@ -122,11 +124,11 @@ dependencies:
       - .github/instructions/agent-skills.instructions.md
     deployed_file_hashes:
       .github/instructions/agent-skills.instructions.md: sha256:2462b317022d382573215358823acaedc05030aac121d54b6bf2fb0e22de51d3
-    content_hash: sha256:65fcf88a30510d219d52aac749ab613476348a1a4584c736fbea0a909f627804
+    content_hash: sha256:18e84d672160fef45205712dce31ba38031ca41c65a9bcf59106f0ce67e06de7
   - repo_url: github/awesome-copilot
     name: awesome-copilot-agents
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: 1.0.0
     virtual_path: instructions/agents.instructions.md
     is_virtual: true
@@ -134,11 +136,11 @@ dependencies:
       - .github/instructions/agents.instructions.md
     deployed_file_hashes:
       .github/instructions/agents.instructions.md: sha256:05ca77656669d76091460783bf8e82bcd0ec91e9d27f6d2dab570a66e170380d
-    content_hash: sha256:d07c345b3767232098773e612b9e40a4771c4f9c572c24083fa3259e2ba303a6
+    content_hash: sha256:d253234f3f8779cbbd8eb125e44f04d5be259e977a766378be56bc3f6b5facb5
   - repo_url: github/awesome-copilot
     name: awesome-copilot-instructions
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: 1.0.0
     virtual_path: instructions/instructions.instructions.md
     is_virtual: true
@@ -146,11 +148,11 @@ dependencies:
       - .github/instructions/instructions.instructions.md
     deployed_file_hashes:
       .github/instructions/instructions.instructions.md: sha256:a38e647c44a1b3702cea44569ddb4cb3f3b53a78d08f7f457d14c12e9e65eaba
-    content_hash: sha256:c190999f713a13bc01b918acf454e7546a9dc9fe254e0f9d6705df3ff698c917
+    content_hash: sha256:d9020787a56cce564c1f4b4ef7ccc01f0a19334aa28990a03f0e43457f9abd89
   - repo_url: github/awesome-copilot
     name: awesome-copilot-markdown
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: 1.0.0
     virtual_path: instructions/markdown.instructions.md
     is_virtual: true
@@ -158,11 +160,11 @@ dependencies:
       - .github/instructions/markdown.instructions.md
     deployed_file_hashes:
       .github/instructions/markdown.instructions.md: sha256:4dbd77240f4e946b321fbadb3dfaa6e5add1f803e80402ea7af598de55b3991a
-    content_hash: sha256:84a6e6a3f92829fddee305f516706b794934c312f8cfb2c4a0aad402debdd704
+    content_hash: sha256:d1d0c022d2373a1b56e564d75844fb2a73921b07de1fe24bef0aaca6b5080a75
   - repo_url: github/awesome-copilot
     name: awesome-copilot-prompt
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: 1.0.0
     virtual_path: instructions/prompt.instructions.md
     is_virtual: true
@@ -170,11 +172,11 @@ dependencies:
       - .github/instructions/prompt.instructions.md
     deployed_file_hashes:
       .github/instructions/prompt.instructions.md: sha256:01cc2cbf50c7a000295eab5083048d0c0158c7c8e651ab0845ee8870bc6183dd
-    content_hash: sha256:9aa049787bdcdcb6e7cc5f02daeb7c9662c6bdcec515dc9e5ff708b8c4cceaf6
+    content_hash: sha256:c751ad3d3a681468bad3f418d238573e8a73d36ece8334ee112578738ab5df39
   - repo_url: github/awesome-copilot
     name: conventional-branch
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: unknown
     virtual_path: skills/conventional-branch
     is_virtual: true
@@ -186,7 +188,7 @@ dependencies:
     deployed_file_hashes:
       .agents/skills/conventional-branch/LICENSE: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
       .agents/skills/conventional-branch/SKILL.md: sha256:f96662c6fafb93e7a87e04f4dfe143032fbeaa4dbb86d08a356097472c75cc6f
-    content_hash: sha256:12238ae18d36e1f57007483a406dd2f3a427f42e23948344630ca0d45136ff7d
+    content_hash: sha256:b4e4145480b3daf1edc3fd06f7c553cf9c528878bb3832d65cb27a569584d48c
     carried_licenses:
       - path: LICENSE
         source: LICENSE
@@ -194,7 +196,7 @@ dependencies:
   - repo_url: github/awesome-copilot
     name: conventional-commit
     host: github.com
-    resolved_commit: f10fdb8b2660ce85c98f220b2f1ca24653768a5c
+    resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
     version: unknown
     virtual_path: skills/conventional-commit
     is_virtual: true
@@ -206,7 +208,7 @@ dependencies:
     deployed_file_hashes:
       .agents/skills/conventional-commit/LICENSE: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
       .agents/skills/conventional-commit/SKILL.md: sha256:250235f71b8c501a7744ded911281292324bcd1a2d014e34b25041e2d2c8bf73
-    content_hash: sha256:f29c9486cede6c7b2df0cfb0a2e4aa67446552b991bcf17d1b309e903171f03d
+    content_hash: sha256:050b209f7a540376125a6c5be453472ac29e28b94fd30c45621138e606252e9f
     carried_licenses:
       - path: LICENSE
         source: LICENSE
@@ -216,7 +218,7 @@ dependencies:
     host: github.com
     resolved_commit: 9c8cd1a00c1290bf89db8f068aded1fb5dace200
     version: 1.0.0
-    package_type: skill_bundle
+    package_type: marketplace_plugin
     deployed_files:
       - .agents/skills/dependency-scanning
       - .agents/skills/dependency-scanning/LICENSE
@@ -229,7 +231,7 @@ dependencies:
       .agents/skills/dependency-scanning/SKILL.md: sha256:3e9df91dba4a65357ced43553b47c768c4630d054eed37f0fffebfb2495bad14
       .agents/skills/secret-scanning/LICENSE: sha256:2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7
       .agents/skills/secret-scanning/SKILL.md: sha256:29f70ce41559819ac14bf5a2c8fa7c9afc43cfc2cee586277db02a8530b87865
-    content_hash: sha256:22d81aa813d066194a8c5a53255a4277941ab6ab652a8ae559b06d6a214356e4
+    content_hash: sha256:75b367bff899878d6907a958272b55eccf1ab58f06e1892b77a72f3aba1ed857
     carried_licenses:
       - path: .apm/skills/dependency-scanning/LICENSE
         source: LICENSE
@@ -249,26 +251,7 @@ dependencies:
     resolved_commit: f0a9478a954c9b3a7c6525a5183466902ca60731
     version: 0.3.1
     package_type: marketplace_plugin
-    deployed_files:
-      - .agents/skills/microsoft-code-reference
-      - .agents/skills/microsoft-code-reference/LICENSE
-      - .agents/skills/microsoft-code-reference/SKILL.md
-      - .agents/skills/microsoft-docs
-      - .agents/skills/microsoft-docs/LICENSE
-      - .agents/skills/microsoft-docs/SKILL.md
-      - .agents/skills/microsoft-skill-creator
-      - .agents/skills/microsoft-skill-creator/LICENSE
-      - .agents/skills/microsoft-skill-creator/SKILL.md
-      - .agents/skills/microsoft-skill-creator/references/skill-templates.md
-    deployed_file_hashes:
-      .agents/skills/microsoft-code-reference/LICENSE: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      .agents/skills/microsoft-code-reference/SKILL.md: sha256:36354e87d7095fbba0b7138c251ee6fd30f85a89d35a0909e4a6aafdf74280fe
-      .agents/skills/microsoft-docs/LICENSE: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      .agents/skills/microsoft-docs/SKILL.md: sha256:23d6c309124c4dd7f96ef7166a1998814b4eaeca7e3d654bdac2feacde7e16d1
-      .agents/skills/microsoft-skill-creator/LICENSE: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-      .agents/skills/microsoft-skill-creator/SKILL.md: sha256:b1cd59dfad7379b60dad82da5a23aaebdf25f9523cfe538d6ca4f8d35b6a410e
-      .agents/skills/microsoft-skill-creator/references/skill-templates.md: sha256:ff30f0b66e3d4ce70fa97fb764491fd33728a2b47baf9c37f892bc2b64fe73f6
-    content_hash: sha256:d3ecea7179c354035a2c4881afd317bc82e40c0cdf2c5ea241a46590201e01b5
+    content_hash: sha256:113343bf04e6514b47a23124bc004b122c3107d0c9053ee9dca812883892be74
     carried_licenses:
       - path: .apm/skills/microsoft-code-reference/LICENSE
         source: LICENSE
@@ -291,6 +274,15 @@ dependencies:
       - path: skills/microsoft-skill-creator/LICENSE
         source: LICENSE
         hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
+    native_plugin:
+      name: microsoft-docs
+      root: .agents/plugins/microsoft-docs
+      fingerprint: sha256:86a8cebf142f1125b843180c4e6e8681661696432e3cf7986a509c660f195bf6
+      marketplace:
+        name: apm-p-50a26669
+        path: ./.agents/plugins
+    native_declared:
+      - copilot
 deployments:
   - kind: project-relative
     target: copilot
@@ -895,96 +887,6 @@ deployments:
       - github/copilot-advanced-security-plugin
     active_owner: github/copilot-advanced-security-plugin
     content_hash: sha256:3e9df91dba4a65357ced43553b47c768c4630d054eed37f0fffebfb2495bad14
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-code-reference
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: null
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-code-reference/LICENSE
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-code-reference/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:36354e87d7095fbba0b7138c251ee6fd30f85a89d35a0909e4a6aafdf74280fe
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-docs
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: null
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-docs/LICENSE
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-docs/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:23d6c309124c4dd7f96ef7166a1998814b4eaeca7e3d654bdac2feacde7e16d1
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-skill-creator
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: null
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-skill-creator/LICENSE
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-skill-creator/SKILL.md
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:b1cd59dfad7379b60dad82da5a23aaebdf25f9523cfe538d6ca4f8d35b6a410e
-  - kind: project-relative
-    target: copilot
-    value: .agents/skills/microsoft-skill-creator/references/skill-templates.md
-    runtime: null
-    scope: project
-    owners:
-      - microsoftdocs/mcp
-    active_owner: microsoftdocs/mcp
-    content_hash: sha256:ff30f0b66e3d4ce70fa97fb764491fd33728a2b47baf9c37f892bc2b64fe73f6
   - kind: project-relative
     target: copilot
     value: .agents/skills/office-scripts
@@ -1758,7 +1660,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:460b638fb7c919bdd1cd525512d7fe724f9a14bd6d9b57fe31b15559c159514b
+    content_hash: sha256:0bac3fbf3d347402b844c037a268f26faec2738fbc41d49cd7d50c251e96b6d5
   - kind: uri
     target: mcp
     value: microsoft-learn
@@ -1767,7 +1669,7 @@ deployments:
     owners:
       - .
     active_owner: .
-    content_hash: sha256:6213b3de13c577efc42949df522519a94a3319e45226d60de6e7cadedaf5960f
+    content_hash: sha256:3476022fecd0a5da71b13372c38ff1ad685f6ff876a168103d40f7561209b041
 mcp_servers:
   - github-ghas-tools
   - microsoft-learn
